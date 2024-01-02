@@ -1,6 +1,7 @@
 = ownCloud App and Client Releases
 :toc: right
 :toclevels: 3
+:page-aliases: next@docs::client_releases.adoc
 
 == Introduction
 

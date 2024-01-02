@@ -1,7 +1,7 @@
 = ownCloud Server Releases
 :toc: right
 :toclevels: 3
-:page-aliases: releases.adoc
+:page-aliases: releases.adoc, next@docs::server_releases.adoc
 
 == Introduction
 
