@@ -2,6 +2,7 @@
 :toc: macro
 :toclevels: 2
 :toc-title: Releases
+:page-aliases: next@docs::ocis_release_notes.adoc
 
 :release-roadmap-url: https://github.com/owncloud/ocis/blob/master/docs/ocis/release_roadmap.md
 

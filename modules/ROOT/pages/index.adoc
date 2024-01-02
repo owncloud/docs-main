@@ -1,6 +1,7 @@
 = ownCloud Documentation Overview
 :toc: right
 :toclevels: 3
+:page-aliases: next@docs::index.adoc
 
 == What is Infinite Scale
 
