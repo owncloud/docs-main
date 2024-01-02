@@ -1,6 +1,6 @@
-# Create a New Version Branch for Branded Clients
+# Create a New Version Branch for Docs Main
 
-Note that at the moment **no branching** is necessary for the Branded Clients repo as only the `master` branch is used that appears a `next` in the documentation.
+Note that at the moment **no branching** is necessary for the docs-main repo as only the `master` branch is used that appears a `next` in the documentation.
 
 <!--
 When doing a new release for Branding Clients like `1.x`, a new version branch must be created based on `master`. It is necessary to do this in four steps. Please set the new and former version numbers accordingly
