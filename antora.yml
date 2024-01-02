@@ -1,0 +1,9 @@
+name: docs_main
+title: ownCloud Main Page
+version: next
+start_page: ROOT:index.adoc
+nav:
+- modules/ROOT/partials/nav.adoc
+
+asciidoc:
+  attributes:
