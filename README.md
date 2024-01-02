@@ -29,8 +29,8 @@ See the the [following section](https://github.com/owncloud/docs#target-branch-a
 
 ## Branching Workflow
 
-Please refer to the [Branching Workflow for ownCloud Server](./docs/the-branching-workflow.md) for more information.
+Please refer to the [Branching Workflow for the docs main page](./docs/the-branching-workflow.md) for more information.
 
-## Create a New Version Branch for ownCloud Server
+## Create a New Version Branch for the Docs Mainpage
 
-Please refer to [Create a New Version Branch for ownCloud Server](./docs/new-version-branch.md) for more information.
+Please refer to [Create a New Version Branch for the docs main page](./docs/new-version-branch.md) for more information.
