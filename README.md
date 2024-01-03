@@ -7,7 +7,7 @@
 * [Generating the Documentation](#generating-the-documentation)
 * [Target Branch and Backporting](#target-branch-and-backporting)
 * [Branching Workflow](#branching-workflow)
-* [Create a New Version Branch for ownCloud Server](#create-a-new-version-branch-for-owncloud-server)
+* [Create a New Version Branch for the docs Main Page](#create-a-new-version-branch-for-the-docs-main-page)
 
 ## Building the Main Page Docs
 
@@ -25,12 +25,12 @@ See the [Generating the Documentation](https://github.com/owncloud/docs#generati
 
 ## Target Branch and Backporting
 
-See the the [following section](https://github.com/owncloud/docs#target-branch-and-backporting) as the same rules and notes apply.
+See the [following section](https://github.com/owncloud/docs#target-branch-and-backporting) as the same rules and notes apply.
 
 ## Branching Workflow
 
 Please refer to the [Branching Workflow for the docs main page](./docs/the-branching-workflow.md) for more information.
 
-## Create a New Version Branch for the Docs Mainpage
+## Create a New Version Branch for the Docs Main Page
 
 Please refer to [Create a New Version Branch for the docs main page](./docs/new-version-branch.md) for more information.
