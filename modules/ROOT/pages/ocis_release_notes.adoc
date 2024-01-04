@@ -52,11 +52,11 @@ Set `GRAPH_USERNAME_MATCH` to `none` to accept any username that is also valid f
 === Enhancement
 
 * Add `OCIS_LDAP_BIND_PASSWORD` as replacement for `LDAP_BIND_PASSWORD`.  https://github.com/owncloud/ocis/issues/7176[#7176] +
-The enviroment variable `OCIS_LDAP_BIND_PASSWORD` was added to be more consistent with all other global LDAP variables. `LDAP_BIND_PASSWORD` is deprecated now and scheduled for removal with the 5.0.0 release. We also deprecated `LDAP_USER_SCHEMA_ID_IS_OCTETSTRING` for removal with 5.0.0. The replacement for it is `OCIS_LDAP_USER_SCHEMA_ID_IS_OCTETSTRING`.
+The environment variable `OCIS_LDAP_BIND_PASSWORD` was added to be more consistent with all other global LDAP variables. `LDAP_BIND_PASSWORD` is deprecated now and scheduled for removal with the 5.0.0 release. We also deprecated `LDAP_USER_SCHEMA_ID_IS_OCTETSTRING` for removal with 5.0.0. The replacement for it is `OCIS_LDAP_USER_SCHEMA_ID_IS_OCTETSTRING`.
 
 === Solved Known Issues
 
-* We reintroduced the `USERS_LDAP_USER_SCHEMA_ID` variable which was accidently removed from the users service with the 4.0.0 release. https://github.com/owncloud/ocis/issues/7312[#7312]
+* We reintroduced the `USERS_LDAP_USER_SCHEMA_ID` variable which was accidentally removed from the users service with the 4.0.0 release. https://github.com/owncloud/ocis/issues/7312[#7312]
 
 == Infinite Scale 4.0.2
 
@@ -74,7 +74,7 @@ This is a patch release only, please update as soon as possible.
 
 * Actually pass `PROXY_OIDC_SKIP_USER_INFO` option to oidc client middleware. https://github.com/owncloud/ocis/pull/7220[#7220]
 
-* Reintroducing the `USERS_LDAP_USER_SCHEMA_ID` variable which was accidently removed from the users service
+* Reintroducing the `USERS_LDAP_USER_SCHEMA_ID` variable which was accidentally removed from the users service
 with the 4.0.0 release. https://github.com/owncloud/ocis/pull/7321[#7321]
 
 * Always pass adjusted default nats options. https://github.com/cs3org/reva/pull/4214[cs3org/reva#4214]
@@ -137,7 +137,7 @@ Effortlessly transfer your work documents, shared files, or entire project folde
 
 The Cloud Importer is disabled by default. To enable this extension, please refer to the xref:{latest-ocis-version}@ocis:ROOT:deployment/container/orchestration/orchestration.adoc#docker-compose-examples[WOPI Docker Compose Deployment] Example. https://github.com/owncloud/ocis/pull/6702[#6702]
 
-This feature is experimental, i.e. its in a preview state, may break and individual production usage must be agreed with ownCloud Support.
+This feature is experimental, i.e., it's in a preview state, may break, and individual production usage must be agreed with ownCloud Support.
 
 [discrete]
 === Simplified Sharing Links
@@ -146,7 +146,7 @@ The simplified sharing links make sharing files with both internal and external 
 
 With simplified sharing links, you can generate a single, user-friendly link for any file or folder you want to share. This one link is all you need, whether you're sharing with team members within your organization or with external partners and clients.
 
-The advanced design of simplified sharing links respects the permissions of all recipients, regardless of whether they're internal or external. This means that users will only gain the access levels (e.g. view, download, edit) that you authorize. It ensures secure, controlled sharing without compromising on ease of use.
+The advanced design of simplified sharing links respects the permissions of all recipients, regardless of whether they're internal or external. This means that users will only gain the access levels (e.g., view, download, edit) that you authorize. It ensures secure, controlled sharing without compromising on ease of use.
 
 An added benefit for internal users is the visibility of the file location. If permission is granted, internal users can see where the shared file is stored within the organization's file system. This enables them to navigate directly to the file location, eliminating the need to access the file via the shared link every time. This feature is particularly valuable for efficient collaboration and knowledge sharing within teams.
 
@@ -216,7 +216,7 @@ in a more compact and organized manner. This is particularly useful for users wh
 === Known Issues
 
 * A critical issue has been discovered where users where able to search other users' spaces under certain circumstances.
-* The environment variable `USERS_LDAP_USER_SCHEMA_ID` variable was accidently removed from the users service.
+* The environment variable `USERS_LDAP_USER_SCHEMA_ID` variable was accidentally removed from the users service.
 
 === Migrations
 
@@ -229,7 +229,7 @@ in a more compact and organized manner. This is particularly useful for users wh
 +
 {empty}
 +
-These colors ensure, that the primary and outlined buttons (e.g. "Upload" and "New") have a proper hover state.
+These colors ensure that the primary and outlined buttons (e.g., "Upload" and "New") have a proper hover state.
 * If you used `yes` or `no` in your YAML files, please change these values to `true` or `false`. Background: The YAML parser we use does not support `yes` or `no` any more.
 
 === Breaking Changes
@@ -269,9 +269,9 @@ Policies are written in the Rego query language. Read more: xref:{latest-ocis-ve
 [discrete]
 === Tags
 
-Tags provide a flexible and intuitive way to categorize files. By assigning relevant tags to files, users can easily locate specific documents through powerful search functions. This eliminates the need to remember precise file names or navigate through complex folder structures, saving valuable time and effort. Unlike traditional folder-based systems, tags offer a flexible way to organize files that transcends rigid hierarchies. Users can assign multiple tags to a single file, enabling them to classify and retrieve documents using different criteria simultaneously. This adaptability allows for personalized organization methods that align with individual preferences and working styles.
+Tags provide a flexible and intuitive way to categorize files. By assigning relevant tags to files, users can easily locate specific documents through powerful search functions. This eliminates the need to remember precise file names or navigate through complex folder structures, saving valuable time and effort. Unlike traditional folder-based systems, tags offer a flexible way to organize files that transcend rigid hierarchies. Users can assign multiple tags to a single file, enabling them to classify and retrieve documents using different criteria simultaneously. This adaptability allows for personalized organization methods that align with individual preferences and working styles.
 
-Tags are saved as metadata on the storage without the need for a dedicated database to assure resilience and scalability of the system.
+Tags are saved as metadata on the storage without the need for a dedicated database to ensure resilience and scalability of the system.
 
 [discrete]
 === Fulltext Search
@@ -303,7 +303,7 @@ This update brings a range of functions to streamline user, group, and space adm
 [discrete]
 ==== Users Administration:
 
-* Filter Chips for Groups and Role: +
+* Filter Chips for Groups and Roles: +
 https://m2.material.io/components/chips#filter-chips[Filter chips] use tags or descriptive words to filter content. With that, you can now conveniently filter users based on groups and roles, making it easier to locate and manage specific user segments efficiently.
 
 * Batch Actions:
@@ -380,7 +380,7 @@ The Separate Trash Bin for Spaces introduces individual trash bins for each spac
 
 [discrete]
 === Deny Access
-The Deny Access feature, which is *experimental and not ready for production environments*, allows users to share folders with groups, but deny access to a single person in that group. Example: If you share the "Birthday Present" folder with all users in the organization, you want to exclude the one person whose birthday is coming up. This use case is now possible, but not yet production ready and disabled by default. To enable this feature, the xref:{latest-ocis-version}@ocis:ROOT:deployment/services/s-list/frontend.adoc#environment-variables[variable] `FRONTEND_OCS_ENABLE_DENIALS` needs to be set to to `true`. Please contact {oc-support-url}[ownCloud Support] or give us your feedback via {oc-central-url}[ownCloud Central] so that we can finalize this long-awaited feature with the help of your testing.
+The Deny Access feature, which is *experimental and not ready for production environments*, allows users to share folders with groups, but deny access to a single person in that group. Example: If you share the "Birthday Present" folder with all users in the organization, you want to exclude the one person whose birthday is coming up. This use case is now possible, but not yet production ready and disabled by default. To enable this feature, the xref:{latest-ocis-version}@ocis:ROOT:deployment/services/s-list/frontend.adoc#environment-variables[variable] `FRONTEND_OCS_ENABLE_DENIALS` needs to be set to `true`. Please contact {oc-support-url}[ownCloud Support] or give us your feedback via {oc-central-url}[ownCloud Central] so that we can finalize this long-awaited feature with the help of your testing.
 
 [discrete]
 === Other Notable Changes
@@ -389,7 +389,7 @@ The Deny Access feature, which is *experimental and not ready for production env
 
 - We changed the default behavior of shares: Share receivers have no access to versions. People in spaces with the "Editor" or "Manager" role can still see versions and work with them. https://github.com/owncloud/ocis/pull/5531[#5531]
 
-- With ownCloud Web having transitioned to Vue 3 recently, we would have had to port the settings ui as well. The decision was made to discontinue the settings ui instead. As a result all traces of the settings ui have been removed. The only user facing setting that ever existed in the settings service is now integrated into the `account` page of ownCloud Web (click on top right user menu, then on your username to reach the account page). https://github.com/owncloud/ocis/pull/5463[#5463]
+- With ownCloud Web having transitioned to Vue 3 recently, we would have had to port the settings ui as well. The decision was made to discontinue the settings ui instead. As a result all traces of the settings ui have been removed. The only user facing setting that ever existed in the settings service is now integrated into the `account` page of ownCloud Web (click on the top right user menu, then on your username to reach the account page). https://github.com/owncloud/ocis/pull/5463[#5463]
 
 - We changed the default behavior of shares: Share receivers have no access to versions. People in spaces with the "Can edit" or "Can manage" role can still see versions and work with them. https://github.com/owncloud/ocis/pull/5531[#5531]
 
@@ -397,7 +397,7 @@ The Deny Access feature, which is *experimental and not ready for production env
 
 - You can now send prettier notification emails with HTML templates https://github.com/owncloud/ocis/pull/6147[#6147]
 
-- Webfinger: If your deployment consists of multiple instances, the webfinger service offers the right instances for the right users so that they can login without having to rember instance specific urls. https://github.com/owncloud/ocis/pull/5373[#5373], https://github.com/owncloud/ocis/pull/6110[#6110]
+- Webfinger: If your deployment consists of multiple instances, the webfinger service offers the right instances for the right users so that they can login without having to remember instance-specific urls. https://github.com/owncloud/ocis/pull/5373[#5373], https://github.com/owncloud/ocis/pull/6110[#6110]
 
 - Async postprocessing allows the system to do postprocessing tasks like virusscan, copying of bytes to their final destination, etc. asynchronous to the users request. This is a huge enhancement only available with Infinite Scale!  https://github.com/owncloud/ocis/pull/5207[#5207]
 
@@ -405,7 +405,7 @@ The Deny Access feature, which is *experimental and not ready for production env
 
 - The LDAP base DN for new groups is now configurable: The LDAP backend for the Graph service introduced a new config option for setting the Parent DN for new groups created via the `/groups/` endpoint. (`GRAPH_LDAP_GROUP_CREATE_BASE_DN`). It defaults to the value of `GRAPH_LDAP_GROUP_BASE_DN`. If set to a different value the `GRAPH_LDAP_GROUP_CREATE_BASE_DN` needs to be a subordinate DN of `GRAPH_LDAP_GROUP_BASE_DN`. All existing groups with a DN outside the `GRAPH_LDAP_GROUP_CREATE_BASE_DN` tree will be treated as read-only groups. So it is not possible to edit these groups. In the UI this is indicated via a lock-icon in the administration settings. https://github.com/owncloud/ocis/pull/5974[#5974]
 
-- Disable login for specific users: This new option in the administration settings allows login to be disabled / enabled for specific users. By setting the `accountEnabled` property to `false` for a user via the graph API, users can be disabled (i.e. they can no longer login). https://github.com/owncloud/ocis/pull/5588[#5588]
+- Disable login for specific users: This new option in the administration settings allows login to be disabled / enabled for specific users. By setting the `accountEnabled` property to `false` for a user via the graph API, users can be disabled (i.e., they can no longer login). https://github.com/owncloud/ocis/pull/5588[#5588]
 
 - New service `eventhistory`: It is a service that stores events and provides a grpc API to retrieve them. Users will notice this enhancement by the bell on the top right in the Web UI and the corresponding notifications (ex: if a user receives a share or becomes a member of a space). 
 
@@ -429,11 +429,11 @@ Since the base block is a GRPC API, it is also possible to use it directly. Poli
 
 - Added possibility to assign roles based on OIDC claims: https://github.com/owncloud/ocis/pull/6048[#6048]
 
-- Default quota based on user role: With this enhancement roles can now be configured with a default quota (eg. Admins should have a default quota of 100GB, Users should have a default quota of 50GB). https://github.com/owncloud/ocis/pull/5616[#5616]
+- Default quota based on user role: With this enhancement, roles can now be configured with a default quota (e.g., Admins should have a default quota of 100GB, Users should have a default quota of 50GB). https://github.com/owncloud/ocis/pull/5616[#5616]
 
 - Set default quota for project spaces: Additionally to `set-space-quota` for setting quota on personal spaces we now have `Drive.ReadWriteQuota.Project` for setting project spaces quota. https://github.com/owncloud/ocis/pull/5660[#5660]
 
-- Automatically emtpy the trashbin (off per default): Introduction of a new cli command to purge old trash-bin items. https://github.com/owncloud/ocis/pull/5500[#5500]
+- Automatically empty the trashbin (off per default): Introduction of a new cli command to purge old trash-bin items. https://github.com/owncloud/ocis/pull/5500[#5500]
 
 === Known Issues
 
@@ -450,7 +450,7 @@ Since the base block is a GRPC API, it is also possible to use it directly. Poli
 
 === Breaking Changes
 
-- Metadata in MessagePack: Metadata are no longer stored in the xattr of a file, but in a dedicated, more scalable and robust file in the binary `MessagePack` format. https://github.com/cs3org/reva/pull/3728[cs3org/reva#3728]
+- Metadata in MessagePack: Metadata is no longer stored in the xattr of a file, but in a dedicated, more scalable and robust file in the binary `MessagePack` format. https://github.com/cs3org/reva/pull/3728[cs3org/reva#3728]
 - The Web UI was updated from Vue.js 2 to Vue.js 3. https://github.com/owncloud/web/issues/7948[#7948]
 
 
@@ -480,7 +480,7 @@ When upgrading from release candidates:
 +
 [WARNING]
 ====
-In order to make every ocis storage provider ID unique by default, the use use of a random uuidv4 during ocis init was needed. Existing installations need to set this value explicitly or ocis will terminate after the upgrade.
+In order to make every ocis storage provider ID unique by default, the use of a random uuidv4 during ocis init was needed. Existing installations need to set this value explicitly or ocis will terminate after the upgrade.
 
 See the https://github.com/owncloud/ocis/releases/tag/v2.0.0[BREAKING CHANGE in ocis deployments] description for details.
 ====
@@ -565,14 +565,14 @@ The most prominent changes in **Infinite Scale 2.0.0 beta6** and ownCloud Web 5.
 * Deleting multiple files at once now works properly. https://github.com/owncloud/web/pull/7357[web#7357]
 * Some bugs on the 'Shares' page have been addressed (share indicators, declining shares). https://github.com/owncloud/web/pull/7379[web#7379] https://github.com/owncloud/web/pull/7355[web#7355]
 * The file list rendering performance has been improved. https://github.com/owncloud/web/issues/7038[web#7038]
-* Upload stability in Web has been improved with a better access token handling. https://github.com/owncloud/web/issues/7240[web#7240]
+* Upload stability in Web has been improved with better access token handling. https://github.com/owncloud/web/issues/7240[web#7240]
 * The file versions of a shared file will now be shown. https://github.com/owncloud/web/pull/7313[web#7313]
 * Contextual helper texts for users have been improved. https://github.com/owncloud/web/pull/7404[web#7404]
 * The drop menus in the right sidebar (e.g., role picker) have been visually aligned and improved. https://github.com/owncloud/web/pull/7365[web#7365]
 * File search will now report the total number of results (if there are more than actually shown). https://github.com/owncloud/web/pull/7267[web#7267]
 * Disabling a Space now shows immediate effect to the user. https://github.com/owncloud/web/pull/7334[web#7334]
 * Leaving a Space and handing it over to a new Manager now works properly. https://github.com/owncloud/ocis/pull/4244[ocis#4244]
-* The sharing autocomplete is not case-sensitive anymore and allows to find share recipients based on all terms in their display name. The substring search has been made configurabe to allow performance optimizations. https://github.com/owncloud/ocis/issues/547[ocis#547]
+* The sharing autocomplete is not case-sensitive anymore and allows to find share recipients based on all terms in their display name. The substring search has been made configurable to allow performance optimizations. https://github.com/owncloud/ocis/issues/547[ocis#547]
 * Searching in received shares works again. https://github.com/owncloud/ocis/issues/4308[ocis#4308]
 * The validation of OIDC access tokens has been improved. https://github.com/owncloud/ocis/issues/3841[ocis#3841]
 * It is now possible to provide a list of services that should not start (for scale-out deployments). https://github.com/owncloud/ocis/pull/4254[ocis#4254]
@@ -622,7 +622,7 @@ The most prominent changes in **Infinite Scale 2.0.0 beta3** and ownCloud Web 5.
 * Improved upload UI: The upload stability has been improved, especially for usecases with many small files and complex folder hierarchies. Also the initial view of the upload UI has been simplified and shows now more details, but only on demand. https://github.com/owncloud/web/pull/7067[web#7067] https://github.com/owncloud/web/pull/7036[web#7036] https://github.com/owncloud/web/pull/7032[web#7032]
 * Improved "File already exists" dialog: When moving files to a different folder users can now choose to skip, replace or keep conflicting files. If both files should be kept, the existing filename gets extended with a number: filename (1) filename (2) etc. Similar to known dialogs from e.g. Windows or MacOS, users can now apply the chosen option to all conflicts. https://github.com/owncloud/web/pull/6994[web#6994]
 * Allow listing of "Shares": Clients can now list the share jail content via `PROPFIND /dav/spaces/\{sharejailid}` https://github.com/cs3org/reva/pull/2931[reva#2931], https://github.com/cs3org/reva/pull/2904[reva#2904]
-* Create Spaces without quota restiction: Space managers can now create Spaces without specific quota restrictions like "10 GB". With the quota option "No restriction" Spaces can use up all available storage entirely. This enables a more dynamic storage allocation. https://github.com/cs3org/reva/pull/2895[reva#2895]
+* Create Spaces without quota restriction: Space managers can now create Spaces without specific quota restrictions like "10 GB". With the quota option "No restriction" Spaces can use up all available storage entirely. This enables a more dynamic storage allocation. https://github.com/cs3org/reva/pull/2895[reva#2895]
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v2.0.0-beta.3[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.5.0-rc.9[ownCloud Web changelog] for further details on what has changed.
 
@@ -650,7 +650,7 @@ The most prominent changes in **Infinite Scale 2.0.0 beta1** and ownCloud Web 5.
 
 * ownCloud Web introduces a new upload manager based on Uppy (https://uppy.io). Uppy provides a well-designed upload manager overlay, integrates seamlessly with the TUS protocol for upload chunking and provides the ability to cancel, pause and resume uploads. https://github.com/owncloud/web/pull/6202[web#6202]
 
-* The existing integrated user management has been replaced by LibreIDM which is a lightweight LDAP server being developed by ownCloud and the LibreGraph community (https://github.com/libregraph/idm). LibreIDM comes with a MS Graph-based API and integrates a user interface for user & group management in ownCloud Web. https://github.com/owncloud/ocis/pull/3331[ocis#3331], https://github.com/owncloud/web/issues/6673[web#6673]
+* The existing integrated user management has been replaced by LibreIDM which is a lightweight LDAP server being developed by ownCloud and the LibreGraph community (https://github.com/libregraph/idm). LibreIDM comes with an MS Graph-based API and integrates a user interface for user & group management in ownCloud Web. https://github.com/owncloud/ocis/pull/3331[ocis#3331], https://github.com/owncloud/web/issues/6673[web#6673]
 
 * For security reasons, Infinite Scale will not start anymore without specifying certain secrets. A new command `ocis init` has been added to automatically prepare a new Infinite Scale installation by generating secure default secrets. https://github.com/owncloud/ocis/pull/3551[ocis#3551]
 
@@ -697,7 +697,7 @@ The most prominent changes in Infinite Scale 1.20.0 and ownCloud Web 5.4.0 compr
 
 * The feedback link in ownCloud Web is now customizable. See https://owncloud.dev/clients/web/getting-started/#options[getting started] for more information. https://github.com/owncloud/web/issues/6702[web#6702]
 
-* ownCloud Web now supports full screen mode for external apps like web office. https://github.com/owncloud/web/pull/6688[web#6688]
+* ownCloud Web now supports full-screen mode for external apps like web office. https://github.com/owncloud/web/pull/6688[web#6688]
 
 * ownCloud Web introduces an integrated PDF viewer that user native browser capabilities. https://github.com/owncloud/web/pull/6654[web#6654]
 
@@ -732,7 +732,7 @@ Version 1.19.0 brings major improvements, new features and bug fixes to the plat
 The most prominent changes in Infinite Scale 1.19.0 and ownCloud Web 5.3.0 comprise:
 
 * Bugfix - Thumbnails only for accepted shares: https://github.com/owncloud/web/issues/5310[#5310]
-* Bugfix - Show no auth popup on password protected public links in ownCloud 10: https://github.com/owncloud/web/pull/6530[#6530]
+* Bugfix - Show no auth popup on password-protected public links in ownCloud 10: https://github.com/owncloud/web/pull/6530[#6530]
 * Bugfix - Prevent cross-site scripting attack while displaying space description: https://github.com/owncloud/web/pull/6523[#6523]
 * Bugfix - Replace public mountpoint fileid with grant fileid in ocdav: https://github.com/cs3org/reva/pull/2646[cs3org/reva#2646]
 * Change - Switch NATS backend: https://github.com/cs3org/reva/pull/2574[cs3org/reva#2574]
@@ -750,7 +750,7 @@ The most prominent changes in Infinite Scale 1.19.0 and ownCloud Web 5.3.0 compr
 * Enhancement - Share inheritance indicators: https://github.com/owncloud/web/pull/6613[#6613]
 * Enhancement - Shares overview: https://github.com/owncloud/web/issues/6440[#6440]
 * Enhancement - Side bar nav tags: https://github.com/owncloud/web/pull/6540[#6540]
-* Enhancement - Show space members in share panel for files inside a space: https://github.com/owncloud/web/pull/6554[#6554]
+* Enhancement - Show space members in the share panel for files inside a space: https://github.com/owncloud/web/pull/6554[#6554]
 * Enhancement - Allow updating space quota: https://github.com/owncloud/web/pull/6477[#6477]
 * Enhancement - Implement edit quota action in spaces overview: https://github.com/owncloud/web/pull/6598[#6598]
 * Enhancement - Implement people sharing for spaces: https://github.com/owncloud/web/pull/6455[#6455]
@@ -837,7 +837,7 @@ The most prominent changes in Infinite Scale 1.17.0 and ownCloud Web 5.0.0 compr
 
 * Initial support for the 'Spaces' feature in Infinite Scale and ownCloud Web has been added. https://github.com/owncloud/web/pull/6254[web#6254], https://github.com/owncloud/web/pull/6199[web#6199], https://github.com/owncloud/web/pull/6262[web#6262], https://github.com/owncloud/ocis/pull/2931[ocis#2931], https://github.com/owncloud/ocis/pull/3095[ocis#3095]
 
-* Infinite Scale now supports file locking on CS3 and WebDAV levels to prevent concurrent/conflicting edits in shared areas. ownCloud Web will soon follow-up with the respective actions and indicators. https://github.com/cs3org/reva/pull/2460[cs3org/reva#2460]
+* Infinite Scale now supports file locking on CS3 and WebDAV levels to prevent concurrent/conflicting edits in shared areas. ownCloud Web will soon follow up with the respective actions and indicators. https://github.com/cs3org/reva/pull/2460[cs3org/reva#2460]
 
 * Spaces can now be disabled, restored and permanently deleted. https://github.com/owncloud/ocis/pull/3092[ocis#3092]
 
@@ -867,7 +867,7 @@ You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.17.0
 
 ==== Breaking changes
 
-INPORTANT: Due to some breaking changes, the https://github.com/cs3org/wopiserver[WOPI Server extension] that is required for online office integrations (Collabora Online, ONLYOFFICE, Microsoft Office Online) is not compatible with the 1.17.0 release. This issue is under investigation and will be fixed with the next releases.
+IMPORTANT: Due to some breaking changes, the https://github.com/cs3org/wopiserver[WOPI Server extension] that is required for online office integrations (Collabora Online, ONLYOFFICE, Microsoft Office Online) is not compatible with the 1.17.0 release. This issue is under investigation and will be fixed with the next releases.
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap]
 
@@ -1033,7 +1033,7 @@ The most prominent changes in Infinite Scale 1.11.0 and ownCloud Web 4.1.0 compr
 
 * ownCloud Web now supports drag & drop to move files/folders. https://github.com/owncloud/web/issues/5592[web#5592]
 
-* The right sidebar in ownCloud Web can now be collapsed and expanded. This change also allows to open the sidebar without selecting a file/folder which will select the current folder and enable the user to do actions (e.g., sharing) for it. https://github.com/owncloud/web/issues/5165[web#5165]
+* The right sidebar in ownCloud Web can now be collapsed and expanded. This change also allows opening the sidebar without selecting a file/folder which will select the current folder and enable the user to do actions (e.g., sharing) for it. https://github.com/owncloud/web/issues/5165[web#5165]
 
 * The right sidebar in ownCloud Web now presents details for multiple selected files/folders. https://github.com/owncloud/web/issues/5164[web#5164]
 
@@ -1077,7 +1077,7 @@ The most prominent changes in Infinite Scale 1.10.0 and ownCloud Web 4.0.0 compr
 
 * ownCloud Web now respects the server-side capability for user avatars. https://github.com/owncloud/web/pull/5178[web#5178]
 
-* The login page has been optimized in regards of accessibility. https://github.com/owncloud/web/issues/5376[web#5376]
+* The login page has been optimized in regard to accessibility. https://github.com/owncloud/web/issues/5376[web#5376]
 
 * The Infinite Scale backend is being further hardened by fixing known issues, improving error handling and stabilizing existing features.
 
@@ -1097,7 +1097,7 @@ The most prominent changes in Infinite Scale 1.9.0 and ownCloud Web 3.4.1 compri
 
 * The right sidebar in ownCloud Web now shows previews for images. https://github.com/owncloud/web/pull/5501[web#5501]
 
-* View options for the file list have been introduced in ownCloud Web. Currently this allows to change the number of files/folders per page and to show/hide hidden files. https://github.com/owncloud/web/pull/5408[web#5408], https://github.com/owncloud/web/pull/5470[web#5470]
+* View options for the file list have been introduced in ownCloud Web. Currently this allows changing the number of files/folders per page and to show/hide hidden files. https://github.com/owncloud/web/pull/5408[web#5408], https://github.com/owncloud/web/pull/5470[web#5470]
 
 * A feedback button has been added to the top bar. It guides the user to an ownCloud Web feedback survey. If undesired, this feature can be disabled in the https://owncloud.dev/clients/web/getting-started/#options[ownCloud Web configuration]. https://github.com/owncloud/web/pull/5468[web#5468]
 
@@ -1256,7 +1256,7 @@ Version 1.4.0 brings new features, bug fixes and further improvements. The acces
 
 The most prominent changes in Infinite Scale 1.4.0 and ownCloud Web 2.1.0 comprise:
 
-* ownCloud Web is now able to use pre-signed url downloads for password protected shares https://github.com/owncloud/core/pull/38376[core#38376]
+* ownCloud Web is now able to use pre-signed url downloads for password-protected shares https://github.com/owncloud/core/pull/38376[core#38376]
 
 * Reduced the memory consumption of the runtime drastically (by a factor of 24) https://github.com/owncloud/ocis/pull/1762[ocis#1762]
 
@@ -1268,7 +1268,7 @@ The most prominent changes in Infinite Scale 1.4.0 and ownCloud Web 2.1.0 compri
 
 * Added the possibility to specify configuration values for the entire platform in a single config file https://github.com/owncloud/ocis/pull/1762[ocis#1762]
 
-* Added GIF and JPEG file types for thumbnail generation (allows to display thumbnails and use the media viewer for GIF/JPEG images) https://github.com/owncloud/ocis/pull/1791[ocis#1791]
+* Added GIF and JPEG file types for thumbnail generation (allows displaying thumbnails and using the media viewer for GIF/JPEG images) https://github.com/owncloud/ocis/pull/1791[ocis#1791]
 
 * Fixes for the trash bin feature https://github.com/cs3org/reva/pull/1552[reva#1552]
 
@@ -1302,7 +1302,7 @@ If you already updated to oCIS 1.4.0 without our recommended update strategy you
 . stop oCIS
 . navigate to `/var/tmp/ocis/storage/users/nodes/root/`
 . in this directory you will find directories with UUID as names. These are the home folders of the oCIS users. In the ones with content your oCIS users uploaded to oCIS.
-. create an temporary directory e.g. `/tmp/dereferenced-ocis-storage`
+. create a temporary directory e.g. `/tmp/dereferenced-ocis-storage`
 . copy the data from oCIS to the temporary directory while dereferencing symlinks. On Linux you can do this by running `cp --recursive --dereference /var/tmp/ocis/storage/users/nodes/root/ /tmp/dereferenced-ocis-storage`
 . you now have a backup of all users data in `/tmp/dereferenced-ocis-storage` and can follow our recommended update strategy above
 
@@ -1388,7 +1388,7 @@ Please have a look at https://github.com/owncloud/ocis/blob/master/docs/ocis/dep
 
 Related: https://github.com/owncloud/ocis/pull/1626[ocis#1626]
 
-After upgrading oCIS from a previous version to oCIS 1.2.0 you will will not be able to use previous shares or create new shares.
+After upgrading oCIS from a previous version to oCIS 1.2.0 you will not be able to use previous shares or create new shares.
 
 .Implications:
 + manual action required
@@ -1426,7 +1426,7 @@ We are pleased to announce the availability of Infinite Scale 1.0.0 Technology P
 
 Infinite Scale is following the microservices architectural pattern. It is implemented as a set of microservices which are independent of each other. They are coupled with well-defined APIs. This architecture fosters a lot of benefits that we were aiming for with the new design for oCIS:
 
-* Every service is independent, comparably small and brings it's own webserver, backend/APIs and frontend components
+* Every service is independent, comparably small and brings its own webserver, backend/APIs and frontend components
 
 * Each service runs as a separate service on the system, increasing security and stability
 
@@ -1501,7 +1501,7 @@ oCIS allows you to scale individual services using well-known orchestration fram
 
 ===== Bridge mode with ownCloud 10 backend
 
-For the product transition phase, Infinite Scale comes with an operation mode ("bridge mode") that allows a hybrid deployment, between both server generations to operate the new web frontend with ownCloud 10 and Infinite Scale in parallel. This setup allows the ownCloud Web frontend to operate with both server generations and provides the foundation to migrate users gradually to the new backend.
+For the product transition phase, Infinite Scale comes with an operation mode ("bridge mode") that allows a hybrid deployment between both server generations to operate the new web frontend with ownCloud 10 and Infinite Scale in parallel. This setup allows the ownCloud Web frontend to operate with both server generations and provides the foundation to migrate users gradually to the new backend.
 
 **Requirements for the bridge mode**
 
@@ -1523,7 +1523,7 @@ Infinite Scale is currently in Technology Preview. The bridge mode should only b
 
 This is the first promoted public release of Infinite Scale, released as "Technical Preview". Infinite Scale is not yet ready for production installations. Technical audiences will be able to get a good understanding of the potential of ownCloud's new platform.
 
-Version 1.0.0 comes with the base functionality for sync and share with a much higher performance-, stability- and security-level compared to all available platforms. Based on ten years of experience in enterprise sync and share and a long standing collaboration with the biggest global science organizations this new platform will exceed what content collaboration is today.
+Version 1.0.0 comes with the base functionality for sync and share with a much higher performance-, stability- and security-level compared to all available platforms. Based on ten years of experience in enterprise sync and share and a long-standing collaboration with the biggest global science organizations this new platform will exceed what content collaboration is today.
 
 ==== How to get started?
 
@@ -1660,7 +1660,7 @@ The default oCIS storage driver deconstructs a filesystem to be able to efficien
 
 ====== Settings
 
-The settings service provides APIs for other services for registering a set of settings as `Bundle`. It also provides a pluggable extension for ownCloud Web which provides dynamically built web forms, so that users can customize their own settings. Some well known settings are directly used by ownCloud Web for adapted user experience, e.g. the UI language. Services can query the users' chosen settings for customized backend and frontend operations as needed.
+The settings service provides APIs for other services for registering a set of settings as `Bundle`. It also provides a pluggable extension for ownCloud Web which provides dynamically built web forms, so that users can customize their own settings. Some well-known settings are directly used by ownCloud Web for adapted user experience, e.g., the UI language. Services can query the users' chosen settings for customized backend and frontend operations as needed.
 
 ====== Roles & Permissions System
 

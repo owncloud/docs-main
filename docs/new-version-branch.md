@@ -9,9 +9,9 @@ When doing a new release for Branding Clients like `1.x`, a new version branch m
 
 1.  Create a new `1.x` branch based on latest `origin/master`
 2.  Copy the `.drone.star` file from the _former_ `1.x-1` branch
-    (it contains the correct branch specific setup rules and replaces the current one coming from master)
+    (it contains the correct branch-specific setup rules and replaces the current one coming from master)
 3.  In `.drone.star` set `latest_version` to `1.x` (on top in section `def main(ctx)`)
-4.  In `site.yml` adjust all `-version` keys according the new and former releases
+4.  In `site.yml` adjust all `-version` keys according to the new and former releases
     (in section `asciidoc.attributes`)
 5.  In `antora.yml` change the version from `next` to `1.x`
 6.  Run a build by entering `yarn antora-local`. No errors should occur
@@ -21,7 +21,7 @@ When doing a new release for Branding Clients like `1.x`, a new version branch m
 
 9.  Create a new `changes_necessary_for_1.x` branch based on latest `origin/master`
 10.  In `.drone.star` set `latest_version` to `1.x` (on top in section `def main(ctx)`)
-11. In `site.yml` in section `asciidoc.attributes`, adjust all `-version` keys related to this repo according the new and former releases. Note if those attributes exist in other content sources, they must be set to the identical value to create consistent test builds.
+11. In `site.yml` in section `asciidoc.attributes`, adjust all `-version` keys related to this repo according to the new and former releases. Note if those attributes exist in other content sources, they must be set to the identical value to create consistent test builds.
 12. No changes in `antora.yml` but check if the version is set to `next`
 13. Run a build by entering `yarn antora-local`. No errors should occur
 14. Commit changes and push it
@@ -35,7 +35,7 @@ When doing a new release for Branding Clients like `1.x`, a new version branch m
 
 **Step 4: Protection and Renaming**
 
-18. Go to the settings of the this repository and change the protection of the branch list (Settings > Branches) so that the `1.x` branch gets protected and the `1.x-2` branch is no longer protected.
+18. Go to the settings of this repository and change the protection of the branch list (Settings > Branches) so that the `1.x` branch gets protected and the `1.x-2` branch is no longer protected.
 19. Rename the `1.x-2` branch to `x_archived_1.x-2`
 
 **Text Suggestion for Step 2**
@@ -50,7 +50,7 @@ When 1.x (Branding Clients) is finally out, the 1.x-2 branch can be archived,
 see step 4 in https://github.com/owncloud/docs-client-branding/blob/master/docs/new-version-branch.md
 
 Note, that the 1.x branch in this repo is already created, but the `latest` pointer on the web
-will be set to it automatically when the tag in Branding is set. This means, that in the docs homepage,
+will be set to it automatically when the tag in Branding is set. This means that in the docs homepage,
 `latest` will point to 1.x-1 until the tag in Branding Clients is set accordingly. When merging this PR,
 1.x-2 will be dropped from the web but is available via pdf as usual.
 
