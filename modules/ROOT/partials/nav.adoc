@@ -9,12 +9,12 @@
 * xref:client_releases.adoc[App Releases]
 * xref:how_to_contribute.adoc[How to Contribute]
 
-// note, atm we cant include an existing component navigation via eg
+// note, atm we cant include an existing component navigation via e.g.,
 // include::{latest-server-version}@server:ROOT:nav$partials/nav-server.adoc
-// for details about how to setup the nav link properly the see:
+// for details about how to set up the nav link properly the see:
 // https://antora.zulipchat.com/#narrow/stream/282400-users/topic/Include.20partial.20with.20ROOT.20module.20errors 
 // BUT: the content gets presented, the links do not work - therefore not used
-// a soulution needs to be considered if the current layout should be changed
+// a solution needs to be considered if the current layout should be changed
 // see: https://antora.zulipchat.com/#narrow/stream/282400-users/topic/Multi.20Component.20Navigation
 
 .Server
