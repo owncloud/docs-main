@@ -22,7 +22,7 @@ All in all, spaces make life easier for admins by giving space managers the abil
 
 === ownCloud Web
 
-ownCloud Web is bundled with Infinite Scale, has a new design and comes with a brand new look. The goal is to make ownCloud accessible to all people from children to experts. Technically, ownCloud Web is built with VueJS as dedicated client, communicating via well-formed APIs with the Infinite Scale server, just like all the other ownCloud clients. ownCloud Web can be used as app for ownCloud Server but is limited in its capabilities. Nevertheless, switching to ownCloud Web makes a future migration to Infinite Scale easier for users as they are already used to the new UI. ownCloud Web can be customized according to your corporate identity via config values.
+ownCloud Web is bundled with Infinite Scale, has a new design and comes with a brand-new look. The goal is to make ownCloud accessible to all people from children to experts. Technically, ownCloud Web is built with VueJS as a dedicated client, communicating via well-formed APIs with the Infinite Scale server, just like all the other ownCloud clients. ownCloud Web can be used as an app for ownCloud Server but is limited in its capabilities. Nevertheless, switching to ownCloud Web makes a future migration to Infinite Scale easier for users as they are already used to the new UI. ownCloud Web can be customized according to your corporate identity via config values.
 
 === Collaborative Editing
 
@@ -32,7 +32,7 @@ Infinite Scale comes with a ramped-up WOPI protocol server that provides collabo
 
 === Links
 
-In Infinite Scale, we drastically simplified sharing by links. First of all: You can get a link with a single click in ownCloud Web. Second: You can share one and the same link with internal and external people at once and if you change your mind, you can restrict access for example to only internal people of your organization. This feature was known as "private link" in ownCloud 10 and is still available but via the "internal" selection of a link.
+In Infinite Scale, we drastically simplified sharing by links. First of all: You can get a link with a single click in ownCloud Web. Second: You can share one and the same link with internal and external people at once, and if you change your mind, you can restrict access, for example, to only internal people of your organization. This feature was known as "private link" in ownCloud 10 and is still available but via the "internal" selection of a link.
 
 === Cloud Native Deployments
 
@@ -175,11 +175,11 @@ With that, Infinite Scale provides all deployment models for modern cloud infras
 
 == What is ownCloud Server
 
-ownCloud Server is an open source *LAMP-stack-based* server application that allows you to access your files from anywhere in a secure way. The files are stored on a server running ownCloud. You can access your files via the browser or sync them to your desktop or mobile device like you might know it from oneDrive, Dropbox or others. The difference with ownCloud is, that you stay in control of your data as you can install ownCloud in your own environment.
+ownCloud Server is an open source *LAMP-stack-based* server application that allows you to access your files from anywhere in a secure way. The files are stored on a server running ownCloud. You can access your files via the browser or sync them to your desktop or mobile device like you might know it from oneDrive, Dropbox or others. The difference with ownCloud is that you stay in control of your data as you can install ownCloud in your own environment.
 
 == Web Interfaces
 
-The web interfaces integrated in ownCoud Infinite Scale and owncloud Server give users native access to their ownCloud cloud data. With no needs for user-side installations, one can just access their data securely from all over the world with just a browser. 
+The web interfaces integrated in ownCloud Infinite Scale and owncloud Server give users native access to their ownCloud cloud data. With no need for user-side installations, one can just access their data securely from all over the world with just a browser.
 
 == Apps
 
