@@ -3,7 +3,7 @@
 :owncloud-server-changelog-url: https://owncloud.com/changelog/server/
 :page-aliases: {latest-server-version}@server:admin_manual:whats_new_admin.adoc, \
 {latest-server-version}@server:ROOT:server_release_notes.adoc, \
-next@docs::server_release_notes.adoc
+next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 
 * xref:changes-in-10-13-4[Changes in 10.13.4]
 * xref:changes-in-10-13-3[Changes in 10.13.3]
