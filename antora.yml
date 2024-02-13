@@ -1,6 +1,10 @@
-name: docs_main
+# this is the site's landing page
+# to make it component and version free in the URL, the 'name' MUST be ROOT and the 'version' ~
+# see the docs's site.yml to see how the start page gets integrated.
+# see: https://docs.antora.org/antora/latest/component-name-key/#root-component
+name: ROOT
 title: ownCloud Main Page
-version: next
+version: ~
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/partials/nav.adoc
