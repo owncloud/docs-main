@@ -1,7 +1,7 @@
 = Infinite Scale Server Releases
 :toc: right
 :toclevels: 1
-:page-aliases: next@docs::ocis_releases.adoc
+:page-aliases: next@docs::ocis_releases.adoc, next@docs_main::ocis_releases.adoc
 
 :description: ownCloud provides in-depth documentation for Infinite Scale. Functionalities added or decommissioned dependent on a particular version are referenced in the documentation directly.
 

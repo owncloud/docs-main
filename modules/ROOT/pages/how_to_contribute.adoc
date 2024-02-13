@@ -1,6 +1,6 @@
 = How to Contribute to the ownCloud Documentation
 :toc: right
-:page-aliases: next@docs::how_to_contribute.adoc
+:page-aliases: next@docs::how_to_contribute.adoc, next@docs_main::how_to_contribute.adoc
 
 :asciidoc-syntax-url: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 :antora-platform-url: https://docs.antora.org/
