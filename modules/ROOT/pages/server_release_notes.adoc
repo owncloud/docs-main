@@ -81,7 +81,7 @@ Web frontend offers a lot of proper translations. Browser capabilities are not n
 
 === Limit Performance Impact when Version Metadata is Enabled
 
-Negative performance impact when `file_storage.save_version_metadata` is enabled has been removed. https://github.com/owncloud/core/pull/41069[#41069]
+Negative performance impact when `file_storage.save_version_metadata` is enabled has been resolved. https://github.com/owncloud/core/pull/41069[#41069]
 
 === Proper Error Handling when Deleting Users or Groups
 
