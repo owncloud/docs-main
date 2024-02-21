@@ -85,7 +85,7 @@ Negative performance impact when `file_storage.save_version_metadata` is enabled
 
 === Proper Error Handling when Deleting Users or Groups
 
-In case of an error when deleting an user or a group no proper feedback was given to the user. This is now fixed. https://github.com/owncloud/core/pull/41077[#41077]
+In case of an error when deleting a user or a group no proper feedback was given to the user. This is now fixed. https://github.com/owncloud/core/pull/41077[#41077]
 
 === Account Terms Can be Removed if They Differ From the Ones Stored
 
@@ -113,7 +113,7 @@ Before user information was stored in the browser global object. In some rare ca
 
 === No Activities on Rejected Shares
 
-As soon as an user has rejected a share no activities within this share are now reported via the activity app. https://github.com/owncloud/core/pull/41078[#41078]
+As soon as a user has rejected a share no activities within this share are now reported via the activity app. https://github.com/owncloud/core/pull/41078[#41078]
 
 === CalDAV Query Where the Time Range Is not Given
 
@@ -125,7 +125,7 @@ For avatar and previews generation we now do not accept images exceeding specifi
 
 === Replace the isAdmin Implementation
 
-Instead of asking the backends for the groups an user belongs to, we now get the admin group and list the members to detect if user is admin or not. https://github.com/owncloud/core/pull/41171[#41171]
+Instead of asking the backends for the groups a user belongs to, we now get the admin group and list the members to detect if user is admin or not. https://github.com/owncloud/core/pull/41171[#41171]
 
 === Fix Log Exceptions for mp3 Previews
 
@@ -134,7 +134,7 @@ Log exceptions for mp3 files previews are no longer generated. https://github.co
 === Notable Changes
 
 * Fix: User input validation of comment verb. https://github.com/owncloud/core/pull/40965[#40965]
-* Fix: Input validation when setting the displayname of an user or self. https://github.com/owncloud/core/pull/41172[#41172]
+* Fix: Input validation when setting the displayname of a user or self. https://github.com/owncloud/core/pull/41172[#41172]
 * Fix: Sanitize title in dialogs. https://github.com/owncloud/core/pull/41166[#41166]
 
 === Updated App Versions
