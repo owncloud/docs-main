@@ -5,6 +5,7 @@
 {latest-server-version}@server:ROOT:server_release_notes.adoc, \
 next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 
+* xref:changes-in-10-14-0[Changes in 10.14.0]
 * xref:changes-in-10-13-4[Changes in 10.13.4]
 * xref:changes-in-10-13-3[Changes in 10.13.3]
 * xref:changes-in-10-13-2[Changes in 10.13.2]
@@ -46,6 +47,112 @@ next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 * xref:changes-in-8-1[Changes in 8.1]
 * xref:changes-in-8-0[Changes in 8.0]
 * xref:changes-in-7-0[Changes in 7.0]
+
+== Changes in 10.14.0
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.14.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+
+=== Migrations
+
+When upgrading from ownCloud Server 10.14.0, the following migrations will run as part of the upgrade procedure:
+
+* A migration step takes care of disabling the Template Editor app, if enabled (see below). This step is expected to be quick and should not impact upgrade duration significantly. https://github.com/owncloud/core/pull/41168[#41168]
+* A migration step takes care of setting oc_file_locks.id to bigint (see below). This step is expected to be quick and should not impact upgrade duration significantly. https://github.com/owncloud/core/pull/41158[#41158]
+
+=== Log.conditions With `shared_secret` Shall not Break File Uploads
+
+Any file upload (or PUT request in general) could have caused a 500/Internal Server Error due to wrong usage of the request object. This is now fixed. https://github.com/owncloud/core/pull/41044[#41044]
+
+=== Create Previews from First Page
+
+On multi-page documents (doc, odt, pdf, etc.) the preview will now be generated from the first page and no longer from the last page. https://github.com/owncloud/core/pull/41045[#41045]
+
+=== Fix Expiration Date and Eliminate Duplicate Entries in File List
+
+We have addressed two visual issues in the Web UI file list. Firstly, the problem where the start of the epoch was mistakenly displayed as an expiration date in the shared file list has been resolved. Secondly, we have tackled the bug causing duplicate entries to appear when switching between shared tabs and clicking on a file list entry. https://github.com/owncloud/core/pull/41056[#41056]
+
+=== LDAP Groups Will be Properly Applied to External Storages
+
+The admin can setup external storages to be used by specific users and groups. When a LDAP group was setup, there were some issues so users belonging to that group weren't able to access the external storage even though they should. Now, users belonging to LDAP groups can access external storages configured to be accessed by those groups. https://github.com/owncloud/core/pull/41063[#41063]
+
+=== Disallow Browsers to Translate the Frontend
+
+Web frontend offers a lot of proper translations. Browser capabilities are not needed. https://github.com/owncloud/core/pull/41067[#41067]
+
+=== Limit Performance Impact when Version Metadata is Enabled
+
+Negative performance impact when `file_storage.save_version_metadata` is enabled has been removed. https://github.com/owncloud/core/pull/41069[#41069]
+
+=== Proper Error Handling when Deleting Users or Groups
+
+In case of an error when deleting an user or a group no proper feedback was given to the user. This is now fixed. https://github.com/owncloud/core/pull/41077[#41077]
+
+=== Account Terms Can be Removed if They Differ From the Ones Stored
+
+Search terms for the account can now be removed from the DB if they differ from the ones stored in the DB. This can happen with the user_ldap app, when user search attributes are removed from the connection configuration in the LDAP wizard. https://github.com/owncloud/core/pull/41120[#41120]
+
+=== Add Compatibility for richdocuments.document.index Route
+
+Because of a change first introduced in richdocuments 4.1.0, it was necessary to add compatibility for the richdocuments.document.index route. https://github.com/owncloud/core/pull/41161[#41161]
+
+=== Decommission of Template Editor App
+
+App has been deprecated and themes should be rather used to change mail templates. https://github.com/owncloud/core/pull/41168[#41168]
+
+=== The `user:list -a` occ Command now Correctly Displays the User's Creation Time
+
+Previously, the `user:list -a` occ command was not correctly returning the user's creation time but rather the path to the user's home directory. This has been now fixed. https://github.com/owncloud/core/pull/41125[#41125]
+
+=== Set oc_file_locks.id to bigint
+
+In rare cases, the id column in the file_locks table could hit its limit (defined as int(10) unsigned) as it is set as autoincrement. This is now set to bigint. https://github.com/owncloud/core/pull/41158[#41158]
+
+=== Store User Information in Explicit Variable
+
+Before user information was stored in the browser global object. In some rare cases browsers seemed to loose data stored in the global object. This is fixed now. https://github.com/owncloud/core/pull/41054[#41054]
+
+=== No Activities on Rejected Shares
+
+As soon as an user has rejected a share no activities within this share are now reported via the activity app. https://github.com/owncloud/core/pull/41078[#41078]
+
+=== CalDAV Query Where the Time Range Is not Given
+
+Outlook CalDAV plugin is sending `false` as time range which no longer results in a crash. https://github.com/owncloud/core/pull/41050[#41050]
+
+=== Image Dimension Validation on Avatar Upload and Previews Generation
+
+For avatar and previews generation we now do not accept images exceeding specific dimensions. https://github.com/owncloud/core/pull/41175[#41175]
+
+=== Replace the isAdmin Implementation
+
+Instead of asking the backends for the groups an user belongs to, we now get the admin group and list the members to detect if user is admin or not. https://github.com/owncloud/core/pull/41171[#41171]
+
+=== Fix Log Exceptions for mp3 Previews
+
+Log exceptions for mp3 files previews are no longer generated. https://github.com/owncloud/core/pull/41153[#41153]
+
+=== Notable Changes
+
+* Fix: User input validation of comment verb. https://github.com/owncloud/core/pull/40965[#40965]
+* Fix: Input validation when setting the displayname of an user or self. https://github.com/owncloud/core/pull/41172[#41172]
+* Fix: Sanitize title in dialogs. https://github.com/owncloud/core/pull/41166[#41166]
+
+=== Updated App Versions
+
+Find below a list of updated apps in comparison with the 10.13.4 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
+
+* {oc-marketplace-url}/apps/files_classifier[Document Classification]: 1.5.0
+* {oc-marketplace-url}/apps/files_lifecycle[File Lifecycle Management]: 1.3.5
+* {oc-marketplace-url}/apps/files_pdfviewer[PDF Viewer]: 1.0.2
+* {oc-marketplace-url}/apps/guests[Guests]: 0.12.4
+* {oc-marketplace-url}/apps/impersonate[Impersonate]: 0.6.0
+* {oc-marketplace-url}/apps/templateeditor[Mail Template Editor]: 0.5.0
+* {oc-marketplace-url}/apps/user_ldap[LDAP Integration]: 0.19.0
+* {oc-marketplace-url}/apps/windows_network_drive[External Storage: Windows Network Drives]: 2.4.0
+
+=== Known Issues
+
+Currently there are no known issues with ownCloud Server 10.14.0. This section will be updated if issues are discovered.
 
 == Changes in 10.13.4
 
