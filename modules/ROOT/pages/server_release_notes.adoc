@@ -119,9 +119,13 @@ As soon as a user has rejected a share no activities within this share are now r
 
 Outlook CalDAV plugin is sending `false` as time range which no longer results in a crash. https://github.com/owncloud/core/pull/41050[#41050]
 
-=== Image Dimension Validation on Avatar Upload and Previews Generation
+=== Image Dimension Validation on Avatar Upload
 
-For avatar and previews generation we now do not accept images exceeding specific dimensions. https://github.com/owncloud/core/pull/41175[#41175]
+For avatar generation we now do not accept images exceeding specific dimensions (4k - 4096×2160). https://github.com/owncloud/core/pull/41175[#41175]
+
+=== Max Image Dimensions for Preview Generation are Now Configurable
+
+For preview generation it is now possible to define the maximum dimensions of the original image by using config.php options. Note that images bigger than the defined dimensions will not be processed. Default is 6016x4000, which corresponds to 24 MP. Please refer to `preview_max_dimensions` in config.sample.php for more details. https://github.com/owncloud/core/pull/41193[#41193]  
 
 === Replace the isAdmin Implementation
 
