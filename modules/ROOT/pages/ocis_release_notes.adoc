@@ -486,6 +486,25 @@ Its tasks will be taken over by other services.
 * For existing installations you need to set the `OCIS_SERVICE_ACCOUNT_ID` and `OCIS_SERVICE_ACCOUNT_SECRET` envvars.
 * For new installations `ocis init` sets the values automatically and no envvars are needed.  https://github.com/owncloud/ocis/pull/6427[#6427]
 
+== Infinite Scale 4.0.6
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible.
+
+== Infinite Scale 4.0.5
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible.
+
+[discrete]
+=== Enhancement
+
+* Add cli commands for the trash-bin: https://github.com/owncloud/ocis/pull/7936[#7936]
+
 == Infinite Scale 4.0.4
 
 [discrete]
