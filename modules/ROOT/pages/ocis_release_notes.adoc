@@ -41,7 +41,7 @@ Kudos to all members of the CS3 community who contributed to this project. A spe
 
 The password policy for sharing links allows administrators to set specific requirements for password strength. This feature ensures that your sharing practices align seamlessly with existing security policies.
 
-The customizable settings for the password are minimum amounts of:
+The customizable settings for the password are minimum number of:
 
 * uppercase characters
 * lowercase characters
@@ -409,7 +409,7 @@ The ability to use environment variables in yaml config files has been added to 
 [discrete]
 === Configurable Eventbus
 
-The event bus used in many services is now configurable with a set of environment variables starting with `OCIS_EVENTS_xxx`. This is important for scaling when deploying your instance with an orchestration tool like Docker or Kubernetes. External stores used in caching can be reused for the event bus easying the setup. See the _Environment Variables with Special Scope_ documentation for a list of services affected. Each service listed has a detailed description.
+The event bus used in many services is now configurable with a set of environment variables starting with `OCIS_EVENTS_xxx`. This is important for scaling when deploying your instance with an orchestration tool like Docker or Kubernetes. External stores used in caching can be reused for the event bus, easing the setup. See the _Environment Variables with Special Scope_ documentation for a list of services affected. Each service listed has a detailed description.
 
 [discrete]
 === New Services
