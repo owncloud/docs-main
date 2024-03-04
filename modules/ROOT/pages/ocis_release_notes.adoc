@@ -417,7 +417,10 @@ The event bus used in many services is now configurable with a set of environmen
 The following services have been added:
 
 * `auth-service`: +
-The Infinite Scale auth-service is used to authenticate service accounts. Compared to normal accounts, service accounts are Infinite Scale internal and not available to ordinary users like via LDAP. https://github.com/owncloud/ocis/pull/6427[#6427]
+The Infinite Scale auth-service is used to authenticate service accounts. Compared to normal accounts, service accounts are Infinite Scale internal and not available to ordinary users like via LDAP. https://github.com/owncloud/ocis/pull/6427[#6427] +
+--
+WARNING: Service accounts are a breaking change for instances which are upgrading from Infinite Scale 4.0.0 and before. Please make sure to carefully read the [upgrade instructions].
+--
 
 * `clientlog`: +
 The Infinite Scale clientlog service is responsible for composing machine-readable notifications for clients. Clients are apps and web interfaces. https://github.com/owncloud/ocis/pull/7217[#7217]
@@ -437,11 +440,18 @@ This section will be updated if issues are discovered.
 In future releases the following may no longer be supported or get removed:
 
 * The resharing feature +
-Existing shares will continue to work, but no new reshares can be created.
+Existing shares will continue to work, but no new reshares can be created. +
+We have disabled the resharing feature by default. It will be removed from the product. Existing reshares will still be visible to the original resource owner. Creation of new reshares will not be possible. Please make sure that `OCIS_ENABLE_RESHARING` is not set to `true` in your deployments. +
 * The ocs sharing API +
 It will be fully replaced by the new sharing-ng (graph) API
 * The store service will get fully removed +
 Its tasks will be taken over by other services.
+* Service Registies +
+We deprecated some service registries. If your `MICRO_REGISTRY` config is set to one of these values `mdns, nats, kubernetes, etcd, consul` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
+* Micro caches and stores +
+We deprecated some micro caches and stores. If one of your `*_CACHE_STORE` variables is using one of there values `redis-sentinel, redis, etcd, nats, ocmem` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
+
+
 
 === Migrations
 
