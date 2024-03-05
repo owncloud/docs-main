@@ -446,10 +446,10 @@ We have disabled the resharing feature by default. It will be removed from the p
 It will be fully replaced by the new sharing-ng (graph) API
 * The store service will get fully removed +
 Its tasks will be taken over by other services.
-* Service Registies +
+* Service Registries +
 We deprecated some service registries. If your `MICRO_REGISTRY` config is set to one of these values `mdns, nats, kubernetes, etcd, consul` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
 * Micro caches and stores +
-We deprecated some micro caches and stores. If one of your `*_CACHE_STORE` variables is using one of there values `redis-sentinel, redis, etcd, nats, ocmem` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
+We deprecated some micro caches and stores. If one of your `*_CACHE_STORE` variables is using one of the values `redis-sentinel, redis, etcd, nats, ocmem` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
 
 
 
