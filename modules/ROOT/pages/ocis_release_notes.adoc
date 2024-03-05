@@ -417,9 +417,10 @@ The event bus used in many services is now configurable with a set of environmen
 The following services have been added:
 
 * `auth-service`: +
-The Infinite Scale auth-service is used to authenticate service accounts. Compared to normal accounts, service accounts are Infinite Scale internal and not available to ordinary users like via LDAP. https://github.com/owncloud/ocis/pull/6427[#6427] +
+The Infinite Scale auth-service is used to authenticate service accounts. Compared to normal accounts, service accounts are Infinite Scale internal and not available to ordinary users like via LDAP. https://github.com/owncloud/ocis/pull/6427[#6427]
++
 --
-WARNING: Service accounts are a breaking change for instances which are upgrading from Infinite Scale 4.0.0 and before. Please make sure to carefully read the [upgrade instructions].
+WARNING: Service accounts are a breaking change for instances which are upgrading from Infinite Scale 4.0.0 and before. Please make sure to carefully read the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] instructions.
 --
 
 * `clientlog`: +
@@ -450,8 +451,6 @@ Its tasks will be taken over by other services.
 We deprecated some service registries. If your `MICRO_REGISTRY` config is set to one of these values `mdns, nats, kubernetes, etcd, consul` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
 * Micro caches and stores +
 We deprecated some micro caches and stores. If one of your `*_CACHE_STORE` variables is using one of the values `redis-sentinel, redis, etcd, nats, ocmem` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
-
-
 
 === Migrations
 
@@ -493,8 +492,10 @@ We deprecated some micro caches and stores. If one of your `*_CACHE_STORE` varia
 [discrete]
 ==== Service Accounts for Microservices
 
-* For existing installations you need to set the `OCIS_SERVICE_ACCOUNT_ID` and `OCIS_SERVICE_ACCOUNT_SECRET` envvars.
-* For new installations `ocis init` sets the values automatically and no envvars are needed.  https://github.com/owncloud/ocis/pull/6427[#6427]
+* For existing installations: +
+You need to set the `OCIS_SERVICE_ACCOUNT_ID` and `OCIS_SERVICE_ACCOUNT_SECRET` envvars.
+* For new installations: +
+The `ocis init` command sets the values automatically and no envvars are needed.  https://github.com/owncloud/ocis/pull/6427[#6427]
 
 == Infinite Scale 4.0.6
 
