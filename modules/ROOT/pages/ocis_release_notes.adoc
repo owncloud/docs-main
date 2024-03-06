@@ -451,6 +451,7 @@ Its tasks will be taken over by other services.
 We deprecated some service registries. If your `MICRO_REGISTRY` config is set to one of these values `mdns, nats, kubernetes, etcd, consul` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
 * Micro caches and stores +
 We deprecated some micro caches and stores. If one of your `*_CACHE_STORE` variables is using one of the values `redis-sentinel, redis, etcd, nats, ocmem` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
+* The maintenance command `ocis storage-users uploads list` has been deprecated and will be removed in a later release. A successor with more capabilities has been implemented, see the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] documentation for more details.
 
 === Migrations
 
@@ -459,7 +460,7 @@ We deprecated some micro caches and stores. If one of your `*_CACHE_STORE` varia
 
 // we can keep this section in every release notes as the link and content does not change.
  
-* The admin documentation provides a comprehensive list of added and removed environment variables. For details see next@ocis:ROOT:deployment/services/env-var-changes.adoc[Changed Environment Variables in Versions] and select the Infinite Scale version in the URI accordingly. It is strongly recommended to check this list and update your installation accordingly.
+* The admin documentation provides a comprehensive list of added and removed environment variables. For details see xref:next@ocis:ROOT:deployment/services/env-var-changes.adoc[Changed Environment Variables in Versions] and select the Infinite Scale version in the URI accordingly. It is strongly recommended to check this list and update your installation accordingly.
 
 [discrete]
 ==== Asynchronous Uploads
