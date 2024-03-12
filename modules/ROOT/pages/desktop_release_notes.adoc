@@ -1,0 +1,149 @@
+= Desktop App Release Notes
+:toc: macro
+:toclevels: 2
+:toc-title: Releases
+:description: Dear Desktop App user, find below the changes and known issues in the Desktop App that need your attention.
+
+:desktop-releases-url: https://github.com/owncloud/client/releases/tag/
+
+{description}
+
+{empty} +
+
+toc::[]
+
+== Desktop App 5.2.1
+
+[discrete]
+=== General
+
+The ownCloud Desktop App is now available in version 5.2.1! +
+If you have an enterprise subscription, this is the first 5.x release available for branding. We strongly recommend updating the Desktop App to the latest available version so that you can access and experience a range of new features and security fixes. Users with an Enterprise subscription are entitled to receive dedicated support.
+
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}/v5.2.1[GitHub, window=_blank].
+
+[discrete]
+=== Enhanced Functionality
+
+* Store proxy password securely
+* Windows VFS: Prevent rename to ignored file name
+* Change how all files deleted is handled
+* Enable crash reporter in commandline client
+* Log http request when it is sent
+* Display a progress spinner during the initial setup
+* Reduce how often file changes are handled
+* Persist filter settings for Not Synced tab
+* Make "Show files versions..." context menu action available
+* Allow selective sync of spaces in folder wizard
+* Help user fix problems on the last setup wizard page
+* `--cmd` argument added to the GUI client
+* Improved reliability for persisting settings
+
+[discrete]
+=== Notable Bugfixes
+
+ownCloud Desktop App 5.2.1 also delivers several important technical improvements such as:
+
+* Client stuck in reconnecting
+* Fix url resolution for app provider
+* Fix crash on unhandled status code on rename check
+* Fix crash when keychain job takes longer than expected
+* Crash when accepting a notification
+* Fix crash on start-up when starting shell integration
+* Properly schedule the sync after an account was added
+* Don't start credentials save jobs during shutdown
+* Avoid duplicate notifications when selective sync is enabled
+* VFS Placeholders can now be replaced with folders
+* Authentication dialog no longer appears again and again
+* Possible deadlock during log setup
+* Do not create default sync root when loading accounts
+* Update capabilites and other info after connect
+* Account activity and crash after an account was removed
+* Crash during application shutdown
+* Hide hidden folders again in the selective sync view
+* Fix check if a file is a placeholder
+* Hydration state of file after a directory was replaced with a file
+* Only syncronize after the server settings were refreshed
+* Consitently use the same icon for folders
+* Branding of folder status overlay
+* Creation of folder on the server
+* Selective sync when other than the remote root is synced
+
+[discrete]
+=== Newly Supported platforms
+
+* macOS 14 Sonoma
+* Fedora 39
+* openSUSE Leap 15.5
+* Ubuntu 23.10
+
+
+[discrete]
+=== Deprecated Platforms
+
+* Windows 8
+* Windows 10, version 1709
+* macOS 10.13 High Sierra
+* macOS 10.14 Mojave
+
+[discrete]
+=== Deprecation Announcements
+
+Looking further, the following versions may no longer be supported in future releases:
+
+* macOS 10.15 Catalina
+* Fedora 37
+
+[discrete]
+=== Removed Support
+
+The following Linux versions are no longer supported:
+
+* Fedora 36
+* Ubuntu 22.10
+
+[discrete]
+=== Branding
+
+If you're entitled to create branded versions of the ownCloud Desktop App, visit https://customer.owncloud.com[customer.owncloud.com] to start the branding process for 5.2.1, Updater Server 1.1.0. Customers hosting their own client-updater-server need to upgrade to version 1.1.0. It is included in the full branding subscription. It is shared in the new release 1.1.0 in the customer portal at https://customer.owncloud.com[customer.owncloud.com].
+
+== Desktop App 5.2.0
+
+[discrete]
+=== General
+
+This is a bugfix release only. Update as soon as possible.
+
+* Fix url resolution for app provider: https://github.com/owncloud/client/pull/11296[#11296]
+* Fix crash on unhandled status code on rename check: https://github.com/owncloud/client/pull/11379[#11379]
+
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}/v5.2.0[GitHub, window=_blank].
+
+== Desktop App 5.1.2
+
+[discrete]
+=== General
+
+This is a bugfix release only. Update as soon as possible.
+
+* Fix crash when keychain job takes longer than expected: https://github.com/owncloud/client/pull/11361[#11361]
+
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}/v5.1.2[GitHub, window=_blank].
+
+== Desktop App 5.0.0
+
+[discrete]
+=== General
+
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}/v5.0.0[GitHub, window=_blank].
+
+[discrete]
+=== Breaking changes
+
+* 32bit Windows is no longer supported
+* macOS 10.13 and macOS 10.14 are no longer supported
+
+[discrete]
+=== Known Issues
+
+Linux repositories are omitted from this release
