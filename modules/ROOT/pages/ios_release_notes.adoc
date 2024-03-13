@@ -1,0 +1,83 @@
+= iOS App Release Notes
+:toc: macro
+:toclevels: 2
+:toc-title: Releases
+:description: Dear iOS App user, find below the changes and known issues in the iOS App that need your attention.
+
+:ios-releases-url: https://github.com/owncloud/ios-app/releases/tag
+
+{description}
+
+{empty} +
+
+toc::[]
+
+== iOS App 12.1.0
+
+[discrete]
+=== General
+
+This release contains changes and bugfixes. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.1[GitHub, window=_blank].
+
+[discrete]
+=== Notable Changes
+
+* New account wizard: https://github.com/owncloud/ios-app/pull/1274[#1274]
+* Text recognition actions for images: https://github.com/owncloud/ios-app/pull/1283[#1283]
+* Share Action Extension "Save to ownCloud": https://github.com/owncloud/ios-app/issues/1293[#1293]
+* File extension / suffix protection: https://github.com/owncloud/ios-app/issues/1292[#1292]
+
+== iOS App 12.0.3
+
+[discrete]
+=== General
+
+This is a bugfix release only. Update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.0.3[GitHub, window=_blank].
+
+== iOS App 12.0.2
+
+[discrete]
+=== General
+
+This is a bugfix release only. Update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.0.2[GitHub, window=_blank].
+
+== iOS App 12.0.1
+
+[discrete]
+=== General
+
+This is a bugfix release only. Update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.0.1[GitHub, window=_blank].
+
+== iOS App 12.0.0
+
+[discrete]
+=== General
+
+This is a major release with many enhancements, bugfixes and security fixes. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.0.0[GitHub, window=_blank].
+
+[discrete]
+=== Notable Enhancements
+
+* Version 12 Major Release +
+Rearchitectured for iOS 15 and later.
+* ownCloud Infinite Scale support +
+Support for Spaces, Authenticated WebFinger and other new oCIS features.
+* New Search Capabilities +
+Powerful new search UI, saved searches and search templates.
+* New Navigation +
+Navigate via the new sidebar, breadcrumbs and browser controls.
+* Role-based Sharing Interface +
+The new role-based sharing user interface makes creating and editing shares and links even easier.
+* Grid View Modes +
+Switch between list and several, different grid modes to display your folder's contents in new ways.
+* App Provider support +
+Create and edit new documents through app providers on servers that support them.
+* Improved Theming +
+The updated dark and light themes make use of a new, CSS-based theming system.
+* MDM Enhancements +
+Many new MDM parameters.
