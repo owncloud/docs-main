@@ -3,6 +3,8 @@
 :toclevels: 2
 :toc-title: Releases
 :description: Dear Desktop App user, find below the changes and known issues in the Desktop App that need your attention.
+:page-aliases: 5.2@desktop:ROOT:appendices/release_notes.adoc
+// IMPORTANT: this page alias must be removed at the moment 5.2 is no longer active!!
 
 :desktop-releases-url: https://github.com/owncloud/client/releases/tag/
 
