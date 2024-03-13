@@ -1,0 +1,73 @@
+= Android App Release Notes
+:toc: macro
+:toclevels: 2
+:toc-title: Releases
+:description: Dear Android App user, find below the changes and known issues in the Andriod App that need your attention.
+
+:android-releases-url: https://github.com/owncloud/android/releases/tag/
+
+{description}
+
+{empty} +
+
+toc::[]
+
+== Android App 4.2.1
+
+[discrete]
+=== General
+
+This is a bugfix release only. Update as soon as possible.
+
+* Fixed some crashes in 4.2.0: https://github.com/owncloud/android/issues/4318[#4318]
+
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}/v4.2.1[GitHub, window=_blank].
+
+== Android App 4.2.0
+
+[discrete]
+=== General
+
+This release contains enhancements, bugfixes and security improvements. +
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}/v4.2.0[GitHub, window=_blank].
+
+[discrete]
+=== Security Improvements
+
+* Improve biometric authentication security: https://github.com/owncloud/android/issues/4180[#4180]
+
+[discrete]
+=== Notable Enhancements
+
+* New MDM functionalities, see: https://github.com/owncloud/android/issues/4249[#4249] and https://github.com/owncloud/android/issues/4288[#4288]
+* Thumbnail improvements in grid view: https://github.com/owncloud/android/issues/4145[#4145]
+* Auto upload in oCIS accounts allows upload to any space: https://github.com/owncloud/android/issues/4117[#4117]
+* "Share to" in oCIS accounts allows upload to any space: https://github.com/owncloud/android/issues/4088[#4088]
+
+== Android App 4.1.1
+
+[discrete]
+=== General
+
+This is a bugfix release only. Update as soon as possible.
+
+* Some Null Pointer Exceptions avoided: https://github.com/owncloud/android/issues/4158[#4158]
+* Thumbnails correctly shown for every user: https://github.com/owncloud/android/pull/4189[#4189]
+
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}/v4.1.1[GitHub, window=_blank].
+
+== Android App 4.1.0
+
+[discrete]
+=== General
+
+This release contains enhancements and bugfixes. +
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}/v4.1.0[GitHub, window=_blank].
+
+[discrete]
+=== Notable Enhancements
+
+* Show "More" button for every file list item: https://github.com/owncloud/android/issues/2885[#2885]
+* Added "Open in web" options to main file list: https://github.com/owncloud/android/issues/3860[#3860]
+* Force security if not protected: https://github.com/owncloud/android/issues/4061[#4061]
+* Prevent http traffic with branding options: https://github.com/owncloud/android/issues/4066[#4066]
