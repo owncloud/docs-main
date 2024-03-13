@@ -17,4 +17,4 @@
 
 === Former Stable Release (version {ocis-former-version})
 
-* xref:{latest-ocis-version}@ocis:ROOT:index.adoc[Infinite Scale Documentation]
+* xref:{previous-ocis-version}@ocis:ROOT:index.adoc[Infinite Scale Documentation]

@@ -14,6 +14,509 @@
 
 toc::[]
 
+== Infinite Scale 5.0.0
+
+[discrete]
+=== General
+
+This release brings significant enhancements in performance and stability. It is also designed to provide an optimized experience for both end users and administrators. Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: https://github.com/owncloud/ocis/releases/tag/v5.0.0[Changes in 5.0.0]
+* Web: https://github.com/owncloud/web/releases/tag/v8.0.0[Changelog for ownCloud Web 8.0.0]
+
+[discrete]
+=== Federated Cloud Sharing (Feature Preview)
+
+Federated cloud sharing allows users to access and collaborate on files stored on connected external servers, as if they were stored on the user's instance. This creates a fluid and efficient workflow, eliminating the need for multiple file versions or complex file transfer processes. With federated cloud sharing data can reside on its original server, ensuring compliance with regional data sovereignty laws and organizational data policies.
+
+To enable file sharing with a user on a different, connected server, an initial invitation needs to be sent. Once this is completed, files can be shared with that user as usual by entering their username, just like with internal users. The only difference is that users from connected instances will be marked as `Federated Users` for easy identification and management.
+
+*Technical Note:* +
+Federated cloud sharing in Infinite Scale is based on the Open Cloud Mesh protocol version 1.1 (OCM 1.1) https://cs3org.github.io/OCM-API/docs.html?branch=v1.1.0&repo=OCM-API&user=cs3org#/paths/~1shares/post[Learn more about OCM 1.1]
+
+Kudos to all members of the CS3 community who contributed to this project. A special thanks is owed to CERN for their contribution of the Science Mesh App. Thank You!
+
+[discrete]
+=== Password Policy for Sharing Links
+
+The password policy for sharing links allows administrators to set specific requirements for password strength. This feature ensures that your sharing practices align seamlessly with existing security policies.
+
+The customizable settings for the password are minimum number of:
+
+* uppercase characters
+* lowercase characters
+* numbers
+* the special characters: {nbsp} +++"!#\$%&'()*+,-./:;<=>?@[\]^_`{|}~+++
+* and password length
+
+**Banned Passwords List** +
+To further bolster security, this update includes the ability to define a banned password list. This feature prevents users from using overly common or simplistic passwords, like `Password123!`, thereby reducing the risk of unauthorized access.
+
+**Integrated Password Generator** +
+Accompanying this new password policy is a built-in password generator. It automatically creates passwords that comply with your defined requirements, simplifying the process for users while maintaining a high standard of security.
+
+[discrete]
+=== Default Link Permission
+
+With this new capability we've introduced a new configuration option that allows administrators to set the default permissions for sharing links. This feature is tailored to meet the varying security needs of different organizations.
+
+As an administrator, you now have the flexibility to define what the standard permissions for a link should be. This means you can choose whether to create a sharing link that is accessible to external parties with just a click, or opt for a more secure link that requires user authentication for access.
+
+The default link permissions are communicated through capabilities. The default setting for this config option is set to `default_link_permissions:1`, meaning that by default, anyone can access the link with viewer permissions. This enhancement is geared towards providing administrators with greater control over their organizations' data sharing and security protocols.
+
+[discrete]
+=== Filter Chips: Type and Last Modified
+
+[discrete]
+==== Type Filter Chip
+
+Easily narrow down your search by file type. Whether you're looking for documents, images, spreadsheets, or any other file types, the type filter chip allows you to quickly filter results to match your specific needs. The type filter groups the following MIME types. (The usual file extension is indicated in parentheses after the MIME type for ease of reference. However, it is the MIME type of a file that is decisive, not the file extension.)
+
+* **Document Filter:**
+
+** .doc (Microsoft Word Document)
+** .docx (Microsoft Word Open XML Document)
+** .odt (OpenDocument Text Document)
+** .txt (Plain Text File)
+** .md (Markdown Documentation File)
+** .rtf (Rich Text Format File)
+** .pages (Apple Pages Document)
+
+* **Spreadsheet Filter:**
+
+** .xls (Microsoft Excel Spreadsheet)
+** .xlsx (Microsoft Excel Open XML Spreadsheet)
+** .ods (OpenDocument Spreadsheet)
+** .csv (Comma-Separated Values)
+** .numbers (Apple Numbers Spreadsheet)
+
+* **Presentation Filter:**
+
+** .pptx (PowerPoint Presentation, Open XML)
+** .ppt (PowerPoint Presentation)
+** .odp (OpenDocument Presentation)
+** .key (Apple Keynote Presentation)
+
+* **PDF Filter:**
+
+** .pdf (Portable Document Format)
+
+* **Image Filter:**
+
+** .jpg or .jpeg (JPEG image)
+** .png (Portable Network Graphics)
+** .gif (Graphics Interchange Format)
+** .bmp (Bitmap Image File)
+** .tif or .tiff (Tagged Image File Format)
+** .svg (Scalable Vector Graphics)
+** .webp (WebP image)
+** .psd (Adobe Photoshop Document)
+** .raw (Raw Image Formats, various camera manufacturers)
+** .heif or .heic (High Efficiency Image File Format)
+** .ico (Icon File)
+** .tga (Targa Graphic)
+** .pcx (Paintbrush Bitmap Image)
+** .ai (Adobe Illustrator File)
+** .eps (Encapsulated PostScript)
+** .wmf (Windows Metafile)
+** .emf (Enhanced Metafile)
+** .xcf (eXperimental Computing Facility, native GIMP file format)
+** .indd (Adobe InDesign)
+** .cr2 (Canon Raw 2nd Edition)
+** .nef (Nikon Electronic Format)
+** .orf (Olympus Raw Format)
+** .sr2 (Sony Raw Format 2)
+** .pef (Pentax Electronic File)
+** .arw (Sony Alpha Raw)
+** .rw2 (Panasonic RAW 2)
+** .dng (Digital Negative)
+** .exr (OpenEXR)
+** .apng (Animated Portable Network Graphics)
+** .avif (AV1 Image File Format)
+** .jxr (JPEG XR)
+** .hdp (HD Photo, also known as JPEG XR)
+** .cpt (Corel Photo-Paint image)
+** .dds (DirectDraw Surface)
+** .jp2 or .j2k (JPEG 2000)
+** .jng (JPEG Network Graphics)
+** .pbm (Portable Bitmap Format)
+** .pgm (Portable Graymap Format)
+** .ppm (Portable Pixmap Format)
+** .pnm (Portable Any Map)
+** .pfm (Portable Float Map)
+** .pam (Pluggable Authentication Module)
+** .hdr (High Dynamic Range Image)
+** .ras (Sun Raster Graphic)
+** .sgi or .rgb (Silicon Graphics Image)
+** .tiff (Tagged Image File Format, alternative spelling)
+** .xbm (X Bitmap)
+** .xpm (X Pixmap)
+** .ico (Windows Icon)
+** .cur (Windows Cursor)
+
+// do not remove
+
+[none]
+** ... and all other types that are included within the MIME Types of image/*
+
+// do not remove
+
+* **Video Filter:**
+
+** video/* 
+
+** .mp4 (MPEG-4 Part 14)
+** .avi (Audio Video Interleave)
+** .mov (Apple QuickTime Movie)
+** .wmv (Windows Media Video)
+** .flv (Flash Video)
+** .mkv (Matroska Video)
+** .webm (WebM Video)
+** .mpeg or .mpg (MPEG Video)
+** .vob (DVD Video Object)
+** .ogv (Ogg Video)
+** .m4v (MPEG-4 Video File)
+** .3gp (3GPP Multimedia File)
+** .3g2 (3GPP2 Multimedia File)
+** .asf (Advanced Systems Format)
+** .h264 (H.264 Encoded Video File)
+** .rm (RealMedia File)
+** .rmvb (RealMedia Variable Bitrate)
+** .ts (MPEG Transport Stream)
+** .mts (AVCHD Video File)
+** .m2ts (MPEG-2 Transport Stream)
+** .divx (DivX-Encoded Movie File)
+** .xvid (Xvid-Encoded Video File)
+** .dvr-ms (Microsoft Digital Video Recording)
+** .f4v (Flash MP4 Video File)
+** .m2v (MPEG-2 Video)
+** .mxf (Material Exchange Format)
+** .svi (Samsung Video File)
+** .m4p (MPEG-4 Protected File)
+** .qt (QuickTime Movie)
+** .nsv (Nullsoft Streaming Video File)
+** .amv (Anime Music Video File)
+** .flh (FLIC Animation File)
+** .roq (Id Software Game Video)
+** .mpe (MPEG Movie File)
+** .smk (Smacker Video File)
+** .bik (Bink Video File)
+** .ayuv (Uncompressed YUV Video File)
+
+// do not remove
+
+[none]
+** ... and all other types that are included within the MIME Types of video/*
+
+// do not remove
+
+* **Audio Filter:**
+** .mp3 (MPEG Audio Layer III)
+** .wav (Waveform Audio File Format)
+** .aac (Advanced Audio Coding)
+** .flac (Free Lossless Audio Codec)
+** .ogg (Ogg Vorbis)
+** .m4a (MPEG-4 Audio)
+** .wma (Windows Media Audio)
+** .opus (Opus Audio Codec)
+** .alac (Apple Lossless Audio Codec)
+** .mid or .midi (Musical Instrument Digital Interface)
+** .mp2 (MPEG Audio Layer II)
+** .amr (Adaptive Multi-Rate)
+** .aiff or .aif (Audio Interchange File Format)
+** .au (Sun Microsystems Audio)
+** .ra or .ram (Real Audio)
+** .dts (Digital Theater Systems)
+** .ac3 (Audio Codec 3)
+** .ape (Monkey's Audio)
+** .mka (Matroska Audio)
+** .gsm (Global System for Mobile Audio)
+** .vox (Dialogic ADPCM)
+** .tta (True Audio Codec)
+** .voc (Creative Labs Audio)
+** .qcp (Qualcomm PureVoice)
+** .vqf (TwinVQ)
+** .paf (Ensoniq PARIS Audio File)
+** .spx (Speex)
+** .wv (WavPack)
+** .oga (Ogg Audio)
+** .mogg (Multitrack Ogg)
+
+// do not remove
+
+[none]
+** ... and all other types that are included within the MIME Types of audio/*
+
+// do not remove
+
+* **Archive Filter:**
+
+** .zip (zip)
+** .tar (x-tar)
+** .gzip (x-gzip)
+** .7z (x-7z-compressed)
+** .rar (x-rar-compressed)
+** .bz (x-bzip)
+** .bz2 (x-bzip2)
+** .tgz (x-tgz)
+
+// do not remove
+
+[none]
+** ... _only_ those types that are starting within the MIME Types of application/<name-in-brackets>
+
+// do not remove
+
+[discrete]
+==== Last Modified Filter Chip
+
+Find the most relevant files in no time. This filter enables users to search for files based on the time they were last modified. Whether you're looking for the latest versions or need to access files from a specific time period, this filter streamlines your search process.
+
+* **Modified Filter:**
+** today
+** last 7 days
+** last 30 days
+** this year
+** last year
+
+[discrete]
+=== Simplified Shared with me Page
+
+We made significant improvements to the `Shared with me` section to make your file-sharing experience more efficient and user-friendly.
+
+Previously divided into three parts, the `Shared with me` section has now been consolidated into a single, simplified section. This change provides a more streamlined view of all shared files, making it easier to navigate and manage your shared content.
+
+[discrete]
+==== Auto-Accept Feature for Shares:
+
+In an effort to simplify your workflow, we have implemented an auto-accept feature for shares which is enabled by default. This means that any files shared with you will automatically appear in your `Shared with me` section without the need for manual acceptance, saving you time and effort.
+
+[discrete]
+==== Filter by People:
+
+If you remember only the name of the person who shared a file with you, our new filter option comes to the rescue. You can now filter the shares by the name of people, making it easier to find files shared by specific individuals.
+
+[discrete]
+==== Option to Hide Unwanted Shares:
+
+We understand that sometimes you may receive shares that are not relevant or wanted. To address this, we have introduced a feature that allows you to hide such shares. By hiding a share, you can maintain a clear view of the shares that are important to you, ensuring your `Shared with me` section remains organized and clutter-free.
+
+**Access to Hidden Shares:** +
+If you change your mind and wish to view a hidden share, you can easily do so. A dedicated area for hidden shares has been added, allowing you to revisit and manage any shares you have previously hidden.
+
+[discrete]
+==== Enhanced Search Filter:
+
+To help you quickly find specific shares, we have improved the search functionality within the `Shared with me` section. This enhanced search filter enables you to efficiently locate files based on various criteria.
+
+[discrete]
+==== Sync Feature for Better Control:
+
+Gain control over which shared files are available for sync on your mobile and desktop devices. This feature is especially useful for managing large files. You can now choose to exclude certain files from syncing right from the start.
+
+[discrete]
+=== Shortcuts
+
+This new feature is designed to improve navigation and access within the platform, making your experience more efficient and integrated. Creating shortcuts is a new option in the 'New' menu, where you can also create new files.
+
+**Link to External: Webpage:** +
+You can now create shortcuts that link directly to external websites. This feature allows for quick access to frequently used online resources, right from within ownCloud Infinite Scale.
+
+**Internal Linking to a File, a Folder or a Space** +
+The shortcut feature also allows you to create links to internal files, folders, or spaces. This improves organization and accessibility of important documents and areas within ownCloud, which is especially useful in collaborative scenarios.
+
+[discrete]
+=== Improved Tags
+
+You can now add tags to files directly from the file's details panel in the right sidebar. This update eliminates the need to navigate away from the details panel, streamlining the process of organizing and categorizing your documents. With tagging now integrated into the details panel, the process becomes more intuitive and user-friendly.
+
+[discrete]
+=== New Action: Duplicate a Space
+
+This action is designed to enhance the flexibility and efficiency of space management for our users. You now have the option to create a copy of an existing space. This duplication includes all files and folder structures within the space. The duplicated space will be free of any existing members, shares, sharing links or tags. This precaution is taken to prevent accidental data leakage and to ensure that the space manager can start from scratch, setting up a new space for team collaboration as needed. This feature saves time and effort in setting up new spaces that require content and structure similar to existing ones, but with different sharing.
+
+[discrete]
+=== Show WebDAV Path
+
+Advanced users now have the ability to view the WebDav path and URL for each file, folder or space. This is particularly beneficial for users who prefer to interact via alternative methods, such as command-line interfaces or other third-party tools that support WebDav. It offers a direct and powerful way to interact with resources, especially for scripting, automation, or programmatic access.
+
+[discrete]
+=== Realtime Events (Server-Sent Events)
+
+This new feature brings the ability to display events in real-time, a shift from the traditional time series (polling mechanism). This advancement is made possible through the implementation of Server-Sent Events (SSE). By leveraging SSE, Infinite Scale now provides an instantaneous update mechanism. This means that events like notifications and file locking status changes are communicated to users in real-time.
+
+**Real-Time Notifications:** +
+You will receive notifications instantly ensuring that you don't have to wait for important information.
+
+**Immediate File Locking Visibility:** +
+The status of file locking and unlocking is now displayed in real-time. This feature is crucial for collaborative environments, as it allows team members to see when a file is being used or becomes available, preventing conflicts and enhancing collaboration efficiency.
+
+[discrete]
+=== Keyword Query Language (KQL)
+
+To streamline and enhance the development process, we have standardized the search syntax across server-client search requests using the Keyword Query Language (KQL). By adopting KQL, a well-known and widely used standard, we significantly simplify the development process for client applications. Developers can now rely on a familiar syntax, reducing complexity and accelerating development.
+
+[discrete]
+=== NATS.js as Registry
+
+To enhance the robustness of Infinite Scale we integrated NATS.js as our primary registry mechanism. This update is particularly beneficial for large-scale deployments. With NATS.js, Infinite Scale is better equipped to handle large-scale deployments efficiently. NATS.js facilitates smoother and more stable operations even as the number of services and nodes increases. The goal is to provide a resilient and fault-tolerant framework, ensuring continuous and uninterrupted service even in demanding scenarios.
+
+[discrete]
+=== Web Embed Mode
+
+The Web UI now provides an Embed Mode for easier integration into other applications. The embed mode allows external applications to integrate the Web UI directly. This means that users can now access and interact with Infinite Scale within the context of other applications.
+
+Example: Imagine you're using a chat application and want to send a sharing link. With the embed mode, you can open the Web UI in a file picker-like interface, select files from Infinite Scale, and share them without ever having to leave the chat tab.
+
+Embed mode streamlines workflows and eliminates the need to switch between different applications to manage files.
+
+[discrete]
+=== Focused "New" Menu
+
+The `New` menu items have been reorganized with the most frequently used items placed at the top. This rearrangement is based on user feedback, ensuring that the most important file types are readily accessible. In our commitment to open source and universal accessibility, we've revised the wording for document labels to be more vendor-neutral. This change reflects our dedication to providing a user-friendly interface that caters to a universal user base.
+
+[discrete]
+=== Open the Sidebar From Everywhere
+We have relocated the button to open the sidebar, positioning it now in the global top bar. This move allows users to access the right sidebar not just in the Files app, but also in a variety of other applications. This change provides a way for integrating features like file details and sharing options into other applications, beside the Files app.
+
+[discrete]
+=== 400% Faster Upload Preparation Time
+
+In the latest update, we've implemented significant improvements in the efficiency of folder tree creation during file uploads. By optimizing the process to run asynchronously and reducing the number of PROPFIND requests on nested folders, we've managed to substantially speed up this operation. In a test scenario with a folder containing 155 subfolders, the time to create these folders has been reduced from 20-30 seconds to just 5-7 seconds. While this duration may still be noticeable, it represents a considerable improvement, especially considering the limitations of client-side operations.
+
+Additionally, we've massively enhanced the upload preparation time. Rather than setting file data individually for each file, we now collect all necessary data first and then apply it in a single batch using Uppy's setState method. This approach streamlines the upload process, making it much quicker and more efficient for users.
+
+[discrete]
+=== Thumbnail Generation Using Image Processors
+
+When thumbnail creation is requested by the WebUI, the format can now be changed as part of the creation process. Previously images were always scaled to fit the given frame. In the process it could happen that images were cropped to fit, making them often hard to identify. By defining a processor via the API, images can now be scaled to best fit a given frame.
+
+[discrete]
+=== Experimental: Support of AD FS
+
+Experimental support for AD FS has been added. AD FS `/adfs/.well-known/openid-configuration` has an optional `access_token_issuer` which, in violation of the OpenID Connect spec, takes precedence over `issuer`.
+
+[discrete]
+=== Enhanced Extension Capabilities
+
+To enable custom Infinite Scale extensions, custom routes have been added to the Infinite Scale proxy service. More details can be found in the https://owncloud.dev/services/proxy/#configuring-routes[Developer Documentation].
+
+[discrete]
+=== Use Environment Variables in yaml Config Files
+
+The ability to use environment variables in yaml config files has been added to make configuring Infinite Scale services easier. The value in the yaml file will be replaced by the actual value of the environment variable at runtime. This makes it possible to use the same config file for different environments without the need to change the config file itself, useful like when using docker compose with `.env` files to run Infinite Scale services.
+
+[discrete]
+=== Configurable Eventbus
+
+The event bus used in many services is now configurable with a set of environment variables starting with `OCIS_EVENTS_xxx`. This is important for scaling when deploying your instance with an orchestration tool like Docker or Kubernetes. External stores used in caching can be reused for the event bus, easing the setup. See the _Environment Variables with Special Scope_ documentation for a list of services affected. Each service listed has a detailed description.
+
+[discrete]
+=== New Services
+
+The following services have been added:
+
+* `auth-service`: +
+The Infinite Scale auth-service is used to authenticate service accounts. Compared to normal accounts, service accounts are Infinite Scale internal and not available to ordinary users like via LDAP. https://github.com/owncloud/ocis/pull/6427[#6427]
++
+--
+WARNING: Service accounts are a breaking change for instances which are upgrading from Infinite Scale 4.0.0 and before. Please make sure to carefully read the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] instructions.
+--
+
+* `clientlog`: +
+The Infinite Scale clientlog service is responsible for composing machine-readable notifications for clients. Clients are apps and web interfaces. https://github.com/owncloud/ocis/pull/7217[#7217]
+
+* `ocm`: +
+The Infinite Scale OCM service provides federated sharing functionality based on the ScienceMesh and OCM HTTP APIs. https://github.com/owncloud/ocis/pull/7998[#7998]
+
+* `sse`: +
+The Infinite Scale sse service is responsible for sending sse (server-sent events) to a user. The referenced pull request https://github.com/owncloud/ocis/pull/6992[#6992] is the initial PR introducing SSE. More PRs have been added to improve and extend the SSE service. For details see the Infinite Scale changelog.
+
+=== Known Issues
+
+This section will be updated if issues are discovered.
+
+=== Deprecation Announcements
+
+In future releases the following may no longer be supported or get removed:
+
+* The resharing feature +
+Existing shares will continue to work, but no new reshares can be created. +
+We have disabled the resharing feature by default. It will be removed from the product. Existing reshares will still be visible to the original resource owner. Creation of new reshares will not be possible. Please make sure that `OCIS_ENABLE_RESHARING` is not set to `true` in your deployments. +
+* The ocs sharing API +
+It will be fully replaced by the new sharing-ng (graph) API
+* The store service will get fully removed +
+Its tasks will be taken over by other services.
+* Service Registries +
+We deprecated some service registries. If your `MICRO_REGISTRY` config is set to one of these values `mdns, nats, kubernetes, etcd, consul` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
+* Micro caches and stores +
+We deprecated some micro caches and stores. If one of your `*_CACHE_STORE` variables is using one of the values `redis-sentinel, redis, etcd, nats, ocmem` please use `nats-js-kv` in the future (`memory` is only intended for testing environments).
+* The maintenance command `ocis storage-users uploads list` has been deprecated and will be removed in a later release. A successor with more capabilities has been implemented, see the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] documentation for more details.
+
+=== Migrations
+
+[discrete]
+==== Changed Environment Variables
+
+// we can keep this section in every release notes as the link and content does not change.
+ 
+* The admin documentation provides a comprehensive list of added and removed environment variables. For details see xref:next@ocis:ROOT:deployment/services/env-var-changes.adoc[Changed Environment Variables in Versions] and select the Infinite Scale version in the URI accordingly. It is strongly recommended to check this list and update your installation accordingly.
+
+[discrete]
+==== Asynchronous Uploads
+
+* This change sets the default for async uploads `OCIS_ASYNC_UPLOADS` from `false` to `true`. True enables postprocessing for all uploaded files. Note, newer features are based on async uploads and might not work correctly when left to false or turning the feature off manually. https://github.com/owncloud/ocis/pull/7416[#7416]
+
+[discrete]
+==== Cache Stores
+
+* Some cache stores as defined in `OCIS_CACHE_STORE` are now marked for deprecation. These are `ocmem`, `redis`, `etcd` and `nats-js`. A new cache store has been added: `nats-js-kv`. If you have used one of the deprecated stores, you should change your configuration to use one of the supported ones as the deprecated stores will be removed in a later version. https://github.com/owncloud/ocis/pull/7979[#7979]
+
+
+[discrete]
+==== Default Registry
+
+* The default registry of `MICRO_REGISTRY` has been switched from `memory` to `nats-js-kv`. In addition, some registries are now marked for deprecation. These are `nats`, `etcd`, `consul` and `mdns`. If you have manually defined one of the deprecated registries, you should reconfigure to use one of the supported ones as the deprecated registries will be removed in a later version. In addition, the environment variables `MICRO_REGISTRY_AUTH_PASSWORD` and `MICRO_REGISTRY_AUTH_USERNAME` can be configured when using a nats cluster. https://github.com/owncloud/ocis/pull/8011[#8011]
+
+[discrete]
+==== Antivirus Scanning Service
+
+* The antivirus ICAP client library has been updated and the antivirus scanning service optimized. Therefore the environment variable `ANTIVIRUS_ICAP_TIMEOUT` has been deprecated and replaced by `ANTIVIRUS_ICAP_SCAN_TIMEOUT`. https://github.com/owncloud/ocis/pull/8062[#8062]
+
+[discrete]
+==== Web Config Keys
+
+* The environment variables `WEB_OPTION_IMPRINT_URL`, `WEB_OPTION_PRIVACY_URL` and `WEB_OPTION_ACCESS_DENIED_HELP_URL` have been removed and the settings are now avaialble as part of the https://owncloud.dev/clients/web/theming/#common-section[Web Theming]. For details see the referenced developer documentation. https://github.com/owncloud/ocis/pull/7970[#7970] and https://github.com/owncloud/ocis/pull/7938[#7938]
+
+=== Breaking Changes
+
+[discrete]
+==== Service Accounts for Microservices
+
+* For existing installations: +
+You need to set the `OCIS_SERVICE_ACCOUNT_ID` and `OCIS_SERVICE_ACCOUNT_SECRET` envvars.
+* For new installations: +
+The `ocis init` command sets the values automatically and no envvars are needed.  https://github.com/owncloud/ocis/pull/6427[#6427]
+
+== Infinite Scale 4.0.6
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible.
+
+== Infinite Scale 4.0.5
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible.
+
+[discrete]
+=== Enhancement
+
+* Add cli commands for the trash-bin: https://github.com/owncloud/ocis/pull/7936[#7936]
+
 == Infinite Scale 4.0.4
 
 [discrete]
@@ -487,6 +990,7 @@ See the https://github.com/owncloud/ocis/releases/tag/v2.0.0[BREAKING CHANGE in 
 
 == Beta Releases
 
+[discrete]
 === Beta 8
 
 Infinite Scale 2.0.0 Beta 8 includes a huge number of smaller bug fixes and polishing all around. It introduces a more efficient and scalable way to store share information and improves the performance of ownCloud Web in many areas very noticeably. Furthermore it is now possible to set user quotas in the UI and administrators can now delete orphaned spaces.
@@ -539,6 +1043,7 @@ The most prominent changes in **Infinite Scale 2.0.0 beta8** and ownCloud Web 5.
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v2.0.0-beta.8[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.7.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 === Beta 7
 
 Infinite Scale 2.0.0 beta7 includes stability, security and performance improvements. ownCloud Web has been condensed a bit and the cut/copy/paste feature has been reworked. Web Office can now be configured to use a certain language and system administrators can recover a lost admin password.
@@ -555,6 +1060,7 @@ The most prominent changes in **Infinite Scale 2.0.0 beta7** and ownCloud Web 5.
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v2.0.0-beta.7[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.7.0-rc.10[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 === Beta 6
 
 Infinite Scale 2.0.0 beta6 includes a huge number of bug fixes, cosmetic and performance improvements. It also brings a lot of improvements and fixes which further hardened the 'Spaces' feature.
@@ -579,6 +1085,7 @@ The most prominent changes in **Infinite Scale 2.0.0 beta6** and ownCloud Web 5.
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v2.0.0-beta.6[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.7.0-rc.8[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 === Beta 5
 
 Infinite Scale 2.0.0 beta5 includes a huge number of bug fixes and performance improvements. It further finalizes the 'Resharing' feature.
@@ -594,6 +1101,7 @@ The most prominent changes in **Infinite Scale 2.0.0 beta5** and ownCloud Web 5.
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v2.0.0-beta.5[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.7.0-rc.4[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 === Beta 4
 
 Infinite Scale 2.0.0 beta4 introduces the 'Resharing' feature in the backend, brings major improvements for file uploads and adds keyboard shortcuts as well as full drag & drop support in ownCloud Web.
@@ -613,6 +1121,7 @@ IMPORTANT: Due to an issue, the `latest` version of the https://github.com/cs3or
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v2.0.0-beta.4[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.7.0-rc.1[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 === Beta 3
 
 The third beta release of Infinite Scale 2.0.0 allows clients to list the contents of "Shares" and rounds-off Spaces with a no-restriction quota feature. Web is shipped with the version 5.5.0-rc.9 and focuses on upload reliability and usability. 
@@ -626,6 +1135,7 @@ The most prominent changes in **Infinite Scale 2.0.0 beta3** and ownCloud Web 5.
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v2.0.0-beta.3[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.5.0-rc.9[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 === Beta 2
 
 The Infinite Scale 2.0.0 beta2 release ships the first round of bug fixes and performance improvements. ownCloud Web has received a lot of smaller improvements all around.
@@ -638,6 +1148,7 @@ The most prominent changes in **Infinite Scale 2.0.0 beta2** and ownCloud Web 5.
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v2.0.0-beta2[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.5.0-rc.8[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 === Beta 1
 
 The first beta release of Infinite Scale 2.0.0 (beta1) introduces the `File Search` feature and completely replaces the integrated user management with a lightweight LDAP server that is shipped out-of-the-box (LibreIDM). ownCloud Web introduces a new, feature-rich upload manager based on uppy.io and comes with a couple of design and usability round-offs.
@@ -675,6 +1186,7 @@ This section will be updated if known issues are discovered.
 
 == Technology Preview Releases
 
+[discrete]
 === Infinite Scale 1.20.0 Technology Preview
 
 Version 1.20.0 brings major improvements, new features and bug fixes to the platform. Infinite Scale now provides complete Auditing capabilities and the basic 'Spaces' feature has reached initial feature completeness. Furthermore, ownCloud Web introduces a number of smaller features as well as more design and usability improvements.
@@ -711,6 +1223,7 @@ The most prominent changes in Infinite Scale 1.20.0 and ownCloud Web 5.4.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.20.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.4.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: Due to some breaking changes, the https://github.com/cs3org/wopiserver[WOPI Server extension] that is required for online office integrations (Collabora Online, ONLYOFFICE, Microsoft Office Online) is not compatible with the 1.20.0 release. This issue is under investigation and will be fixed with the next releases.
@@ -719,12 +1232,14 @@ IMPORTANT: The archive download for multiple files and whole folders is currentl
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap]
 
+[discrete]
 === Infinite Scale 1.19.1 Technology Preview
 
 Version 1.19.1 is a bugfix release which fixes a regression in version 1.19.0.
 
 * Bugfix - Return correct special item urls: https://github.com/owncloud/ocis/pull/3419[#3419]
 
+[discrete]
 === Infinite Scale 1.19.0 Technology Preview
 
 Version 1.19.0 brings major improvements, new features and bug fixes to the platform. Infinite Scale now has a full audit log and the `Spaces` feature has made a lot of progress towards its initial feature completeness. Sharing inside of spaces was added as well as a spaces aware trashbin. Furthermore, ownCloud Web comes with many design and usability improvements that round off the recent redesign initiative.
@@ -777,6 +1292,7 @@ The most prominent changes in Infinite Scale 1.19.0 and ownCloud Web 5.3.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.19.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.3.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: Due to some breaking changes, the https://github.com/cs3org/wopiserver[WOPI Server extension] that is required for online office integrations (Collabora Online, ONLYOFFICE, Microsoft Office Online) is not compatible with the 1.19.0 release. This issue is under investigation and will be fixed with the next releases.
@@ -785,6 +1301,7 @@ IMPORTANT: The archive download for multiple files and whole folders is currentl
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap]
 
+[discrete]
 === Infinite Scale 1.18.0 Technology Preview
 
 Version 1.18.0 brings major improvements, new features and bug fixes to the platform. Infinite Scale can now send user notifications via email and the `Spaces` feature has made a lot of progress towards its initial feature completeness. Furthermore, ownCloud Web comes with many design and usability improvements that round off the recent redesign initiative.
@@ -817,6 +1334,7 @@ The most prominent changes in Infinite Scale 1.18.0 and ownCloud Web 5.2.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.18.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.2.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: Due to some breaking changes, the https://github.com/cs3org/wopiserver[WOPI Server extension] that is required for online office integrations (Collabora Online, ONLYOFFICE, Microsoft Office Online) is not compatible with the 1.18.0 release. This issue is under investigation and will be fixed with the next releases.
@@ -825,6 +1343,7 @@ IMPORTANT: The archive download for multiple files and whole folders is currentl
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap]
 
+[discrete]
 === Infinite Scale 1.17.0 Technology Preview
 
 Version 1.17.0 brings major changes, new features and improvements. The Infinite Scale backend introduces an event system as an important platform component and adds support for file locking. ownCloud Web 5.0.0 comes with a full rework of the design and user experience and introduces initial support for the `Spaces` feature. Additionally ownCloud Web now supports Collabora Online with the ownCloud 10 backend.
@@ -865,12 +1384,14 @@ The most prominent changes in Infinite Scale 1.17.0 and ownCloud Web 5.0.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.17.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v5.0.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: Due to some breaking changes, the https://github.com/cs3org/wopiserver[WOPI Server extension] that is required for online office integrations (Collabora Online, ONLYOFFICE, Microsoft Office Online) is not compatible with the 1.17.0 release. This issue is under investigation and will be fixed with the next releases.
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap]
 
+[discrete]
 === Infinite Scale 1.16.0 Technology Preview
 
 Version 1.16.0 brings bug fixes, new features and progress for ongoing feature implementations like `Spaces` and application integrations. ownCloud Web comes with a couple of usability improvements (e.g., breadcrumb context menu, right-click menu for multi-select). Infinite Scale has got a revamped config handling that makes deployments easier and more flexible. Additionally, it enables easy and fast collaboration via public links.
@@ -897,10 +1418,12 @@ The most prominent changes in Infinite Scale 1.16.0 and ownCloud Web 4.6.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.16.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v4.6.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap]
 
+[discrete]
 === Infinite Scale 1.15.0 Technology Preview
 
 Version 1.15.0 brings improvements for the app provider (external application integrations) and more progress on the 'Spaces' feature. Public links now support multi-file and folder downloads as well as all other external application integrations. ownCloud Web 4.5.0 furthermore comes with improvements for use with the ownCloud Classic backend.
@@ -933,10 +1456,12 @@ The most prominent changes in Infinite Scale 1.15.0 and ownCloud Web 4.5.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.15.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v4.5.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap]
 
+[discrete]
 === Infinite Scale 1.14.0 Technology Preview
 
 Version 1.14.0 brings more progress on the backend for the `Spaces` and `Quota` features. ownCloud Web 4.4.0 has received performance and usability improvements.
@@ -965,10 +1490,12 @@ The most prominent changes in Infinite Scale 1.14.0 and ownCloud Web 4.4.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.14.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v4.4.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.13.0 Technology Preview
 
 Version 1.13.0 brings progress on the backend for the `Spaces` feature. ownCloud Web and Infinite Scale now provide ZIP/TAR download for multiple files/folders and can integrate external file viewer/editor applications (e.g., Collabora Online, ONLYOFFICE, CodiMD, Microsoft Office Online).
@@ -987,10 +1514,12 @@ The most prominent changes in Infinite Scale 1.13.0 and ownCloud Web 4.3.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.13.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v4.3.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.12.0 Technology Preview
 
 Version 1.12.0 is a maintenance release with the foundations for the `Spaces` feature and for viewer/editor application integrations. The Infinite Scale backend has been further hardened by fixing known issues, improving error handling and stabilizing existing features. Apart from bugfixing, ownCloud Web 4.2.0 has received a number of usability and design improvements for sharing and the file list.
@@ -1021,10 +1550,12 @@ The most prominent changes in Infinite Scale 1.12.0 and ownCloud Web 4.2.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.12.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v4.2.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.11.0 Technology Preview
 
 Version 1.11.0 brings new features, usability improvements and bug fixes. ownCloud Web 4.1.0 now supports drag & drop and allows users to do actions (e.g., sharing) for the folder they are currently in.
@@ -1049,10 +1580,12 @@ The most prominent changes in Infinite Scale 1.11.0 and ownCloud Web 4.1.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.11.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v4.1.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.10.0 Technology Preview
 
 Version 1.10.0 brings new features, usability improvements and bug fixes. ownCloud Web 4.0.0 now supports ONLYOFFICE document editors and can search/filter files and folders. Furthermore it brings a new context menu for file actions that can be accessed via right click and comes with a big bunch of other notable improvements and fixes.
@@ -1083,10 +1616,12 @@ The most prominent changes in Infinite Scale 1.10.0 and ownCloud Web 4.0.0 compr
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.10.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v4.0.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.9.0 Technology Preview
 
 Version 1.9.0 is a feature and maintenance release. More features have been added and the platform was matured further. ownCloud Web 3.4.1 brings usability improvements and new features. The right sidebar now shows details about the selected resource and offers previews for images. View options for the file list and a feedback button have been added.
@@ -1111,10 +1646,12 @@ The most prominent changes in Infinite Scale 1.9.0 and ownCloud Web 3.4.1 compri
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.9.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v3.4.1[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.8.0 Technology Preview
 
 Version 1.8.0 is a maintenance and bug fix release. ownCloud Web 3.3.0 has received further performance and major accessibility improvements.
@@ -1135,10 +1672,12 @@ The most prominent changes in Infinite Scale 1.8.0 and ownCloud Web 3.3.0 compri
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.8.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v3.3.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.7.0 Technology Preview
 
 Version 1.7.0 is a maintenance and bug fix release. ownCloud Web 3.2.0 has received further performance improvements and minor usability tweaks.
@@ -1155,10 +1694,12 @@ The most prominent changes in Infinite Scale 1.7.0 and ownCloud Web 3.2.0 compri
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.7.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v3.2.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.6.0 Technology Preview
 
 To get the full potential out of the microservice architecture, version 1.6.0 introduces a dynamic service registry to Infinite Scale. The dynamic service registry facilitates the configuration and contributes to the scalability of the platform. ownCloud Web 3.1.0 has received further improvements for accessibility like keyboard navigation and it comes with performance improvements by loading certain elements asynchronously.
@@ -1179,10 +1720,12 @@ The most prominent changes in Infinite Scale 1.6.0 and ownCloud Web 3.1.0 compri
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.6.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v3.1.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 ===== Changed oCIS JSON share driver storage format
 
 Related: https://github.com/cs3org/reva/pull/1655[reva#1655]
@@ -1199,6 +1742,7 @@ The storage format of the oCIS JSON share driver has changed. You will be affect
 . update to oCIS 1.6.0
 . let users recreate their shares
 
+[discrete]
 ===== Fixed / changed oCIS metadata storage driver filesystem path
 
 Related: https://github.com/owncloud/ocis/pull/1956[ocis#1956]
@@ -1226,6 +1770,7 @@ export STORAGE_SYSTEM_ROOT=/var/tmp/ocis/storage/users
 
 This may lead to faulty behaviour since both the metadata and user storage driver will be storing their data in the same filesystem path.
 
+[discrete]
 === Infinite Scale 1.5.0 Technology Preview
 
 Version 1.5.0 is a maintenance release for the Infinite Scale backend with a number of bug fixes and smaller improvements. For ownCloud Web it brings further accessibility improvements and a whole bunch of new features. The web interface can now be branded and there is a new, dedicated view in the left sidebar to list all link shares of a user.
@@ -1246,10 +1791,12 @@ The most prominent changes in Infinite Scale 1.5.0 and ownCloud Web 3.0.0 compri
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.5.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v3.0.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.4.0 Technology Preview
 
 Version 1.4.0 brings new features, bug fixes and further improvements. The accessibility of ownCloud Web has greatly improved, paving the way for WCAG 2.1 compliance. The Infinite Scale platform has received major improvements regarding memory consumption. The user storage quota feature has been implemented and folder sizes are now properly calculated. It is now possible to write log messages to log files and to specify configuration values using a config file.
@@ -1274,10 +1821,12 @@ The most prominent changes in Infinite Scale 1.4.0 and ownCloud Web 2.1.0 compri
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.4.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v2.1.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 ===== Changed oCIS storage driver file layout
 
 Related: https://github.com/cs3org/reva/pull/1452[reva#1452]
@@ -1306,11 +1855,12 @@ If you already updated to oCIS 1.4.0 without our recommended update strategy you
 . copy the data from oCIS to the temporary directory while dereferencing symlinks. On Linux you can do this by running `cp --recursive --dereference /var/tmp/ocis/storage/users/nodes/root/ /tmp/dereferenced-ocis-storage`
 . you now have a backup of all users data in `/tmp/dereferenced-ocis-storage` and can follow our recommended update strategy above
 
-
+[discrete]
 === Infinite Scale 1.3.0 Technology Preview
 
 Version 1.3.0 is a regular maintenance and bugfix release. It provides the latest improvements to users and administrators.
 
+[discrete]
 ==== Changes in Reva
 
 https://github.com/cs3org/[Reva] is one of the fundamental components of oCIS. It has these significant changes:
@@ -1323,6 +1873,7 @@ https://github.com/cs3org/[Reva] is one of the fundamental components of oCIS. I
 * Add functionality to share resources with groups https://github.com/cs3org/Reva/pull/1453[reva#1453]
 * Add s3ng storage driver, storing blobs in a s3-compatible blobstore https://github.com/cs3org/Reva/pull/1428[#reva1428]
 
+[discrete]
 ==== Changes in oCIS
 
 These are the major changes in oCIS:
@@ -1337,10 +1888,12 @@ These are the major changes in oCIS:
 
 More details about this release can be found in the full https://github.com/owncloud/ocis/releases/tag/v1.3.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v2.0.2[ownCloud Web changelog].
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 === Infinite Scale 1.2.0 Technology Preview
 
 Version 1.2.0 brings more functionality and stability to Infinite Scale. ownCloud Web now loads a lot faster and is prepared for the introduction of accessibility features. An initial implementation for S3 storage support is available and file integrity checking has been introduced.
@@ -1359,10 +1912,12 @@ The most prominent changes in ownCloud Infinite Scale 1.2.0 and ownCloud Web 2.0
 
 You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.2.0[Infinite Scale changelog] and https://github.com/owncloud/web/releases/tag/v2.0.0[ownCloud Web changelog] for further details on what has changed.
 
+[discrete]
 ==== Breaking changes
 
 IMPORTANT: We are currently in a Tech Preview state and breaking changes may occur at any time. For more information see our {release-roadmap-url}[release roadmap].
 
+[discrete]
 ===== Fix IDP service user
 
 Related: https://github.com/owncloud/ocis/pull/1390[ocis#1390], https://github.com/owncloud/ocis/issues/1569[ocis#1569]
@@ -1384,6 +1939,7 @@ After upgrading oCIS from a previous version to oCIS 1.2.0 you will not be able 
 
 Please have a look at https://github.com/owncloud/ocis/blob/master/docs/ocis/deployment/_index.md#secure-an-ocis-instance[how to secure an oCIS instance] since you seem to run it with default secrets.
 
+[discrete]
 ===== Reset shares
 
 Related: https://github.com/owncloud/ocis/pull/1626[ocis#1626]
@@ -1400,6 +1956,7 @@ After upgrading oCIS from a previous version to oCIS 1.2.0 you will not be able 
 . Start oCIS
 . Recreate shares manually
 
+[discrete]
 === Infinite Scale 1.1.0 Technology Preview
 
 Version 1.1.0 is a hardening and patch release. It ships with the latest version of ownCloud Web and brings a couple of minor improvements. The minor version increase is needed due to non-backwards compatible changes in configuration. The documentation has been updated to reflect the changes. Please note that this version is still a Technology Preview and not suited for production use.
@@ -1422,6 +1979,7 @@ You can also read the full https://github.com/owncloud/ocis/releases/tag/v1.1.0[
 
 We are pleased to announce the availability of Infinite Scale 1.0.0 Technology Preview which is released as the first public version of the new Infinite Scale platform.
 
+[discrete]
 ==== Microservice architecture
 
 Infinite Scale is following the microservices architectural pattern. It is implemented as a set of microservices which are independent of each other. They are coupled with well-defined APIs. This architecture fosters a lot of benefits that we were aiming for with the new design for oCIS:
@@ -1442,6 +2000,7 @@ Infinite Scale is following the microservices architectural pattern. It is imple
 
 * Cloud-native deployment, update, monitoring, logging, tracing and orchestration strategies
 
+[discrete]
 ==== Key figures
 
 * The all-new ownCloud Web frontend is shipped as part of the platform
@@ -1462,12 +2021,14 @@ Infinite Scale is following the microservices architectural pattern. It is imple
 
 * A secure and flexible framework to create extensions
 
+[discrete]
 ===== Supported platforms
 
 * Linux-amd64
 * Darwin-amd64
 * Experimental: Windows, ARM (e.g., Raspberry Pi, Termux on Android)
 
+[discrete]
 ===== Client support
 
 All official ownCloud Clients support the Infinite Scale server with the following versions:
@@ -1476,6 +2037,7 @@ All official ownCloud Clients support the Infinite Scale server with the followi
 * Android >= 2.15
 * iOS >= 1.2
 
+[discrete]
 ==== Architecture components
 
 Infinite Scale is built as a modular framework in which components can be scaled individually. It consists of
@@ -1489,16 +2051,20 @@ Infinite Scale is built as a modular framework in which components can be scaled
 
 These components can be deployed in a multi-tier deployment architecture. See the https://owncloud.dev[developer documentation] for an overview of the services.
 
+[discrete]
 ==== Operation modes
 
+[discrete]
 ===== Standalone mode (with oCIS storage driver)
 
 In standalone mode oCIS uses its built-in orchestrator to start all necessary services. This allows you to run oCIS on a single node without any outside dependencies like docker-compose, kubernetes or even a webserver. It will start an OpenID IdP and create a self-signed certificate. You can start right away by navigating to `\https://localhost:9200`
 
+[discrete]
 ===== Single services scaleout
 
 oCIS allows you to scale individual services using well-known orchestration frameworks like docker-compose, dockerSwarm and kubernetes.
 
+[discrete]
 ===== Bridge mode with ownCloud 10 backend
 
 For the product transition phase, Infinite Scale comes with an operation mode ("bridge mode") that allows a hybrid deployment between both server generations to operate the new web frontend with ownCloud 10 and Infinite Scale in parallel. This setup allows the ownCloud Web frontend to operate with both server generations and provides the foundation to migrate users gradually to the new backend.
@@ -1519,20 +2085,24 @@ See the https://owncloud.dev/ocis/deployment/bridge/[documentation] on how to de
 Infinite Scale is currently in Technology Preview. The bridge mode should only be used in non-production environments.
 ====
 
+[discrete]
 ==== What to expect?
 
 This is the first promoted public release of Infinite Scale, released as "Technical Preview". Infinite Scale is not yet ready for production installations. Technical audiences will be able to get a good understanding of the potential of ownCloud's new platform.
 
 Version 1.0.0 comes with the base functionality for sync and share with a much higher performance-, stability- and security-level compared to all available platforms. Based on ten years of experience in enterprise sync and share and a long-standing collaboration with the biggest global science organizations this new platform will exceed what content collaboration is today.
 
+[discrete]
 ==== How to get started?
 
 One of the most important objectives for oCIS was to ease the setup of a working instance dramatically. Since oCIS is built with Google's powerful Go language it supports the single-file-deployment: Installing oCIS 1.0.0 is as easy as downloading a single file, applying execution permission to it and get started. No more fiddling around with complicated LAMP stacks.
 
+[discrete]
 ===== Deployment Options
 
 Given the architecture of Infinite Scale, there are various deployment options based on the users requirements. In our experience setting up the LAMP stack for ownCloud 10 was difficult for many users. Therefore a big emphasis was put on easy yet functional https://owncloud.dev/ocis/deployment/[deployment] strategies.
 
+[discrete]
 ===== Delivery as single binary
 
 The single binary is the best option to test the new Infinite Scale 1.0.0 Technical Preview release on a local machine. Follow these instructions to get the platform running in the most simple way:
@@ -1553,12 +2123,15 @@ The single binary is the best option to test the new Infinite Scale 1.0.0 Techni
 
 Production environments will need a more sophisticated setup, see https://owncloud.dev/ocis/deployment/[deployment] for more information.
 
+[discrete]
 ===== Containerized Setup
 
 For more sophisticated setups we recommend using one of our docker setup examples. See the https://owncloud.dev/ocis/deployment/ocis_traefik/[documentation] for a setup with https://traefik.io/traefik/[Traefik] as a reverse proxy which also includes automated SSL certificate provisioning using Letsencrypt tools.
 
+[discrete]
 ==== ownCloud Web Features
 
+[discrete]
 ===== Framework
 
 + User avatars (compatible with oC 10 API)
@@ -1569,6 +2142,7 @@ For more sophisticated setups we recommend using one of our docker setup example
 ** Media Viewer (images and videos)
 ** Draw.io
 
+[discrete]
 ===== Files
 
 * Listing and browsing the hierarchy
@@ -1593,6 +2167,7 @@ For more sophisticated setups we recommend using one of our docker setup example
 * Versions (list/restore/download/delete)
 * File/folder search
 
+[discrete]
 ===== Sharing with People (user/group shares)
 
 * Adding people to a resource
@@ -1610,6 +2185,7 @@ For more sophisticated setups we recommend using one of our docker setup example
 ** Editing persons
 ** Removing persons
 
+[discrete]
 ===== Sharing with Links
 
 * Private links (copy)
@@ -1627,22 +2203,27 @@ For more sophisticated setups we recommend using one of our docker setup example
 ** Removing existing public links
 ** Viewing public links
 
+[discrete]
 ===== User Profile
 
 * Display basic profile information (user name, display name, e-mail, group memberships)
 
 * "Edit" button guides to ownCloud 10 user settings (when used with oC 10)
 
+[discrete]
 ====== Basic user settings
 
 * Language of the web interface
 
+[discrete]
 ==== oCIS Backend Features
 
+[discrete]
 ===== Storage
 
 The default oCIS storage driver deconstructs a filesystem to be able to efficiently look up files by fileid as well as path. It stores all folders and files by a uuid and persists share and other metadata using extended attributes. This allows using the linux VFS cache using stat syscalls instead of a database or key/value store. The driver implements trash, versions and sharing. It not only serves as the current default storage driver, but also as a blueprint for future storage driver implementations.
 
+[discrete]
 ===== User and group management
 
 - Functionality available via API and frontend ("Accounts" extension)
@@ -1658,10 +2239,12 @@ The default oCIS storage driver deconstructs a filesystem to be able to efficien
 - Group deletion (API)
 - Create/read/update/delete users and groups (CLI)
 
+[discrete]
 ====== Settings
 
 The settings service provides APIs for other services for registering a set of settings as `Bundle`. It also provides a pluggable extension for ownCloud Web which provides dynamically built web forms, so that users can customize their own settings. Some well-known settings are directly used by ownCloud Web for adapted user experience, e.g., the UI language. Services can query the users' chosen settings for customized backend and frontend operations as needed.
 
+[discrete]
 ====== Roles & Permissions System
 
 Infinite Scale follows a role-based access control model. Based on permissions for actions which are provided by the system and by extensions, roles can be composed. Ultimately, these roles can be assigned to users to define what users are permitted to do. This model allows a segregation of duties for administration and allows granular control of how different types of users (e.g., Guests) can use the platform.
@@ -1677,11 +2260,13 @@ Infinite Scale follows a role-based access control model. Based on permissions f
 
 * Users with the role "Admin" can assign/unassign roles to/from other users (as part of the permission to "manage roles")
 
+[discrete]
 ===== APIs
 
 * WebDAV
 * OCS
 
+[discrete]
 ==== Known issues
 
 * There are feature differences depending on the operation mode, e.g., no user management with ownCloud Web and oC 10 backend
