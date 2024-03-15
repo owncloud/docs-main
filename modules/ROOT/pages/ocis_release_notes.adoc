@@ -442,8 +442,8 @@ This section will be updated if issues are discovered.
 In future releases the following may no longer be supported or get removed:
 
 * The resharing feature +
-Existing shares will continue to work, but no new reshares can be created. +
-We have disabled the resharing feature by default. It will be removed from the product. Existing reshares will still be visible to the original resource owner. Creation of new reshares will not be possible. Please make sure that `OCIS_ENABLE_RESHARING` is not set to `true` in your deployments. +
+Existing shares will continue to work, but no new reshares should be created. +
+Resharing will be removed from the product in a subsequent release. Please make sure to set `OCIS_ENABLE_RESHARING` to `false` in your deployments to avoid accidentially creating new reshares. Existing reshares will continue to be visible to the original resource owner. With the removal of the resharing feature, the environment variables for resharing will be dropped and the creation of new reshares will not be possible anymore.
 * The ocs sharing API +
 It will be fully replaced by the new sharing-ng (graph) API
 * The store service will get fully removed +
