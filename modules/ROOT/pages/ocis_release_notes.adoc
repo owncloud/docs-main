@@ -498,6 +498,24 @@ You need to set the `OCIS_SERVICE_ACCOUNT_ID` and `OCIS_SERVICE_ACCOUNT_SECRET` 
 * For new installations: +
 The `ocis init` command sets the values automatically and no envvars are needed.  https://github.com/owncloud/ocis/pull/6427[#6427]
 
+== Infinite Scale 4.0.7
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v4.0.7[GitHub, window=_blank].
+
+[discrete]
+=== Issues Fixed
+
+* Update reva to include bugfixes and improvements: https://github.com/owncloud/ocis/pull/8718[#8718]
+
+[discrete]
+=== Enhancement
+
+* Update to go 1.22: https://github.com/owncloud/ocis/pull/8597[#8597]
+
 == Infinite Scale 4.0.6
 
 [discrete]
