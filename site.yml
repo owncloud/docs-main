@@ -74,9 +74,9 @@ asciidoc:
     latest-ocis-version: 'next'
     previous-ocis-version: 'next'
     # these versions are just for printing like in releases but not used for referencing
-    ocis-actual-version: '4.0.4'
-    ocis-former-version: '3.0.0'
-    ocis-compiled: '2023-10-06 00:00:00 +0000 UTC'
+    ocis-actual-version: '5.0.1'
+    ocis-former-version: '4.0.7'
+    ocis-compiled: '2024-04-10 00:00:00 +0000 UTC'
     ocis-downloadpage-url: 'https://download.owncloud.com/ocis/ocis/stable/'
 #   webui
     latest-webui-version: 'next'
