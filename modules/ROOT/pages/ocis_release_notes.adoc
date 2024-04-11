@@ -15,6 +15,27 @@
 
 toc::[]
 
+== Infinite Scale 5.0.1
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.1[GitHub, window=_blank].
+
+[discrete]
+=== Issues Fixed
+
+* Update reva to v2.19.4: Use gateway selector in jsoncs3 to scale the service: https://github.com/owncloud/ocis/pull/8787[#8787]
+* Update reva to v2.19.3: Mask user email in output: https://github.com/owncloud/ocis/pull/8781[#8781]
+* Make IDP cookies same site strict: https://github.com/owncloud/ocis/pull/8799[#8799]
+* Fix restarting of postprocessing: https://github.com/owncloud/ocis/pull/8782[#8782]
+
+[discrete]
+=== Enhancement
+
+* Make IDP cookies same site strict: https://github.com/owncloud/ocis/pull/8716[#8716]
+
 == Infinite Scale 5.0.0
 
 [discrete]
