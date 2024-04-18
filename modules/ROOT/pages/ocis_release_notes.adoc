@@ -15,6 +15,20 @@
 
 toc::[]
 
+== Infinite Scale 5.0.2
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.2[GitHub, window=_blank].
+
+[discrete]
+=== Issues Fixed
+
+* Update reva to v2.19.5: Fix public share update and Fix access to files within a public link targeting a space root: https://github.com/owncloud/ocis/pull/8873[#8873]
+* Creating a new Office document in a publicly shared folder is now possible: https://github.com/owncloud/ocis/pull/8828[#8828]
+
 == Infinite Scale 5.0.1
 
 [discrete]
