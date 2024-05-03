@@ -15,6 +15,22 @@
 
 toc::[]
 
+== Infinite Scale 5.0.3
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.3[GitHub, window=_blank].
+
+[discrete]
+=== Issues Fixed
+
+* Update reva to v2.19.6: Reworks virus handling: https://github.com/owncloud/ocis/pull/9011[#9011]
+* Update the admin user role assignment to enforce the config: https://github.com/owncloud/ocis/pull/8918[#8918]
+* Crash when processing crafted TIFF files: https://github.com/owncloud/ocis/pull/8981[#8981]
+* Fix infected file handling: https://github.com/owncloud/ocis/pull/9011[#9011]
+
 == Infinite Scale 5.0.2
 
 [discrete]
