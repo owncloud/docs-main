@@ -22,8 +22,7 @@ All in all, spaces make life easier for admins by giving space managers the abil
 
 === ownCloud Web
 
-ownCloud Web is bundled with Infinite Scale, has a new design and comes with a brand-new look. The goal is to make ownCloud accessible to all people from children to experts. Technically, ownCloud Web is built with VueJS as a dedicated client, communicating via well-formed APIs with the Infinite Scale server, just like all the other ownCloud clients. ownCloud Web can be used as an app for ownCloud Server but is limited in its capabilities. Nevertheless, switching to ownCloud Web makes a future migration to Infinite Scale easier for users as they are already used to the new UI. ownCloud Web can be customized according to your corporate identity via config values. 
-For details see https://doc.owncloud.com/ocis/deployment/webui/webui.html
+ownCloud Web is bundled with Infinite Scale, has a new design and comes with a brand-new look. The goal is to make ownCloud accessible to all people from children to experts. Technically, ownCloud Web is built with VueJS as a dedicated client, communicating via well-formed APIs with the Infinite Scale server, just like all the other ownCloud clients. ownCloud Web can be used as an app for ownCloud Server but is limited in its capabilities. Nevertheless, switching to ownCloud Web makes a future migration to Infinite Scale easier for users as they are already used to the new UI. ownCloud Web can be customized according to your corporate identity via config values. For details see the xref:{latest-ocis-version}@ocis:ROOT:deployment/webui/webui.adoc[Web UI] configuration documentation.
 
 === Collaborative Editing
 
