@@ -74,7 +74,7 @@ asciidoc:
     latest-ocis-version: 'next'
     previous-ocis-version: 'next'
     # these versions are just for printing like in releases but not used for referencing
-    ocis-actual-version: '5.0.1'
+    ocis-actual-version: '5.0.4'
     ocis-former-version: '4.0.7'
     ocis-compiled: '2024-04-10 00:00:00 +0000 UTC'
     ocis-downloadpage-url: 'https://download.owncloud.com/ocis/ocis/stable/'
