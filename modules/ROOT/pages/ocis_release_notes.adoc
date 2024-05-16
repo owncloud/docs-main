@@ -15,6 +15,21 @@
 
 toc::[]
 
+== Infinite Scale 5.0.4
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.4[GitHub, window=_blank].
+
+[discrete]
+=== Issues Fixed
+
+* Update reva to v2.19.7: Reworks virus handling: https://github.com/owncloud/ocis/pull/9141[#9141]
+* Service startup of WOPI example: https://github.com/owncloud/ocis/pull/9127[#9127]
+* Nats reconnects: https://github.com/owncloud/ocis/pull/9139[#9139]
+
 == Infinite Scale 5.0.3
 
 [discrete]
