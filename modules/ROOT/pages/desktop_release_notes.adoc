@@ -14,6 +14,36 @@
 
 toc::[]
 
+== Desktop App 5.3.0
+
+[discrete]
+=== General
+
+The ownCloud Desktop App is now available in version 5.3.0! +
+We strongly recommend updating the Desktop App to the latest available version so that you can access and experience a range of new features and security fixes. Users with an Enterprise subscription are entitled to receive dedicated support.
+
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v5.3.0[GitHub, window=_blank].
+
+[discrete]
+=== Enhanced Functionality
+
+* Add support to provide a list of ports for the OAuth process
+* Support `Active Directory Federation Service` as identity provider
+
+[discrete]
+=== Notable Bugfixes
+
+ownCloud Desktop App 5.3.0 also delivers several important technical improvements such as:
+
+* Fix early-use crash in the folder watcher on Linux
+* Client stuck in `reconnecting`
+* Ensure folders are scheduled only once
+
+[discrete]
+=== Notable Changes
+
+* Revert local folder name back to pre 3.0 behavior
+
 == Desktop App 5.2.1
 
 [discrete]
@@ -22,7 +52,7 @@ toc::[]
 The ownCloud Desktop App is now available in version 5.2.1! +
 If you have an enterprise subscription, this is the first 5.x release available for branding. We strongly recommend updating the Desktop App to the latest available version so that you can access and experience a range of new features and security fixes. Users with an Enterprise subscription are entitled to receive dedicated support.
 
-Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}/v5.2.1[GitHub, window=_blank].
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v5.2.1[GitHub, window=_blank].
 
 [discrete]
 === Enhanced Functionality
@@ -118,7 +148,7 @@ This is a bugfix release only. Update as soon as possible.
 * Fix url resolution for app provider: https://github.com/owncloud/client/pull/11296[#11296]
 * Fix crash on unhandled status code on rename check: https://github.com/owncloud/client/pull/11379[#11379]
 
-Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}/v5.2.0[GitHub, window=_blank].
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v5.2.0[GitHub, window=_blank].
 
 == Desktop App 5.1.2
 
@@ -136,7 +166,7 @@ Refer to the full change log for a list of bug fixes and changes at {desktop-rel
 [discrete]
 === General
 
-Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}/v5.0.0[GitHub, window=_blank].
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v5.0.0[GitHub, window=_blank].
 
 [discrete]
 === Breaking changes
