@@ -24,7 +24,6 @@ Dear ownCloud administrator, find below the changes and known issues in ownCloud
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.14.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
 
-[discrete]
 === Migrations
 
 When upgrading from ownCloud Server 10.14.0, the following migrations will run as part of the upgrade procedure:
