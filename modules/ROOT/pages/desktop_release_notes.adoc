@@ -14,6 +14,21 @@
 
 toc::[]
 
+== Desktop App 5.3.1
+
+[discrete]
+=== General
+
+The ownCloud Desktop App is now available in version 5.3.1! +
+We strongly recommend updating the Desktop App to the latest available version so that you can access and experience a range of new features and security fixes. Users with an Enterprise subscription are entitled to receive dedicated support.
+
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v5.3.1[GitHub, window=_blank].
+
+[discrete]
+=== Notable Bugfixes
+
+* Ensure the Windows shell extension is linked statically
+
 == Desktop App 5.3.0
 
 [discrete]

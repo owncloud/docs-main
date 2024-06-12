@@ -2,7 +2,7 @@
 site:
   title: ownCloud Main Page
   url: https://doc.owncloud.com
-  start_page: docs_main::index.adoc
+  start_page: ROOT::index.adoc
 
 content:
   sources:

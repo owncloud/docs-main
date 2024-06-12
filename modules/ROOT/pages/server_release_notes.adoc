@@ -1005,12 +1005,12 @@ With all these improvements we want to motivate ownCloud service providers to ma
 
 TIP: ownCloud Web is currently in the status of a Technology Preview. This means that bugs and other undesired behavior are expected. After careful testing, ownCloud Web can be used on production systems. Features are still being added to ownCloud Web and users will need to use the Classic web interface to do certain actions. Please evaluate according to your use case how well the new web interface suits your needs and let us know any feedback that you encounter.
 
-==== Fixed Known Issues
+=== Fixed Known Issues
 
 Both xref:server_release_notes.adoc#known-issues-10-7[known issues from ownCloud Server 10.7] have been fixed. The deployment of ownCloud Web is now more robust and administrators can optionally decide whether ownCloud Links (public and private links) should be provided by the Classic web interface or by ownCloud Web using a https://owncloud.dev/clients/web/deployments/oc10-app/#configure-link-routing[new option in config.php].
 
 [discrete]
-==== Feedback
+=== Feedback
 
 As mentioned, features are still being added to ownCloud Web and the new web interface can't yet cover every use case of the Classic interface. To further shape the new product and to determine the development priorities it is of utmost importance to consider user feedback. We're very grateful for any hints or feedback that you supply via the following channels
 
