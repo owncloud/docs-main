@@ -16,9 +16,11 @@ next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 
 toc::[]
 
+////
 == Changes in 10.15.0
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.15.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+////
 
 == Changes in 10.14.0
 
