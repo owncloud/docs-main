@@ -1,52 +1,26 @@
 = Release Notes
-:server-10_2-avatar-change-url: https://github.com/owncloud/core/issues/35311
-:owncloud-server-changelog-url: https://owncloud.com/changelog/server/
+:toc: macro
+:toclevels: 2
+:toc-title: Releases
+:description: Dear ownCloud Server administrator, find below the changes and known issues in ownCloud Server that need your attention.
 :page-aliases: {latest-server-version}@server:admin_manual:whats_new_admin.adoc, \
 {latest-server-version}@server:ROOT:server_release_notes.adoc, \
 next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 
-* xref:changes-in-10-14-0[Changes in 10.14.0]
-* xref:changes-in-10-13-4[Changes in 10.13.4]
-* xref:changes-in-10-13-3[Changes in 10.13.3]
-* xref:changes-in-10-13-2[Changes in 10.13.2]
-* xref:changes-in-10-13-1[Changes in 10.13.1]
-* xref:changes-in-10-13-0[Changes in 10.13.0]
-* xref:changes-in-10-12-2[Changes in 10.12.2]
-* xref:changes-in-10-12-1[Changes in 10.12.1]
-* xref:changes-in-10-12-0[Changes in 10.12.0]
-* xref:changes-in-10-11-0[Changes in 10.11.0]
-* xref:changes-in-10-10-0[Changes in 10.10.0]
-* xref:changes-in-10-9-1[Changes in 10.9.1]
-* xref:changes-in-10-9-0[Changes in 10.9.0]
-* xref:changes-in-10-8-0[Changes in 10.8.0]
-* xref:changes-in-10-7-0[Changes in 10.7.0]
-* xref:changes-in-10-6-0[Changes in 10.6.0]
-* xref:changes-in-10-5-0[Changes in 10.5.0]
-* xref:changes-in-10-4-1[Changes in 10.4.1]
-* xref:changes-in-10-4-0[Changes in 10.4.0]
-* xref:changes-in-10-3-2[Changes in 10.3.2]
-* xref:changes-in-10-3-1[Changes in 10.3.1]
-* xref:changes-in-10-3-0[Changes in 10.3.0]
-* xref:changes-in-10-2-1[Changes in 10.2.1]
-* xref:changes-in-10-2-0[Changes in 10.2.0]
-* xref:changes-in-10-1-1[Changes in 10.1.1]
-* xref:changes-in-10-1-0[Changes in 10.1.0]
-* xref:changes-in-10-0-10[Changes in 10.0.10]
-* xref:changes-in-10-0-9[Changes in 10.0.9]
-* xref:changes-in-10-0-8[Changes in 10.0.8]
-* xref:changes-in-10-0-7[Changes in 10.0.7]
-* xref:changes-in-10-0-6[Changes in 10.0.6]
-* xref:changes-in-10-0-5[Changes in 10.0.5]
-* xref:changes-in-10-0-4[Changes in 10.0.4]
-* xref:changes-in-10-0-3[Changes in 10.0.3]
-* xref:changes-in-10-0-1[Changes in 10.0.1]
-* xref:changes-in-10-0-0[Changes in 10.0.0]
-* xref:changes-in-9-1[Changes in 9.1]
-* xref:changes-in-9-0[Changes in 9.0]
-* xref:changes-in-8-2[Changes in 8.2]
-* xref:changes-in-8-1[Changes in 8.1]
-* xref:changes-in-8-0[Changes in 8.0]
-* xref:changes-in-7-0[Changes in 7.0]
+:server-10_2-avatar-change-url: https://github.com/owncloud/core/issues/35311
+:owncloud-server-changelog-url: https://owncloud.com/changelog/server/
+
+{description}
+
+{empty} +
+
+toc::[]
+
+////
+== Changes in 10.15.0
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.15.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+////
 
 == Changes in 10.14.0
 
@@ -59,88 +33,109 @@ When upgrading from ownCloud Server 10.14.0, the following migrations will run a
 * A migration step takes care of disabling the Template Editor app, if enabled (see below). This step is expected to be quick and should not impact upgrade duration significantly. https://github.com/owncloud/core/pull/41168[#41168]
 * A migration step takes care of setting oc_file_locks.id to bigint (see below). This step is expected to be quick and should not impact upgrade duration significantly. https://github.com/owncloud/core/pull/41158[#41158]
 
+[discrete]
 === Log.conditions With `shared_secret` Shall not Break File Uploads
 
 Any file upload (or PUT request in general) could have caused a 500/Internal Server Error due to wrong usage of the request object. This is now fixed. https://github.com/owncloud/core/pull/41044[#41044]
 
+[discrete]
 === Create Previews from First Page
 
 On multi-page documents (doc, odt, pdf, etc.) the preview will now be generated from the first page and no longer from the last page. https://github.com/owncloud/core/pull/41045[#41045]
 
+[discrete]
 === Fix Expiration Date and Eliminate Duplicate Entries in File List
 
 We have addressed two visual issues in the Web UI file list. Firstly, the problem where the start of the epoch was mistakenly displayed as an expiration date in the shared file list has been resolved. Secondly, we have tackled the bug causing duplicate entries to appear when switching between shared tabs and clicking on a file list entry. https://github.com/owncloud/core/pull/41056[#41056]
 
+[discrete]
 === LDAP Groups Will be Properly Applied to External Storages
 
 The admin can setup external storages to be used by specific users and groups. When a LDAP group was setup, there were some issues so users belonging to that group weren't able to access the external storage even though they should. Now, users belonging to LDAP groups can access external storages configured to be accessed by those groups. https://github.com/owncloud/core/pull/41063[#41063]
 
+[discrete]
 === Disallow Browsers to Translate the Frontend
 
 Web frontend offers a lot of proper translations. Browser capabilities are not needed. https://github.com/owncloud/core/pull/41067[#41067]
 
+[discrete]
 === Limit Performance Impact when Version Metadata is Enabled
 
 Negative performance impact when `file_storage.save_version_metadata` is enabled has been resolved. https://github.com/owncloud/core/pull/41069[#41069]
 
+[discrete]
 === Proper Error Handling when Deleting Users or Groups
 
 In case of an error when deleting a user or a group no proper feedback was given to the user. This is now fixed. https://github.com/owncloud/core/pull/41077[#41077]
 
+[discrete]
 === Account Terms Can be Removed if They Differ From the Ones Stored
 
 Search terms for the account can now be removed from the DB if they differ from the ones stored in the DB. This can happen with the user_ldap app, when user search attributes are removed from the connection configuration in the LDAP wizard. https://github.com/owncloud/core/pull/41120[#41120]
 
+[discrete]
 === Add Compatibility for richdocuments.document.index Route
 
 Because of a change first introduced in richdocuments 4.1.0, it was necessary to add compatibility for the richdocuments.document.index route. https://github.com/owncloud/core/pull/41161[#41161]
 
+[discrete]
 === Decommission of Template Editor App
 
 App has been deprecated and themes should be rather used to change mail templates. https://github.com/owncloud/core/pull/41168[#41168]
 
+[discrete]
 === The `user:list -a` occ Command now Correctly Displays the User's Creation Time
 
 Previously, the `user:list -a` occ command was not correctly returning the user's creation time but rather the path to the user's home directory. This has been now fixed. https://github.com/owncloud/core/pull/41125[#41125]
 
+[discrete]
 === Set oc_file_locks.id to bigint
 
 In rare cases, the id column in the file_locks table could hit its limit (defined as int(10) unsigned) as it is set as autoincrement. This is now set to bigint. https://github.com/owncloud/core/pull/41158[#41158]
 
+[discrete]
 === Store User Information in Explicit Variable
 
 Before user information was stored in the browser global object. In some rare cases browsers seemed to loose data stored in the global object. This is fixed now. https://github.com/owncloud/core/pull/41054[#41054]
 
+[discrete]
 === No Activities on Rejected Shares
 
 As soon as a user has rejected a share no activities within this share are now reported via the activity app. https://github.com/owncloud/core/pull/41078[#41078]
 
+[discrete]
 === CalDAV Query Where the Time Range Is not Given
 
 Outlook CalDAV plugin is sending `false` as time range which no longer results in a crash. https://github.com/owncloud/core/pull/41050[#41050]
 
+[discrete]
 === Image Dimension Validation on Avatar Upload
 
 For avatar generation we now do not accept images exceeding specific dimensions (4k - 4096×2160). https://github.com/owncloud/core/pull/41175[#41175]
 
+[discrete]
 === Max Image Dimensions for Preview Generation are Now Configurable
 
 For preview generation it is now possible to define the maximum dimensions of the original image by using config.php options. Note that images bigger than the defined dimensions will not be processed. Default is 6016x4000, which corresponds to 24 MP. Please refer to `preview_max_dimensions` in config.sample.php for more details. https://github.com/owncloud/core/pull/41193[#41193]  
 
+[discrete]
 === Replace the isAdmin Implementation
 
 Instead of asking the backends for the groups a user belongs to, we now get the admin group and list the members to detect if user is admin or not. https://github.com/owncloud/core/pull/41171[#41171]
 
+[discrete]
 === Fix Log Exceptions for mp3 Previews
 
 Log exceptions for mp3 files previews are no longer generated. https://github.com/owncloud/core/pull/41153[#41153]
 
+[discrete]
 === Notable Changes
 
 * Fix: User input validation of comment verb. https://github.com/owncloud/core/pull/40965[#40965]
 * Fix: Input validation when setting the displayname of a user or self. https://github.com/owncloud/core/pull/41172[#41172]
 * Fix: Sanitize title in dialogs. https://github.com/owncloud/core/pull/41166[#41166]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.13.4 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -155,6 +150,7 @@ Find below a list of updated apps in comparison with the 10.13.4 complete bundle
 * {oc-marketplace-url}/apps/user_ldap[LDAP Integration]: 0.19.0
 * {oc-marketplace-url}/apps/windows_network_drive[External Storage: Windows Network Drives]: 2.4.0
 
+[discrete]
 === Known Issues
 
 Currently there are no known issues with ownCloud Server 10.14.0. This section will be updated if issues are discovered.
@@ -163,12 +159,14 @@ Currently there are no known issues with ownCloud Server 10.14.0. This section w
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.13.4 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Show Alert about IoC Scanner to All Customers on Upgrade
 
 We now display IoC scanner instructions to all customers (a valid license key needs to be present) during upgrade (console as well as Web Updater) and in the admin settings. https://github.com/owncloud/core/pull/41137[#41137]
 
 Background: The Indicators of Compromise (IoC) tool plays a vital role in identifying potential security threats or breaches. The tool analyzes your ownCloud 10 deployments and determines whether they have possibly been compromised via the known vulnerabilities. It collects information from the Apache logs and identifies the signatures of potential exploits. Please note, the tool has to be run on ALL ownCloud servers in case of a clustered setup!
 
+[discrete]
 === 2FA Check on Controllers Which Are Annotated as @PublicPage and Also Authenticated
 
 Some controllers define methods which are publicly accessible and accessible for authenticated users at the same time. In such situations the 2FA handling was bypassed because of the @PublicPage annotation. We now check 2FA on controllers which are publicly accessible and authenticated. https://github.com/owncloud/core/pull/41123[#41123]
@@ -181,22 +179,27 @@ Since we reverted https://github.com/owncloud/core/pull/41014[#41014], upon remo
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.13.3 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Fix Potential Issue with the Preview Cleanup Job in PostgreSQL
 
 One of the filters of the preview cleanup job requires casting a filename, which is supposed to contain only digits, to an integer. The expected execution of the DB query should filter the results so the condition above should be true, but the DB's query planner might choose to apply the filters in a different way, so we could potentially cast random strings to integer. In the case of PostgreSQL, the cast function will cause an error if the string can't be cast to an integer (because it has non-digit chars, for example). This situation is fixed for all the supported DBs, so we don't require the query planner to execute the query in any particular way. https://github.com/owncloud/core/pull/41051[#41051]
 
+[discrete]
 === Revert [#41014] for Performance
 
 The https://github.com/owncloud/core/pull/41014[#41014] PR introduced performance problems for large installations. We are therefore reverting that change. https://github.com/owncloud/core/pull/41059[#41059]
 
+[discrete]
 === Users Can Only Delete Their Own External Storage Configurations
 
 Ensure that users can only delete their own external storage configurations. https://github.com/owncloud/core/pull/41092[#41092]
 
+[discrete]
 === Update config.apps.sample.php
 
 Comments describing the configuration variables related to the Kerberos and Windows Network Drive app are now updated and in sync with published online documentation. https://github.com/owncloud/core/pull/41109[#41109]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.13.2 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -212,30 +215,37 @@ Find below a list of updated apps in comparison with the 10.13.2 complete bundle
 
 Since we reverted https://github.com/owncloud/core/pull/41014[#41014], upon removing a mount point configuration from the web UI, the occ command `files:remove-storage` is currently not able to properly find the candidates to delete in case shares have been created for files/folders located on those mountpoints.
 
+[discrete]
 == Changes in 10.13.2
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.13.2 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Fix View on Users Page for Subadmins ===
 
 Previously, subadmins couldn't read app config values. This caused problems in the users page because some of the functionalities were depending on the config values that subadmins couldn't read. These problems are now solved. https://github.com/owncloud/core/pull/40961[#40961]
 
+[discrete]
 === Delete All Files from Object Storage When User Is Deleted ===
 
 In previous versions when a user was deleted, files belonging to this user were not correctly removed from the object storage (s3) and were therefore left as remnants, unnecessarily using up space. This has been corrected and files are now properly removed. https://github.com/owncloud/core/pull/40959[#40959]
 
+[discrete]
 === Remove "Fill ETags" Repair Step ===
 
 The legacy "OC\Repair\FillETags" repair step, executed during upgrades, had prolonged execution times without delivering any further repairs. For this reason, the repair step has now been removed. https://github.com/owncloud/core/pull/40996[#40996]
 
+[discrete]
 === Allow Media Viewer App to Work with HEIC and HEIF Formats ===
 
 We removed the regular expression related to HEIC and HEIF files from the preview manager list as this was preventing the files_mediaviewer app from correctly interpreting these mime types. The app is now able to open such files. https://github.com/owncloud/core/pull/40990[#40990]
 
+[discrete]
 === Prevent mounting of shares with failed underlying storages ===
 
 Some mounts use a shared storage which is pointing to a different storage. In case the underlying storage was removed (removal of the external mount from the web UI), the share mount was still being present as if the underlying storage could still be accessed. This was causing problems with the "files:remove-storage --show-candidates" occ command because the removed storage wasn't shown as a possible candidate. Now that shared storage won't be mounted and the underlying storage will be detected as a candidate to be removed with the mentioned command. https://github.com/owncloud/core/pull/41014[#41014]
 
+[discrete]
 === Check if Account Creation Time Exists for Migrations ===
 
 In some rare scenarios it could have happened that the migration responsible for adding the creation time in the oc_accounts table was not correctly inserted into the oc_migrations one with the consequence that it was reattempted i.e., when upgrading apps, even if the column was already present. This has been fixed. https://github.com/owncloud/core/pull/40991[#40991]
@@ -246,6 +256,7 @@ All xref:known-issues-10-13-1[known issues] in Server 10.13.1 have been fixed:
 
 * The database query used to identify the previews that need cleaning up has been enhanced for optimal performance. As a result, the background job responsible for this task will have significant performance improvements. https://github.com/owncloud/core/pull/40974[#40974]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.13.1 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -261,19 +272,23 @@ Possible workaround: https://patch-diff.githubusercontent.com/raw/owncloud/core/
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.13.1 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
 
-=== Open in Web Improvements ===
+[discrete]
+=== Open in Web Improvements
 
 The "Open in Web" feature for direct editing of office documents now properly works on iOS and Desktop clients with Collabora. https://github.com/owncloud/core/pull/40958[#40958]
 
+[discrete]
 === Avoid Loading 3rd-party Resources
 
 The "Open in Web" configuration offers icons to be shown in the clients. This is e.g., used by the iOS 12.0.3 client. We now ship the icons embedded in core. https://github.com/owncloud/core/issues/40953[#40953]
 
+[discrete]
 === Notable Changes
 
 * Fix: disallow pre-signed url access if the signing key is not initialized. https://github.com/owncloud/core/pull/40962[#40962]
 * New code was added to dismiss invalid settings of the redirection endpoint URI as seen in the OAuth2 protocol, according to RFC#7636. https://github.com/owncloud/oauth2/pull/359[oauth2#349]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.13.0 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -282,6 +297,7 @@ Find below a list of updated apps in comparison with the 10.13.0 complete bundle
 * {oc-marketplace-url}/apps/guests [Guests]: 0.12.3
 * {oc-marketplace-url}/apps/oauth2 [OAuth2]: v0.6.1
 
+[discrete]
 [#known-issues-10-13-1]
 === Known Issues
 
@@ -291,100 +307,124 @@ Find below a list of updated apps in comparison with the 10.13.0 complete bundle
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.13.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Internet Explorer 11 Deprecation Note
 
 Internet Explorer 11 support will be dropped in the next server release.
 
+[discrete]
 === Update Symfony from 4.4.* to 5.4.*
 
 Symfony framework has been updated to LTS major version 5.4. This also affected a number of apps which required a new release and have been now included in the complete bundle.
 
+[discrete]
 === Drop Setup of User Key Encryption
 
 User key encryption has already been deprecated in core versions later than 10.7. For this reason, the command line interface and web UI to enable user key encryption are no longer available. If you are operating an ownCloud installation with user key encryption enabled, please get in contact with support@owncloud.com to plan a migration to master key encryption. https://github.com/owncloud/encryption/pull/389[encryption#389]
 
+[discrete]
 === User Key Encryption Is No Longer Auto-Enabled
 
 Executing the `encryption:encrypt-all` occ command will no longer auto-enable user key encryption. https://github.com/owncloud/core/pull/40702[#40702]
 
+[discrete]
 === Added occ Command to Remove Obsolete Storages
 
 Metadata coming from storages is stored in the database. Previously, when a storage has been removed from ownCloud, metadata remained in the DB. The new occ command allows removing that stored metadata, reducing the amount of space used by the DB as well as slightly improving the performance since there will be fewer entries. https://github.com/owncloud/core/pull/40779[#40779]
 
+[discrete]
 === Enforce 2-Factor Authentication
 
 2-factor authentication can be enforced now. The feature requires at least one app implementing 2-factor authentication, otherwise no enforcement will be done. If 2-factor authentication is enforced, all users will be required to use a 2-factor authentication app. Some specific groups selected by the admin can be excluded to let those users bypass 2-factor authentication. https://github.com/owncloud/core/pull/40830[#40830]
 
+[discrete]
 === Setting up Federation Sharing over the Web UI Can Use Trusted Servers Again
 
 After an update of the guzzle library in previous core versions, it was no longer possible to set up new trusted server relations for federated sharing over the Web UI because of the wrong format used during the token exchange phase. We now explicitly set the format to be json so that the exchange is correctly done. https://github.com/owncloud/core/pull/40815[#40815]
 
+[discrete]
 === Add Commands to Handle Trusted Servers from the Command Line
 
 New occ commands have been added to handle the trusted servers for federation from the command line. These commands will allow the admin to add, list and remove trusted servers. https://github.com/owncloud/core/pull/40796[#40796]
 
+[discrete]
 === Implement App Registry
 
 By using a new option `Open in..` in the iOS (version 12.0.3+) or Desktop client (version 4.0+) it is now possible to directly open a file in the Office Suite being installed on the ownCloud server. https://github.com/owncloud/core/pull/40843[#40843]    
 
+[discrete]
 === Skip `share_folder` for Guest Users
 
 When the `share_folder` config.php option was set, guest users could no longer see their received shares. We now skip the `share_folder` config.php option for guest users and default to root. https://github.com/owncloud/core/pull/40864[#40864]
 
+[discrete]
 === Apply Same Restrictions for All the Shares
 
 Remote shares will have the same restrictions as user and group shares. This means that, in order for a remote user to show up as sharee, the search term length must be greater than the minimum configured otherwise only exact matches will be shown. https://github.com/owncloud/core/pull/40885[#40885]
 
+[discrete]
 === Clean up Storage and Database After Failed File Uploads
 
 Storage and database are now cleaned up of any remaining items if a file upload fails. https://github.com/owncloud/core/pull/40892[#40892]
 
+[discrete]
 === Bump Files App Version
 
 The files app version was not properly increased when the `OCA\Files\BackgroundJob\CleanupPersistentFileLock` and `OCA\Files\BackgroundJob\PreviewCleanupJob` background jobs were originally added. As a result, those two jobs were not correctly inserted into the `oc_jobs` table upon a core upgrade. First time installations are not affected as their jobs are correctly added. https://github.com/owncloud/core/pull/40878[#40878]
 
+[discrete]
 === Explicitly Set Open Mode in the Checksum Wrapper
 
 Uploading files to some external storages via the desktop client was causing issues due to the checksum wrapper. We are using additional wrappers and the mode wasn't being detected correctly in some cases. Using the right mode in the checksum wrapper was required in order to decide whether we should have discarded the final checksum or not; in this case, the checksum was being discarded so it was causing a checksum mismatch. Now the open mode in the checksum wrapper is set explicitly. https://github.com/owncloud/core/pull/40832[#40832]
 
+[discrete]
 === Align to New accounts.google.com Authorization URI
 
 Core 10.12.1 brought an update of the google/apiclient from version 2.12.6 to 2.13.1. However, in version 2.13.0 the accounts.google.com authorization URI has been updated. This change broke old code that uses the `setApprovalPrompt('force')` instead of the newer `setPrompt('consent')` method, as this endpoint does not support the legacy approval prompt parameter. This has been now fixed. https://github.com/owncloud/core/pull/40783[#40783]
 
+[discrete]
 === Fix for Query Unnecessarily Deleting Thumbnails
 
 Fixed query that detects unused thumbnails to prevent unnecessary deletes and potential recreations. https://github.com/owncloud/core/pull/40801[#40801]
 
+[discrete]
 === Automatically Disable Online Updater for Enterprise
 
 Online updater is not recommended for Enterprise installations and is now automatically disabled in such cases. https://github.com/owncloud/core/pull/40841[#40841]
 
+[discrete]
 === Versions Expire Job No Longer Reports an Error with Federated Shares
 
 The versions expire job does not report errors anymore with federated shares when versioning metadata is enabled. https://github.com/owncloud/core/pull/40847[#40847]
 
+[discrete]
 === Display and delete invalid background jobs
 
 Background jobs can be no longer valid because they are from an old version of an app, or from an app that has been disabled. These jobs can now be listed with the command `occ background:queue:status --display-invalid-jobs` and can be deleted with the command `occ background:queue:delete <Job ID>`. https://github.com/owncloud/core/pull/40846[#40846]
 
+[discrete]
 === Rely on Server to Sort the User List
 
 Previously, the user list was sorted in the browser. This was causing confusion because the sorting happened without taking into account all the items, so there were some weird effects. There is no sorting in the browser now. The server is expected to return the list of users already sorted, so the browser just needs to show the list. https://github.com/owncloud/core/pull/40840[#40840]
 
+[discrete]
 === Remove the `add group` Button from the Dropdowns in the Users Page
 
 The `add group` button has been removed from the dropdowns because the behavior was confusing. You can still create new groups in the users page by using the `add group` button in the top left corner of the users page. The dropdowns will only select existing groups, but they won't add new groups. https://github.com/owncloud/core/pull/40770[#40770]
 
+[discrete]
 === Require firebase/php-jwt in Core
 
 firebase/php-jwt version 6 is now part of core and all apps can rely on it. https://github.com/owncloud/core/pull/40901[#40901]
 
+[discrete]
 === New Default Minimum Supported Desktop Client Version
 
 To ensure clean and reliable operation of the ownCloud platform it is important to stay up-to-date with the latest releases of the server as well as the clients. To take care of compatibility between the server and desktop clients, the minimum version the server will accept connections from has been raised to version `3.2.1`.
 
 While it’s recommended to keep up with later versions, this is the new default value. https://github.com/owncloud/core/pull/40876[#40876]
 
+[discrete]
 === Notable Changes
 
 * Setup checks now allow values other than `none` for X-Robots-Tag header. If `none` or `noindex` and `nofollow` are missing, a security warning is raised. Previously a header value with `noindex` and `nofollow` wasn't allowed even though it was valid. https://github.com/owncloud/core/pull/40715[#40715]
@@ -401,6 +441,7 @@ While it’s recommended to keep up with later versions, this is the new default
 * We have added an `if-statement` in the ShareesController code of the files_sharing app that searches for remote sharees. When the `sciencemesh` app is installed, it will be used instead of the federatedfilesharing app to find sharee matches for OCM sharing. https://github.com/owncloud/core/pull/40886[#40886]
 * Changed the share dropdown to expand to the page bottom if there are more entries. https://github.com/owncloud/core/pull/40873[#40873]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.12.2 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -434,6 +475,7 @@ Find below a list of updated apps in comparison with the 10.12.2 complete bundle
 * https://marketplace.owncloud.com/apps/wopi [Microsoft Office Online] 1.7.0
 * https://marketplace.owncloud.com/apps/workflow [Workflows] 0.6.0
 
+[discrete]
 === Known Issues
 
 Currently there are no known issues with ownCloud Server 10.13.0. This section will be updated if issues are discovered.
@@ -442,10 +484,12 @@ Currently there are no known issues with ownCloud Server 10.13.0. This section w
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.12.2 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Disallow permissions to be upgraded via federated sharing
 
 Do not allow setting higher permissions on a federated share for a resource which was shared with limited permissions. https://github.com/owncloud/core/pull/40803[#40803]
 
+[discrete]
 === Filter sensitive data in log for Session::loginInOwnCloud
 
 The `loginInOwnCloud` method contains sensitive data in the argument list and needed therefore to be added to the list of methods where sensitive parameters are being obfuscated. https://github.com/owncloud/core/pull/40792[#40792]
@@ -454,18 +498,22 @@ The `loginInOwnCloud` method contains sensitive data in the argument list and ne
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.12.1 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Fix Permission Bits when Enforcing Passwords on Public Links
 
 Passwords on public link files with read + write permission were not correctly enforced. The usage of the permissions bits has been now fixed so that, when selecting "Enforce password protection for read + write + delete links", passwords are correctly enforced. https://github.com/owncloud/core/pull/40701[#40701]
 
+[discrete]
 === Prevent 507 Insufficient Storage on 32-Bit Systems
 
 With the introduction of https://github.com/owncloud/core/pull/40567 compatibility with 32-bit systems broke as we are now casting $freeSpace to int and this caused an integer overflow on such systems when the free space was above the max supported value. We added an additional check for 32-bit systems in QuotaPlugin.php. https://github.com/owncloud/core/pull/40709[#40709]
 
+[discrete]
 === Fix quota for 32-Bit Systems
 
 Quota calculation on 32 bit systems suffered from an inconsistent use of float and integer data types. The fix now correctly supports that the size could be either an integer or a float. https://github.com/owncloud/core/pull/40729[#40729]
 
+[discrete]
 === Package firebase/php-jwt in files_texteditor
 
 Since version 2.5.0 of the files_texteditor app we use Firebase\JWT\JWT, but this dependency was not directly shipped with files_texteditor. This was not an issue if the files_external or WOPI app(s) were enabled as they include the same dependency. However, if both apps were disabled the functionality of the files_texteditor app broke. We now ship this dependency in files_texteditor as well. https://github.com/owncloud/files_texteditor/pull/389[files_texteditor#389]
@@ -481,6 +529,7 @@ In previous core versions, the setting of the `htaccess.RewriteBase` config.php 
 
 When using the User Home Folder Naming Rule (configurable in the Advanced tab of the LDAP wizard), which allows to specify the home folder by means of an LDAP attribute, chunks of users' uploads were wrongly created under the default data directory rather than inside the configured home directory. We are now using the getHome() method for getting the user's home so that chunks uploads respect the configured home directory. https://github.com/owncloud/core/pull/40693 [#40693] https://github.com/owncloud/core/pull/40719[#40719]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.12.0 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -512,78 +561,97 @@ Support for security fixes for PHP 7.3 ended in December 2021. ownCloud Server n
 
 NOTE: Before upgrading to ownCloud Server 10.12, you MUST upgrade to PHP 7.4. ownCloud Server 10.12 will not start when using PHP 7.3.
 
+[discrete]
 === Persistent Major File Versions Workflow
 
 To save space, old versions of files are usually deleted over time according to ownCloud's retention policy. Users are now able to mark the current version as "published". This increases the major version tag and prevents deletion. Also, restore operation logic changed. Now restore creates a new current version of the file from one of the past noncurrent versions of the file. The current version also receives incremented mtime for the file, and author of the file is the user who restored it. The old noncurrent version is no longer removed upon restore and the current version no longer receives mtime of that version. The current version of the file is now shown in the Versions Tab, highlighted with "gray" background. Versions now persist additional extended metadata on versioning tags, that allow easier identification of the versions. Each update increases the minor version for the file. Each new edit of the file creates noncurrent versions - the ones tagged with major version due to publishing will persist long term and won't be subject to any retention policies. Migrate from deprecated save_version_author to save_version_metadata. https://github.com/owncloud/core/pull/40531[#40531]
 
+[discrete]
 === Support for Login Policies
 
 Support for login policies has been added in order to block the login of users under some circumstances. By default, there isn't any restriction, so any user can login normally (assuming the password is correct). A group login policy has been added. This policy allows or denies users to log in based on the login type being used (username + password, openID Connect, etc.) and whether they belong to specific groups. This can be used to ensure a group of users is always authenticated using a determined authentication mechanism. https://github.com/owncloud/core/pull/40574[#40574]
 
+[discrete]
 === Properly Remove File Versions from the Trashbin
 
 Previously, restoring or removing a file from a deleted folder (the folder and the contents were in the trashbin) didn't remove the versions of the file. Those versions were left in both the database and the file system, taking up space and degrading the performance. This is now being handled properly, so no resources are consumed due to the versions being left stranded. https://github.com/owncloud/core/pull/40291[#40291]
 
+[discrete]
 === "available for" Selection in the Mount Point Configuration Now Shows the Display Names
 
 The "available for" selection of the mount configuration of external storages was using the group ID. This wasn't a problem because for local groups the group ID matches the group display name, and for ldap groups the group ID was the "cn" attribute. Due to recent changes, the ldap group will now use the "objectuid" attribute (or a similar attribute) as group ID by default. This was causing the "available for" selection to show that "objectuid", so identifying the right group was problematic. Now, the "available for" selection will show the group display name, which for ldap is the "cn" attribute by default. Note that this happens on new installations. There is an automatic migration in place, so for upgrades, the "cn" attribute will be set as group name in order to keep the old behavior. https://github.com/owncloud/core/pull/40412[#40412]
 
+[discrete]
 === Skip Public Links When Updating Permissions of a Share's Children
 
 Updates to permissions of a share were wrongly propagated to public links' children. This has now been fixed and public links are being skipped. https://github.com/owncloud/core/pull/40420[#40420]
 
+[discrete]
 === Checksums Only Stored if the Whole Stream Has Been Read
 
 Previously, range downloads (or downloads requesting a specific byte range) would store a checksum, if needed, based only on the requested range. This caused problems because the checksum is expected to be for the whole file. Now those range downloads won't store a checksum because only a part of the file has been read, so the checksum would be incomplete. Some additional cases have been taken into account, mostly based on actions that could happen on the data stream, but they shouldn't happen normally. https://github.com/owncloud/core/pull/40513[#40513]
 
+[discrete]
 === Fixed the dav:cleanup-chunks Command to Work With a Configured Folder
 
 ownCloud's file system was initialized partially to prevent contacting the LDAP server if it was configured. This was causing problems because the upload folder where the chunks were expected was a mount point, and due to the partial file system initialization such a mount point was missing, so we were checking a different folder (the default one). Now, ownCloud's file system will be fully initialized instead, so that the mount point will be present and we check the right location. https://github.com/owncloud/core/pull/40571[#40571]
 
+[discrete]
 === Copy the Encryption Keys First and Then Rename the Files
 
 With encryption enabled when a file was renamed, first the actual file was renamed, and then the encryption keys were moved to the new location. If something went wrong, it was possible that the keys weren't moved. This caused the file to become inaccessible because we couldn't decrypt the file due to the missing keys (which weren't in the right place). Now, when a file is renamed, the encryption keys will be copied first, and then the file will be renamed. If copying the encryption keys fails, renaming will fail. After the encryption keys are copied, the file could still fail to be renamed. In this case, the copies of the keys will be removed, but the file will still be accessible because we still keep the old keys. The original keys (not the copy) will be removed if the file is successfully renamed. https://github.com/owncloud/core/pull/40433[#40433]
 
+[discrete]
 === Delete Action Is Removed from Sharing Sections
 
 In the files apps, the "shared with others" and "shared by link" sections allowed people to use a delete action on a file or folder present in that list. This was causing problems because people accidentally removed the folder when, in fact, they wanted to unshare it. This delete action isn't present any longer. You can revoke shares by accessing the file or folder's details. If you want to delete the file or folder, you can do it from the regular "all files" section. https://github.com/owncloud/core/pull/40497[#40497]
 
+[discrete]
 === Allow to Temporarily Ignore Invalid Federated Shares
 
 This change is targeted mostly at tightly federated setups. Currently, if a federated share is invalid or the API endpoint returns "not found", an availability check would validate whether this is a problem with a server, and that given share is removed. However, in some cases these checks might not be enough (e.g., complex migrations in tightly federated setups). In that case the invalidation behavior can be disabled by using the app setting: "occ config:app:set files_sharing enable_cleanup_invalid_external_shares --value no". https://github.com/owncloud/core/pull/40503[#40503]
 
+[discrete]
 === Fix Orientation of Images with EXIF Data
 
 Some images with large EXIF data had problems with the orientation when they were shown. This was caused by the native function failing to retrieve the EXIF data. Images with small EXIF data didn't have this problem. By making the chunk size of the stream bigger, the native function is now able to load the EXIF data properly and return the information, and with such information we can fix the orientation of the image. https://github.com/owncloud/core/pull/40600[#40600]
 
+[discrete]
 === Remove Empty Directories from the files_versions
 
 Empty directories were left when the contained versions were deleted or moved. Large installations might end up with too many of these empty directories. Now, when a version is deleted, the containing directory will also be deleted if there aren't any more versions inside. https://github.com/owncloud/core/pull/40499[#40499]
 
+[discrete]
 === Use Correct Themed l10n App Folder When the App Lives outside of Server Root
 
 When an app_path is pointing outside of the ownCloud server root or uses a symlink, under certain conditions the l10n folder points to an invalid location and results in a crash of the server. This happened due to the assumption that app paths always start with the server root path. https://github.com/owncloud/core/pull/40607[#40607]
 
+[discrete]
 === Fix Share-into-Share Move Scenario
 
 Public links were lost upon moving a share into another share as the share owner was not correctly set. This has now been partially fixed. https://github.com/owncloud/core/pull/40612[#40612]
 
+[discrete]
 === Prevent Creation of Empty Files and Folders When No Quota Is Available
 
 Until now it was possible for users with 0 quota or who already reached the limit of their assigned quota to still create empty files/folders, which was confusing. This behavior has been fixed. https://github.com/owncloud/core/pull/40567[#40567]
 
+[discrete]
 === Drag & Drop Folders into Public File Upload
 
 Previously only files were accepted via drag & drop. Users can now also drag folders into a public link that has the filedrop flag. When adding a folder, the hierarchy is flattened out and all files are added without any subfolders. Name collisions are avoided as usual. https://github.com/owncloud/core/pull/40643[#40643]
 
+[discrete]
 === Add Support for OCM via ScienceMesh
 
 We have added an if-statement in the files_sharing ShareesController code that searches for remote sharees. When the config entry "sharing.remoteShareesSearch" is set to the name of a class that is registered in the server container and that implements "IRemoteShareesSearch" (for instance the "ScienceMeshSearchPlugin" that the "sciencemesh" app registers) it will be used instead of the federatedfilesharing app to find sharee matches for OCM sharing. https://github.com/owncloud/core/issues/40577[#40577]
 
+[discrete]
 === Allow Specifying Available Space for Object Storages
 
 Object storages are reporting only unknown storage space. This causes problems for other apps that rely on this storage method, e.g., metrics app that monitors the available space. A new configuration at the storage level has been added which allows apps or further extensions of the storage class for object storage to use it. https://github.com/owncloud/core/pull/40674[#40674]
 
+[discrete]
 === Other Notable Changes
 
 * The suggested host name and port syntax for the database host on the installation has been corrected. https://github.com/owncloud/core/pull/40348[#40348]
@@ -602,6 +670,7 @@ Object storages are reporting only unknown storage space. This causes problems f
 should check any calls to ensure that arrays of items are not passed in the body option. See the diffs of PHP docs in the linked PR for examples. https://github.com/owncloud/core/pull/40652[#40652]
 * In some cases mail notifications related to sharing activities are blocked by mail filters as they are flagged as email impersonation. In such cases it may be desirable for an ownCloud admin to have a config option for removing the sender display name from the "From" address. This is now possible by setting the config.php parameter "remove_sender_display_name => true". https://github.com/owncloud/core/pull/40671[#40671]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.11.0 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -620,6 +689,7 @@ Find below a list of updated apps in comparison with the 10.11.0 complete bundle
 [#known-issues-10-12-0]
 === Known Issues
 
+[discrete]
 ==== ownCloud Inaccessibility
 
 If you have installed ownCloud 10.12.0 in the *combination* of:
@@ -638,22 +708,27 @@ Dear ownCloud administrator, find below the changes and known issues in ownCloud
 
 When upgrading from ownCloud Server 10.10, there will be no migration steps impacting the upgrade duration. Therefore the upgrade is expected to finish quickly.
 
+[discrete]
 === Edit Permission for Public Links on Single Files
 
 In previous versions of ownCloud Server, public links on single files could only be created with read-only permissions (`Download / View`). If users wanted to share a file and enable recipients to change it, they had to put that file into a folder and share that with permissions for editing (`Download / View / Edit`). Server 10.11 introduces the `Download / View / Edit` role for public link shares on single files to make a user's life easier. Especially when using ownCloud in combination with web office solutions like ONLYOFFICE, Collabora Online or Microsoft Office Online, users can now quickly and conveniently collaborate on documents with external parties. https://github.com/owncloud/core/pull/40264[#40264]
 
+[discrete]
 === Sharing with Multiple Users at once
 
 Server 10.11 introduces the ability to share with multiple users at once by entering their identifiers (e.g., display name, user ID, email address, federated cloud ID) as a comma-separated list in the sharing dialog (e.g., `alice,bob@example.org,carol`. Based on the inputs, ownCloud will decide how to create the shares (e.g., share with an internal user, invite a new guest, create a federated share). This way, users can easily invite many recipients at once to their files and folders. With Custom Groups version 0.7.0 onwards the same behavior also applies to adding users to Custom Groups. https://github.com/owncloud/core/pull/40155[#40155] https://github.com/owncloud/customgroups/pull/522[customgroups#522] https://github.com/owncloud/guests/pull/506[guests#506]
 
+[discrete]
 === Inviting New Guests to Custom Groups
 
 Server 10.11 in combination with Custom Groups 0.7.0 and Guests 0.12.0 allows inviting new guest users directly into a Custom Group. Previously this was only possible by sharing files with new guests first and creating their user account thereby. New guests will not have access to any files nor will they be able to create/upload their own files unless there is a share with the respective Custom Group or with the guest user. https://github.com/owncloud/customgroups/pull/521[#521] https://github.com/owncloud/guests/pull/506[guests#506]
 
+[discrete]
 === New Skeleton Files for Users
 
 For new user accounts, the default skeleton files have been changed a bit in version 10.11. The ownCloud user manual PDF has been removed as it becomes outdated quickly and will not be updated for existing users when a server upgrade is done. It is recommended to provide the official user documentation to users instead. New users will further find a folder called "Learn more about ownCloud" that contains information about the product.
 
+[discrete]
 === Notable Changes
 
 * The default app on login can now be set per individual user. ownCloud use this to remember which UI (Classic UI or ownCloud Web) the user has used during their last session. This way, users are always redirected to their preferred UI after logging in. https://github.com/owncloud/core/pull/39600[#39600]
@@ -670,6 +745,7 @@ For new user accounts, the default skeleton files have been changed a bit in ver
 * The comments feature now works better on small screens. https://github.com/owncloud/core/pull/40142[#40142]
 * A new setting `proxy_ignore` has been introduced to exclude requests to certain domains from using the configured `proxy`. https://github.com/owncloud/core/pull/40148[#40148]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.10.0 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -685,6 +761,7 @@ Find below a list of updated apps in comparison with the 10.10.0 complete bundle
 
 === Known Issues
 
+[discrete]
 ==== PHP guzzle dependencies
 This release uses guzzle 7. The complete bundle contains several app updates that were migrated from guzzle 5 to guzzle 7. When using the minimum bundle, those apps can be downloaded from the marketplace. Please check any non-standard apps for guzzle 7 compatibility. If in doubt, disable these apps before upgrading.
 
@@ -706,6 +783,7 @@ When upgrading from ownCloud Server 10.9, the following migrations will run as p
 
 * A migration step takes care of converting external storage parameters to the new format (see below). This step is expected to be quick and should not impact upgrade duration significantly. https://github.com/owncloud/core/pull/39935[#39935]
 
+[discrete]
 === Session Lifetime and Expiration Improvements
 
 ownCloud Server 10.10 comes with a couple of stability and security improvements around session lifetime and expiration in the Classic web interface https://github.com/owncloud/core/pull/39916[#39916]:
@@ -715,6 +793,7 @@ ownCloud Server 10.10 comes with a couple of stability and security improvements
 * If the session_keepalive config option (`session_keepalive` in `config.php`) is set to `false`, a "heartbeat" request will be sent based on activity in order to extend the session lifetime. If there's no activity, the session might expire, and the user will need to login again.
 * A new config option `session_forced_logout_timeout` has been introduced in `config.php`. For advanced security, this option can be used to expire user sessions a configurable amount of seconds after they close the ownCloud browser tab or the whole browser, respectively, forcing the user to log in again when they access ownCloud the next time. This option is disabled by default.
 
+[discrete]
 === Notable Changes
 
 * The feature _Resend invitation mail_ in user management does not apply to guest users anymore as those have a different invitation flow than regular users (user-based vs. admin-based). https://github.com/owncloud/core/pull/40032[#40032]
@@ -730,6 +809,7 @@ ownCloud Server 10.10 comes with a couple of stability and security improvements
 * ownCloud Web: Guest users will now be explicitly listed as "Guests" (instead of "User") https://github.com/owncloud/core/pull/40013[#40013]
 * The config report now provides a https://github.com/owncloud/configreport/releases[dedicated guest user count]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.9.1 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -745,6 +825,7 @@ Find below a list of updated apps in comparison with the 10.9.1 complete bundle.
 * https://marketplace.owncloud.com/apps/workflow[Workflow] 0.5.4
 * https://marketplace.owncloud.com/apps/windows_network_drive[External Storage: Windows Network Drive] 2.1.1
 
+[discrete]
 === For Developers
 
 * The Capabilities API now exposes the product name. [#39851]https://github.com/owncloud/core/pull/39851
@@ -759,7 +840,7 @@ Currently there are no known issues with ownCloud Server 10.10.0. This section w
 ownCloud Server 10.9.1 is a follow-up bugfix release that takes care of 10.9 known issues.
 You can read {owncloud-server-changelog-url}[the full ownCloud Server changelog] for further details on what has changed.
 
-=== Solved known issues
+=== Solved Known Issues
 
 All xref:server_release_notes.adoc#known-issues-10-9-0[known issues] in Server 10.9.0 have been fixed:
 
@@ -767,6 +848,7 @@ All xref:server_release_notes.adoc#known-issues-10-9-0[known issues] in Server 1
 * Marketplace not working after upgrade from 10.8 to 10.9 https://github.com/owncloud/core/issues/39616[#39616]
 * Fixes for the newly introduced xref:file-versions-store-and-display-the-author-of-file-versions[feature to store the author of versions] https://github.com/owncloud/core/pull/39670[#39670] https://github.com/owncloud/core/pull/39673[#39673]
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.9.0 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -783,6 +865,7 @@ Dear ownCloud administrator, find below the changes and known issues in ownCloud
 * To improve the performance of address book search queries (e.g., when looking for federated users to share with), a migration step adds an index in the `cards_properties` table. The impact on upgrade duration depends on the number of known federated users. https://github.com/owncloud/core/pull/39017[#39017]
 * A migration step takes care of setting the new option `allow_user_to_change_mail_address` according to what has been set in `allow_user_to_change_display_name` to make sure that there's no unintentional behavior change after upgrading. The impact on upgrade duration is insignificant.  https://github.com/owncloud/core/pull/39288[#39288]
 
+[discrete]
 === PHP 7.2 Support Discontinued
 
 As xref:php-7-2-deprecation-note[announced] in the previous minor releases of ownCloud Server, from version 10.9 onward ownCloud Server **no longer supports PHP 7.2**.
@@ -795,10 +878,12 @@ NOTE: If you're using the official Docker containers or the Univention appliance
 
 PHP 7.3 support will be dropped in one of the next server releases. Support is still available with 10.9 but it will be necessary to plan an upgrade soon if PHP < 7.4 is in use.
 
+[discrete]
 === Support for MariaDB 10.6
 
 Version 10.9 adds support for MariaDB 10.6 (https://github.com/owncloud/core/pull/39286[#39286]). If you're planning a database update to a MariaDB version > 10.5, it is **very important to prepare the ownCloud installation first**. Please read the https://doc.owncloud.com/server/latest/admin_manual/maintenance/upgrading/database_upgrade.html[documentation] on this matter carefully before upgrading to MariaDB 10.6.
 
+[discrete]
 === Highly Improved Initial Sync and Discovery Performance
 
 Server 10.9 comes with the means to drastically reduce the time needed by the ownCloud clients for the initial discovery of the contents in user accounts, especially for those with many files and huge directory structures. Practically, this means when a user account is initially set up, e.g., in the ownCloud Desktop Client or when larger directory structures are added to an existing account (e.g., via sharing or external storage mounts like Windows Network Drives), the client no longer needs to check every individual folder. Instead, the server will compose a full content listing and provide it to the client ("Streaming PROPFIND with depth=infinity", https://github.com/owncloud/core/pull/38583[#38583]). Additionally, to prevent memory issues on the server side, this content listing will be streamed to the client while it is being created.
@@ -807,12 +892,14 @@ This new server-side capability needs changes in the ownCloud clients to work. A
 
 TIP: If you use the currently existing versions of the ownCloud clients, you will not yet experience performance gains.
 
+[discrete]
 === Manual File Locking: Ability to Define User Groups That Can Unlock Files
 
 Since version 10.5, xref:file-locking-in-the-web-interface[ownCloud supports Manual File Locking] to prevent concurrent changes of files by different users. The feature works in a way that it only allows the user who locked a file to unlock it again (_exclusive file locking_) and it provides a configurable timeout for file locks.
 
 Version 10.9 introduces a new subfeature that allows administrators to define groups of users that are entitled to unlock locked files, independent of whether they have set the lock initially or not (https://github.com/owncloud/core/pull/38222[#38222]). Users in such groups can regain control over files, e.g., if a lock owner is unavailable and a long timeout for file locks is used. Administrators can configure this in the _Manual File Locking_ section of the _General_ admin settings. For more information, refer to the https://doc.owncloud.com/server/latest/admin_manual/configuration/files/manual_file_locking.html[ownCloud documentation].
 
+[discrete]
 === File Versions: Store and Display the Author of File Versions
 
 To improve usability, Server 10.9 provides a new feature for file versioning. When working on documents with multiple people, it can be important to know who created a certain version, e.g., to roll back to a specific state or to understand who made which changes to a file. For this, you can enable storing and displaying the author of file versions. When enabled, users will see the author of file versions in the 'Versions' tab of the right sidebar in the web interface. To avoid time-consuming database migrations, the author metadata will be stored in files on the storage.
@@ -821,17 +908,20 @@ The feature is disabled by default as it is not compatible with all use cases. T
 
 TIP: This feature is incompatible with S3 object storage. Do not enable it if you're using S3 as primary storage.
 
+[discrete]
 === Restrict Public Link Sharing to Certain Groups
 
 In certain scenarios it is not desired that all users of an ownCloud installation can create public links and share data publicly. Therefore, ownCloud Server 10.9 provides a new configuration option for administrators that allows restricting the creation of public links to users in certain groups (https://github.com/owncloud/core/pull/38980[#38980]).
 
 TIP: Existing public links will continue to work after introducing a restriction policy. The policy only applies to the creation of new public links.
 
+[discrete]
 === Ability to move a user's home folder
 
 In some cases it is necessary to manage storage locations of users, e.g., if you want to distribute them across multiple storages. To facilitate this process, Server 10.9 introduces a new _occ_ command (`occ user:move-home`) that allows moving user home folders to a new location (https://github.com/owncloud/core/pull/39136[#39136]). The command takes care of moving the physical data and of updating all other related information. In addition, new commands like the `occ user:home:list-dirs` which lists the available storage locations of users and `occ user:home:list-users` which lists users belonging to a storage location have been added.
 For more information, refer to the https://doc.owncloud.com/server/latest/admin_manual/configuration/server/occ_command.html#user-commands[ownCloud documentation about occ] and https://doc.owncloud.com/server/latest/admin_manual/configuration/user/user_management.html#moving-the-user-home[about user management].
 
+[discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.8 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -847,6 +937,7 @@ Find below a list of updated apps in comparison with the 10.8 complete bundle. M
 * https://marketplace.owncloud.com/apps/wopi[Microsoft Office Online] 1.5.1
 * https://marketplace.owncloud.com/apps/user_ldap[LDAP Integration] 0.16.0
 
+[discrete]
 === Other Notable Changes
 
 * The handling of inaccessible federated shares has been improved to avoid removing temporarily unavailable shares. https://github.com/owncloud/core/pull/38474[#38474]
@@ -877,11 +968,12 @@ Find below a list of updated apps in comparison with the 10.8 complete bundle. M
 * The setting `allow_user_to_change_mail_address` has been introduced and decoupled from the setting `allow_user_to_change_display_name`.
 * The expiration date in the _Shared by link_ view will now be correctly displayed. https://github.com/owncloud/core/pull/39238[#39238]
 
+[discrete]
 === For developers
 
 * It is now possible to register multiple default actions for a certain mimetype. If there is only a single action available, this action will be conducted when the user clicks on the file name. If there are multiple actions available for a certain mimetype, the user will see an "Open with" menu when clicking on the file name. More information can be found in the https://doc.owncloud.com/server/latest/developer_manual/app/fundamentals/js.html#registering-file-actions[developer documentation]. https://github.com/owncloud/core/pull/39541[#39541]
 
-=== Solved known issues
+=== Solved Known Issues
 
 All xref:server_release_notes.adoc#known-issues-10-8[known issues in Server 10.8] have been fixed.
 
@@ -898,6 +990,7 @@ All xref:server_release_notes.adoc#known-issues-10-8[known issues in Server 10.8
 
 Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.8 that need your attention. You can also read {oc-changelog-url}[the full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === ownCloud Web supplements the Classic Web Interface - Try it!
 
 The all-new web interface for ownCloud, ownCloud Web, has come a long way since its initial release at the end of 2020. It is available as an app on the https://marketplace.owncloud.com/apps/web[ownCloud Marketplace] and ownCloud Server has been xref:server_release_notes.adoc#owncloud-web-the-new-web-frontend-for-owncloud[prepared to work with it since version 10.6]. ownCloud Web https://owncloud.dev/clients/web/deployments/oc10-app/#configure-owncloud-10[can be deployed as a supplement to the classic web interface] and meanwhile it is in use at quite a number of installations. This has brought up good feedback around the integration with ownCloud 10 that has been addressed for 10.8. Additionally, lots of improvements have made their way into ownCloud Web. For an overview you can have a look at the https://owncloud.dev/ocis/release_notes/[ownCloud Infinite Scale release notes] and for a full list of changes, please see the https://github.com/owncloud/web/blob/master/CHANGELOG.md[ownCloud Web changelog].
@@ -912,11 +1005,13 @@ With all these improvements we want to motivate ownCloud service providers to ma
 
 TIP: ownCloud Web is currently in the status of a Technology Preview. This means that bugs and other undesired behavior are expected. After careful testing, ownCloud Web can be used on production systems. Features are still being added to ownCloud Web and users will need to use the Classic web interface to do certain actions. Please evaluate according to your use case how well the new web interface suits your needs and let us know any feedback that you encounter.
 
-==== Fixed known issues
+==== Fixed Known Issues
 
 Both xref:server_release_notes.adoc#known-issues-10-7[known issues from ownCloud Server 10.7] have been fixed. The deployment of ownCloud Web is now more robust and administrators can optionally decide whether ownCloud Links (public and private links) should be provided by the Classic web interface or by ownCloud Web using a https://owncloud.dev/clients/web/deployments/oc10-app/#configure-link-routing[new option in config.php].
 
+[discrete]
 ==== Feedback
+
 As mentioned, features are still being added to ownCloud Web and the new web interface can't yet cover every use case of the Classic interface. To further shape the new product and to determine the development priorities it is of utmost importance to consider user feedback. We're very grateful for any hints or feedback that you supply via the following channels
 
 - ownCloud Web survey: https://owncloud.com/web-design-feedback
@@ -926,18 +1021,21 @@ As mentioned, features are still being added to ownCloud Web and the new web int
 
 Since the ownCloud Web 3.4.0 release, the survey above is made available in ownCloud Web to allow users to directly report about their experience. If undesired, the feature can be turned off in the https://owncloud.dev/clients/web/getting-started/#options[ownCloud Web configuration].
 
+[discrete]
 === Improved Usability for "Add to ownCloud" on Public Links
 
 The usability of the "Add to ownCloud" feature on public link pages has been improved (https://github.com/owncloud/core/pull/38712[#38712]). Research on the feature has shown that most users use the feature to add links to the same ownCloud installation they originate from instead of creating federated shares with other ownCloud installations. For this reason there is a new default behavior which allows adding a link to a user account on the ownCloud installation the public link originates from with just a click and without requiring any further input. Advanced users can use a dropdown menu to add a link to a user account on another ownCloud installation.
 
 TIP: New icons have been introduced for this feature. If you're using a custom theme, it is recommended to check whether the icons have a good contrast.
 
+[discrete]
 === Modernized Login Page
 
 The login page has received several improvements regarding design and usability (https://github.com/owncloud/core/pull/38506[#38506]). A login button and labels for the input fields have been added and the "Alternative login" buttons (e.g., for authentication with OpenID Connect) have been redesigned to give a more modern look and feel. In this context, also the ownCloud Enterprise Theme has received improvements that are shipped with Server 10.8.
 
 TIP: If you're using a custom theme, it is recommended to check the login page and make sure that all elements appear as desired.
 
+[discrete]
 === Improvements for External Storages
 
 * Performance and caching improvements for external storages (e.g., Windows Network Drives) have been added https://github.com/owncloud/core/pull/38804[#38804]
@@ -945,18 +1043,22 @@ TIP: If you're using a custom theme, it is recommended to check the login page a
 * Passwords in the external storage configuration can now be stored encrypted in the database (e.g., for Windows Network Drive mount points). With the next release of the Windows Network Drive app, these can also be used to set up the WND Listener. https://github.com/owncloud/core/pull/38728[#38728]
 * The external storage settings UI has been improved to prevent accidentally exposing mount points to all users https://github.com/owncloud/core/pull/38795[#38795]
 
+[discrete]
 === Re-sending User Invitation Emails
 
 Invitation links for new users in the local ownCloud user management expire after 12 hours for security reasons. For such cases, administrators can now conveniently re-send invitation emails to new users using the mail icon in the user management. https://github.com/owncloud/core/pull/38774[#38774]
 
+[discrete]
 === System Events in the Activity Stream
 
 Events in the activity stream that have been issued by the system (e.g., expired shares or workflow automations like file retention or auto-tagging) are now indicated properly. Before, these events appeared as if the user would have done them manually. To be effective, this requires the latest versions of the Workflow and Activity app versions which are shipped with ownCloud Server 10.8. https://github.com/owncloud/core/pull/38605[#38605] https://github.com/owncloud/core/pull/38631[#38631]
 
+[discrete]
 === Migrations
 
 Upgrading from ownCloud Server 10.7 to 10.8 does not involve database migrations. The upgrade duration is, therefore, expected to be short.
 
+[discrete]
 === Updated App Versions
 
 Since ownCloud Server 10.5, all supported apps are being shipped as part of the complete bundle for ownCloud Server. Find below a list of updated apps in comparison with the 10.7 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
@@ -988,6 +1090,7 @@ ensure that you are running a recent patch release before upgrading to 10.8.
 
 As announced with the xref:server_release_notes.adoc#php-7-2-deprecation-note[release notes of version 10.6], PHP 7.2 support will be dropped in one of the next minor releases. Support is still available with 10.8 but it will be necessary to plan an upgrade soon if PHP < 7.4 is in use.
 
+[discrete]
 === Other Notable Changes
 
 * The auto-removal of inaccessible federated shares has been made more robust https://github.com/owncloud/core/pull/38474[#38474]
@@ -1006,16 +1109,17 @@ As announced with the xref:server_release_notes.adoc#php-7-2-deprecation-note[re
 * License keys can now be removed with a button in the admin settings https://github.com/owncloud/core/issues/38843[#38843]
 * Video playback in ownCloud relies on browser capabilities. If a video cannot be played, users will now see a hint with guidance. https://github.com/owncloud/core/pull/38858[#38858]
 
+[discrete]
 === For developers
 
 * App developers can now exclude default file actions like "Rename" when their app adds a new file view to ownCloud. https://github.com/owncloud/core/pull/38643[#38643]
 
-=== Solved known issues
+=== Solved Known Issues
 
 All xref:server_release_notes.adoc#known-issues-10-7[known issues from Server 10.7] have been fixed.
 
 [#known-issues-10-8]
-=== Known issues
+=== Known Issues
 
 * If `open_basedir` is configured within your `php.ini` file and you update PHP to 7.4.21 or later then unnecessary entries will be logged to the log file about "open_basedir restriction in effect." See issue https://github.com/owncloud/core/issues/39034[#39034]. This issue will also happen on all other 10.* releases if `open_basedir` is used with PHP 7.4.21.
 
@@ -1023,24 +1127,30 @@ All xref:server_release_notes.adoc#known-issues-10-7[known issues from Server 10
 
 Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.7 that need your attention. You can also read {oc-changelog-url}[the full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Migrations
 
 Upgrading from ownCloud Server 10.6 to 10.7 does not involve database migrations. The upgrade duration is, therefore, expected to be short.
 
+[discrete]
 === Usability Improvements for the Classic Web Interface
 
+[discrete]
 ==== Tagging
 
 Based on user feedback, the user interface for file/folder tagging has been improved. Research has shown that some users misinterpret the tagging input field in the right sidebar as the location to share files/folders. To prevent this, the functionality to manage tags has been separated from the location where tags are displayed. From version 10.7 onwards, tags will be displayed as a read-only list at the top of the right sidebar. Tag management (assign/unassign, etc.) can now be conducted in a dedicated tab "Tags" below.
 
+[discrete]
 ==== Sharing via Email Address
 
 Based on user feedback, some further usability improvements have been made in the user sharing dialog. In most cases users actually want to share with an internal or a guest user. Therefore, when sharing data by entering an email address, the suggestion to create a federated share will now only be shown when the internal user lookup has finished and did not return any results. As federated user IDs have the same syntax like email addresses (e.g., _userid@cloud.tld_) this measure has been taken to guide users better by only suggesting federated users when no other known users have been found.
 
+[discrete]
 ==== Improvements for Opening Files with Multiple Applications
 
 Server 10.7 brings improvements for users when there are files that have multiple editor or viewer applications associated. For example, this could be a PDF file that can be opened with the integrated PDF viewer or with a third party application like Collabora Online or OnlyOffice. Previously the classic ownCloud Web interface would just make the decision for the user on click or require the user to use the respective entry in the file's dropdown menu. Starting with version 10.7, the user will be prompted on click to decide which application they want to use. If there is only a single application available that is capable of opening the file, the behavior stays as before.
 
+[discrete]
 === Improvements for Storage Encryption
 
 Version 10.7 brings improvements for storage encryption in order to reduce storage usage. By changing from `base64` to `binary` encoding for encrypted files, a reduction of about 35% in storage usage can be achieved.
@@ -1058,6 +1168,7 @@ TIP: Master-key storage encryption is still supported and has received improveme
 
 As announced with the xref:server_release_notes.adoc#php-7-2-deprecation-note[release notes of version 10.6], PHP 7.2 support will be dropped in one of the next minor releases. Support is still available with 10.7 but it will be necessary to plan an upgrade soon if PHP < 7.3 is in use.
 
+[discrete]
 === Other Notable Changes
 
 * Redis can now be connected with TLS support for improved security. See the xref:{latest-server-version}@server:admin_manual:configuration/server/config_sample_php_parameters.adoc#define-redis-connection-details[documentation] for more information. https://github.com/owncloud/core/pull/38386[#38386]
@@ -1074,7 +1185,7 @@ As announced with the xref:server_release_notes.adoc#php-7-2-deprecation-note[re
 * There are user groups which cannot be edited manually in user management (e.g., the `guests_app` group). These groups will not allow adding users anymore to prevent confusion. https://github.com/owncloud/core/pull/38298[#38298]
 * Some unnecessary errors in the logs have been removed for cleanliness. https://github.com/owncloud/core/pull/38390[#38390]
 
-=== Solved known issues
+=== Solved Known Issues
 
 Both xref:server_release_notes.adoc#known-issues-10-6[known issues from Server 10.6] have been fixed.
 
@@ -1082,7 +1193,7 @@ Both xref:server_release_notes.adoc#known-issues-10-6[known issues from Server 1
 * Theming issues have been resolved. https://github.com/owncloud/core/pull/38246[#38246]
 
 [#known-issues-10-7]
-=== Known issues
+=== Known Issues
 
 * When having storage encryption (master key encryption) enabled, there is an issue that prevents Collabora Online (`richdocuments`) from working. If you are using this feature combination, please skip the 10.7 upgrade and wait for the next release. In case you have already upgraded to Server 10.7, please get in touch with ownCloud Support to fix the issue. https://github.com/owncloud/richdocuments/pull/392[#392]
 * When having ownCloud Web enabled, all public links will open in ownCloud Web instead of the classic UI. This behavior will be made configurable in a follow-up release of ownCloud Server.
@@ -1097,6 +1208,7 @@ need your attention. You can also read {oc-changelog-url}[the full ownCloud Serv
 for further details on what has changed.
 
 === Migrations
+
 * To allow sharing files with very long names (> 64 characters) via federation, a migration step will run.
 The impact on upgrade duration depends on the number of federated shares.
 https://github.com/owncloud/core/pull/37835[#37835]
@@ -1108,6 +1220,7 @@ ownCloud Server will, therefore, drop support in one of the next minor versions 
 If you’re running on PHP lower than 7.3, please make sure to schedule an upgrade to PHP 7.4 as soon as
 possible. See the xref:{latest-server-version}@server:admin_manual:installation/system_requirements.adoc[system requirements] for more information.
 
+[discrete]
 === ownCloud Web - The New Web Frontend for ownCloud
 
 ownCloud Server 10.6 comes with the prerequisites to run the new ownCloud Web frontend as an optional
@@ -1139,6 +1252,7 @@ is used for client authorization.
 * ownCloud Server and ownCloud Web are configured as outlined in the
 https://owncloud.github.io/clients/web/deployments/oc10-app/[documentation].
 
+[discrete]
 === Other Notable Changes
 
 * Federated shares can now also have an expiration date (including default and enforcement options) https://github.com/owncloud/core/pull/37548[#37548]
@@ -1159,6 +1273,7 @@ https://owncloud.github.io/clients/web/deployments/oc10-app/[documentation].
 * Added values to the invalid uid list to prevent creating users with reserved UIDs https://github.com/owncloud/core/pull/37766[#37766]
 * The log level of "file locked" exceptions has been reduced to "debug" https://github.com/owncloud/core/pull/37907[#37907]
 
+[discrete]
 === Bundle and Delivery
 
 Since ownCloud Server 10.5 xref:server_release_notes.adoc#changes-in-delivery[all supported apps are shipped in
@@ -1212,6 +1327,7 @@ TIP: Upgrade PHP to 7.2 or 7.3 then upgrade ownCloud Server to 10.5, then upgrad
 
 NOTE: The official ownCloud Docker containers have been updated to Ubuntu 20.04 and are using PHP 7.4.
 
+[discrete]
 === File Locking in the Web Interface
 
 ownCloud Server 10.5 comes with great enhancements for content collaboration. Manual file locking allows users to lock files in shared areas while working on them in order to prevent concurrent changes from other users (check-in/check-out).
@@ -1235,10 +1351,12 @@ TIP: Please change the lock expiration settings according to your needs. Usually
 TIP: The user-facing components in the web interface are disabled by default. Administrators can enable the feature by executing the following _occ_ command: +
 `occ config:app:set files enable_lock_file_action --value yes`
 
+[discrete]
 === Changes to the ownCloud Marketplace
 
 The ownCloud Marketplace is opening up. With the release of Server 10.5, all apps available on the Marketplace (including ownCloud Enterprise apps) are now also available for download and installation via the Market app. This change facilitates the process of getting started with ownCloud Server and of evaluating Enterprise functionality. Additionally, it allows updates for all apps to be obtained from the ownCloud Marketplace and ensures running up-to-date versions.
 
+[discrete]
 === Changes in Delivery
 
 In line with the changes to the Marketplace the deliverables for ownCloud Server have been unified. Previously there were different Tarball bundles, Docker images and Linux packages for the Community (bare minimum) and Enterprise (all supported apps) Editions.
@@ -1255,16 +1373,19 @@ TIP: It is mandatory to disable the deprecated `enterprise_key` app when upgradi
 
 TIP: Practically, for existing installations the change does not make a big difference. Community installations will get all supported Community and Enterprise apps in addition but they are disabled. For Enterprise installations the bundles stay equal. After upgrading it is recommended to check whether the desired apps are enabled/disabled.
 
+[discrete]
 === New Enterprise Trial Mechanism
 
 To facilitate the evaluation of ownCloud Enterprise functionality, Server 10.5 comes with a new trial mechanism. Previously, the process to upgrade from a Community installation to an Enterprise trial was not that easy.
 
 With Server 10.5 this process has been changed and made easier: Along with the changes to the Marketplace and in delivery, Enterprise functionality is available in every installation after upgrading or installing, respectively. The apps can be enabled like other apps which will start a grace period if no valid license key is present. During this time the functionality can be fully used and the admin has some time to start a trial. To start 30 days of Enterprise trial, a demo license key can be obtained from a https://owncloud.com/try-enterprise/[new landing page]. As usual, if you do not have a valid license key after the grace period or the 30-day trial, all Enterprise apps will become disabled again. The administrator will be informed and guided to obtain the demo license and can enter it in the web interface. If desired, the location of the landing page can be customized using the _config.php_ option `'grace_period.demo_key.link' => 'https://owncloud.com/try-enterprise/'`.
 
+[discrete]
 === New Admin UI to Supply License Keys
 
 As mentioned above, Server 10.5 adds new UI elements to set license keys in the menu:Settings[Admin > General] settings. Keys added this way will be stored in the database, not in _config.php_ as before. Still, there is legacy support taking into account when keys have been stored in _config.php_ or _license.config.php_.
 
+[discrete]
 === New Background Job for Change Detection in Federated Shares
 
 With ownCloud Server 10.2.0 a xref:background-job-for-change-detection-of-nested-federated-shares[background job for change detection of nested federated shares] was added (`occ incoming-shares:poll`) to allow ownCloud Server to discover changes in federated shares in order to make them available for synchronization with the ownCloud Clients. Based on feedback a new, improved background job with more configuration options was added to Server 10.5. It replaces the former occ command which is now **deprecated** and should not be used anymore after upgrading to 10.5.
@@ -1291,6 +1412,7 @@ If enabled, it will be executed as part of the regular ownCloud background job q
 TIP: If your instance provides federated sharing, activate the new background job as explained above.
 TIP: Remove the `occ incoming-shares:poll` command from crontab if you have set it.
 
+[discrete]
 === Other Notable Changes
 
 - The btn:[Add to your ownCloud] feature on public link pages is now hidden if an instance has outgoing federated shares disabled (specifically, if _Allow users on this server to send shares to other servers_ is disabled in menu:Settings[Admin > Sharing] settings) https://github.com/owncloud/core/pull/37232[#37232]
@@ -1305,8 +1427,9 @@ TIP: Remove the `occ incoming-shares:poll` command from crontab if you have set 
 
 - The xref:sharing-with-numeric-uids[known issue] around sharing with numeric UIDs in 10.4.0 and 10.4.1 has been fixed. https://github.com/owncloud/core/pull/37336[#37336]
 
+[discrete]
 [#known-issues-10-5]
-=== Known issues
+=== Known Issues
 
 Currently there are no known issues with ownCloud Server 10.5.0. This section will be updated when issues are discovered.
 
@@ -1315,6 +1438,7 @@ Currently there are no known issues with ownCloud Server 10.5.0. This section wi
 ownCloud Server 10.4.1 is a bug fix and maintenance release.
 You can read {owncloud-server-changelog-url}[the full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Notable changes
 
 * The xref:password-policy-app[10.4.0 known issue] between Password Policy and user/group share expiration is fixed. Server 10.4.1 and Password Policy 2.1.2 are required to resolve it. https://github.com/owncloud/core/pull/37135[#37135]
@@ -1332,6 +1456,8 @@ You can read {owncloud-server-changelog-url}[the full ownCloud Server changelog]
 
 [#known-issues-10-4-1]
 === Known issues
+
+[discrete]
 ==== Sharing with Numeric UIDs
 
 With Server 10.4.0 and 10.4.1, sharing resources with users that have numeric user ids (e.g., "123") does not work in some cases. https://github.com/owncloud/core/issues/37324[#37324]
@@ -1343,10 +1469,10 @@ Apart from this patch release, please consider the ownCloud Server 10.4.0 releas
 Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.4 that need your attention.
 You can also read {oc-changelog-url}[the full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Migrations
 
-Upgrading from ownCloud Server 10.3.x to 10.4.0 does not involve database migrations.
-The upgrade duration is, therefore, expected to be short.
+Upgrading from ownCloud Server 10.3.x to 10.4.0 does not involve database migrations. The upgrade duration is, therefore, expected to be short.
 
 === PHP 7.0 Support Discontinued
 
@@ -1364,6 +1490,7 @@ ownCloud Server will, therefore, drop support in one of the next minor versions 
 If you're running on PHP < 7.2, please make sure to schedule an upgrade to PHP 7.2 or 7.3 as soon as possible.
 See the xref:{latest-server-version}@server:admin_manual:installation/system_requirements.adoc[system requirements] for more information.
 
+[discrete]
 === Expiration Date for User and Group Shares
 
 To give users and administrators more control of access to resources, Server 10.4 introduces an expiration date for user and group shares, just like in public links.
@@ -1375,6 +1502,7 @@ Additionally, to allow users to recognize expiring shares at a glance, a new clo
 
 Administrators can configure the feature in the '_Sharing_' section of the admin settings.
 
+[discrete]
 === Sharing Information in Subfolders
 
 ownCloud Server 10.4 puts the focus on user awareness for shared areas to prevent accidentally sharing data or changing other users' data, as well as to make it easier for users to recognize who has access to shared areas.
@@ -1386,11 +1514,13 @@ These will be shown as static entries with a "_via_" indicator that allows users
 
 This sharing information is only shown to share owners (users that created shares) as other share recipients are not entitled to get detailed information about who else has access.
 
+[discrete]
 === MariaDB 10.4 and PostgreSQL 10 Support
 
 The discontinuation of PHP 7.0 enables support for MariaDB up to version 10.4 and PostgreSQL 10.
 Server 10.4 is thoroughly tested against these database versions and proven to work stably.
 
+[discrete]
 === Other Notable Changes
 
 * External storages can now be mounted in read-only mode. https://github.com/owncloud/core/pull/36397[#36397]
@@ -1416,6 +1546,7 @@ Server 10.4 is thoroughly tested against these database versions and proven to w
   It will only abort if none of the results matches the search term (e.g., 'alice' returns 'alice1' and 'alice2'). https://github.com/owncloud/core/pull/36576[#36576]
 * When sharing with both a user and a group with the same name, adjusting the permissions of the second entry works again. https://github.com/owncloud/core/issues/36813[#36813]
 
+[discrete]
 === For Developers
 
 * The xref:next@server:developer_manual:webdav_api/trashbin.adoc[WebDAV Trash bin API] and the xref:next@server:developer_manual:webdav_api/public_files.adoc[WebDAV endpoint for public links] (introduced with 10.3.0) have left the tech preview state.
@@ -1427,6 +1558,7 @@ Server 10.4 is thoroughly tested against these database versions and proven to w
 [#known-issues-10-4]
 === Known Issues
 
+[discrete]
 ==== Password Policy App
 
 If the public link expiration policy "_days maximum until link expires if password is not set_" is enabled, sharing with users and groups will not work.
@@ -1436,6 +1568,7 @@ https://github.com/owncloud/password_policy/issues/287[#287]
 
 This issue has been resolved with ownCloud Server 10.4.1.
 
+[discrete]
 ==== Sharing with Numeric UIDs
 
 With Server 10.4.0 and 10.4.1, sharing resources with users that have numeric user ids (e.g., "123") does not work in some cases. https://github.com/owncloud/core/issues/37324[#37324]
@@ -1445,6 +1578,7 @@ With Server 10.4.0 and 10.4.1, sharing resources with users that have numeric us
 ownCloud Server 10.3.2 is a bug fix and maintenance release.
 You can read {owncloud-server-changelog-url}[the full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Notable changes
 
 * Guest sharing works now even when the sharing restriction `Restrict users to only share with users in their groups` is enabled https://github.com/owncloud/core/pull/36384[#36384]
@@ -1489,12 +1623,13 @@ If you are still using version 5.6, you must upgrade PHP before upgrading ownClo
 If you are still running PHP 7.0 or 7.1, please plan an upgrade soon as these versions {php-supported-versions-url}[are or will soon be unsupported], respectively.
 See the xref:{latest-server-version}@server:admin_manual:installation/system_requirements.adoc#officially-supported-environments[system requirements in the ownCloud Documentation] for more information.
 
-=== PHP 7.0 deprecation note
+=== PHP 7.0 Deprecation Note
 
 As announced with ownCloud Server xref:php-5-6-deprecation-2[10.0.8] and xref:php-5-6-deprecation[10.2.0], support for PHP 7.0 is discontinued.
 The next minor version of ownCloud Server (around the end of 2019) **no longer supports PHP 7.0**.
 If you are still running on PHP 7.0, please make sure to plan an upgrade to PHP >= 7.2 to stay compatible.
 
+[discrete]
 === Changes to background job execution
 
 For code cleanup reasons, the execution of background jobs (e.g., for public link expiration, trash bin emptying, cleanup of old file versions) has been changed.
@@ -1515,6 +1650,7 @@ Please apply the changes to ensure that background jobs continue to work.
 
 TIP: If your ownCloud deployment is based on the official Docker images or the Univention appliance, these changes have already been applied for you.
 
+[discrete]
 === Media Viewer replaces Gallery and Video Player
 
 The {oc-marketplace-url}/apps/files_mediaviewer[Media Viewer] app has recently been released.
@@ -1534,6 +1670,7 @@ TIP: Please do not enable `gallery`/`files_videoplayer` and `files_mediaviewer` 
 
 For more information on the Media Viewer app, visit the xref:{latest-server-version}@server:admin_manual:installation/apps/mediaviewer/index.adoc[ownCloud Documentation].
 
+[discrete]
 === OAuth2 and session handling improvements
 
 Server 10.3 comes with improvements for session handling with Redis.
@@ -1553,6 +1690,7 @@ TIP: Please note that Redis Session Locking is not supported in clustered Redis 
 
 TIP: If your ownCloud deployment is based on the official Docker images or the Univention appliance, you do not have to apply changes as Redis is not used for session handling (unless you configured it differently using ENV variables).
 
+[discrete]
 === Restructured user/group sharing autocompletion
 
 To cope with long user names or additional user information and to provide a better overview for users, the user/group sharing autocompletion dropdown has been restructured.
@@ -1560,11 +1698,13 @@ The available information is now distributed vertically to improve space usage a
 Screenshots are available in the https://github.com/owncloud/core/pull/35397[pull request].
 Other ownCloud clients will align with this behavior with the next releases.
 
+[discrete]
 === SWIFT object storage as primary & secondary storage removed
 
 Following the xref:swift-objectstore-deprecation[deprecation announcement] with ownCloud Server 10.0.9, support for primary and secondary storage via the OpenStack SWIFT protocol has been removed.
 Please get in contact with ownCloud Support if you're still using OpenStack SWIFT and want to upgrade.
 
+[discrete]
 === S3 object storage as secondary storage is now a separate app
 
 The extension to integrate S3 object storages as secondary storages (`files_external_s3`) has been updated, unbundled from ownCloud Server (was previously part of `files_external`) and released to the {oc-marketplace-url}/apps/files_external_s3[ownCloud Marketplace].
@@ -1575,6 +1715,7 @@ If you're using S3 external storage mounts, you have to conduct some steps to en
 * Existing storage mount points will remain and do not have to be touched.
 * Make sure that everything works and disable maintenance/single-user mode to put the installation back into normal operations (`occ maintance:mode --off` / `occ maintenance:singleuser --off`).
 
+[discrete]
 === New HTTP APIs
 
 ownCloud Server is being prepared for https://owncloud.com/news/owncloud-phoenix-rebirth-of-the-owncloud-user-interface/[Phoenix], the upcoming web frontend for ownCloud.
@@ -1589,7 +1730,8 @@ The following new HTTP APIs have been added with Server 10.3:
 All new endpoints are currently in tech preview state and are mainly used for Phoenix development.
 For this reason, they are disabled by default and have to be explicitly enabled using the new config.php option: `'dav.enable.tech_preview' => true,`.
 
-=== Other notable changes
+[discrete]
+=== Other Notable Changes
 
 * The `previews_path` config option has been added to allow customization of the thumbnail storage path (by default those reside in the user storage). https://github.com/owncloud/core/pull/35131[#35131]
 * An Activity entry is now shown when a share receiver unshares a share. https://github.com/owncloud/core/pull/35193[#35193]
@@ -1601,7 +1743,7 @@ For this reason, they are disabled by default and have to be explicitly enabled 
 * The performance when loading groups of users has been improved. https://github.com/owncloud/core/pull/35822[#35822]
 * Memory handling for the trashbin expiry background job has been improved. https://github.com/owncloud/core/pull/35708[#35708]
 
-=== Solved known issues
+=== Solved Known Issues
 
 * A new occ command, `encryption:fix-encrypted-version`, has been introduced to address issues related to encrypted files no longer being accessible.
   This originated from a security measure to avoid that encrypted files with the same content look identical.
@@ -1630,6 +1772,7 @@ For this reason, they are disabled by default and have to be explicitly enabled 
 * The input fields in user administration are not captured by password manager autocompletion anymore. https://github.com/owncloud/core/pull/35931[#35931]
 * Storage encryption with a master key in an HSM: Recreating a master key works again. https://github.com/owncloud/encryption/pull/128[#128]
 
+[discrete]
 === For developers
 
 * Tech preview for WebDAV Trash bin API (disabled by default). https://github.com/owncloud/core/pull/35716[#35716] https://github.com/owncloud/core/pull/35879[#35879]
@@ -1644,7 +1787,7 @@ For this reason, they are disabled by default and have to be explicitly enabled 
   Version 1 of the API is still available in parallel. https://github.com/owncloud/core/pull/35836[#35863]
 
 [#known-issues-10-3]
-=== Known issues
+=== Known Issues
 
 NOTE: This section will be updated if further issues become known.
 
@@ -1659,6 +1802,7 @@ It is recommended to schedule an upgrade to this version soon, especially if you
 
 TIP: No occ upgrade is required when upgrading from 10.2.0.
 
+[discrete]
 === Improved Performance For Storage Encryption With Master Key
 
 ownCloud Server offers two ways for key management with storage encryption.
@@ -1668,7 +1812,7 @@ Previously both modes used the same mechanisms which resulted in potentially sig
 With master key encryption, `share keys` are redundant as you have one central key that can be used to decrypt all files.
 Version 10.2.1 corrects this behavior by dropping `share keys` for master key encryption, thereby increasing the performance dramatically, especially when sharing folders with many files as said keys do not have to be generated anymore for each file.
 
-=== Solved Issues
+=== Solved Known Issues
 
 * **Fixed reshare permission issue** +
 An issue in the Sharing API allowed users to increase sharing permissions beyond their own permissions in a reshare scenario: When user A shares a folder "_Project_" with user B, granting only read and share permission, then the Sharing API allowed user B to reshare a subfolder of "_Project_" with user C granting full permissions or to create a public link on the shared folder, respectively.
@@ -1718,6 +1862,7 @@ To allow for additional upgrade time, version 10.2 still supports PHP 7.0, becau
 However, support for PHP 7.0 will be discontinued in an upcoming version of ownCloud 10, to enhance both security and performance.
 To prepare for this change, we strongly encourage you to begin planning an upgrade as soon as possible.
 
+[discrete]
 === Advanced Sharing Permissions
 
 The new server version https://github.com/owncloud/core/issues/34951[introduces the means] for extensions to implement additional, advanced permissions for user and group sharing. This feature increases sharing flexibility and opens the doors for extension developers to introduce new functionality based on sharing permissions.
@@ -1730,11 +1875,13 @@ Practically, it enables users to share documents (such as docx, xlsx, pptx, and 
 Additional protection for screenshots and photos is provided by watermarks which display user information.
 What's more, users can decide to allow printing and exporting of documents protected by watermarks as well.
 
+[discrete]
 === More Granular Permissions for Public Links on Folders
 
 With ownCloud Server 10.2, the former "Download / View / Upload" permission has been renamed to "Download / View / Edit", as this better reflects its behavior (full permissions).
 Additionally, a new permission ("Download / View / Upload") has been introduced which allows recipients to view, download, and upload contents but not to make any changes to existing content (e.g., rename, move, delete, update). Another way of looking at it is as a public file drop folder for distributing and gathering information with a single link, yet which prevents recipients from altering the existing content.
 
+[discrete]
 === Storage Encryption with Master Key in HSM
 
 With version 10.2, ownCloud Server officially supports storage encryption with master keys stored in hardware security modules (HSM).
@@ -1744,6 +1891,7 @@ As a result, the bundled `encryption` app has been updated to support HSM, and a
 To get started with storage encryption and HSM, https://owncloud.com/contact/[please get in touch with us].
 For more information around the different encryption types ownCloud offers, consider https://oc.owncloud.com/rs/038-KRL-592/images/Whitepaper_Data_Protection_and_Data_Secrecy_in_ownCloud_EN.pdf[this whitepaper].
 
+[discrete]
 === Background Job for Change Detection of Nested Federated Shares
 
 When using federation to share data across ownCloud instances, deeply nested folders (e.g., folders with many sub-items) https://github.com/owncloud/docs/issues/856[are not discovered automatically for performance reasons].
@@ -1763,6 +1911,7 @@ However, the interval could be reduced to once per 2 hours for instances with a 
 Depending on the desired resource consumption this value should be lowered or increased based on individual expectations.
 To find a value that fits a specific setup, it is recommended to execute the command once, measure the execution time and set the interval so that the background job can finish before the next execution is triggered.
 
+[discrete]
 === New Option to Automatically Accept Federated Shares from Trusted Servers
 
 ownCloud Server 10.0.9 xref:server_release_notes.adoc#pending-shares[introduced the *Pending Shares* feature] which allows users to decide whether or not they want to accept local user shares instead of just making the decision for them, giving more control thereby.
@@ -1773,6 +1922,7 @@ This option enables providers of several instances (e.g., an external and an int
 
 NOTE: For security reasons, federated shares from untrusted servers will never be accepted automatically.
 
+[discrete]
 === New Privacy and Self-Service Options for Users
 
 In the spirit of self-service, ownCloud Server 10.2 introduces new options for users that previously were reserved for global admin settings:
@@ -1785,6 +1935,7 @@ In the spirit of self-service, ownCloud Server 10.2 introduces new options for u
   This option is not a general override but an opt-out, meaning it can only be used when "_Allow username autocompletion in share dialog_" is enabled.
   The new checkbox is available in the 'Sharing' settings panel of personal settings.
 
+[discrete]
 === Other Notable Changes
 
 * *Added email footer with motto in email for changing passwords.*
@@ -1839,6 +1990,7 @@ NOTE: This section will be updated if further issues become known.
 - The HTML email that confirms a successful password change is rendered in plain text. Please apply this https://patch-diff.githubusercontent.com/raw/owncloud/core/pull/35260.patch[patch] to fix the issue.
 - WebDAV Locks: When a file in a folder is locked, exclusively locking the parent folder currently still works ("conflicting lock"; divergent from https://datatracker.ietf.org/doc/html/rfc4918#section-7.4[RFC 4918])
 
+[discrete]
 === For Developers
 
 - It is now possible for apps to specify extra permissions for shares https://github.com/owncloud/core/issues/34951[#34951]
@@ -1860,46 +2012,53 @@ Apart from this patch release, please consider the ownCloud Server 10.1.0 releas
 
 Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.1 that need your attention. You can also read https://owncloud.com/changelog/server/[the full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === Semantic Versioning
 
 Starting with this release, ownCloud Server and the app ecosystem will follow the principles of https://semver.org/[Semantic Versioning].
 This step was taken to benefit operators by clearly indicating the contents and upgrade procedures of new releases via version numbers. Practically, the versioning scheme will follow the "Major.Minor.Patch" (or "Breaking.Feature.Fix") format.
 App developers need to re-release their apps to make them compatible with the new version. For details, please refer to https://owncloud.com/news/switching-owncloud-to-semantic-versioning/[this blog post].
 
+[discrete]
 === Change Management for Server Updates
 
 `occ upgrade` pulls app updates from the ownCloud Marketplace to make sure that not only the Server itself but also the installed apps are kept up-to-date. In line with the new versioning principles `occ upgrade` as well as the {oc-marketplace-url}/apps/market[Market App] now make a difference between major and minor app updates. Practically, this means that during a minor Server upgrade only new minor app versions will be installed. This is to make sure that apps with breaking changes will not be automatically installed when upgrading the Server. The `--major` option for `occ upgrade` and `occ market:install` provides the means for administrators to force installing new major app versions. Additionally, the {oc-marketplace-url}/apps/market[Market App] now includes a version picker to enable administrators to choose which version of an app they want to install or upgrade to.
 
+[discrete]
 === MS Office Online Server Compatibility
 
 Version 10.1 delivers all the prerequisites to be compatible with the Microsoft Office Online Server Integration (WOPI) that is about to become available. This enables providers to integrate ownCloud Server with Microsoft's Office Online Server which brings users the benefits of working on Office documents in the browser as well as collaboratively with other users. The integration will work with MS Office Online Server (on-premise) out-of-the-box. We kindly ask you to get in touch with us if you want to make use of the Office 365 (cloud) version of Office Online.
 
+[discrete]
 === WebDAV Locks
 
 ownCloud Server 10.1 introduces WebDAV Locks that allow clients to lock and unlock resources to prevent other users from making changes. The feature has been implemented as a prerequisite for manual file locking and MS Office Online Server compatibility. In the current state, file locking is only available via API. Users can recognize locked files via the "lock" icon in the file list. Additionally a lock owner (the user who locked the file) can manually unlock them via the "Locks" tab in the right sidebar. The "Locks" tab will only appear for files that have active locks.
 
+[discrete]
 === Foreign Keys in Database
 
 Please note that foreign keys have been added with the :xref:webdav-locks[WebDAV Locks] feature.
 This is the first time ownCloud implements foreign keys.
 
+[discrete]
 ==== How Does This Affect Each Database
 
+[discrete]
 ===== MySQL
 
-MySQL supports foreign keys.
-They are enabled by default.
+MySQL supports foreign keys. They are enabled by default.
 
+[discrete]
 ===== MariaDB
 
-MariaDB supports foreign keys.
-They are enabled by default.
+MariaDB supports foreign keys. They are enabled by default.
 
+[discrete]
 ===== PostgreSQL
 
-PostgreSQL supports foreign keys.
-They are enabled by default.
+PostgreSQL supports foreign keys. They are enabled by default.
 
+[discrete]
 ===== SQLite
 
 Foreign keys are, by default, disabled in SQLite.
@@ -1914,27 +2073,29 @@ If `SQLITE_OMIT_FOREIGN_KEY` is defined, then foreign key definitions cannot eve
 
 IMPORTANT: SQLite is not recommended for production deployments.
 
+[discrete]
 ===== Oracle
 
-Oracle supports foreign keys.
-They are enabled by default.
+Oracle supports foreign keys. They are enabled by default.
 
+[discrete]
 === Federation: Compliance with proposed OpenCloudMesh 1.0 specification
 
 Federation enables instances of ownCloud and other supporting platforms to exchange information. It allows users to share data across installations building a worldwide collaboration network of decentralized nodes - each under the full control of it's provider. Together with the other vendors the underlying OpenCloudMesh API specification has been shifted to a new level to clean up the interface, improve its stability and to set the foundation for future feature improvements. ownCloud Server 10.1 is compliant with the new specification proposal. The introduction of the new specification does not involve changes in functionality for users.
 
+[discrete]
 === New Collaborative Tags Scope: Static Tags
 
 Version 10.1 comes with a new scope for Collaborative Tags called "Static Tags". In addition to the https://doc.owncloud.com/webui/next/classic_ui/files/webgui/tagging.html#filter-by-tag[other tag scopes], these tags are intended to be supplied by administrators and linked with policies in the {oc-marketplace-url}/apps/firewall[File Firewall], {oc-marketplace-url}/apps/files_classifier[Document Classification] or {oc-marketplace-url}/apps/workflow[Workflows], for example. Every user will be able to see these tags assigned to files but only users in specified groups have the permission to assign or unassign them. This makes it possible to equip certain users with the means to impose pre-defined policies upon files. To create such tags administrators need to use the {oc-marketplace-url}/apps/systemtags_management[Collaborative Tags Management] extension.
 
+[discrete]
 === Other notable changes
 
 - The user/group deletion in the users page now has a confirmation dialog to prevent unintentional user deletion
 - The default public link share name has been changed to be "Public link" instead of formerly the file or folder's name
 - Allow loading JSON files in setups with pretty URLs. Please check that the .htaccess file has updated automatically. If not, see https://github.com/owncloud/core/pull/32718/files for the required change.
 
-
-=== Solved known issues
+=== Solved Known Issues
 
 - LDAP users can upload avatars again https://github.com/owncloud/core/issues/33369[#33369]
 - Versions list performance improvements https://github.com/owncloud/core/issues/33291[#33291]
@@ -1945,7 +2106,8 @@ Version 10.1 comes with a new scope for Collaborative Tags called "Static Tags".
 
 - WebDAV Locks: When a file in a folder is locked, exclusively locking the parent folder currently still works ("conflicting lock"; divergent from https://datatracker.ietf.org/doc/html/rfc4918#section-7.4[RFC 4918])
 
-=== For developers
+[discrete]
+=== For Developers
 
 - Added "getBucket" method to HomeObjectStore to fix S3 issue https://github.com/owncloud/core/issues/33513[#33513]
 - Public JS utility function for email validation https://github.com/owncloud/core/issues/33699[#33699]
@@ -1975,6 +2137,7 @@ See the xref:{latest-server-version}@server:admin_manual:installation/system_req
 NOTE: With PHP 7.2 some extensions have changed. If you have not yet upgraded, you need to install `php-openssl`.
 See https://github.com/owncloud/core/issues/30337[#30337] for more information.
 
+[discrete]
 === New Local User Creation Flow
 
 In previous versions, administrators created local users by entering a username and a password.
@@ -1987,6 +2150,7 @@ in self-service. For cases where administrators want to set the initial password
 the default by setting the option "*Set a password for new users*" on the bottom left settings cog.
 The former option "*Send email to new users*" has been removed, as this change made it obsolete.
 
+[discrete]
 === HTTP API for Search
 
 ownCloud Server 10.0.10 introduces an HTTP API for search functionality.
@@ -1999,6 +2163,7 @@ In combination with the Full-Text Search integration, which is soon to be releas
 For example, they will be able to search through all the content which they store in their account and quickly
 find files on their smartphones.
 
+[discrete]
 === Native Brute-Force Protection
 
 Together with the new server version, another security-enhancing extension is available,
@@ -2016,6 +2181,7 @@ extension, which xref:server_release_notes.adoc#password-history-and-expiration[
 with ownCloud Server 10.0.9]. This community-contributed extension is well-tested, but out of ownCloud's
 general support scope. However, individual support can be obtained on request.
 
+[discrete]
 === Improved Reliability for Uploads Via Web Interface on Unreliable Connections
 
 The reliability of the file upload feature in the ownCloud web interface has been improved.
@@ -2024,12 +2190,14 @@ When uploading larger amounts of data on unreliable connections (e.g., on the tr
 On top of ownCloud's chunking mechanism, which splits large files into pieces and uploads them separately, there's new logic that takes care of retrying stalled chunks.
 With this, uploads can now continue from the point they froze when a connection becomes available again.
 
+[discrete]
 === New Option to Prevent Sharing With Specific System Groups
 
 System groups in ownCloud can have many purposes. They can be used for sharing with many users at once, for feature and access restrictions, or for storage mounts to specific users - just to name a few.
 In some cases, especially in larger deployments, it's undesirable that groups which are used for other purposes are also available for sharing.
 To prevent users from sharing with such groups, administrators can now blacklist the respective system groups using the option "*Exclude groups from receiving shares*" in the administration settings "*Sharing*" section.
 
+[discrete]
 === New Options for the occ Command to Reset User Passwords
 
 The occ command `user:resetpassword` allows system administrators to reset or change user passwords.
@@ -2037,6 +2205,7 @@ It has been extended to provide the additional options `--send-email` and `--out
 This change is in line with the new local user creation flow, which is explained above, and can also be used for further processing with scripts.
 See the ownCloud Documentation and the `--help` option for more information.
 
+[discrete]
 === New Default Minimum Supported Desktop Client Version
 
 To ensure clean and reliable operation of the ownCloud platform it is important to stay up-to-date with the latest releases for the server as well as the clients.
@@ -2045,6 +2214,7 @@ To take care of compatibility between the server and desktop clients, the minimu
 While it's recommended to keep up with later versions, this is the new default value.
 It can be changed by altering the config.php parameter `'minimum.supported.desktop.version' => '2.3.3',` if absolutely necessary.
 
+[discrete]
 === New Option to Configure the Language of Mail Notifications for Public Links
 
 Usually ownCloud renders mail notifications in the language of the recipients, when they are known.
@@ -2054,6 +2224,7 @@ determined automatically, it just knows the recipients' mail addresses.
 
 ownCloud therefore uses the language of the user who sent the notification, which can have the drawback that recipients can't understand them. This is still the default behavior but administrators can now change it via a dropdown menu *"Language used for public mail notifications for shared files"* in the settings *"Sharing"* section.
 
+[discrete]
 === Theming Changes
 
 Mail templates for share notifications do not strip line breaks from the personal note anymore.
@@ -2070,6 +2241,7 @@ with
 with
 `print_unescaped($l->t("Personal note from the sender: \n %s.", $_['personal_note']));`.
 
+[discrete]
 === Other Notable Changes
 
 - Allow automated SSL certificate verifications for CAs other than Let's Encrypt.
@@ -2110,11 +2282,12 @@ See https://github.com/owncloud/core/issues/32562[#32562] for further details.
 - Fixed issue with spam filters when sending public link emails.
 See https://github.com/owncloud/core/issues/32542[#32542] for further details.
 
+[discrete]
 === Known Issues
 
-Currently there are no known issues with ownCloud Server 10.0.10.
-This section will be updated in the case that issues become known.
+Currently there are no known issues with ownCloud Server 10.0.10. This section will be updated in the case that issues become known.
 
+[discrete]
 === For Developers
 
 - Search API for files using WebDAV REPORT and an underlying search provider.
@@ -2137,8 +2310,10 @@ ownCloud Server releases and can be used normally.
 Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.0.9 that need your attention.
 You can also read https://owncloud.com/changelog/server/[the full ownCloud Server changelog] for further details on what has changed.
 
+[discrete]
 === New Features
 
+[discrete]
 ==== Pending Shares
 
 ownCloud Server 10.0.9 introduces new features to close usability gaps and to give users more control over incoming shares.
@@ -2162,6 +2337,7 @@ sharing with large groups (> 50 users) can take some time and might
 cause load peaks. When operating installations with large groups, it is,
 therefore, not yet recommended to enable the feature.
 
+[discrete]
 ==== Overview of pending & rejected shares
 
 In addition to the "_Pending Shares_" feature, ownCloud Server now
@@ -2175,11 +2351,13 @@ This improvement not only empowers users to accept rejected shares
 subsequently but also to restore shares that have been unshared before
 without requiring the owner to share it again.
 
+[discrete]
 ==== Password history and expiration
 
 To prepare ownCloud Server for new capabilities in the authentication process, we have introduced an authentication middleware,
 and a new major version of the {oc-marketplace-url}/apps/password_policy[Password Policy extension] is now available.
 
+[discrete]
 ===== The Authentication Middleware
 
 It:
@@ -2192,6 +2370,7 @@ It:
 The authentication middleware is currently focused on offering new features for the Password Policy extension.
 ====
 
+[discrete]
 ===== The Password Policy Extension
 
 The {oc-marketplace-url}/apps/password_policy[Password Policy Extension]
@@ -2241,6 +2420,7 @@ When imposing password expiration policies on an existing installation it is nec
 Please consult `the ownCloud documentation`_ for guidance.
 ====
 
+[discrete]
 ==== Technology preview for new S3 Objectstore implementation
 
 ownCloud Server 10.0.9 comes with the prerequisites to be ready for the new S3 Objectstore implementation
@@ -2260,6 +2440,7 @@ extension will continue to work as usual.
 Once the new implementation leaves the technology preview state and migrations have been taken care of,
 the current implementation will be deprecated.
 
+[discrete]
 ==== SWIFT Objectstore Deprecation
 
 As the markets are moving in the direction of https://aws.amazon.com/documentation/s3/[the S3 protocol] to
@@ -2273,6 +2454,7 @@ support will be discontinued. Please make sure to move to the S3
 protocol to use object storage as primary storage with future ownCloud
 Server versions.
 
+[discrete]
 ==== New options to display Imprint and Privacy Policy
 
 To enable GDPR and legal compliance in various jurisdictions for
@@ -2304,6 +2486,7 @@ In a custom theme, change `getShortFooter` and `getLongFooter` in `defaults.php`
 https://github.com/owncloud/theme-example/blob/master/defaults.php#L124[without links] to
 https://github.com/owncloud/core/blob/master/lib/private/legacy/defaults.php#L256[include the links]
 
+[discrete]
 === Changed behavior of "Exclude groups from sharing" option
 
 The option "_Exclude groups from sharing_", in the administration
@@ -2318,6 +2501,7 @@ cover the expectations of administrators. With ownCloud Server 10.0.9,
 it will apply to all users who are members of at least one of the
 excluded groups.
 
+[discrete]
 === Changes to the sharing autocomplete mechanism
 
 In ownCloud Server 10.0.8, the value for
@@ -2332,6 +2516,7 @@ For increased security requirements, the `config.php` option
 usability, a hint has been added to inform users about the required
 character count, to get suggestions.
 
+[discrete]
 === Improvements for _occ user:list_
 
 To improve the usability of the `occ user:list` command, the output has
@@ -2339,6 +2524,7 @@ been made configurable by using the `-a` option, for including certain
 attributes. This change has mainly been introduced to facilitate
 automation tasks. Check the `--help` option for more information.
 
+[discrete]
 === Additional events for audit logging
 
 New events are available for audit logging, among others. These include:
@@ -2351,7 +2537,8 @@ When logs are forwarded to external analyzers, like Splunk,
 administrators can check to add the new events. The latest version of
 the Auditing extension (`admin_audit`) is required.
 
-=== Theming improvements and changes
+[discrete]
+=== Theming Improvements and Changes
 
 * HTML templates for `lost password` mails have been added. This is important in case a custom theme is used and it needs manual adjustments.
 * The mail notifications framework, introduced with ownCloud Server 10.0.8 <new-mail-notifications-feature-label>, has been extended to provide a basic framework and notification structure, which can be used by ownCloud features and third party extensions. To support this, mail template wording and structure have been updated. Please review the templates in `apps/notifications/templates/mail/` to align them with your needs.
@@ -2375,7 +2562,7 @@ the Auditing extension (`admin_audit`) is required.
 is no longer bundled with ownCloud Server. It now lives in its own
 https://github.com/owncloud/theme-example[repository on GitHub].
 
-=== Solved known issues
+=== Solved Known Issues
 
 ownCloud Server 10.0.9 takes care of xref:server_release_notes.adoc#changes-in-10-0-9[10.0.8 known issues],
 and provides remedy for several others:
@@ -2399,7 +2586,7 @@ See https://github.com/owncloud/core/issues/31489[#31489] for further details.
 (hard memory limit of 5 GB causing uploads to fail randomly as garbage collection for file chunks did not
 work properly). See https://github.com/owncloud/core/pull/31825[#31884] for further details.
 
-=== Known issues
+=== Known Issues
 
 xref:server_release_notes.adoc#the-password-policy-extension[The new Password Policy feature "Password Expiration"]:
 
@@ -2414,7 +2601,8 @@ policy *X days until user password expires* has been enabled. This might be conf
 with the next release of the extension. See https://github.com/owncloud/password_policy/issues/66[#66]
 for more information.
 
-=== For developers
+[discrete]
+=== For Developers
 
 * The symfony event for logging has been extended to include the original exception when applicable:
 https://github.com/owncloud/core/issues/31623[#31623]
@@ -2447,6 +2635,7 @@ actively anymore which forces ownCloud to drop support in one of the next minor 
 as well. Please make sure to upgrade to PHP 7.1 as soon as possible. See the
 xref:{latest-server-version}@server:admin_manual:installation/system_requirements.adoc#officially-supported-environments[system requirements in the ownCloud documentation].
 
+[discrete]
 === Personal note for public link mail notification
 
 One of the usability enhancements of ownCloud Server 10.0.8 is the
@@ -2456,6 +2645,7 @@ adapt the shipped original template to the customizations or to add the
 https://github.com/owncloud/core/blob/stable10/core/templates/mail.php#L21-L25[code block]
 for the personal note to customized templates in order to display the personal note in the mail notifications.
 
+[discrete]
 === New mail notifications feature
 
 ownCloud Server 10.0.8 introduces a new extensible notification
@@ -2469,6 +2659,7 @@ notifications, only for those that require an action or decide not to
 get notifications via mail (by default users will only receive
 notifications when an action is required).
 
+[discrete]
 === LDAP-related improvements
 
 * When disabling or deleting user accounts in LDAP, the administrator
@@ -2484,6 +2675,7 @@ to their cron jobs or when manually executing `occ user:sync`.
 administrators now have to explicitly specify the option
 `-c, --showCount` to display the number of users to be synchronized.
 
+[discrete]
 === New events for audit logging
 
 New events have been added to be used for audit logging, among others.
@@ -2493,6 +2685,7 @@ logs are forwarded to external analyzers like Splunk, administrators can
 check to add the new events. The latest version of the Auditing
 extension (_admin_audit_) is required.
 
+[discrete]
 === New command to verify and repair file checksums
 
 With ownCloud 10 file integrity checking by computing and matching
@@ -2509,6 +2702,7 @@ available options by executing `occ files:checksums:verify --help`.
 Note: Executing this command might take some time depending on the file
 count.
 
+[discrete]
 === New config setting to specify minimum characters for sharing autocomplete
 
 For security reasons the default value for minimum characters to trigger
@@ -2521,6 +2715,7 @@ Therefore the value now is configurable via the _config.php_ option
 `'user.search_min_length' => 4,`. Please check which value fits your
 needs best.
 
+[discrete]
 === New option to granularly configure public link password enforcement
 
 With ownCloud 10 the `File Drop` feature has been merged with public
@@ -2532,6 +2727,7 @@ links can now be enforced based on permissions (_read-only, read &
 write, upload only/File Drop_). Please check the administration settings
 _`Sharing`_ section and configure as desired.
 
+[discrete]
 === New option to exclude apps from integrity check
 
 By verifying signature files the _integrity check_ ensures that the code
@@ -2544,18 +2740,21 @@ the _integrity check_ by using the _config.php_ option
 `'integrity.ignore.missing.app.signature' => ['app_id1', 'app_id2', 'app_id3'],`.
 See _config.sample.php_ for more information.
 
+[discrete]
 === New occ command to modify user details
 
 It is now possible to modify user details like display names or mail
 addresses via the command `occ user:modify`. Please append `--help` for
 more information.
 
+[discrete]
 === occ files:scan can now be executed for groups
 
 Apart from using the `occ files:scan` command for _single users_ and
 _whole instances_ it can now be executed for _groups_ using
 `-g, --groups=GROUPS`. Please append `--help` for more information.
 
+[discrete]
 === New configurable default format for syslog
 
 When using syslog as the log type (`'log_type' => 'syslog',` in
@@ -2565,6 +2764,7 @@ configurable using `'log.syslog.format'` in _config.php_. If you require
 a certain log format, please check the new format and
 _config.sample.php_ on how to change it.
 
+[discrete]
 === New config option to enable fallback to HTTP for federated shares
 
 For security reasons federated sharing (sharing between different
@@ -2573,14 +2773,15 @@ behavior is undesired the insecure fallback to HTTP needs to be enabled
 explicitly by setting `'sharing.federation.allowHttpFallback' => false,`
 to `true` in _config.php_.
 
+[discrete]
 === Migration related to auth_tokens (app passwords)
-
 
 Upgrading to 10.0.8 includes migrations related to _auth_tokens_ (_app
 passwords_). When users have created _app passwords_ as separate
 passwords for their clients the upgrade duration will increase depending
 on user count. Please consider this when planning the upgrade.
 
+[discrete]
 === Changed behavior of e-mail autocomplete for public link share dialog
 
 When the _"Sharing"_ settings option
@@ -2594,6 +2795,7 @@ intended for sharing between ownCloud users (local/federated), those
 have been removed. Contacts synchronized via CardDAV or created in the
 Contacts app will still appear as suggestions.
 
+[discrete]
 === Notifications sent by _occ_ can now include links
 
 The command `occ notifications:generate` can be used to send notifications to individual users or groups.
@@ -2603,6 +2805,7 @@ There is also {oc-marketplace-url}/apps/announcementcenter[Announcement center]
 to conduct such tasks from the web interface but it is currently limited to send notifications to all users.
 For now administrators can use the `occ` command if more granularity is required.
 
+[discrete]
 === Global option for CORS domains
 
 For security reasons ownCloud has a _Same-Origin-Policy_ that prevents
@@ -2614,6 +2817,7 @@ exceptions via _CORS (Cross-Origin Resource Sharing)_ using
 `'cors.allowed-domains'` in _config.php_. Please check
 _config.sample.php_ for more information.
 
+[discrete]
 === Mail Template Editor is now unbundled
 
 The Mail Template Editor has been unbundled from the default apps and is not shipped with the Server anymore.
@@ -2625,7 +2829,7 @@ If this is not possible (e.g. no internet connection or clustered setup) you wil
 (`occ app:disable templateeditor`) or
 xref:{latest-server-version}@server:admin_manual:installation/apps_management_installation.adoc#installing-apps-manually[download and install it manually].
 
-=== Solved known issues
+=== Solved Known Issues
 
 * Bogus `Login failed` log entries have been removed (see xref:server_release_notes.adoc#changes-in-10-0-7[10.0.7 known issues])
 * The _Provisioning API_ can now properly set default or zero quota
@@ -2647,6 +2851,7 @@ As a remedy administrators can either uninstall the second theme app or disable 
 
 * `occ transfer:ownership` https://github.com/owncloud/core/issues/31150[does not transfer public link shares if they were created by the target user (reshare)].
 
+[discrete]
 === For developers
 
 * The global JS variable `oc_current_user` was removed. Please use the public method `OC.getCurrentUser()` instead.
@@ -2684,6 +2889,7 @@ issues in ownCloud Server 10.0.5 that need your attention. You can also
 read https://owncloud.com/changelog/server/[the full ownCloud Server changelog]
 for further details on what has changed.
 
+[discrete]
 === Technology preview for PHP 7.2 support
 
 ownCloud catches up with new web technologies. This has mainly been
@@ -2691,10 +2897,12 @@ introduced for the open-source community to test and give feedback. PHP
 7.2 is not yet supported nor recommended for production scenarios.
 ownCloud is going to fully support PHP 7.2 with the next major release.
 
+[discrete]
 === php-intl now is a hard requirement
 
 Please make sure to have the PHP extension installed before upgrading.
 
+[discrete]
 === Changed: Only allow a single active theme app
 
 The theming behavior has been changed so that only a single theme can be
@@ -2702,17 +2910,19 @@ active concurrently. This change ensures that themes cannot interfere
 in any way (e.g., override default theming in an arbitrary order).
 Please make sure to have the desired theme enabled after upgrading.
 
+[discrete]
 === Removed old Dropbox external storage backend (Dropbox API v1)
-
 
 Please switch to
 {oc-marketplace-url}/apps/files_external_dropbox[the new _External Storage: Dropbox_ app]
 with Dropbox API v2 support to continue providing Dropbox external storages to your users.
 
+[discrete]
 === Fixed: Only set CORS headers on WebDAV endpoint when Origin header is specified
 
 ownCloud Server 10.0.4 known issue is resolved.
 
+[discrete]
 === Fixes and improvements for the Mail Template Editor
 
 * Known issues are resolved: Mail Template Editor works again, got
@@ -2721,7 +2931,7 @@ support for app themes and additional templates were added for customization.
 soon be released as a separate app to ownCloud Marketplace.
 * Changelog:  https://github.com/owncloud/templateeditor/blob/master/CHANGELOG.md#02---2018-02-28
 
-=== Known issues
+=== Known Issues
 
 * When using application passwords,
 https://github.com/owncloud/core/issues/30157[log entries related to
@@ -2734,6 +2944,7 @@ issues in ownCloud Server 10.0.4 that need your attention. You can also
 read https://github.com/owncloud/core/blob/stable10/CHANGELOG.md[the full ownCloud Server 10.0.4 changelog]
 for further details on what has changed.
 
+[discrete]
 === More granular sharing restrictions
 
 The "_Restrict users to only share with users in their groups_"
@@ -2749,6 +2960,7 @@ possible to restrict users from sharing with all users of an
 installation, limiting them to only being able to share with groups
 which they are a member of, and vice versa.
 
+[discrete]
 === Configurable solution for indistinguishable user display names
 
 The ownCloud sharing dialog displays users according to their display
@@ -2759,17 +2971,20 @@ possible that a user can’t distinguish sharing results.
 To cover this case the displayed user identifiers are now configurable.
 In the Sharing settings administrators can now configure the display of either mail addresses or user ids.
 
+[discrete]
 === Added `occ files:scan` repair mode to repair filecache inconsistencies
 
 We recommend using this command when directed to do so in the upgrade process.
 Please refer to xref:{latest-server-version}@server:admin_manual:configuration/server/occ_command.adoc#the-repair-option[the occ command’s files:scan --repair documentation] for more information.
 
+[discrete]
 === Detailed mode for `occ security:routes`
 
 Administrators can use the output of this command when using a network
 firewall, to check the appropriateness of configured rules or to get
 assistance when setting up.
 
+[discrete]
 === Added mode of operations to differentiate between single-instance or clustered setup
 
 As ownCloud needs to behave differently when operating in a clustered setup versus a single instance setup, the new `config.php` option `operation.mode` has been added.
@@ -2783,6 +2998,7 @@ The new config setting prevents this and other actions that are undesired in clu
 xref:{latest-server-version}@server:admin_manual:configuration/server/config_sample_php_parameters.adoc[the config_sample_php_parameters documentation]
 for more information.
 
+[discrete]
 === Added occ dav:cleanup-chunks command to clean up expired uploads
 
 When file uploads are interrupted for any reason, already uploaded file
@@ -2802,42 +3018,42 @@ It is not included in the regular ownCloud background jobs so that the administr
 Please check xref:{latest-server-version}@server:admin_manual:configuration/server/background_jobs_configuration.adoc#cleanupchunks[the background jobs configuration documentation]
 for more information.
 
+[discrete]
 === Administrators can now exclude files from integrity check in config.php
 
 When administrators did intentional changes to the ownCloud code they
 now have the ability to exclude certain files from the integrity
 checker. Please check `config.sample.php` for the usage of `'integrity.excluded.files'`.
 
+[discrete]
 === Modification time value of files is now 64 bits long
 
 When upgrading to 10.0.4 migrations may increase update duration
 dependent on the number of files.
 
+[discrete]
 === Updated minimum supported browser versions
 
 Users with outdated browsers might get warnings.
 See xref:{latest-server-version}@server:admin_manual:installation/system_requirements.adoc#web-browser[the list of supported browser versions].
 
-=== Known issues
+=== Known Issues
 
 * When using application passwords,
 https://github.com/owncloud/core/issues/30157[log entries related to `Login Failed` will appear],
 please upgrade to 10.0.7 and check the fix mentioned in its release notes.
+* Impersonate app 0.1.1 does not work with ownCloud Server 10.0.4.
+Please update to {oc-marketplace-url}/apps/impersonate[Impersonate 0.1.2]
+to be able to use the feature with ownCloud 10.0.4.
+* https://github.com/owncloud/core/issues/29793[Mounting ownCloud storage via davfs does not work]
 
-=== 10.0.3 resolved known issues
+=== 10.0.3 Resolved Known Issues
 
 * https://github.com/owncloud/core/issues/29156[SFTP external storages with key pair mode work again]
 * https://github.com/owncloud/core/issues/29240[Added support for MariaDB 10.2.7+]
 * https://github.com/owncloud/core/issues/29049[Encryption panel in admin settings fixed to
 properly detect current mode after upgrade to ownCloud 10]
 * https://github.com/owncloud/core/pull/29261[Removed double quotes from boolean values in status.php output]
-
-=== Known issues
-
-* Impersonate app 0.1.1 does not work with ownCloud Server 10.0.4.
-Please update to {oc-marketplace-url}/apps/impersonate[Impersonate 0.1.2]
-to be able to use the feature with ownCloud 10.0.4.
-* https://github.com/owncloud/core/issues/29793[Mounting ownCloud storage via davfs does not work]
 
 == Changes in 10.0.3
 
@@ -2869,7 +3085,7 @@ setup/upgrade procedures that rely on `occ upgrade' outputs.
 * Clustering: Better support of read only config file and apps folder
 * Default minimum desktop client version in config.php is now 2.2.4.
 
-*Known issues*
+=== Known Issues
 
 * Added quotes in boolean result values of `yourdomain/status.php` output
 * Setting up SFTP external storages with keypairs does not work.
@@ -2925,6 +3141,7 @@ The template editor app is not included in the 10.0.1 release due to technical r
 you can still xref:{latest-server-version}@server:admin_manual:configuration/server/email_configuration.adoc#using-email-templates[edit template files manually].
 ====
 
+[discrete]
 === Settings
 
 * *Settings design:* Admin, personal pages, and app management are now
@@ -2934,6 +3151,7 @@ panel has been added.
 * *Password Policy:* Rules now apply not only to link passwords but also
 to user passwords.
 
+[discrete]
 === Infrastructure
 
 * *Client:* You need to update to
@@ -2946,12 +3164,14 @@ xref:{latest-server-version}@server:admin_manual:configuration/server/config_sam
 
 === Known Issues
 
+[discrete]
 ==== Converting the Database Type doesn’t work
 
 Converting a Database from e.g. `SQLite` to `MySQL` or `PostgreSQL` with
 the `occ db:convert-type` currently doesn’t work. See
 https://github.com/owncloud/core/issues/27075 for more info.
 
+[discrete]
 ==== Installing the LDAP user backend will trigger the installation twice
 
 This causes an SQL error such as the following:
@@ -2972,19 +3192,23 @@ that already has `user_ldap` this error will not occur. It was fixed by
 https://github.com/owncloud/core/pull/27982. However, this could happen
 for other apps as well that use `database.xml`. If it does please use the same workaround.
 
+[discrete]
 ==== SAML authentication only works for users synced with `occ user:sync`
 
 We will re-enable SSO for LDAP users with an update of the app in the
 market after completing internal testing.
 
+[discrete]
 ==== The web UI prevents uninstalling apps marked as shipped, e.g., `user_ldap`
 
 To uninstall, disable the app with occ and rm the app directory.
 
+[discrete]
 ==== Moving files around in external storages outside of ownCloud will invalidate the metadata
 
 All shares, comments, and tags on the moved files will be lost.
 
+[discrete]
 ==== Existing LDAP users only show up in the user management page and the share dialog after being synced
 
 The account table introduced in ownCloud 10.0.0 significantly reduces
@@ -2994,6 +3218,7 @@ log in or when the administrator runs
 `occ user:sync "OCA\User_LDAP\User_Proxy"`.
 We recommend setting up xref:{latest-server-version}@server:admin_manual:configuration/server/background_jobs_configuration.adoc[a nightly Cron job] to keep metadata of users not actively logging in up to date.
 
+[discrete]
 ==== Error pages will not use the configured theme but will instead fall back to the community default
 
 == Changes in 10.0.0
@@ -3180,6 +3405,7 @@ conflicts with ownCloud. See installation/linux_installation.
 New option for the ownCloud admin to enable or disable sharing on individual external mountpoints (see xref:{latest-server-version}@server:admin_manual:configuration/files/external_storage/configuration.adoc#mount-options[External Storage GUI Mount Options]).
 Sharing on such mount points is disabled by default.
 
+[discrete]
 === Enterprise 9.0
 
 owncloud-enterprise packages are no longer available for CentOS 6,
@@ -3303,6 +3529,7 @@ xref:{latest-server-version}@server:admin_manual:configuration/server/harden_ser
 
 WebDAV file locking was removed in ownCloud 8.1 which causes Finder on macOS to mount WebDAV read-only.
 
+[discrete]
 === Enterprise 8.1
 
 The SharePoint Drive application does not verify the SSL certificate of
@@ -3311,17 +3538,20 @@ both devices are in the same trusted environment.
 
 == Changes in 8.0
 
+[discrete]
 === Manual LDAP Port Configuration
 
 When you are configuring the LDAP user and group backend application,
 ownCloud may not auto-detect the LDAP server’s port number, so you will
 need to enter it manually.
 
+[discrete]
 === No Preview Icon on Text Files
 
 There is no preview icon displayed for text files when the file contains
 fewer than six characters.
 
+[discrete]
 === Remote Federated Cloud Share Cannot be Reshared With Local Users
 
 When you mount a Federated Cloud share from a remote ownCloud server,
@@ -3329,11 +3559,13 @@ you cannot re-share it with your local ownCloud users. (See
 xref:{latest-server-version}@server:admin_manual:configuration/files/federated_cloud_sharing_configuration.adoc[Federated Cloud Sharing Configuration]
 to learn more about federated cloud sharing)
 
+[discrete]
 === Manually Migrate Encryption Keys after Upgrade
 
 If you are using the Encryption application and upgrading from older versions of ownCloud to ownCloud 8.0, you must
 xref:{latest-server-version}@server:admin_manual:configuration/server/occ_command.adoc#encryption[manually migrate your encryption keys].
 
+[discrete]
 === Windows Server Not Supported
 
 Windows Server is not supported in ownCloud 8.
@@ -3343,6 +3575,7 @@ Windows Server is not supported in ownCloud 8.
 PHP 5.3 is not supported in ownCloud 8, and PHP 5.4 or better is
 required.
 
+[discrete]
 === Disable Apache Multiviews
 
 If Multiviews are enabled in your Apache configuration, this may cause
@@ -3356,28 +3589,33 @@ Options Indexes FollowSymLinks Multiviews
 
 Delete `Multiviews` and restart Apache.
 
+[discrete]
 === ownCloud Does Not Follow Symlinks
 
 ownCloud’s file scanner does not follow symlinks, which could lead to
 infinite loops. To avoid this do not use soft or hard links in your
 ownCloud data directory.
 
+[discrete]
 === No Commas in Group Names
 
 Creating an ownCloud group with a comma in the group name causes
 ownCloud to treat the group as two groups.
 
+[discrete]
 === Hebrew File Names Too Large on Windows
 
 On Windows servers Hebrew file names grow to five times their original
 size after being translated to Unicode.
 
+[discrete]
 === Google Drive Large Files Fail with 500 Error
 
 Google Drive tries to download the entire file into memory, then write
 it to a temp file, and then stream it to the client, so very large file
 downloads from Google Drive may fail with a 500 internal server error.
 
+[discrete]
 === Encrypting Large Numbers of Files
 
 When you activate the Encryption application on a running server that
@@ -3385,19 +3623,23 @@ has large numbers of files, it is possible that you will experience
 timeouts. It is best to activate encryption at installation, before
 accumulating large numbers of files on your ownCloud server.
 
+[discrete]
 === Enterprise 8.0
 
+[discrete]
 ==== Sharepoint Drive SSL Not Verified
 
 The SharePoint Drive application does not verify the SSL certificate of
 the SharePoint server or the ownCloud server, as it is expected that
 both devices are in the same trusted environment.
 
+[discrete]
 ==== No Federated Cloud Sharing with Shibboleth
 
 Federated Cloud Sharing (formerly Server-to-Server file sharing) does not
 work with Shibboleth.
 
+[discrete]
 ==== Direct Uploads to SWIFT do not Appear in ownCloud
 
 When files are uploaded directly to a SWIFT share mounted as external
@@ -3405,6 +3647,7 @@ storage in ownCloud, the files do not appear in ownCloud. However, files
 uploaded to the SWIFT mount through ownCloud are listed correctly in
 both locations.
 
+[discrete]
 ==== SWIFT Objectstore Incompatible with Encryption App
 
 The current SWIFT implementation is incompatible with any application
@@ -3412,19 +3655,22 @@ that uses direct file I/O and circumvents the ownCloud virtual
 filesystem. Using the Encryption application on a SWIFT object store
 incurs twice as many HTTP requests and increases latency significantly.
 
-==== application Store is Back
+[discrete]
+==== Application Store is Back
 
 The ownCloud application Store has been re-enabled in ownCloud 8. Note
 that third-party apps are not supported.
 
 == Changes in 7.0
 
+[discrete]
 === Manual LDAP Port Configuration
 
 When you are configuring the LDAP user and group backend application,
 ownCloud may not auto-detect the LDAP server’s port number, so you will
 need to enter it manually.
 
+[discrete]
 === LDAP Search Performance Improved
 
 Prior to 7.0.4, LDAP searches were substring-based and would match
@@ -3453,6 +3699,7 @@ if your search attributes are `givenName` and `sn` you can find users by
 first name + last name very quickly. For example, you’ll find Terri
 Hanson by searching for `te ha`. Trailing whitespaces are ignored.
 
+[discrete]
 === Protecting ownCloud on IIS from Data Loss
 
 Under certain circumstances, running your ownCloud server on IIS could
@@ -3464,6 +3711,7 @@ be at risk of data loss. To prevent this, follow these steps.
 * When you make server updates `config.php` must be made writeable. When
 your updates are completed re-set it to read-only.
 
+[discrete]
 === Antivirus Application Modes
 
 The Antivirus application offers three modes for running the ClamAV
@@ -3472,12 +3720,14 @@ remote server, or an executable mode that calls `clamscan` on the local
 server. We recommend using one of the daemon modes, as they are the most
 reliable.
 
+[discrete]
 === `Enable Only for Specific Groups` Fails
 
 Some ownCloud applications have the option to be enabled only for
 certain groups. However, when you select specific groups they do not get
 access to the app.
 
+[discrete]
 === Changes to File Previews
 
 For security and performance reasons, file previews are available only
@@ -3485,11 +3735,13 @@ for image files, covers of MP3 files, and text files, and have been
 disabled for all other filetypes. Files without previews are represented
 by generic icons according to their file types.
 
+[discrete]
 === 4GB Limit on SFTP Transfers
 
 Because of limitations in `phpseclib`, you cannot upload files larger
 than 4GB over SFTP.
 
+[discrete]
 === `Not Enough Space Available` on File Upload
 
 Setting user quotas to `unlimited` on an ownCloud installation that has
@@ -3498,24 +3750,29 @@ provider– may cause file uploads to fail with a `Not Enough Space
 Available` error. A workaround is to set file quotas for all users
 instead of `unlimited`.
 
+[discrete]
 === No More Expiration Date On Local Shares
 
 In older versions of ownCloud, you could set an expiration date on both
 local and public link shares. Now you can set an expiration date only on
 public link shares, and local shares do not expire when public link shares expire.
 
+[discrete]
 === Zero Quota Not Read-Only
 
 Setting a user’s storage quota should be the equivalent of read-only,
 however, users can still create empty files.
 
+[discrete]
 === Enterprise 7.0
 
+[discrete]
 ==== No Federated Cloud Sharing with Shibboleth
 
 Federated Cloud Sharing (formerly Server-to-Server file sharing) does
 not work with Shibboleth.
 
+[discrete]
 ==== Windows Network Drive
 
 Windows Network Drive runs only on Linux servers because it requires the
@@ -3532,28 +3789,33 @@ LDAP and samba libraries. Again, see Using External Storage > Installing
 and Configuring the Windows Network Drive application in the Enterprise
 Admin manual for instructions.
 
+[discrete]
 ==== Sharepoint Drive SSL
 
 The SharePoint Drive application does not verify the SSL certificate of
 the SharePoint server or the ownCloud server, as it is expected that
 both devices are in the same trusted environment.
 
+[discrete]
 ==== Shibboleth and WebDAV Incompatible
 
 Shibboleth and standard WebDAV are incompatible, and cannot be used
 together in ownCloud. If Shibboleth is enabled, the ownCloud client uses
 an extended WebDAV protocol
 
+[discrete]
 ==== No SQLite
 
 SQLite is no longer an installation option for ownCloud Enterprise
 Edition, as it not suitable for multiple-user installations or managing
 large numbers of files.
 
+[discrete]
 ==== No Application Store
 
 The application Store is disabled for the Enterprise Edition.
 
+[discrete]
 ==== LDAP Home Connector Linux Only
 
 The LDAP Home Connector application requires Linux (with MySQL, MariaDB,
