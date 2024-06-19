@@ -34,12 +34,12 @@ The frontend is generating the URL to the public link share and submitting it to
 [discrete] 
 === Sanitize SVG
 
-For the purpose of hardening SVG support, `xlink:href` as well as other `ìmage` tags will now completely be blocked. https://github.com/owncloud/core/pull/41234[#41234]   
+For the purpose of hardening SVG support, `xlink:href` as well as other `ìmage` tags will be now completely blocked. https://github.com/owncloud/core/pull/41234[#41234]   
 
 [discrete]
 === Remove IoC Scanner Instructions
 
-IoC scanner instructions, firstly introduced in 10.13.4, which were displayed during upgrade (console as well as Web Updater) and in the admin settings have been now completely removed. https://github.com/owncloud/core/pull/41260[#41260]
+IoC scanner instructions, firstly introduced in 10.13.4 and which were displayed during upgrade (console as well as Web Updater) and in the admin settings, have been now completely removed. https://github.com/owncloud/core/pull/41260[#41260]
 
 [discrete]
 === Fail Fast on Unresponsive Remote Servers
