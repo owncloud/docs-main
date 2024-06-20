@@ -15,6 +15,136 @@
 
 toc::[]
 
+== Infinite Scale 6.0.0
+[discrete]
+=== General
+
+IMPORTANT: This is a Rolling Release. Please check the https://owncloud.dev/ocis/release_roadmap/#release-types[documentation] to see if this realse type is right for your usecase. There is no upgrade path from previous releases, so this version is therefore only suitable for you if you start with a clean slate.
+
+[discrete]
+=== Rolling Release
+
+This is the first https://owncloud.dev/ocis/release_roadmap/#release-types[Rolling Release] of Infinite Scale.
+
+In addition to our Production releases, you can now install the new release type "Rolling", which allows you to experience the latest features without having to wait for a Production release. The Rolling release offers access to the latest features and improvements every three weeks. This new release type complements our existing Production and Daily releases, providing a flexible and dynamic update cycle perfect for early adopters and enthusiasts.
+
+[discrete]
+=== Online Demo
+
+Feel free to try Infinite Scale by exploring our online demo:
+
+- URL: https://ocis.owncloud.com/  
+- Username: `katherine`
+- Password: `gemini`
+
+Hint: You can also use your desktop, iOS or Android Apps to connect to our online demo for temporary evaluation purposes. 
+
+[discrete]
+#### How to Get the Rolling Release
+
+[discrete]
+##### Docker
+
+Pull the Docker image
+
+[source,shell]
+----
+docker pull owncloud/ocis-rolling:latest
+----
+
+[discrete]
+#### Binary
+
+Download the binary from our download server
+
+https://download.owncloud.com/ocis/ocis/rolling/[https://download.owncloud.com/ocis/ocis/rolling/]
+
+[discrete]
+#### Source Code on GitHub
+
+This release is tagged as `v6.0.0`` on GitHub
+
+https://github.com/owncloud/ocis/releases/tag/v6.0.0[https://github.com/owncloud/ocis/releases/tag/v6.0.0]
+
+[discrete]
+=== Web Office: Collabora Secure View
+
+Infinite Scale now supports Collabora’s Secure View feature, enhancing security for sensitive documents by allowing restricted viewing. Recipients can view content without downloading, copying, or editing, and a watermark with the user’s name is always applied to prevent unauthorized sharing. Secure View supports for example office documents, images, and PDFs. Read all about https://www.collaboraoffice.com/security/collabora-secure-view/[Collabora`s Secure View]. Collabora is the favored web office application of Infinite Scale, known for its strong focus on secure collaboration, making it ideal for organizations prioritizing data security and privacy.
+
+[discrete]
+=== Markdown Editor: ToastUI
+
+We have integrated the ToastUI markdown editor, providing users with robust capabilities to edit on markdown (.md or .markdown) files. Markdown files offer distinct advantages such as simplicity in formatting text using plain text syntax. The big advantage in markdown lies in its platform-independence as you don't need a complex or commercial App to edit these files. They are just plain simple and ultra useful. The ToastUI markdown editor enhances this experience with features like inline preview and syntax highlighting. Collaborative (live) editing is currently not available. 
+
+[discrete]
+=== View e-Books: ePub Reader
+Infinite Scale now includes per default the ability to open ePub e-books via the integrated ePub reader. This feature supports the EPUB 3.0 format as specified by the International Digital Publishing Forum (IDPF). It utilizes the Epub.js library, a versatile JavaScript tool for rendering ePub documents in the browser across various devices. Special thanks to https://github.com/dschmidt[dschmidt] for his valuable contribution.
+
+[discrete]
+=== Diagramming Tool draw.io
+
+Infinite Scale now supports opening and editing diagrams with draw.io. Widely used by professionals in software development, project management, engineering, and business analysis, draw.io allows users to create a variety of diagrams such as flowcharts, network diagrams, UML diagrams, mind maps, and organizational charts. Its extensive library of shapes and templates make it ideal for diagramming tasks, enhancing visual communication.
+
+[discrete]
+=== Show Audio and Image EXIF Metadata
+
+Introducing new metadata details, Infinite Scale now features an `EXIF`` panel that displays image metadata whenever available. These metada are shown from image `EXIF` data:
+
+* Dimensions
+* Camera Make
+* Camera Model
+* Focal Length
+* f-number (aperture)
+* Exposure Time
+* ISO
+* Orientation
+* Taken Date and Time
+* Location
+
+Additionally, an Audio Info panel showcases audio metadata: 
+
+* Album
+* Artist
+* Album Artist
+* Genre
+* Title
+* Duration
+* Track
+* Disc
+* Year
+
+[discrete]
+=== Other Notable Changes
+
+* Change - Define maximum input image dimensions and size when generating previews: #9360
+* Enhancement - Limit concurrent thumbnail requests. The number of concurrent requests to the thumbnail service can be limited now to have more control over the consumed system resources. #9199 #9199
+* Enhancement - Change Cors default settings. We have changed the default CORS settings to set Access-Control-Allow-Origin to the OCIS_URL if not explicitely set and Access-Control-Allow-Credentials to false if not explicitely set. #8514 #8518
+* Enhancement - Custom WEB App Loading. We've added a new feature which allows the administrator of the environment to provide custom web applications to the users. This feature is useful for organizations that have specific web applications that they want to provide to their users. The users will then be able to access these custom web applications from the web ui. For a detailed description of the feature, please read the WEB service README.md file. #8392 #8523
+* Enhancement - Make server side space templates production ready. Fixes several smaller bugs and adds some improvements to space templates, introduced with #8558 #8723
+* Enhancement - Allow to resolve public shares without the ocs tokeninfo endpoint. Instead of querying the /v1.php/apps/files_sharing/api/v1/tokeninfo/ endpoint, a client can now resolve public and internal links by sending a PROPFIND request to /dav/public-files/{sharetoken} authenticated clients accessing an internal link are redirected to the "real" resource (`/dav/spaces/{target-resource-id} authenticated clients are able to resolve public links like before. For password protected links they need to supply the password even if they have access to the underlying resource by other means. unauthenticated clients accessing an internal link get a 401 returned with WWW-Authenticate set to Bearer (so that the client knows that it need to get a token via the IDP login page. unauthenticated clients accessing a password protected link get a 401 returned with an error message to indicate the requirement for needing the link's password. #8858 #8926 cs3org/reva#4653
+* Enhancement - Configurable claims for auto-provisioning user accounts. We introduce the new environment variables "PROXY_AUTOPROVISION_CLAIM_USERNAME", "PROXY_AUTOPROVISION_CLAIM_EMAIL", and "PROXY_AUTOPROVISION_CLAIM_DISPLAYNAME" which can be used to configure the OIDC claims that should be used for auto-provisioning user accounts. The automatic fallback to use the 'email' claim value as the username when the 'preferred_username' claim is not set, has been removed. Also it is now possible to autoprovision users without an email address. #8635 #6909 #8952
+* Enhancement - Theme Processing and Logo Customization. We have made significant improvements to the theme processing in Infinite Scale. The changes include: Enhanced the way themes are composed. Now, the final theme is a combination of the built-in theme and the custom theme provided by the administrator via WEB_ASSET_THEMES_PATH and WEB_UI_THEME_PATH. - Introduced a new mechanism to load custom assets. This is particularly useful when a single asset, such as a logo, needs to be overwritten. - Fixed the logo customization option. Previously, small theme changes would copy the entire theme. Now, only the changed keys are considered, making the process more efficient. - Default themes are now part of ocis. This change simplifies the theme management process for web. These changes enhance the robustness of the theme handling in Infinite Scale and provide a better user experience. #8966 #9133
+* Enhancement - Add command to check ocis backup consistency. Adds a command that checks the consistency of an ocis backup. #9238
+* Enhancement - Web server compression. We've added a compression middleware to the web server to reduce the request size when delivering static files. This speeds up loading times in web clients. owncloud/web#7964 #9287
+* Enhancement - Activitylog Service. Adds a new service activitylog which stores events (activities) per resource. This data can be retrieved by clients to show item activities #9327
+
+
+[discrete]
+=== Migration
+
+- There is no upgrade path from previous releases, so this version is therefore only suitable for you if you start with a clean slate.
+
+[discrete]
+=== Breaking Changes
+
+- @mbarz please add
+
+[discrete]
+=== Deprecation
+
+* *Custom Permissions*: The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available. @mbarz please confirm - I could not find a changelog entry.
+
+
 == Infinite Scale 5.0.4
 
 [discrete]
