@@ -29,17 +29,6 @@ This is the first https://owncloud.dev/ocis/release_roadmap/#release-types[Rolli
 In addition to our Production releases, you can now install the new release type "Rolling", which allows you to experience the latest features without having to wait for a Production release. The Rolling release offers access to the latest features and improvements every three weeks. This new release type complements our existing Production and Daily releases, providing a flexible and dynamic update cycle perfect for early adopters and enthusiasts.
 
 [discrete]
-=== Online Demo
-
-Feel free to try Infinite Scale by exploring our online demo:
-
-- URL: https://ocis.owncloud.com/  
-- Username: `katherine`
-- Password: `gemini`
-
-Hint: You can also use your desktop, iOS or Android Apps to connect to our online demo for temporary evaluation purposes. 
-
-[discrete]
 #### How to Get the Rolling Release
 
 [discrete]
@@ -86,6 +75,24 @@ Infinite Scale now includes per default the ability to open ePub e-books via the
 Infinite Scale now supports opening and editing diagrams with draw.io. Widely used by professionals in software development, project management, engineering, and business analysis, draw.io allows users to create a variety of diagrams such as flowcharts, network diagrams, UML diagrams, mind maps, and organizational charts. Its extensive library of shapes and templates make it ideal for diagramming tasks, enhancing visual communication.
 
 [discrete]
+=== Up to 44% faster loading times
+
+We have improved the loading time of the web ui, especially on slower networks. For example, on a “Fast 3G” connection, load times improved by approximately 44% (from 27s to 15s) and finish times improved by 25% (from 40s to 30s). The overall speed index improved by 32% (from 4.7s to 3.2s).
+Benchmarks and details on: https://github.com/owncloud/web/pull/10976[10976]
+
+
+[discrete]
+=== More Real-Time UI Updates with Server-Sent Events (SSE)
+
+We have introduced new Server-Sent Events (SSE) to enhance the real-time responsiveness of the web UI. The following events will now automatically update the web UI when they occur:
+
+* *Locking*: The UI will reflect changes when files or folders are l* ed.
+* *Renaming*: Any renaming of files or folders will be instantly v* ble.
+* *Deleting*: Deletions will be immediately updated in the UI.
+* *Restoring*: Restored items will appear right away.
+* *Moving*: The UI will update to show the new location of moved items.
+
+[discrete]
 === Show Audio and Image EXIF Metadata
 
 Introducing new metadata details, Infinite Scale now features an `EXIF`` panel that displays image metadata whenever available. These metadata are shown from image `EXIF` data:
@@ -114,12 +121,20 @@ Additionally, an Audio Info panel showcases audio metadata:
 * Year
 
 [discrete]
+== Custom WEB App Loading
+We've added a new feature which allows the administrator of the environment to provide custom web applications to the users. This feature is useful for organizations that have specific web applications that they want to provide to their users. The users will then be able to access these custom web applications from the web ui. For a detailed description of the feature, please read the WEB service README.md file. #8392 #8523
+
+[discrete]
+== Persistent Sidebar States
+
+The state of the left and right sidebars is now persisted. If you open the left or right sidebar, it will remain open until you close or collapse it.
+
+[discrete]
 === Other Notable Changes
 
 * Change - Define maximum input image dimensions and size when generating previews: #9360
 * Enhancement - Limit concurrent thumbnail requests. The number of concurrent requests to the thumbnail service can be limited now to have more control over the consumed system resources. #9199 #9199
 * Enhancement - Change Cors default settings. We have changed the default CORS settings to set Access-Control-Allow-Origin to the OCIS_URL if not explicitly set and Access-Control-Allow-Credentials to false if not explicitly set. #8514 #8518
-* Enhancement - Custom WEB App Loading. We've added a new feature which allows the administrator of the environment to provide custom web applications to the users. This feature is useful for organizations that have specific web applications that they want to provide to their users. The users will then be able to access these custom web applications from the web ui. For a detailed description of the feature, please read the WEB service README.md file. #8392 #8523
 * Enhancement - Make server side space templates production ready. Fixes several smaller bugs and adds some improvements to space templates, introduced with #8558 #8723
 * Enhancement - Allow public shares to be resolved without the ocs tokeninfo endpoint. Instead of querying the /v1.php/apps/files_sharing/api/v1/tokeninfo/ endpoint, a client can now resolve public and internal links by sending a PROPFIND request to /dav/public-files/{sharetoken} Authenticated clients accessing an internal link are redirected to the "real" resource (`/dav/spaces/{target-resource-id} Authenticated clients are able to resolve public links like before. For password protected links they need to supply the password even if they have access to the underlying resource by other means. Unauthenticated clients accessing an internal link get a 401 returned with WWW-Authenticate set to Bearer (so that the client knows that it needs to get a token via the IDP login page. Unauthenticated clients accessing a password protected link get a 401 returned with an error message to indicate the requirement for providing the link's password. #8858 #8926 cs3org/reva#4653
 * Enhancement - Configurable claims for auto-provisioning user accounts. We introduce the new environment variables "PROXY_AUTOPROVISION_CLAIM_USERNAME", "PROXY_AUTOPROVISION_CLAIM_EMAIL", and "PROXY_AUTOPROVISION_CLAIM_DISPLAYNAME" which can be used to configure the OIDC claims that should be used for auto-provisioning user accounts. The automatic fallback to use the 'email' claim value as the username when the 'preferred_username' claim is not set, has been removed. Also it is now possible to autoprovision users without an email address. #8635 #6909 #8952
@@ -137,12 +152,12 @@ Additionally, an Audio Info panel showcases audio metadata:
 [discrete]
 === Breaking Changes
 
-- @mbarz please add
+- @micbar please add
 
 [discrete]
 === Deprecation
 
-* *Custom Permissions*: The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available. @mbarz please confirm - I could not find a changelog entry.
+* *Custom Permissions*: The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available. @micbar please confirm - I could not find a changelog entry.
 
 
 == Infinite Scale 5.0.4
