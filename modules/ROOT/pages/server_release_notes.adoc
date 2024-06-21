@@ -69,17 +69,18 @@ The config.php option `preview_max_dimensions` which is being used to define the
 [discrete]
 === Disallow HTTP API Requests for User External Storages When Disabled
 
-Requests into the files_external API can be prevented by setting the app config variable 'allow_user_mounting' to false. Requests will then be denied with HTTP status code 403 Forbidden. https://github.com/owncloud/core/pull/41250
+The admin UI setting 'Allow users to mount external storage' now also controls if requests into the files_external API are allowed. https://github.com/owncloud/core/pull/41250
 
 [discrete]
 === Updated App Versions
 
 Find below a list of updated apps in comparison with the 10.14.0 complete bundle. More information on the changes can be found in the respective changelogs on ownCloud Marketplace.
 
+* Config Report: 0.3.0
 * {oc-marketplace-url}/apps/customgroups[Custom Groups]: 0.9.1
 * {oc-marketplace-url}/apps/files_classifier[Document Classification]: 1.5.2
 * {oc-marketplace-url}/apps/market[Market]: 0.9.0
-* https://github.com/owncloud/updater/releases[Updater]: 1.1.1
+* Updater: 1.1.1
 * {oc-marketplace-url}/apps/windows_network_drive[External Storage: Windows Network Drives]: 2.4.0
 
 [discrete]
