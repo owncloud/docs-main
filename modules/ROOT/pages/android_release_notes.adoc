@@ -20,6 +20,22 @@ toc::[]
 This release contains bugfixes, changes and enhancements. +
 Refer to the full change log for a list of bug fixes and changes at {android-releases-url}v4.3.0[GitHub, window=_blank].
 
+* *Important new items:*
+** New Dialog for Manage Accounts
+** Support for URL shortcut files
+** New setting to remove automatically downloaded files
+** New setting to remove manually local storage
+** Automatic discovery
+** Password generator
+
+* *Other improvements:*
+** Feedback section changed
+** Device's clear button re-enabled
+** Filtering in spaces list
+** Performance in av. offline
+** Warning for http connections
+** Bugfixing, accessibility and tiny UI improvements
+
 [discrete]
 === Issues Fixed
 
@@ -36,8 +52,6 @@ Refer to the full change log for a list of bug fixes and changes at {android-rel
 
 * Upgrade minimum SDK version to Android 7.0 (v24): https://github.com/owncloud/android/issues/4230[#4230]
 * Automatic discovery of the account in login: https://github.com/owncloud/android/issues/4301[#4301]
-* Add new prefixes in commit messages of 3rd party contributors: https://github.com/owncloud/android/issues/4346[#4346]
-* Kotlinize PreviewTextFragment: https://github.com/owncloud/android/issues/4356[#4356]
 
 [discrete]
 === Enhancements
@@ -50,7 +64,6 @@ Refer to the full change log for a list of bug fixes and changes at {android-rel
 * New setting for manual removal of local storage: https://github.com/owncloud/android/issues/4174[#4174]
 * New setting for automatic removal of local files: https://github.com/owncloud/android/issues/4175[#4175]
 * Avoid unnecessary requests when an av. offline folder is refreshed: https://github.com/owncloud/android/issues/4197[#4197]
-* Unit tests for repository classes - Part 1: https://github.com/owncloud/android/issues/4232[#4232]
 * Add a warning in http connections: https://github.com/owncloud/android/issues/4284[#4284]
 * Make dialog more Android-alike: https://github.com/owncloud/android/issues/4303[#4303]
 * Password generator for public links in oCIS: https://github.com/owncloud/android/issues/4308[#4308]
