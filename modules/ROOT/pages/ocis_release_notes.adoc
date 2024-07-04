@@ -44,7 +44,7 @@ is located at https://hub.docker.com/r/owncloud/ocis and can be used via:
 +
 [source,shell]
 ----
-docker pull owncloud/ocic:latest
+docker pull owncloud/ocis:latest
 ----
 
 * *Rolling* +
