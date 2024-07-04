@@ -15,6 +15,183 @@
 
 toc::[]
 
+== Infinite Scale 6.0.0
+
+[discrete]
+=== General
+
+IMPORTANT: This is a Rolling Release. Please check the https://owncloud.dev/ocis/release_roadmap/#release-types[documentation] to see if this release type is right for your use case. There is no upgrade path from previous releases, so this version is therefore only suitable for you if you start with a clean slate.
+
+Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.0.0[GitHub, window=_blank].
+
+[discrete]
+=== Rolling Release
+
+This is the first https://owncloud.dev/ocis/release_roadmap/#release-types[Rolling Release] of Infinite Scale.
+
+In addition to our Production releases, you can now install the new release type *Rolling*, which allows you to experience the latest features without having to wait for a Production release. The Rolling release offers access to the latest features and improvements every three weeks. This new release type complements our existing Production and Daily releases, providing a flexible and dynamic update cycle perfect for early adopters and enthusiasts.
+
+[discrete]
+#### How to Get the Rolling Release
+
+[discrete]
+##### Docker
+
+The images available on https://hub.docker.com[Docker Hub] are now separated to clearly distinguish between *production* and *rolling*.
+
+* *Production* +
+is located at https://hub.docker.com/r/owncloud/ocis and can be used via:
++
+[source,shell]
+----
+docker pull owncloud/ocis:latest
+----
+
+* *Rolling* +
+is located at https://hub.docker.com/r/owncloud/ocis-rolling and can be used via:
++
+[source,shell]
+----
+docker pull owncloud/ocis-rolling:latest
+----
+
+[discrete]
+#### Binary
+
+The binary files to download are now separated to clearly distinguish between production and rolling.
+
+* *Production* +
+can be downloaded from: https://download.owncloud.com/ocis/ocis/stable/[, window=_blank]
+
+* *Rolling* +
+can be downloaded from: https://download.owncloud.com/ocis/ocis/rolling/[, window=_blank]
+
+[discrete]
+=== Web Office: Collabora Secure View
+
+Infinite Scale now supports Collabora’s Secure View feature, enhancing security for sensitive documents by allowing restricted viewing. Recipients can view content without downloading, copying, or editing, and a watermark with the user’s name is always applied to prevent unauthorized sharing. Secure View supports, for example, office documents, images, and PDFs. Read all about https://www.collaboraoffice.com/security/collabora-secure-view/[Collabora`s Secure View]. Collabora is the favored web office application of Infinite Scale, known for its strong focus on secure collaboration, making it ideal for organizations prioritizing data security and privacy.
+
+[discrete]
+=== Markdown Editor: ToastUI
+
+We have integrated the ToastUI markdown editor, providing users with robust capabilities to edit on markdown (`.md` or `.markdown`) files. Markdown files offer distinct advantages such as simplicity in formatting text using plain text syntax. The big advantage of markdown lies in its platform-independence as you don't need a complex or commercial App to edit these files. They are just plain simple and ultra useful. The ToastUI markdown editor enhances this experience with features like inline preview, syntax highlighting and an editor toolbar to help you with the markdown syntax. Collaborative (live) editing is currently not available. 
+
+[discrete]
+=== View e-Books: ePub Reader
+Infinite Scale now includes by default the ability to open ePub e-books via the integrated ePub reader. This feature supports the EPUB 3.0 format as specified by the International Digital Publishing Forum (IDPF). It utilizes the Epub.js library, a versatile JavaScript tool for rendering ePub documents in the browser across various devices.
+
+[discrete]
+=== Diagramming Tool draw.io
+
+Infinite Scale now supports opening and editing diagrams with draw.io. Widely used by professionals in software development, project management, engineering, and business analysis, draw.io allows users to create a variety of diagrams such as flowcharts, network diagrams, UML diagrams, mind maps, and organizational charts. Its extensive library of shapes and templates make it ideal for diagramming tasks, enhancing visual communication.
+
+[discrete]
+=== Up to 44% Faster Loading Times
+
+We have improved the loading time of the web ui, especially on slower networks. For example, on a “Fast 3G” connection, load times improved by approximately 44% (from 27s to 15s) and finish times improved by 25% (from 40s to 30s). The overall speed index improved by 32% (from 4.7s to 3.2s). Benchmarks and details on: https://github.com/owncloud/web/pull/10976[owncloud/web#10976]
+
+[discrete]
+=== More Real-Time UI Updates with Server-Sent Events (SSE)
+
+We have introduced new Server-Sent Events (SSE) to enhance the real-time responsiveness of the web UI. The following events will now automatically update the web UI when they occur:
+
+* *Locking* +
+The UI will reflect changes when files or folders are locked.
+* *Renaming* +
+Any renaming of files or folders will be instantly visible.
+* *Deleting* +
+Deletions will be immediately updated in the UI.
+* *Restoring* +
+Restored items will appear right away.
+* *Moving* +
+The UI will update to show the new location of moved items.
+
+[discrete]
+=== Show Audio and Image EXIF Metadata
+
+Introducing new metadata details, Infinite Scale now features an `EXIF` panel that displays image metadata whenever available. These metadata are shown from image `EXIF` data:
+
+* Dimensions
+* Camera Make
+* Camera Model
+* Focal Length
+* f-number (aperture)
+* Exposure Time
+* ISO
+* Orientation
+* Taken Date and Time
+* Location
+
+Additionally, an Audio Info panel showcases audio metadata: 
+
+* Album
+* Artist
+* Album Artist
+* Genre
+* Title
+* Duration
+* Track
+* Disc
+* Year
+
+[discrete]
+== Custom WEB App Loading
+
+We've added a new feature which allows the administrator of the environment to provide custom web applications to the users. This feature is useful for organizations that have specific web applications that they want to provide to their users. The users will then be able to access these custom web applications from the web ui. Read the xref:next@ocis:ROOT:deployment/services/s-list/web.adoc[WEB service description] from the admin docs and the https://owncloud.dev/services/web/[WEB service README.md] from the developer docs for a detailed description of the feature. https://github.com/owncloud/ocis/pull/8392[#8392], https://github.com/owncloud/ocis/pull/8523[#8523]
+
+[discrete]
+== Persistent Sidebar States
+
+The state of the left and right sidebars is now persisted. If you open the left or right sidebar, it will remain open until you close or collapse it.
+
+[discrete]
+=== Other Notable Changes
+
+[discrete]
+=== Changes in Reva
+
+* Define maximum input image dimensions and size when generating previews. https://github.com/owncloud/ocis/pull/9360[#9360]
+
+[discrete]
+==== Enhancements
+
+* Limit concurrent thumbnail requests. The number of concurrent requests to the thumbnail service can be limited now to have more control over the consumed system resources. https://github.com/owncloud/ocis/pull/9199[#9199] https://github.com/owncloud/ocis/pull/9199[#9199]
+
+* Change Cors default settings. We have changed the default CORS settings to set Access-Control-Allow-Origin to the OCIS_URL if not explicitly set and Access-Control-Allow-Credentials to false if not explicitly set. https://github.com/owncloud/ocis/pull/8514[#8514], https://github.com/owncloud/ocis/pull/8518[#8518]
+
+* Make server side space templates production ready. Fixes several smaller bugs and adds some improvements to space templates, introduced with https://github.com/owncloud/ocis/pull/8558[#8558], https://github.com/owncloud/ocis/pull/8723[#8723]
+
+* Allow public shares to be resolved without the ocs tokeninfo endpoint. Instead of querying the `/v1.php/apps/files_sharing/api/v1/tokeninfo/` endpoint, a client can now resolve public and internal links by sending a PROPFIND request to `/dav/public-files/\{sharetoken}` Authenticated clients accessing an internal link are redirected to the "real" resource `/dav/spaces/\{target-resource-id}`. Authenticated clients are able to resolve public links like before. For password protected links they need to supply the password even if they have access to the underlying resource by other means. Unauthenticated clients accessing an internal link get a 401 returned with WWW-Authenticate set to Bearer (so that the client knows that it needs to get a token via the IDP login page. Unauthenticated clients accessing a password protected link get a 401 returned with an error message to indicate the requirement for providing the link's password. https://github.com/owncloud/ocis/pull/8858[#8858], https://github.com/owncloud/ocis/pull/8926[#8926], https://github.com/cs3org/reva/pull/4653[cs3org/reva#4653]
+
+* Configurable claims for auto-provisioning user accounts. We introduce the new environment variables `PROXY_AUTOPROVISION_CLAIM_USERNAME`, `PROXY_AUTOPROVISION_CLAIM_EMAIL`, and `PROXY_AUTOPROVISION_CLAIM_DISPLAYNAME` which can be used to configure the OIDC claims that should be used for auto-provisioning user accounts. The automatic fallback to use the `email` claim value as the username when the `preferred_username` claim is not set, has been removed. Also it is now possible to autoprovision users without an email address. https://github.com/owncloud/ocis/pull/8635[#8635], https://github.com/owncloud/ocis/pull/6909[#6909], https://github.com/owncloud/ocis/pull/8952[#8952]
+
+* Theme Processing and Logo Customization. We have made significant improvements to the theme processing in Infinite Scale. The changes include: Enhanced the way themes are composed. Now, the final theme is a combination of the built-in theme and the custom theme provided by the administrator via `WEB_ASSET_THEMES_PATH` and `WEB_UI_THEME_PATH`. https://github.com/owncloud/ocis/pull/8966[#8966], https://github.com/owncloud/ocis/pull/9133[#9133]
+** Introduced a new mechanism to load custom assets. This is particularly useful when a single asset, such as a logo, needs to be overwritten.
+** Fixed the logo customization option. Previously, small theme changes would copy the entire theme. Now, only the changed keys are considered, making the process more efficient.
+** Default themes are now part of ocis. This change simplifies the theme management process for web. These changes enhance the robustness of the theme handling in Infinite Scale and provide a better user experience.
+
+* Add command to check ocis backup consistency. Adds a command that checks the consistency of an ocis backup. https://github.com/owncloud/ocis/pull/9238[#9238]
+
+* Web server compression. We've added a compression middleware to the web server to reduce the request size when delivering static files. This speeds up loading times in web clients. https://github.com/owncloud/web/issues/7954[owncloud/web#7964], https://github.com/owncloud/ocis/pull/9287[#9287]
+
+* Activitylog Service. Adds a new service activitylog which stores events (activities) per resource. This data can be retrieved by clients to show item activities. https://github.com/owncloud/ocis/pull/9327[#9327]
+
+[discrete]
+=== Migration
+
+* There is no upgrade path from previous releases, so this version is therefore only suitable for you if you start with a clean slate.
+
+////
+[discrete]
+=== Breaking Changes
+
+////
+[discrete]
+=== Deprecation
+
+* *Custom Permissions* +
+The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available.
+
 == Infinite Scale 5.0.5
 
 [discrete]
