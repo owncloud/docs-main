@@ -48,7 +48,7 @@ docker pull owncloud/ocic:latest
 ----
 
 * *Rolling* +
-is located at https://hub.docker.com/r/owncloud/ocis and can be used via:
+is located at https://hub.docker.com/r/owncloud/ocis-rolling and can be used via:
 +
 [source,shell]
 ----
@@ -69,7 +69,7 @@ can be downloaded from: https://download.owncloud.com/ocis/ocis/rolling/[, windo
 [discrete]
 === Web Office: Collabora Secure View
 
-Infinite Scale now supports Collabora’s Secure View feature, enhancing security for sensitive documents by allowing restricted viewing. Recipients can view content without downloading, copying, or editing, and a watermark with the user’s name is always applied to prevent unauthorized sharing. Secure View supports for example office documents, images, and PDFs. Read all about https://www.collaboraoffice.com/security/collabora-secure-view/[Collabora`s Secure View]. Collabora is the favored web office application of Infinite Scale, known for its strong focus on secure collaboration, making it ideal for organizations prioritizing data security and privacy.
+Infinite Scale now supports Collabora’s Secure View feature, enhancing security for sensitive documents by allowing restricted viewing. Recipients can view content without downloading, copying, or editing, and a watermark with the user’s name is always applied to prevent unauthorized sharing. Secure View supports, for example, office documents, images, and PDFs. Read all about https://www.collaboraoffice.com/security/collabora-secure-view/[Collabora`s Secure View]. Collabora is the favored web office application of Infinite Scale, known for its strong focus on secure collaboration, making it ideal for organizations prioritizing data security and privacy.
 
 [discrete]
 === Markdown Editor: ToastUI
@@ -78,7 +78,7 @@ We have integrated the ToastUI markdown editor, providing users with robust capa
 
 [discrete]
 === View e-Books: ePub Reader
-Infinite Scale now includes per default the ability to open ePub e-books via the integrated ePub reader. This feature supports the EPUB 3.0 format as specified by the International Digital Publishing Forum (IDPF). It utilizes the Epub.js library, a versatile JavaScript tool for rendering ePub documents in the browser across various devices.
+Infinite Scale now includes by default the ability to open ePub e-books via the integrated ePub reader. This feature supports the EPUB 3.0 format as specified by the International Digital Publishing Forum (IDPF). It utilizes the Epub.js library, a versatile JavaScript tool for rendering ePub documents in the browser across various devices.
 
 [discrete]
 === Diagramming Tool draw.io
@@ -96,9 +96,9 @@ We have improved the loading time of the web ui, especially on slower networks. 
 We have introduced new Server-Sent Events (SSE) to enhance the real-time responsiveness of the web UI. The following events will now automatically update the web UI when they occur:
 
 * *Locking* +
-The UI will reflect changes when files or folders are locked ed.
+The UI will reflect changes when files or folders are locked.
 * *Renaming* +
-Any renaming of files or folders will be instantly visible ble.
+Any renaming of files or folders will be instantly visible.
 * *Deleting* +
 Deletions will be immediately updated in the UI.
 * *Restoring* +
@@ -181,16 +181,16 @@ The state of the left and right sidebars is now persisted. If you open the left 
 
 * There is no upgrade path from previous releases, so this version is therefore only suitable for you if you start with a clean slate.
 
+////
 [discrete]
 === Breaking Changes
 
-- @micbar please add
-
+////
 [discrete]
 === Deprecation
 
 * *Custom Permissions* +
-The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available. @micbar please confirm - I could not find a changelog entry.
+The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available.
 
 == Infinite Scale 5.0.5
 
