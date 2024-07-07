@@ -15,6 +15,26 @@
 
 toc::[]
 
+== Infinite Scale 6.1.0
+
+IMPORTANT: This is a Rolling Release. Please check the https://owncloud.dev/ocis/release_roadmap/#release-types[documentation] to see if this release type is right for your use case.
+
+=== Ensure Accountability with Activity Tracking
+
+Select activities for a file, folder, or Space to see who made which changes. This feature ensures transparency and accountability by allowing everyone to track who worked on which files.
+
+Simply select a file, folder or Space to view all changes within it. You will also see activities within subfolders.
+
+
+=== Open File Dialog via Tabs
+
+You can now open files directly from the tab bar. For instance, while working on a document in your web office, click “Open” to browse and select files just like you would in desktop applications.
+
+
+Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.1.0[GitHub, window=_blank].
+
+
+
 == Infinite Scale 6.0.0
 
 [discrete]
