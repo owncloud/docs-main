@@ -5,6 +5,7 @@
 :description: Dear Infinite Scale administrator, find below the changes and known issues in Infinite Scale that need your attention.
 :page-aliases: next@docs::ocis_release_notes.adoc, next@docs_main::ocis_release_notes.adoc
 
+:release-types-url: https://owncloud.dev/ocis/release_roadmap/#release-types
 :release-roadmap-url: https://github.com/owncloud/ocis/blob/master/docs/ocis/release_roadmap.md
 :ocis-releases-url: https://github.com/owncloud/ocis/releases/tag
 :web-releases-url: https://github.com/owncloud/web/releases/tag
@@ -15,19 +16,37 @@
 
 toc::[]
 
+== Infinite Scale 6.1.0
+
+IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
+
+Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.1.0[GitHub, window=_blank].
+
+[discrete]
+=== Ensure Accountability with Activity Tracking
+
+Select activities for a file, folder, or Space to see who made which changes. This feature ensures transparency and accountability by allowing everyone to track who worked on which files.
+
+Simply select a file, folder or Space to view all changes within it. You will also see activities within subfolders.
+
+[discrete]
+=== Open File Dialog via Tabs
+
+You can now open files directly from the tab bar. For instance, while working on a document in your web office, click “Open” to browse and select files just like you would in desktop applications.
+
 == Infinite Scale 6.0.0
 
 [discrete]
 === General
 
-IMPORTANT: This is a Rolling Release. Please check the https://owncloud.dev/ocis/release_roadmap/#release-types[documentation] to see if this release type is right for your use case. There is no upgrade path from previous releases, so this version is therefore only suitable for you if you start with a clean slate.
+IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case. There is no upgrade path from previous releases, so this version is therefore only suitable for you if you start with a clean slate.
 
 Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.0.0[GitHub, window=_blank].
 
 [discrete]
 === Rolling Release
 
-This is the first https://owncloud.dev/ocis/release_roadmap/#release-types[Rolling Release] of Infinite Scale.
+This is the first {release-types-url}[Rolling Release] of Infinite Scale.
 
 In addition to our Production releases, you can now install the new release type *Rolling*, which allows you to experience the latest features without having to wait for a Production release. The Rolling release offers access to the latest features and improvements every three weeks. This new release type complements our existing Production and Daily releases, providing a flexible and dynamic update cycle perfect for early adopters and enthusiasts.
 
