@@ -101,7 +101,7 @@ Find below a list of updated apps in comparison with the 10.14.0 complete bundle
 * {oc-marketplace-url}/apps/files_classifier[Document Classification]: 1.5.2
 * {oc-marketplace-url}/apps/market[Market]: 0.9.0
 * Updater: 1.1.1
-* {oc-marketplace-url}/apps/windows_network_drive[External Storage: Windows Network Drives]: 2.4.0
+* {oc-marketplace-url}/apps/windows_network_drive[External Storage: Windows Network Drives]: 2.4.1
 
 [discrete]
 === Known Issues
