@@ -99,7 +99,9 @@ Find below a list of updated apps in comparison with the 10.14.0 complete bundle
 * Config Report: 0.3.0
 * {oc-marketplace-url}/apps/customgroups[Custom Groups]: 0.9.1
 * {oc-marketplace-url}/apps/files_classifier[Document Classification]: 1.5.2
+* {oc-marketplace-url}/apps/files_external_dropbox[External Storage: Dropbox]: 2.0.2
 * {oc-marketplace-url}/apps/market[Market]: 0.9.0
+* {oc-marketplace-url}/apps/openidconnect[OpenID Connect]: 2.3.0
 * Updater: 1.1.1
 * {oc-marketplace-url}/apps/windows_network_drive[External Storage: Windows Network Drives]: 2.4.1
 
