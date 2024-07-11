@@ -16,7 +16,7 @@
 
 toc::[]
 
-== Infinite Scale 6.1.0
+== Infinite Scale 6.1.0 (Rolling)
 
 IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
 
@@ -34,7 +34,7 @@ Simply select a file, folder or Space to view all changes within it. You will al
 
 You can now open files directly from the tab bar. For instance, while working on a document in your web office, click “Open” to browse and select files just like you would in desktop applications.
 
-== Infinite Scale 6.0.0
+== Infinite Scale 6.0.0 (Rolling)
 
 [discrete]
 === General
@@ -211,7 +211,7 @@ The state of the left and right sidebars is now persisted. If you open the left 
 * *Custom Permissions* +
 The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available.
 
-== Infinite Scale 5.0.5
+== Infinite Scale 5.0.5 (Production)
 
 [discrete]
 === General
@@ -224,7 +224,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 
 * Update web to v8.0.2: https://github.com/owncloud/ocis/pull/8716[#8716]
 
-== Infinite Scale 5.0.4
+== Infinite Scale 5.0.4 (Production)
 
 [discrete]
 === General
@@ -239,7 +239,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 * Service startup of WOPI example: https://github.com/owncloud/ocis/pull/9127[#9127]
 * Nats reconnects: https://github.com/owncloud/ocis/pull/9139[#9139]
 
-== Infinite Scale 5.0.3
+== Infinite Scale 5.0.3 (Production)
 
 [discrete]
 === General
@@ -255,7 +255,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 * Crash when processing crafted TIFF files: https://github.com/owncloud/ocis/pull/8981[#8981]
 * Fix infected file handling: https://github.com/owncloud/ocis/pull/9011[#9011]
 
-== Infinite Scale 5.0.2
+== Infinite Scale 5.0.2 (Production)
 
 [discrete]
 === General
@@ -269,7 +269,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 * Update reva to v2.19.5: Fix public share update and Fix access to files within a public link targeting a space root: https://github.com/owncloud/ocis/pull/8873[#8873]
 * Creating a new Office document in a publicly shared folder is now possible: https://github.com/owncloud/ocis/pull/8828[#8828]
 
-== Infinite Scale 5.0.1
+== Infinite Scale 5.0.1 (Production)
 
 [discrete]
 === General
@@ -290,7 +290,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 
 * Make IDP cookies same site strict: https://github.com/owncloud/ocis/pull/8716[#8716]
 
-== Infinite Scale 5.0.0
+== Infinite Scale 5.0.0 (Production)
 
 [discrete]
 === General
@@ -773,7 +773,7 @@ You need to set the `OCIS_SERVICE_ACCOUNT_ID` and `OCIS_SERVICE_ACCOUNT_SECRET` 
 * For new installations: +
 The `ocis init` command sets the values automatically and no envvars are needed.  https://github.com/owncloud/ocis/pull/6427[#6427]
 
-== Infinite Scale 4.0.7
+== Infinite Scale 4.0.7 (Production)
 
 [discrete]
 === General
@@ -791,7 +791,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 
 * Update to go 1.22: https://github.com/owncloud/ocis/pull/8597[#8597]
 
-== Infinite Scale 4.0.6
+== Infinite Scale 4.0.6 (Production)
 
 [discrete]
 === General
@@ -799,7 +799,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 This is a patch release only, please update as soon as possible. +
 Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v4.0.6[GitHub, window=_blank].
 
-== Infinite Scale 4.0.5
+== Infinite Scale 4.0.5 (Production)
 
 [discrete]
 === General
@@ -812,7 +812,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 
 * Add cli commands for the trash-bin: https://github.com/owncloud/ocis/pull/7936[#7936]
 
-== Infinite Scale 4.0.4
+== Infinite Scale 4.0.4 (Production)
 
 [discrete]
 === General
@@ -825,7 +825,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 
 * Update Reva to improve trash bin listing: https://github.com/owncloud/ocis/pull/7858[#7858]
 
-== Infinite Scale 4.0.3
+== Infinite Scale 4.0.3 (Production)
 
 [discrete]
 === General
@@ -858,7 +858,7 @@ The environment variable `OCIS_LDAP_BIND_PASSWORD` was added to be more consiste
 
 * We reintroduced the `USERS_LDAP_USER_SCHEMA_ID` variable which was accidentally removed from the users service with the 4.0.0 release. https://github.com/owncloud/ocis/issues/7312[#7312]
 
-== Infinite Scale 4.0.2
+== Infinite Scale 4.0.2 (Production)
 
 [discrete]
 === General
@@ -883,7 +883,7 @@ with the 4.0.0 release. https://github.com/owncloud/ocis/pull/7321[#7321]
 * In the yaml example for Keycloak, set `GRAPH_USERNAME_MATCH` to `none`, to accept any username that is
 also valid for keycloak. https://github.com/owncloud/ocis/pull/7230[#7230]
 
-== Infinite Scale 4.0.1
+== Infinite Scale 4.0.1 (Production)
 
 [discrete]
 === General
@@ -895,7 +895,7 @@ Refer to the full change log for a list of bug fixes and changes at {ocis-releas
 
 The critical issue identified in Infinite Scale 4.0.0 where users where able to search other users' spaces under certain circumstances has been resolved, see https://github.com/owncloud/ocis/issues/7092[#7092]. 
 
-== Infinite Scale 4.0.0
+== Infinite Scale 4.0.0 (Production)
 
 [discrete]
 === General
@@ -1041,7 +1041,7 @@ These colors ensure that the primary and outlined buttons (e.g., "Upload" and "N
 
 See the xref:{latest-ocis-version}@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] documentation for important details.
 
-== Infinite Scale 3.0.0
+== Infinite Scale 3.0.0 (Production)
 
 [discrete]
 === General
@@ -1256,7 +1256,7 @@ Since the base block is a GRPC API, it is also possible to use it directly. Poli
 - The Web UI was updated from Vue.js 2 to Vue.js 3. https://github.com/owncloud/web/issues/7948[#7948]
 
 
-== Infinite Scale 2.0.0
+== Infinite Scale 2.0.0 (Production)
 
 Infinite Scale 2.0.0 is the first stable release, ready for production scenarios. Infinite Scale bundles with ownCloud Web.
 
