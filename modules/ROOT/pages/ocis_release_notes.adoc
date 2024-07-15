@@ -16,6 +16,21 @@
 
 toc::[]
 
+== Infinite Scale 5.0.6 (Production)
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.6[GitHub, window=_blank].
+
+////
+[discrete]
+=== Enhancement
+
+* Update web to v8.0.2: https://github.com/owncloud/ocis/pull/8716[#8716]
+////
+
 == Infinite Scale 6.1.0 (Rolling)
 
 IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
