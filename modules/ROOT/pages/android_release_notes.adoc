@@ -12,6 +12,68 @@
 
 toc::[]
 
+== Android App 4.3.0
+
+[discrete]
+=== General
+
+This release contains bugfixes, changes and enhancements. +
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}v4.3.0[GitHub, window=_blank].
+
+* *Important new items:*
+** New Dialog for Manage Accounts
+** Support for URL shortcut files
+** New setting to remove automatically downloaded files
+** New setting to remove manually local storage
+** Automatic discovery
+** Password generator
+
+* *Other improvements:*
+** Feedback section changed
+** Device's clear button re-enabled
+** Filtering in spaces list
+** Performance in av. offline
+** Warning for http connections
+** Bugfixing, accessibility and tiny UI improvements
+
+[discrete]
+=== Issues Fixed
+
+* Removed unnecessary requests when the app is installed from scratch: https://github.com/owncloud/android/issues/4213[#4213]
+* "Clear data" button enabled in the app settings in device settings: https://github.com/owncloud/android/issues/4309[#4309]
+* Video streaming in spaces: https://github.com/owncloud/android/issues/4328[#4328]
+* Retried successful uploads are cleaned up from the temporary folder: https://github.com/owncloud/android/issues/4335[#4335]
+* Resolve incorrect truncation of long display names in Manage Accounts: https://github.com/owncloud/android/issues/4351[#4351]
+* Av. offline files are not removed when "Local only" option is clicked: https://github.com/owncloud/android/issues/4353[#4353]
+* Unwanted DELETE operations when synchronization in single file fails: https://github.com/owncloud/android/issues/6638[#6638]
+
+[discrete]
+=== Changes
+
+* Upgrade minimum SDK version to Android 7.0 (v24): https://github.com/owncloud/android/issues/4230[#4230]
+* Automatic discovery of the account in login: https://github.com/owncloud/android/issues/4301[#4301]
+
+[discrete]
+=== Enhancements
+
+* Add search functionality to spaces list: https://github.com/owncloud/android/issues/3865[#3865]
+* Get personal space quota from GraphAPI: https://github.com/owncloud/android/issues/3874[#3874]
+* Correct "Local only" option in remove dialog: https://github.com/owncloud/android/issues/3936[#3936]
+* Show app provider icon from endpoint: https://github.com/owncloud/android/issues/4105[#4105]
+* Improvements in Manage Accounts view: https://github.com/owncloud/android/issues/4148[#4148]
+* New setting for manual removal of local storage: https://github.com/owncloud/android/issues/4174[#4174]
+* New setting for automatic removal of local files: https://github.com/owncloud/android/issues/4175[#4175]
+* Avoid unnecessary requests when an av. offline folder is refreshed: https://github.com/owncloud/android/issues/4197[#4197]
+* Add a warning in http connections: https://github.com/owncloud/android/issues/4284[#4284]
+* Make dialog more Android-alike: https://github.com/owncloud/android/issues/4303[#4303]
+* Password generator for public links in oCIS: https://github.com/owncloud/android/issues/4308[#4308]
+* New UI for "Manage accounts" view: https://github.com/owncloud/android/issues/4312[#4312]
+* Improvements in remove dialog: https://github.com/owncloud/android/issues/4342[#4342]
+* Content description in UI elements to improve accessibility: https://github.com/owncloud/android/issues/4360[#4360]
+* Added contentDescription attribute in the previewed image: https://github.com/owncloud/android/issues/4360[#4360]
+* Support for URL shortcut files: https://github.com/owncloud/android/issues/4413[#4413]
+* Changes in the Feedback section: https://github.com/owncloud/android/issues/6594[#6594]
+
 == Android App 4.2.1
 
 [discrete]
@@ -29,7 +91,7 @@ Refer to the full change log for a list of bug fixes and changes at {android-rel
 === General
 
 This release contains enhancements, bugfixes and security improvements. +
-Refer to the full change log for a list of bug fixes and changes at {android-releases-url}/v4.2.0[GitHub, window=_blank].
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}v4.2.0[GitHub, window=_blank].
 
 [discrete]
 === Security Improvements
@@ -54,7 +116,7 @@ This is a bugfix release only. Update as soon as possible.
 * Some Null Pointer Exceptions avoided: https://github.com/owncloud/android/issues/4158[#4158]
 * Thumbnails correctly shown for every user: https://github.com/owncloud/android/pull/4189[#4189]
 
-Refer to the full change log for a list of bug fixes and changes at {android-releases-url}/v4.1.1[GitHub, window=_blank].
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}v4.1.1[GitHub, window=_blank].
 
 == Android App 4.1.0
 
@@ -62,7 +124,7 @@ Refer to the full change log for a list of bug fixes and changes at {android-rel
 === General
 
 This release contains enhancements and bugfixes. +
-Refer to the full change log for a list of bug fixes and changes at {android-releases-url}/v4.1.0[GitHub, window=_blank].
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}v4.1.0[GitHub, window=_blank].
 
 [discrete]
 === Notable Enhancements
