@@ -16,26 +16,31 @@
 
 toc::[]
 
-== Infinite Scale 5.0.6 (Production)
+== Infinite Scale 6.2.0 (Rolling)
+
+IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
+
+Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.2.0[GitHub, window=_blank].
 
 [discrete]
-=== General
+=== Permanent Link
 
-This is a patch release only, please update as soon as possible. +
-Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.6[GitHub, window=_blank].
-
-[discrete]
-=== Issues Fixed
-
-* Allow all uploads to restart: Reworks virus handling: https://github.com/owncloud/ocis/pull/9506[#9506]
-* Fix the email notification service: https://github.com/owncloud/ocis/pull/9514[#9514]
+You can now copy links even more easily: As soon as you have shared a file with someone else, you can now just click on copy "Permanent Link". This link allows you to share direct links with people who already have access and enables users to jump straight to the desired file, improving navigation efficiency. Simply copy and share the link to access specific files instantly. (For those who are familiar with the PHP based ownCloud 10: The permanent link in Infinite Scale has the same function as "Private Links" in ownCloud 10)
 
 [discrete]
-=== Enhancement
+=== New App: Link to External Sites
 
-* Limit concurrent thumbnail requests: https://github.com/owncloud/ocis/pull/9199[#9199]
-* Update web to v8.0.4: https://github.com/owncloud/ocis/pull/9429[#9429]
-* Add cli to purge revisions: https://github.com/owncloud/ocis/pull/9497[#9497]
+We’ve introduced a new App https://github.com/owncloud/web-extensions/tree/main/packages/web-app-external-sites[External Sites] allowing users to add links to external sites directly from the Apps Menu. This enables easy access to organizational URLs like helpdesk, legal notes, or chat. External sites can be opened in a new tab/window or embedded within ownCloud Web via an iFrame.
+
+[discrete]
+=== New App: Customize your Progress Bar
+
+Introducing the ability to customize your progress bar at the top of the screen. This extension adds progress bars to the global-progress-bar extension point in ownCloud Web. For demo purposes, we've included a fun Nyan Cat progress bar — enjoy!
+
+[discrete]
+=== Beautified Password Criteria
+
+The password criteria display has been significantly improved for clarity and ease of use. Users will now see a cleaner, more organized presentation of the requirements.
 
 == Infinite Scale 6.1.0 (Rolling)
 
@@ -231,6 +236,27 @@ The state of the left and right sidebars is now persisted. If you open the left 
 
 * *Custom Permissions* +
 The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available.
+
+== Infinite Scale 5.0.6 (Production)
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.6[GitHub, window=_blank].
+
+[discrete]
+=== Issues Fixed
+
+* Allow all uploads to restart: Reworks virus handling: https://github.com/owncloud/ocis/pull/9506[#9506]
+* Fix the email notification service: https://github.com/owncloud/ocis/pull/9514[#9514]
+
+[discrete]
+=== Enhancement
+
+* Limit concurrent thumbnail requests: https://github.com/owncloud/ocis/pull/9199[#9199]
+* Update web to v8.0.4: https://github.com/owncloud/ocis/pull/9429[#9429]
+* Add cli to purge revisions: https://github.com/owncloud/ocis/pull/9497[#9497]
 
 == Infinite Scale 5.0.5 (Production)
 
