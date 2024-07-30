@@ -24,15 +24,9 @@ Dear ownCloud administrator, find below the changes and known issues in ownCloud
 [discrete]
 === New Feature Telemetry Reporting for Enterprise Customers
 
-Servers with a license key installed will send daily telemetry reports unless opted out. See the admin documentation,
-
-TODO
-TODO https://github.com/owncloud/docs-server/issues/1350#issuecomment-2213660765
-TODO ??? https://doc.owncloud.com/server/next/admin_manual/troubleshooting/providing_logs_and_config_files.html#introduction ???
-TODO
-
-for details. https://github.com/owncloud/configreport/pull/197[configreport/#197]
-
+Servers with a license key installed will send daily telemetry reports unless opted out. See direct customer communication and our general
+https://owncloud.com/privacy-statement/[privacy policy] for details.
+https://github.com/owncloud/configreport/pull/197[configreport/#197]
 
 [discrete]
 === Fix Wrong Logic When 'allow_user_mounting' is Initially Undefined
