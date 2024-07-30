@@ -42,6 +42,11 @@ Introducing the ability to customize your progress bar at the top of the screen.
 
 The password criteria display has been significantly improved for clarity and ease of use. Users will now see a cleaner, more organized presentation of the requirements.
 
+[discrete]
+=== Note
+
+We decided not to enable draw.io by default, as it requests an external resource and does not comply with our privacy-by-default principle. However, since draw.io is still a great tool, you can manually enable it.
+
 == Infinite Scale 6.1.0 (Rolling)
 
 IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
