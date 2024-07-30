@@ -30,12 +30,12 @@ You can now copy links even more easily: As soon as you have shared a file with 
 [discrete]
 === New App: Link to External Sites
 
-We’ve introduced a new App https://github.com/owncloud/web-extensions/tree/main/packages/web-app-external-sites[External Sites] allowing users to add links to external sites directly from the Apps Menu. This enables easy access to organizational URLs like helpdesk, legal notes, or chat. External sites can be opened in a new tab/window or embedded within ownCloud Web via an iFrame.
+We’ve introduced a new App https://github.com/owncloud/web-extensions/tree/main/packages/web-app-external-sites[External Sites] allowing users to add links to external sites directly from the Apps Menu. This enables easy access to organizational URLs like helpdesk, legal notes, or chat. External sites can be opened in a new tab/window or embedded within ownCloud Web via an iFrame. Please note that for embedded links you most likely need to adjust your csp.yaml settings.
 
 [discrete]
 === New App: Customize your Progress Bar
 
-Introducing the ability to customize your progress bar at the top of the screen. This extension adds progress bars to the global-progress-bar extension point in ownCloud Web. For demo purposes, we've included a fun Nyan Cat progress bar — enjoy!
+Introducing the ability to customize your progress bar at the top of the screen. This extension adds progress bars to the global-progress-bar extension point in ownCloud Web. After installing the app each user can decide on their own which progress bar should be used. The setting is located on the account page (top right user menu). For demo purposes, we've included a fun Nyan Cat progress bar — enjoy!
 
 [discrete]
 === Beautified Password Criteria
