@@ -24,7 +24,7 @@ Dear ownCloud administrator, find below the changes and known issues in ownCloud
 [discrete]
 === New Feature Telemetry Reporting for Enterprise Customers
 
-Servers with a license key installed will send daily telemetry reports unless opted out. See direct customer communication and our general
+Servers with a license key installed will send daily telemetry reports unless opted out. See direct customer communication, https://4067630.fs1.hubspotusercontent-na1.net/hubfs/4067630/2024%20ownCloud%20Assets/Brief%20-%20Telemetry%20for%20ownCloud%20Customers%20-%202024-07-30.pdf[the telemtry brief] and our general
 https://owncloud.com/privacy-statement/[privacy policy] for details.
 https://github.com/owncloud/configreport/pull/197[configreport/#197]
 
