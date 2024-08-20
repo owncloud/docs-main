@@ -6,7 +6,7 @@
 :page-aliases: next@docs::ocis_release_notes.adoc, next@docs_main::ocis_release_notes.adoc
 
 :release-types-url: https://owncloud.dev/ocis/release_roadmap/#release-types
-:release-roadmap-url: https://github.com/owncloud/ocis/blob/master/docs/ocis/release_roadmap.md
+:release-roadmap-url: https://owncloud.dev/ocis/release_roadmap/#dates
 :ocis-releases-url: https://github.com/owncloud/ocis/releases/tag
 :web-releases-url: https://github.com/owncloud/web/releases/tag
 
