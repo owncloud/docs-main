@@ -25,7 +25,7 @@ Refer to the source and the full change log for a list of bug fixes and changes 
 [discrete]
 === Unzip in Web
 
-You can now unzip files directly within the Web UI, with support for the .zip file format. Simply use the “Extract Here” option in the context menu to unzip your files. Please note that we’ve set a maximum file size of 64MB to ensure a reliable extraction process. For larger zip files, we recommend using the desktop client to maintain workflow stability. Please note that the Unzip in Web feature is a web extension and needs to be activated separately. Here’s a quick guide on how to install Web extensions like "Unzip in web" in just 2 minutes: https://owncloud.dev/services/web/#loading-applications
+You can now unzip files directly within the WebUI, with support for the .zip file format. Simply use the “Extract Here” option in the context menu to unzip your files. Please note that we’ve set a maximum file size of 64MB to ensure a reliable extraction process. For larger zip files, we recommend using the desktop client to maintain workflow stability. Please note that the _Unzip in Web_ feature is a WebUI extension and needs to be installed and activated separately, for more details see xref:6-3-0-other-notable-changes[Other Notable Changes].
 
 [discrete]
 === Accessibility Improvements
@@ -42,6 +42,18 @@ We’ve made the link-sharing dialog even easier to use, simplifying the process
 === Shortcut to Open in New Tab
 
 You can now hold the Command key (Ctrl on Windows) to open items in a new tab. By default, links will open in the same tab, but you can easily deviate from this with the shortcut. For mobile users, simply press and hold a link to access OS-specific options for opening links in new tabs.
+
+[#6-3-0-other-notable-changes]
+[discrete]
+=== Other Notable Changes
+
+* Skyhigh Security ICAP server +
+The https://www.skyhighsecurity.com[Skyhigh Secure Web Gateway (SWG)] can now be configured as Infinite Scale ICAP virus scanner.
+
+* https://github.com/owncloud/web-extensions[WebUI extensions] can be added manually to the default WebUI. See the link for available extensions and the
+https://doc.owncloud.com/ocis/next/deployment/webui/webui-customisation.html[ownCloud Web with Custom Configuration] for more details.
+
+* `drawio` has been removed from the embedded WebUI but provided as WebUI extension.
 
 == Infinite Scale 6.2.0 (Rolling)
 
@@ -109,10 +121,10 @@ This is the first {release-types-url}[Rolling Release] of Infinite Scale.
 In addition to our Production releases, you can now install the new release type *Rolling*, which allows you to experience the latest features without having to wait for a Production release. The Rolling release offers access to the latest features and improvements every three weeks. This new release type complements our existing Production and Daily releases, providing a flexible and dynamic update cycle perfect for early adopters and enthusiasts.
 
 [discrete]
-#### How to Get the Rolling Release
+==== How to Get the Rolling Release
 
 [discrete]
-##### Docker
+===== Docker
 
 The images available on https://hub.docker.com[Docker Hub] are now separated to clearly distinguish between *production* and *rolling*.
 
@@ -133,7 +145,7 @@ docker pull owncloud/ocis-rolling:latest
 ----
 
 [discrete]
-#### Binary
+==== Binary
 
 The binary files to download are now separated to clearly distinguish between production and rolling.
 
