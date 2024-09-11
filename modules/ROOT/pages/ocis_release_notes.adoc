@@ -16,20 +16,38 @@
 
 toc::[]
 
-== Infinite Scale 5.0.7 (Production)
+== Infinite Scale 6.4.0 (Rolling)
+
+IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
+
+Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.4.0[GitHub, window=_blank].
 
 [discrete]
-=== General
+== Redesign of the Account Preferences
 
-This is a patch release only, please update as soon as possible. +
-Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.7[GitHub, window=_blank].
+The User Account Preferences have been redesigned for a more intuitive layout, making it easier to navigate and manage your account information.
 
 [discrete]
-=== Enhancement
+=== Enhanced Accessibility for the Datepicker UI
 
-* Add virus filter to sessions command: https://github.com/owncloud/ocis/pull/9041[#9041]
-* Assimilate `clean` into `sessions` command: https://github.com/owncloud/ocis/pull/9828[#9828]
-* Update web to v8.0.5: https://github.com/owncloud/ocis/pull/9958[#9958]
+The Datepicker UI has been replaced with the browser’s native datepicker. This change improves accessibility by offering a more familiar and consistent experience across different devices and browsers. Note: We treat any accessibility violation as a bug and kindly ask you to contact us if you encounter any digital barriers.
+
+[discrete]
+== Tiles View: Lazy Loading and Select All Checkbox
+
+Tiles View now supports lazy loading with an animation for smoother performance, and includes a “Select All” checkbox for easier bulk actions, similar to List View.
+
+[discrete]
+== Open Cloud Mesh - Bugfixes
+
+The Open Cloud Mesh (OCM) protocol, which supports cross-cloud file sharing, has been improved with several bug fixes. These updates enhance stability and reliability, reducing potential issues when federating between different clouds. This feature remains experimental which means that it may break and individual production usage must be agreed with ownCloud Support.
+
+[discrete]
+=== Known Issues
+
+* Open Cloud Mesh *
+
+The Open Cloud Mesh (OCM) integration has several known issues, including federated shares not syncing with desktop and mobile clients, errors when hiding shares, and issues with the “Disable Sync” function. Users should be aware of these limitations while using the experimental feature. For a complete list of known issues, visit the https://github.com/owncloud/ocis/issues/9735[GitHub issue tracker].
 
 == Infinite Scale 6.3.0 (Rolling)
 
@@ -295,6 +313,21 @@ The state of the left and right sidebars is now persisted. If you open the left 
 
 * *Custom Permissions* +
 The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available.
+
+== Infinite Scale 5.0.7 (Production)
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.7[GitHub, window=_blank].
+
+[discrete]
+=== Enhancement
+
+* Add virus filter to sessions command: https://github.com/owncloud/ocis/pull/9041[#9041]
+* Assimilate `clean` into `sessions` command: https://github.com/owncloud/ocis/pull/9828[#9828]
+* Update web to v8.0.5: https://github.com/owncloud/ocis/pull/9958[#9958]
 
 == Infinite Scale 5.0.6 (Production)
 
