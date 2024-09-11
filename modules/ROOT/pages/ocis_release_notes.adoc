@@ -45,9 +45,9 @@ The Open Cloud Mesh (OCM) protocol, which supports cross-cloud file sharing, has
 [discrete]
 === Known Issues
 
-* Open Cloud Mesh *
+*Open Cloud Mesh*
 
-The Open Cloud Mesh (OCM) integration has several known issues, including federated shares not syncing with desktop and mobile clients, errors when hiding shares, and issues with the “Disable Sync” function. Users should be aware of these limitations while using the experimental feature. For a complete list of known issues, visit the https://github.com/owncloud/ocis/issues/9735[GitHub issue tracker].
+The Open Cloud Mesh (OCM) integration is an experimental feature and has several known issues, including federated shares not syncing with desktop and mobile clients, errors when hiding shares, and issues with the “Disable Sync” function. Users should be aware of these limitations. For a complete list of known issues, visit the https://github.com/owncloud/ocis/issues/9735[GitHub issue tracker].
 
 == Infinite Scale 6.3.0 (Rolling)
 
