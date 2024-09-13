@@ -42,12 +42,11 @@ Tiles View now supports lazy loading with an animation for smoother performance,
 
 The Open Cloud Mesh (OCM) protocol, which supports cross-cloud file sharing, has been improved with several bug fixes. These updates enhance stability and reliability, reducing potential issues when federating between different clouds. This feature remains experimental which means that it may break and individual production usage must be agreed with ownCloud Support.
 
-[discrete]
 === Known Issues
 
-*Open Cloud Mesh*
+*Open Cloud Mesh* (OCM)
 
-The Open Cloud Mesh (OCM) integration is an experimental feature and has several known issues, including federated shares not syncing with desktop and mobile clients, errors when hiding shares, and issues with the “Disable Sync” function. Users should be aware of these limitations. For a complete list of known issues, visit the https://github.com/owncloud/ocis/issues/9735[GitHub issue tracker].
+The OCM integration is an experimental feature and has several known issues, including federated shares not syncing with desktop and mobile clients, errors when hiding shares, and issues with the “Disable Sync” function. Users should be aware of these limitations. For a complete list of known issues, visit the https://github.com/owncloud/ocis/issues/9735[GitHub issue tracker].
 
 == Infinite Scale 6.3.0 (Rolling)
 
@@ -847,6 +846,7 @@ The Infinite Scale OCM service provides federated sharing functionality based on
 * `sse`: +
 The Infinite Scale sse service is responsible for sending sse (server-sent events) to a user. The referenced pull request https://github.com/owncloud/ocis/pull/6992[#6992] is the initial PR introducing SSE. More PRs have been added to improve and extend the SSE service. For details see the Infinite Scale changelog.
 
+[discrete]
 === Known Issues
 
 This section will be updated if issues are discovered.
