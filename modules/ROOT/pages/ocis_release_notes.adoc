@@ -16,6 +16,55 @@
 
 toc::[]
 
+== Infinite Scale 6.5.0 (Rolling)
+
+IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
+
+[discrete]
+=== Public and Private Links in the Sharing Panel
+
+The sharing panel has been redesigned to separate links into two categories: Permanent Link and Public Links.
+
+- *Permanent Link*: A fixed link for internal use that works as a pointer for people with existing access. Use it ex. to remind someone to review a file. The link remains unchanged, even if the file or folder is renamed or moved.
+
+- *Public Links*: These links grant access to external people outside your organization. Public links are password-protected by default, ensuring secure file sharing with non-members. Password protection can be turned off by the system administrator.
+
+
+[discrete]
+=== Copy "Permanent Link" by default
+
+Copying a link in the file list now provides the permanent link with a single click. Permanent links work only for people with existing access, ensuring access is secure by default while offering a faster way to share and point people to files.
+
+[discrete]
+=== Public Link: Copy with or without password to clipboard  
+
+You can now copy a public link to your clipboard with or without a password, giving you more control over file sharing.
+
+[discrete]
+=== Removed link types: "Can upload" and "Invited people"
+
+The “Can upload” and “Invited people” link types have been removed to simplify sharing options. The functionality of the “Invited people” link is still available through the “Permanent link” option.
+
+[discrete]
+=== "Save as" in the app top bar
+
+A “Save As” option is now available in the app top bar for ex. markdown or plaintext files. You can easily save your document to the desired location without leaving the editor.
+
+[discrete]
+=== Right Sidebar Transition
+
+The right sidebar transition has been optimized for smoother and more natural animation, enhancing the overall user experience.
+
+[discrete]
+=== Version Information In Right Sidebar
+
+The version information for Infinite Scale and the Web UI is now displayed in the bottom left sidebar. This enhancement ensures that users can easily identify the versions they are using at any time, simplifying the process for support requests.
+
+[discrete]
+=== Build your own Web Application: Web App Boilerplate
+
+Introducing the Web App Development Boilerplate for easy app and extension development in ownCloud Web. This boilerplate includes all necessary files to quickly set up your development environment. To get started, simply clone the repository and follow the instructions available in the https://github.com/owncloud/web-app-skeleton[Web App Skeleton]. Build your own web extensions for ownCloud Infinite Scale!
+
 == Infinite Scale 6.4.0 (Rolling)
 
 IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
