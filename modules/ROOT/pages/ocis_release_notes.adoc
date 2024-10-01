@@ -23,11 +23,11 @@ IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[docum
 Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.5.0[GitHub, window=_blank].
 
 [discrete]
-=== Public and Private Links in the Sharing Panel
+=== Permanent and Public Links in the Sharing Panel
 
-The sharing panel has been redesigned to separate links into two categories: Permanent Link and Public Links.
+The sharing panel has been redesigned to separate links into two categories: Permanent Links and Public Links.
 
-- *Permanent Link*: +
+- *Permanent (Internal) Link*: +
 A fixed link for internal use that works as a pointer for people with existing access. Use it e.g. to remind someone to review a file. The link remains unchanged, even if the file or folder is renamed or moved. The permanent link is located by the space memberships and people shares.
 
 - *Public Links*: +
