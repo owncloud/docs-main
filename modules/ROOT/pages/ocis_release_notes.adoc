@@ -43,7 +43,7 @@ You can now copy a public link to your clipboard with or without a password, giv
 [discrete]
 === Removed link types: "Can upload" and "Invited people"
 
-The “Can upload” and “Invited people” link types have been removed to simplify sharing options. The functionality of the “Invited people” link is still available through the “Permanent link” option.
+The “Can upload” and “Invited people” link types have been removed to simplify sharing options. The functionality of the “Invited people” link is still available through the “Permanent link” option. Existing links of the type “Can upload” and “Invited people” will continue to work.
 
 [discrete]
 === "Save as" in the app top bar
