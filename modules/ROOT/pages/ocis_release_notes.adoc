@@ -48,7 +48,7 @@ The “Can upload” and “Invited people” link types have been removed to si
 [discrete]
 === "Save as" in the app top bar
 
-A “Save As” option is now available in the app top bar for ex. markdown or plaintext files. You can easily save your document to the desired location without leaving the editor.
+A “Save As” option is now available in the app top bar for e.g. markdown or plaintext files. You can easily save your document to the desired location without leaving the editor.
 
 [discrete]
 === Right Sidebar Transition
@@ -56,9 +56,9 @@ A “Save As” option is now available in the app top bar for ex. markdown or p
 The right sidebar transition has been optimized for smoother and more natural animation, enhancing the overall user experience.
 
 [discrete]
-=== Version Information In Right Sidebar
+=== Version Information In Left Sidebar
 
-The version information for Infinite Scale and the Web UI is now displayed in the bottom left sidebar. This enhancement ensures that users can easily identify the versions they are using at any time, simplifying the process for support requests.
+The version information for Infinite Scale and the Web UI is now displayed in the bottom of the left sidebar. This enhancement ensures that users can easily identify the software versions they are using at any time, simplifying the process for support requests.
 
 [discrete]
 === Build your own Web Application: Web App Boilerplate
