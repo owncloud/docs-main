@@ -25,7 +25,7 @@ IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[docum
 
 The sharing panel has been redesigned to separate links into two categories: Permanent Link and Public Links.
 
-- *Permanent Link*: A fixed link for internal use that works as a pointer for people with existing access. Use it ex. to remind someone to review a file. The link remains unchanged, even if the file or folder is renamed or moved.
+- *Permanent Link*: A fixed link for internal use that works as a pointer for people with existing access. Use it e.g. to remind someone to review a file. The link remains unchanged, even if the file or folder is renamed or moved.
 
 - *Public Links*: These links grant access to external people outside your organization. Public links are password-protected by default, ensuring secure file sharing with non-members. Password protection can be turned off by the system administrator.
 
