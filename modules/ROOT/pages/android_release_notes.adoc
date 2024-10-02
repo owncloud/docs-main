@@ -12,6 +12,35 @@
 
 toc::[]
 
+== Android App 4.4.0
+
+[discrete]
+=== General
+
+This release contains bugfixes, changes and enhancements. +
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}v4.4.0[GitHub, window=_blank].
+
+[discrete]
+=== Issues Fixed
+
+* Rely on resharing capability: https://github.com/owncloud/android/issues/4397[#4397]
+* Shares in non-root are updated correctly: https://github.com/owncloud/android/issues/4432[#4432]
+* List filtering not working after rotating device: https://github.com/owncloud/android/issues/4441[#4441]
+* The color of some elements is set up correctly: https://github.com/owncloud/android/issues/4442[#4442]
+* Audio player does not work: https://github.com/owncloud/android/issues/4474[#4474]
+
+[discrete]
+=== Enhancements
+
+* Improved "Remove from original folder" option in auto-upload: https://github.com/owncloud/android/issues/4357[#4357]
+* Improved accessibility of information and relationships: https://github.com/owncloud/android/issues/4362[#4362]
+* Changed the color of some elements to improve accessibility: https://github.com/owncloud/android/issues/4364[#4364]
+* Improved SearchView accessibility: https://github.com/owncloud/android/issues/4365[#4365]
+* Roles added to some elements to improve accessibility: https://github.com/owncloud/android/issues/4373[#4373]
+* Hardware keyboard support: https://github.com/owncloud/android/issues/4438[#4438]
+* Hardware keyboard support for passcode view: https://github.com/owncloud/android/issues/4447[#4447]
+* TalkBack announces the view label correctly: https://github.com/owncloud/android/issues/4458[#4458]
+
 == Android App 4.3.0
 
 [discrete]
