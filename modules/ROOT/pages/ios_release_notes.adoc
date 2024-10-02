@@ -12,6 +12,68 @@
 
 toc::[]
 
+== iOS App 12.3.1
+
+[discrete]
+=== General
+
+This release contains changes and bugfixes. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.3.1[GitHub, window=_blank].
+
+[discrete]
+=== Notable Changes
+
+* Fix Vanilla Branding Assets: https://github.com/owncloud/ios-app/pull/1344[#1396]
+
+== iOS App 12.3.0
+
+[discrete]
+=== General
+
+This release contains changes and bugfixes. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.3.0[GitHub, window=_blank].
+
+[discrete]
+=== Notable Changes
+
+NOTE: This is the first release supporting iOS 18
+
+* Fix cleanup of Available Offline policies targeting unavailable spaces: https://github.com/owncloud/ios-app/pull/1344[#1344]
+* Reduce memory footprint: https://github.com/owncloud/ios-app/pull/1376[#1376]
+* Improved sidebar with account-wide search: https://github.com/owncloud/ios-app/pull/1320[#1320]
+* Sync Engine fixes and improvements: https://github.com/owncloud/ios-app/pull/1376[#1376]
+* Reduce memory footprint: https://github.com/owncloud/ios-app/pull/1376[#1376]
+
+
+== iOS App 12.2.1
+
+[discrete]
+=== General
+
+This release contains changes and bugfixes. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.2.1[GitHub, window=_blank].
+
+[discrete]
+=== Notable Changes
+
+* Detect attempts to bypass a lock timeout by changing the clock: https://github.com/owncloud/ios-app/pull/1347[#1347]
+
+== iOS App 12.2.0
+
+[discrete]
+=== General
+
+This release contains changes and bugfixes. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.2.0[GitHub, window=_blank].
+
+[discrete]
+=== Notable Changes
+
+* Fix cleanup of Available Offline policies targeting unavailable spaces: https://github.com/owncloud/ios-app/pull/1343[#1343]
+* Add required privacy manifests: https://github.com/owncloud/ios-app/pull/1348[#1348]
+* Improved sidebar with account-wide search: https://github.com/owncloud/ios-app/pull/1320[#1320]
+* Password Policy support: https://github.com/owncloud/ios-app/pull/1325[#1325]
+
 == iOS App 12.1.0
 
 [discrete]
