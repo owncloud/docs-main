@@ -16,6 +16,37 @@
 
 toc::[]
 
+== Infinite Scale 6.6.0 (Rolling)
+
+IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
+
+Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.5.0[GitHub, window=_blank].
+
+[discrete]
+=== 10x Faster Image Previews
+
+Infinite Scale now uses libvips for image processing, making photo previews appear up to 10x faster when uploading large folders. This update significantly improves performance, especially for handling large batches of images.
+
+Note: This improvement is exclusively available for containerized deployments. It is not available for bare-metal deployments, which run the Infinite Scale executable without Docker, Kubernetes or similar platforms. https://github.com/owncloud/ocis/blob/master/services/thumbnails/README.md#using-libvips-for-thumbnail-generation[More details]
+
+[discrete]
+=== 20 Newly Supported Image Formats like HEIC/HEIF or WebP
+
+Infinite Scale now supports 20 additional image formats: TIFF (with advanced features), WebP, HEIC/HEIF, AVIF, PDF, SVG, JPEG 2000, JPEG XL, DNG (RAW format), HDR (Radiance), PPM/PGM/PBM/PFM, OpenEXR, FITS, Matlab, VIPS native format, Analyze, NIfTI, DeepZoom, OpenSlide formats (e.g. SVS, NDPI, SCN)
+
+Note: This improvement is exclusively available for containerized deployments. It is not available for bare-metal deployments, which run the Infinite Scale executable without Docker, Kubernetes or similar platforms. https://github.com/owncloud/ocis/blob/master/services/thumbnails/README.md#using-libvips-for-thumbnail-generation[More details]
+
+[discrete]
+=== Only Office: 1-Click Document Templates
+
+Easily create documents from templates with a single click. Just select an office template eg. from a "Templates" Space and the templated document will open automatically, just like on your desktop. Your new document will be saved in your Personal storage with the template name as the filename. Supported template formats are: DOTX, OTT, XLTX, POTX, OTS and OTP.
+
+=== Known Issues
+
+**OCM Federation: No Image Preview in Browser** 
+
+A user receiving an image via OCM (Open Cloud Mesh) federation cannot view it directly in the browser. Users must download the image from the web to view it. Status of the issue: https://github.com/owncloud/ocis/issues/10272[github.com/owncloud/ocis/issues/10272] Please note: OCM is still classified as a feature preview (i.e., it works, but production use should be discussed with ownCloud support). This is because OCM was initially developed for the scientific community as early adopters. Its use in other environments is not yet recommended.
+
 == Infinite Scale 6.5.0 (Rolling)
 
 IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
