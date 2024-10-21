@@ -44,12 +44,12 @@ NOTE: This improvement is exclusively available for containerized deployments. I
 [discrete]
 === Only Office: 1-Click Document Templates
 
-Easily create documents from templates with a single click. Just select an office template eg. from a "Templates" Space and the templated document will open automatically, just like on your desktop. Your new document will be saved in your Personal storage with the template name as the filename. Supported template formats are: DOTX, OTT, XLTX, POTX, OTS and OTP.
+Easily create documents from templates with a single click. Just select an office template, e.g. from a "Templates" Space, and the templated document will open automatically, just like on your desktop. Your new document will be saved in your Personal storage with the template name as the filename. Supported template formats are: DOTX, OTT, XLTX, POTX, OTS and OTP.
 
 === Known Issues
 
 OCM Federation: No Image Preview in Browser::
-A user receiving an image via an OCM (Open Cloud Mesh) federation cannot view it directly in the browser. Users must download the image from the web to view it. For the status of the issue see: https://github.com/owncloud/ocis/issues/10272[github.com/owncloud/ocis/issues/10272]. Please note that OCM is still classified as a feature preview (e.g. it works, but production use should be discussed with ownCloud support). This is because OCM was initially developed for the scientific community as early adopters. Its use in other environments is not yet recommended.
+A user receiving an image via an OCM (Open Cloud Mesh) federation cannot view it directly in the browser. Users must download the image from the web to view it. For the status of the issue see: https://github.com/owncloud/ocis/issues/10272[github.com/owncloud/ocis/issues/10272]. Please note that OCM is still classified as a feature preview (i.e. it works, but production use should be discussed with ownCloud support). This is because OCM was initially developed for the scientific community as early adopters. Its use in other environments is not yet recommended.
 
 == Infinite Scale 6.5.0 (Rolling)
 
