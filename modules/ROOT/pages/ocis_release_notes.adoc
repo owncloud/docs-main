@@ -23,20 +23,11 @@ IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[docum
 Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.5.0[GitHub, window=_blank].
 
 [discrete]
-=== 10x Faster Image Previews
+=== 4x Faster Image Previews
 
 * Infinite Scale now uses the `libvips` shared library for image processing.
-** Photo previews appear up to 10x faster when uploading large folders.
+** Photo previews appear up to 4x faster when uploading large folders.
 ** The handling of large image batches is greatly improved.
-
-+
-NOTE: This improvement is exclusively available for containerized deployments. It is not available for bare-metal deployments, which run the Infinite Scale executable without Docker, Kubernetes or similar platforms. See the xref:next@ocis:ROOT:deployment/services/s-list/thumbnails.adoc#thumbnailing-performance[thumbnail service] for more details.
-
-[discrete]
-=== 20 Newly Supported Image Formats like HEIC/HEIF or WebP
-
-* Infinite Scale now supports 20 additional image formats:
-** TIFF (with advanced features), WebP, HEIC/HEIF, AVIF, PDF, SVG, JPEG 2000, JPEG XL, DNG (RAW format), HDR (Radiance), PPM/PGM/PBM/PFM, OpenEXR, FITS, Matlab, VIPS native format, Analyze, NIfTI, DeepZoom, OpenSlide formats (e.g. SVS, NDPI, SCN).
 
 +
 NOTE: This improvement is exclusively available for containerized deployments. It is not available for bare-metal deployments, which run the Infinite Scale executable without Docker, Kubernetes or similar platforms. See the xref:next@ocis:ROOT:deployment/services/s-list/thumbnails.adoc#thumbnailing-performance[thumbnail service] for more details.
