@@ -16,6 +16,32 @@
 
 toc::[]
 
+== Infinite Scale 6.6.0 (Rolling)
+
+IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
+
+Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.5.0[GitHub, window=_blank].
+
+[discrete]
+=== 4x Faster Image Previews
+
+* Infinite Scale now uses the `libvips` shared library for image processing.
+** Photo previews appear up to 4x faster when uploading large folders.
+** The handling of large image batches is greatly improved.
+
++
+NOTE: This improvement is exclusively available for containerized deployments. It is not available for bare-metal deployments, which run the Infinite Scale executable without Docker, Kubernetes or similar platforms. See the xref:next@ocis:ROOT:deployment/services/s-list/thumbnails.adoc#thumbnailing-performance[thumbnail service] for more details.
+
+[discrete]
+=== Only Office: 1-Click Document Templates
+
+Easily create documents from templates with a single click. Just select an office template, e.g. from a "Templates" Space, and the templated document will open automatically, just like on your desktop. Your new document will be saved in your Personal storage with the template name as the filename. Supported template formats are: DOTX, OTT, XLTX, POTX, OTS and OTP.
+
+=== Known Issues
+
+OCM Federation: No Image Preview in Browser::
+A user receiving an image via an OCM (Open Cloud Mesh) federation cannot view it directly in the browser. Users must download the image from the web to view it. For the status of the issue see: https://github.com/owncloud/ocis/issues/10272[github.com/owncloud/ocis/issues/10272]. Please note that OCM is still classified as a feature preview (i.e. it works, but production use should be discussed with ownCloud support). This is because OCM was initially developed for the scientific community as early adopters. Its use in other environments is not yet recommended.
+
 == Infinite Scale 6.5.0 (Rolling)
 
 IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
