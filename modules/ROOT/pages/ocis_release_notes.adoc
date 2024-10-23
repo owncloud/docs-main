@@ -73,6 +73,18 @@ NOTE: OCM is still in experimental phase!
 
 === Breaking Changes
 
+Infinite Scale::
++
+--
+yeah
+--
+
+Web UI::
++
+--
+* The `draw-io` app has been removed as default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
+* The `importer` app has been removed as default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
+--
 
 == Infinite Scale 6.6.1 (Rolling)
 
