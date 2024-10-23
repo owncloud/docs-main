@@ -16,11 +16,19 @@
 
 toc::[]
 
+== Infinite Scale 6.6.1 (Rolling)
+
+IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
+
+Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.6.1[GitHub, window=_blank].
+
+Note this is a bugfix release only.
+
 == Infinite Scale 6.6.0 (Rolling)
 
 IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
 
-Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.5.0[GitHub, window=_blank].
+Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.6.0[GitHub, window=_blank].
 
 [discrete]
 === 4x Faster Image Previews
