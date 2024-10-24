@@ -82,6 +82,8 @@ yeah
 Web UI::
 +
 --
+* Deprecated config options have finally been removed, see https://github.com/owncloud/web/pull/11256[#11256]. +
+Note that these config options were able to be set via the `WEB_UI_CONFIG_FILE` environment variable. Having one of the deprecated set, will not have any impact.
 * The `draw-io` app has been removed as default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
 * The `importer` app has been removed as default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
 --
