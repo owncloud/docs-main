@@ -54,10 +54,22 @@ Each rolling release of Infinite Scale has notable features added, see the follo
 * xref:6-0-0-sse[Real-Time UI Updates with Server-Sent Events (SSE)]
 --
 
-Additional features added::
+Additional features or functionalities added::
 +
 --
-* Fully customisable deployment examples ready for productive use based on docker compose, see the
+* New maintenance CLI commands have been added, see link in the xref:migrations[migrations] section for details.
+
+* The following services have been added:
+** xref:next@ocis:ROOT:{s-path}/activitylog.adoc[activitylog] +
+It is responsible for storing events (activities) per resource. +
+Note that the implementation of the `activitylog` service is a breaking change. For details see xref:breaking-changes[Breaking Changes] section.
+** xref:next@ocis:ROOT:{s-path}/auth-app.adoc[auth-app] +
+It provides authentication for 3rd party apps.
+** xref:next@ocis:ROOT:{s-path}/collaboration.adoc[collaboration]. +
+It connects with document servers such as Collabora, ONLYOFFICE or Microsoft using the WOPI protocol. +
+Note that the `collaboration` service replaces the external https://github.com/cs3org/wopiserver[cs3org/wopi]  server used before.
+
+* Fully customisable deployment examples ready for productive use including web office, based on docker compose. See the
 xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc[Local Production Setup] and xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-hetzner.adoc[Deployment on Hetzner]. Note that with these examples, you can easily enable additional web apps like `draw-io`, `external-sites`, `json-viewer`, `unzip`, `progressbars` and others. Though provided via the compose example setup, no support can be given for these web apps.
 --
 
@@ -80,13 +92,15 @@ NOTE: OCM is still in experimental phase!
 
 === Migrations
 
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] documentation for migration and upgrade steps.
 
 === Breaking Changes
 
 Infinite Scale::
 +
 --
-yeah
+* The xref:next@ocis:ROOT:{s-path}/activitylog.adoc[activitylog] service has been added. +
+To make it work, the Infinite Scale config must be updated. See the link in the xref:migrations[migrations] section above for details how to do so. 
 --
 
 Web UI::
