@@ -69,6 +69,9 @@ It provides authentication for 3rd party apps.
 It connects with document servers such as Collabora, ONLYOFFICE or Microsoft using the WOPI protocol. +
 Note that the `collaboration` service replaces the external https://github.com/cs3org/wopiserver[cs3org/wopi]  server used before.
 
+* Content Security Policy: +
+When using office web packages or web apps like provided in our docker compose deployment examples, a CSP has been implemented to secure the environment. For details see the list item below. 
+
 * Fully customisable deployment examples ready for productive use including web office, based on docker compose. See the
 xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc[Local Production Setup] and xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-hetzner.adoc[Deployment on Hetzner]. Note that with these examples, you can easily enable additional web apps like `draw-io`, `external-sites`, `json-viewer`, `unzip`, `progressbars` and others. Though provided via the compose example setup, no support can be given for these web apps.
 --
