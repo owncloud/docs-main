@@ -12,6 +12,6 @@ nav:
 asciidoc:
   attributes:
     # this attribute is needed to create the proper path for references to ocis services
-    # it origins from the antora.yaml file in the docs-ocis repo
+    # it originates from the antora.yaml file in the docs-ocis repo
     # when doing a full build via docs, the path using this attribute resolves correctly
     s-path: 'deployment/services/s-list'

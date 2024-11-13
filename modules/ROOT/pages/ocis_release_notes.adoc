@@ -74,7 +74,7 @@ It connects with web office document servers such as Collabora, ONLYOFFICE or Mi
 * Content Security Policy: +
 When using web office document servers or web apps like provided in our docker compose deployment examples, a CSP has been implemented to secure the environment. For details on web office/apps see the next list item. 
 
-* Fully customisable deployment examples ready for productive use including web office, based on docker compose. See the
+* Fully customisable deployment examples ready for production use including web office, based on docker compose. See the
 xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc[Local Production Setup] and xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-hetzner.adoc[Deployment on Hetzner]. Note that with these examples, you can easily enable additional web apps like `draw-io`, `external-sites`, `json-viewer`, `unzip`, `progressbars` and others. Though provided via the compose example setup, no support can be given for these web apps.
 --
 
@@ -115,8 +115,8 @@ Web UI::
 --
 * Deprecated config options have finally been removed, see https://github.com/owncloud/web/pull/11256[#11256]. +
 Note that these config options were able to be set via the `WEB_UI_CONFIG_FILE` environment variable. Having one of the deprecated set, will not have any impact.
-* The `draw-io` app has been removed as default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
-* The `importer` app has been removed as default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
+* The `draw-io` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
+* The `importer` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
 --
 
 == Infinite Scale 6.6.1 (Rolling)
