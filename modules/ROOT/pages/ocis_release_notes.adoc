@@ -60,13 +60,16 @@ Additional features or functionalities added::
 * New maintenance CLI commands have been added, see link in the xref:migrations[migrations] section for details.
 
 * The following services have been added:
+
 ** xref:next@ocis:ROOT:{s-path}/activitylog.adoc[activitylog] +
 It is responsible for storing events (activities) per resource. +
 Note that the implementation of the `activitylog` service is a breaking change. For details see xref:breaking-changes[Breaking Changes] section.
+
 ** xref:next@ocis:ROOT:{s-path}/auth-app.adoc[auth-app] +
 It provides authentication for 3rd party apps.
+
 ** xref:next@ocis:ROOT:{s-path}/collaboration.adoc[collaboration] +
-It connects with web office document servers such as Collabora, ONLYOFFICE or Microsoft using the WOPI protocol. Note that the `collaboration` service replaces the external https://github.com/cs3org/wopiserver[cs3org/wopi] server used before. If you have used document servers with the external wopiserver, you must switch to the collaboration service which is a breaking change. For details see xref:breaking-changes[Breaking Changes] section.
+It connects with web office document servers such as Collabora, ONLYOFFICE or Microsoft using the WOPI protocol. Note that the `collaboration` service replaces the external https://github.com/cs3org/wopiserver[cs3org/wopi] server used before. If you have used document servers with the external wopiserver, we highly recommend using the collaboration service which is a breaking change. For details see xref:breaking-changes[Breaking Changes] section.
 
 * Content Security Policy: +
 When using web office document servers or web apps like provided in our docker compose deployment examples, a CSP has been implemented to secure the environment. For details on web office/apps see the next list item. 
@@ -104,7 +107,7 @@ Infinite Scale::
 * The xref:next@ocis:ROOT:{s-path}/activitylog.adoc[activitylog] service has been added. +
 To make it work, the Infinite Scale config must be updated. See the link in the xref:migrations[migrations] section above for details how to do so.
 * The xref:next@ocis:ROOT:{s-path}/collaboration.adoc[collaboration] service has been added. +
-If you have used web office document servers with the external https://github.com/cs3org/wopiserver[cs3org/wopi] server, you must switch to the collaboration service. See the link in the xref:migrations[migrations] section above for details how to do so.
+If you have used web office document servers with the external https://github.com/cs3org/wopiserver[cs3org/wopi] server, you should switch to the collaboration service. See the link in the xref:migrations[migrations] section above for details how to do so.
 --
 
 Web UI::
