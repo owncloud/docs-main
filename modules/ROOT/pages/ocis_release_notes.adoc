@@ -399,6 +399,25 @@ The state of the left and right sidebars is now persisted. If you open the left 
 * *Custom Permissions* +
 The custom permission selection `View`, `Edit`, `Create`, `Delete`, `Share` in sharing "Custom permissions" will no longer be available.
 
+== Infinite Scale 5.0.9 (Production)
+
+[discrete]
+=== General
+
+This is a patch release only, please update as soon as possible. +
+Refer to the full change log for a list of bug fixes and changes at {ocis-releases-url}/v5.0.9[GitHub, window=_blank].
+
+[discrete]
+=== Issues Fixed
+
+* Thumbnail request limit: https://github.com/owncloud/ocis/pull/10280[#10280]
+* Restart Postprocessing properly: https://github.com/owncloud/ocis/pull/10439[#10439]
+
+[discrete]
+=== Enhancement
+
+* Define maximum input image dimensions and size when generating previews: https://github.com/owncloud/ocis/pull/10270[#10270]
+
 == Infinite Scale 5.0.8 (Production)
 
 [discrete]

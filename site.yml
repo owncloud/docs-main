@@ -74,7 +74,7 @@ asciidoc:
     latest-ocis-version: 'next'
     previous-ocis-version: 'next'
     # these versions are just for printing like in releases but not used for referencing
-    ocis-actual-version: '5.0.8'
+    ocis-actual-version: '5.0.9'
     ocis-former-version: '4.0.7'
     # Needed in docs-ocis to define which rolling release to print like in the envvars table or in deployment examples
     ocis-rolling-version: '6.4.0'
