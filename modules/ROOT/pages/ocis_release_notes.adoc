@@ -24,9 +24,9 @@ This release brings significant enhancements in performance and stability. It is
 +
 NOTE: All changes from rolling releases 6.x apply for this production release.
 
-* Web: {web-releases-url}/v11.0.3[Changelog for ownCloud Web 11.0.3, window=_blank]
+* Web: {web-releases-url}/v11.0.4[Changelog for ownCloud Web 11.0.4, window=_blank]
 +
-NOTE: All changes of web releases after 8.0 up to 11.0.3 apply for this production release.
+NOTE: All changes of web releases after 8.0 up to 11.0.4 apply for this production release.
 
 [discrete]
 === General Information
@@ -73,7 +73,7 @@ It provides authentication for 3rd party apps.
 It connects with web office document servers such as Collabora, ONLYOFFICE or Microsoft using the WOPI protocol. Note that the `collaboration` service replaces the external https://github.com/cs3org/wopiserver[cs3org/wopi] server used before. If you have used document servers with the external wopiserver, we highly recommend using the collaboration service which is a breaking change. For details see xref:breaking-changes[Breaking Changes] section.
 
 * Content Security Policy: +
-When using web office document servers or web apps like provided in our docker compose deployment examples, a CSP has been implemented to secure the environment. For details on web office/apps see the next list item. 
+When using external services like an IDP, web office document servers or web apps (like provided in our docker compose deployment examples), a Content Security Policy (CSP) has been implemented to secure the environment. For details on web office/apps see the next list item. For details on CSP see xref:breaking-changes[Breaking Changes] section.
 
 * Fully customisable deployment examples ready for production use including web office, based on docker compose. See the
 xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc[Local Production Setup] and xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-hetzner.adoc[Deployment on Hetzner]. Note that with these examples, you can easily enable additional web apps like `draw-io`, `external-sites`, `json-viewer`, `unzip`, `progressbars` and others. Though provided via the compose example setup, no support can be given for these web apps.
@@ -107,8 +107,11 @@ Infinite Scale::
 --
 * The xref:next@ocis:ROOT:{s-path}/activitylog.adoc[activitylog] service has been added. +
 To make it work, the Infinite Scale config must be updated. See the link in the xref:migrations[migrations] section above for details how to do so.
+
 * The xref:next@ocis:ROOT:{s-path}/collaboration.adoc[collaboration] service has been added. +
 The Infinite Scale config must be updated. If you have used web office document servers with the external https://github.com/cs3org/wopiserver[cs3org/wopi] server, you should switch to the collaboration service. See the link in the xref:migrations[migrations] section above for details how to do so.
+
+* A Content Security Policy (CSP) has been implemented to secure the environment. Without configuring it, external services like an IDP, web office document servers or web apps will refuse to work for security reasons.
 --
 
 Web UI::
@@ -116,7 +119,9 @@ Web UI::
 --
 * Deprecated config options have finally been removed, see https://github.com/owncloud/web/pull/11256[#11256]. +
 Note that these config options were able to be set via the `WEB_UI_CONFIG_FILE` environment variable. Having one of the deprecated set, will not have any impact.
+
 * The `draw-io` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
+
 * The `importer` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
 --
 
