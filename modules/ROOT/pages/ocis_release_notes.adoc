@@ -24,9 +24,9 @@ This release brings significant enhancements in performance and stability. It is
 +
 NOTE: All changes from rolling releases 6.x apply for this production release.
 
-* Web: {web-releases-url}/v11.0.4[Changelog for ownCloud Web 11.0.4, window=_blank]
+* Web: {web-releases-url}/v11.0.5[Changelog for ownCloud Web 11.0.5, window=_blank]
 +
-NOTE: All changes of web releases after 8.0 up to 11.0.4 apply for this production release.
+NOTE: All changes of web releases after 8.0 up to 11.0.5 apply for this production release.
 
 [discrete]
 === General Information
