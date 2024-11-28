@@ -111,7 +111,7 @@ To make it work, the Infinite Scale config must be updated. See the link in the 
 * The xref:next@ocis:ROOT:{s-path}/collaboration.adoc[collaboration] service has been added. +
 The Infinite Scale config must be updated. If you have used web office document servers with the external https://github.com/cs3org/wopiserver[cs3org/wopi] server, you should switch to the collaboration service. See the link in the xref:migrations[migrations] section above for details how to do so.
 
-* A Content Security Policy (CSP) has been implemented to secure the environment. Without configuring it, external services like an IDP, web office document servers or web apps will refuse to work for security reasons.
+* A Content Security Policy (CSP) has been implemented to secure the environment. Its configuration is described in the xref:next@ocis:ROOT:{s-path}/proxy.adoc[proxy] service. Without configuration, external services like an IDP, web office document servers or web apps will refuse to work for security reasons.
 --
 
 Web UI::
