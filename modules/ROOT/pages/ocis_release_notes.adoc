@@ -81,15 +81,20 @@ Note that with these examples, you can easily enable additional web apps like `d
 Though provided via the compose example setup, no support can be given for these web apps.
 
 * Additonal external web apps can be configured _manually_ to the deployment examples.
-** https://github.com/owncloud/web-app-dicom-viewer[Dicom Viewer] A Viewer for medical images.
-** https://github.com/saw-jan/web-app-3dmodel-viewer[3D Model Viewer] A Viewer for 3D models.
-** http://github.com/JankariTech/web-app-presentation-viewer[Presentation Viewer] A markdown renderer for  presentations.
+** https://github.com/owncloud/web-app-dicom-viewer[Dicom Viewer] +
+The Dicom Viewer Web Extension offers an easy way to preview medical images of DICOM standard (.dcm) such as Ultrasound, X-ray, CT scan, MRI, including all their corresponding meta data. The app offers image manipulation operations such as zoom in and out, rotation, flipping, colour inversion on the image preview.
+
+** https://github.com/saw-jan/web-app-3dmodel-viewer[3D Model Viewer] +
+The 3D model viewer Web Extension is an extension for ownCloud Web which offers preview of .glb, .stl, .fbx, and .obj files. The app allows to zoom and rotate the model, to navigate between model files, plus it supports full screen view.
+
+** http://github.com/JankariTech/web-app-presentation-viewer[Presentation Viewer] +
+The Presentation Viewer Web Extension allows to render markdown slide presentations from .md files with reveal.js. It can be used both for preview and for sharing the slides using public links.
 
 +
 Though referenced here, no support can be given for these web apps.
 
 * PosixFS +
-With PosixFS, you can use, with some restrictions, a posix based filesystem to access user data from both sides. Infinite Scale manages data as usual, but also recognizes changes on the filesystem that are not initiated by Infinite Scale. On the other hand side, a user or service can read and write data directly to the filesystem like before without the need to go thru Infinite Scale. For details see the xref:next@ocis:ROOT:deployment/storage/general-considerations.adoc[General Storage Considerations and Settings] documentation.
+With PosixFS, you can use, with some restrictions, a posix based filesystem with shared access for user data. Infinite Scale manages data as usual, but also recognizes changes on the filesystem that are not initiated by Infinite Scale. On the other hand, a user or service can read and write data directly to the filesystem like before without the need to go thru Infinite Scale. For details see the xref:next@ocis:ROOT:deployment/storage/general-considerations.adoc[General Storage Considerations and Settings] documentation.
 +
 The PosixFS integration is an experimental feature and should not used in production! +
 --
@@ -135,9 +140,9 @@ Web UI::
 * Deprecated config options have finally been removed, see https://github.com/owncloud/web/pull/11256[#11256]. +
 Note that these config options were able to be set via the `WEB_UI_CONFIG_FILE` environment variable. Having one of the deprecated set, will not have any impact.
 
-* The `draw-io` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
+* The `draw-io` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository]. See the deployment examples for how to integrate them.
 
-* The `importer` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository].
+* The `importer` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository]. See the deployment examples for how to integrate them.
 --
 
 == Infinite Scale 6.6.1 (Rolling)
