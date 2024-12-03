@@ -75,7 +75,7 @@ It connects with web office document servers such as Collabora, ONLYOFFICE or Mi
 * Content Security Policy: +
 When using external services like an IDP, web office document servers or web apps (like provided in our docker compose deployment examples), a Content Security Policy (CSP) has been implemented to secure the environment. For details on web office/apps see the next list item. For details on CSP see xref:breaking-changes[Breaking Changes] section.
 
-* Fully customisable deployment examples ready for production use including web office, based on docker compose. See the
+* Fully customisable deployment examples ready for production use including web office, based on docker compose. See
 xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc[Local Production Setup] and xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-hetzner.adoc[Deployment on Hetzner]. +
 Note that with these examples, you can easily enable additional web apps like `draw-io`, `external-sites`, `json-viewer`, `unzip`, `progressbars` and others. +
 Though provided via the compose example setup, no support can be given for these web apps.
@@ -85,10 +85,10 @@ Though provided via the compose example setup, no support can be given for these
 The Dicom Viewer Web Extension offers an easy way to preview medical images of DICOM standard (.dcm) such as Ultrasound, X-ray, CT scan, MRI, including all their corresponding meta data. The app offers image manipulation operations such as zoom in and out, rotation, flipping, colour inversion on the image preview.
 
 ** https://github.com/saw-jan/web-app-3dmodel-viewer[3D Model Viewer] +
-The 3D model viewer Web Extension is an extension for ownCloud Web which offers preview of .glb, .stl, .fbx, and .obj files. The app allows to zoom and rotate the model, to navigate between model files, plus it supports full screen view.
+The 3D model viewer Web Extension is an extension for ownCloud Web which offers preview of .glb, .stl, .fbx, and .obj files. The app allows zooming and rotating the model, navigating between model files, plus it supports full screen view.
 
 ** http://github.com/JankariTech/web-app-presentation-viewer[Presentation Viewer] +
-The Presentation Viewer Web Extension allows to render markdown slide presentations from .md files with reveal.js. It can be used both for preview and for sharing the slides using public links.
+The Presentation Viewer Web Extension allows rendering markdown slide presentations from .md files with reveal.js. It can be used both for preview and for sharing the slides using public links.
 
 +
 Though referenced here, no support can be given for these web apps.
@@ -138,7 +138,7 @@ Web UI::
 +
 --
 * Deprecated config options have finally been removed, see https://github.com/owncloud/web/pull/11256[#11256]. +
-Note that these config options were able to be set via the `WEB_UI_CONFIG_FILE` environment variable. Having one of the deprecated set, will not have any impact.
+Note that these config options were able to be set via the `WEB_UI_CONFIG_FILE` environment variable. Having one of the deprecated options set, will not have any impact.
 
 * The `draw-io` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository]. See the deployment examples for how to integrate them.
 
