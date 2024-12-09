@@ -96,7 +96,7 @@ Though referenced here, no support can be given for these web apps.
 * PosixFS +
 With PosixFS, you can use, with some restrictions, a posix based filesystem with shared access for user data. Infinite Scale manages data as usual, but also recognizes changes on the filesystem that are not initiated by Infinite Scale. On the other hand, a user or service can read and write data directly to the filesystem like before without the need to go thru Infinite Scale. For details see the xref:next@ocis:ROOT:deployment/storage/general-considerations.adoc[General Storage Considerations and Settings] documentation.
 +
-The PosixFS integration is an experimental feature and should not used in production! +
+The PosixFS integration is an experimental feature and should not be used in production! +
 --
 
 === Known Issues
