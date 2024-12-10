@@ -16,6 +16,135 @@
 
 toc::[]
 
+== Infinite Scale 7.0.0 (Production)
+
+This release brings significant enhancements in performance and stability. It is also designed to provide an optimized experience for both end users and administrators. Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v7.0.0[Changes in 7.0.0, window=_blank]
++
+NOTE: All changes from rolling releases 6.x apply for this production release.
+
+* Web: {web-releases-url}/v11.0.6[Changelog for ownCloud Web 11.0.6, window=_blank]
++
+NOTE: All changes of web releases after 8.0 up to 11.0.6 apply for this production release.
+
+[discrete]
+=== General Information
+
+Each rolling release of Infinite Scale provided many bugfixes. For details see the linked changelog of each release.
+
+=== Summary of Notable Feature Implementations
+
+
+Each rolling release of Infinite Scale has notable features added, see the following summary list::
++
+--
+* xref:6-6-0-faster-image-preview[4x Faster Image Previews]
+* xref:6-6-0-one-click-templates[Only Office: 1-Click Document Templates]
+* xref:6-5-0-public-links-in-sharing[Permanent and Public Links in the Sharing Panel]
+* xref:6-5-0-default-permanent-link[Copy "Permanent Link" by Default]
+* xref:6-5-0-copy-to-clipboard[Public Link: Copy With or Without Password to Clipboard]
+* xref:6-3-0-simplified-link-sharing[Simplified Link Sharing]
+* xref:6-3-0-other-notable-changes[Skyhigh Security ICAP server]
+* xref:6-3-0-other-notable-changes[Web UI Extensions]
+* xref:6-2-0-permanent-link[Permanent Link]
+* xref:6-1-0-accountability[Ensure Accountability with Activity Tracking]
+* xref:6-0-0-secure-view[Web Office: Collabora Secure View]
+* xref:6-0-0-audio-image-metadata[Show Audio and Image EXIF Metadata]
+* xref:6-0-0-webui-load-times[Up to 44% Faster Loading Times for the WebUI]
+* xref:6-0-0-sse[Real-Time UI Updates with Server-Sent Events (SSE)]
+--
+
+Additional features or functionalities added::
++
+--
+* New maintenance CLI commands have been added, see link in the xref:migrations[migrations] section for details.
+
+* The following services have been added:
+
+** xref:next@ocis:ROOT:{s-path}/activitylog.adoc[activitylog] +
+It is responsible for storing events (activities) per resource. +
+Note that the implementation of the `activitylog` service is a breaking change. For details see xref:breaking-changes[Breaking Changes] section.
+
+** xref:next@ocis:ROOT:{s-path}/auth-app.adoc[auth-app] +
+It provides authentication for 3rd party apps.
+
+** xref:next@ocis:ROOT:{s-path}/collaboration.adoc[collaboration] +
+It connects with web office document servers such as Collabora, ONLYOFFICE or Microsoft using the WOPI protocol. Note that the `collaboration` service replaces the external https://github.com/cs3org/wopiserver[cs3org/wopi] server used before. If you have used document servers with the external wopiserver, we highly recommend using the collaboration service which is a breaking change. For details see xref:breaking-changes[Breaking Changes] section.
+
+* Content Security Policy: +
+When using external services like an IDP, web office document servers or web apps (like provided in our docker compose deployment examples), a Content Security Policy (CSP) has been implemented to secure the environment. For details on web office/apps see the next list item. For details on CSP see xref:breaking-changes[Breaking Changes] section.
+
+* Fully customisable deployment examples ready for production use including web office, based on docker compose. See
+xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc[Local Production Setup] and xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-hetzner.adoc[Deployment on Hetzner]. +
+Note that with these examples, you can easily enable additional web apps like `draw-io`, `external-sites`, `json-viewer`, `unzip`, `progressbars` and others. +
+Though provided via the compose example setup, no support can be given for these web apps.
+
+* Additonal external web apps can be configured _manually_ to the deployment examples.
+** https://github.com/owncloud/web-app-dicom-viewer[Dicom Viewer] +
+The Dicom Viewer Web Extension offers an easy way to preview medical images of DICOM standard (.dcm) such as Ultrasound, X-ray, CT scan, MRI, including all their corresponding meta data. The app offers image manipulation operations such as zoom in and out, rotation, flipping, colour inversion on the image preview.
+
+** https://github.com/saw-jan/web-app-3dmodel-viewer[3D Model Viewer] +
+The 3D model viewer Web Extension is an extension for ownCloud Web which offers preview of .glb, .stl, .fbx, and .obj files. The app allows zooming and rotating the model, navigating between model files, plus it supports full screen view.
+
+** http://github.com/JankariTech/web-app-presentation-viewer[Presentation Viewer] +
+The Presentation Viewer Web Extension allows rendering markdown slide presentations from .md files with reveal.js. It can be used both for preview and for sharing the slides using public links.
+
++
+Though referenced here, no support can be given for these web apps.
+
+* PosixFS +
+With PosixFS, you can use, with some restrictions, a posix based filesystem with shared access for user data. Infinite Scale manages data as usual, but also recognizes changes on the filesystem that are not initiated by Infinite Scale. On the other hand, a user or service can read and write data directly to the filesystem like before without the need to go thru Infinite Scale. For details see the xref:next@ocis:ROOT:deployment/storage/general-considerations.adoc[General Storage Considerations and Settings] documentation.
++
+The PosixFS integration is an experimental feature and should not be used in production! +
+--
+
+=== Known Issues
+
+The following is a list of known issues identified in Infinite Scale rolling releases 6.x that still exist:
+
+OCM::
++
+--
+* xref:6-6-0-known-issues[Known Issues in 6.6.0 (OCM)] and
+* xref:6-4-0-known-issues[Known Issues in 6.4.0 (OCM)]
+--
+
+NOTE: OCM is still in experimental phase!
+
+=== Deprecations
+
+* Deprecations announced in release 5.0.0 in section xref:5-0-0-deprecation-announcements[Deprecation Announcements] have finally been removed.
+
+=== Migrations
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] documentation for migration and upgrade steps.
+
+=== Breaking Changes
+
+Infinite Scale::
++
+--
+* The xref:next@ocis:ROOT:{s-path}/activitylog.adoc[activitylog] service has been added. +
+To make it work, the Infinite Scale config must be updated. See the link in the xref:migrations[migrations] section above for details how to do so.
+
+* The xref:next@ocis:ROOT:{s-path}/collaboration.adoc[collaboration] service has been added. +
+The Infinite Scale config must be updated. If you have used web office document servers with the external https://github.com/cs3org/wopiserver[cs3org/wopi] server, you should switch to the collaboration service. See the link in the xref:migrations[migrations] section above for details how to do so.
+
+* A Content Security Policy (CSP) has been implemented to secure the environment. Its configuration is described in the xref:next@ocis:ROOT:{s-path}/proxy.adoc[proxy] service. Without configuration, external services like an IDP, web office document servers or web apps will refuse to work for security reasons.
+--
+
+Web UI::
++
+--
+* Deprecated config options have finally been removed, see https://github.com/owncloud/web/pull/11256[#11256]. +
+Note that these config options were able to be set via the `WEB_UI_CONFIG_FILE` environment variable. Having one of the deprecated options set, will not have any impact.
+
+* The `draw-io` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository]. See the deployment examples for how to integrate them.
+
+* The `importer` app has been removed as a default Web app. It's now part of the https://github.com/owncloud/web-extensions[web-extensions repository]. See the deployment examples for how to integrate them.
+--
+
 == Infinite Scale 6.6.1 (Rolling)
 
 IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[documentation] to see if this release type is right for your use case.
@@ -30,6 +159,7 @@ IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[docum
 
 Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.6.0[GitHub, window=_blank].
 
+[#6-6-0-faster-image-preview]
 [discrete]
 === 4x Faster Image Previews
 
@@ -40,11 +170,13 @@ Refer to the source and the full change log for a list of bug fixes and changes 
 +
 NOTE: This improvement is exclusively available for containerized deployments. It is not available for bare-metal deployments, which run the Infinite Scale executable without Docker, Kubernetes or similar platforms. See the xref:next@ocis:ROOT:deployment/services/s-list/thumbnails.adoc#thumbnailing-performance[thumbnail service] for more details.
 
+[#6-6-0-one-click-templates]
 [discrete]
 === Only Office: 1-Click Document Templates
 
 Easily create documents from templates with a single click. Just select an office template, e.g. from a "Templates" Space, and the templated document will open automatically, just like on your desktop. Your new document will be saved in your Personal storage with the template name as the filename. Supported template formats are: DOTX, OTT, XLTX, POTX, OTS and OTP.
 
+[#6-6-0-known-issues]
 === Known Issues
 
 OCM Federation: No Image Preview in Browser::
@@ -56,6 +188,7 @@ IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[docum
 
 Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.5.0[GitHub, window=_blank].
 
+[#6-5-0-public-links-in-sharing]
 [discrete]
 === Permanent and Public Links in the Sharing Panel
 
@@ -67,11 +200,13 @@ A fixed link for internal use that works as a pointer for people with existing a
 - *Public Links*: +
 These links grant access to external people outside your organization. Public links are password-protected by default, ensuring secure file sharing with non-members. Password protection can be turned off by the system administrator.
 
+[#6-5-0-default-permanent-link]
 [discrete]
 === Copy "Permanent Link" by Default
 
 Copying a link in the file list now provides the permanent link with a single click. Permanent links work only for people with existing access, ensuring access is secure by default while offering a faster way to share and point people to files.
 
+[#6-5-0-copy-to-clipboard]
 [discrete]
 === Public Link: Copy With or Without Password to Clipboard  
 
@@ -128,6 +263,7 @@ Tiles View now supports lazy loading with an animation for smoother performance,
 
 The Open Cloud Mesh (OCM) protocol, which supports cross-cloud file sharing, has been improved with several bug fixes. These updates enhance stability and reliability, reducing potential issues when federating between different clouds. This feature remains experimental which means that it may break and individual production usage must be agreed with ownCloud Support.
 
+[#6-4-0-known-issues]
 === Known Issues
 
 *Open Cloud Mesh* (OCM)
@@ -151,6 +287,7 @@ You can now unzip files directly within the Web UI, with support for the .zip fi
 We’re committed to making our platform accessible to all users. Amongst other accessibility improvements in this update, we’ve ensured that keyboard focus is always visible for those who navigate without a mouse. Additionally, we’ve enhanced the color contrasts to meet accessibility standards, making content easier to read and interact with for everyone.
 Note: We treat any accessibility violation as a bug and kindly ask you to contact us if you encounter any digital barriers.
 
+[#6-3-0-simplified-link-sharing]
 [discrete]
 === Simplified Link Sharing
 
@@ -168,7 +305,7 @@ You can now hold the Command key (Ctrl on Windows) to open items in a new tab. B
 * Skyhigh Security ICAP server +
 The https://www.skyhighsecurity.com[Skyhigh Secure Web Gateway (SWG)] can now be configured as Infinite Scale ICAP virus scanner.
 
-* https://github.com/owncloud/web-extensions[Web UI extensions] can be added manually to the default Web UI. See the link for available extensions and the
+* https://github.com/owncloud/web-extensions[Web UI Extensions] can be added manually to the default Web UI. See the link for available extensions and the
 https://doc.owncloud.com/ocis/next/deployment/webui/webui-customisation.html[ownCloud Web with Custom Configuration] for more details.
 
 * `drawio` has been removed from the embedded Web UI but provided as Web UI extension.
@@ -179,6 +316,7 @@ IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[docum
 
 Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.2.0[GitHub, window=_blank].
 
+[#6-2-0-permanent-link]
 [discrete]
 === Permanent Link
 
@@ -210,6 +348,7 @@ IMPORTANT: This is a Rolling Release. Please check the {release-types-url}[docum
 
 Refer to the source and the full change log for a list of bug fixes and changes at {ocis-releases-url}/v6.1.0[GitHub, window=_blank].
 
+[#6-1-0-accountability]
 [discrete]
 === Ensure Accountability with Activity Tracking
 
@@ -273,6 +412,7 @@ can be downloaded from: https://download.owncloud.com/ocis/ocis/stable/[, window
 * *Rolling* +
 can be downloaded from: https://download.owncloud.com/ocis/ocis/rolling/[, window=_blank]
 
+[#6-0-0-secure-view]
 [discrete]
 === Web Office: Collabora Secure View
 
@@ -292,11 +432,13 @@ Infinite Scale now includes by default the ability to open ePub e-books via the 
 
 Infinite Scale now supports opening and editing diagrams with draw.io. Widely used by professionals in software development, project management, engineering, and business analysis, draw.io allows users to create a variety of diagrams such as flowcharts, network diagrams, UML diagrams, mind maps, and organizational charts. Its extensive library of shapes and templates make it ideal for diagramming tasks, enhancing visual communication.
 
+[#6-0-0-webui-load-times]
 [discrete]
-=== Up to 44% Faster Loading Times
+=== Up to 44% Faster Loading Times for the WebUI
 
 We have improved the loading time of the Web UI, especially on slower networks. For example, on a “Fast 3G” connection, load times improved by approximately 44% (from 27s to 15s) and finish times improved by 25% (from 40s to 30s). The overall speed index improved by 32% (from 4.7s to 3.2s). Benchmarks and details on: https://github.com/owncloud/web/pull/10976[owncloud/web#10976]
 
+[#6-0-0-sse]
 [discrete]
 === More Real-Time UI Updates with Server-Sent Events (SSE)
 
@@ -313,6 +455,7 @@ Restored items will appear right away.
 * *Moving* +
 The UI will update to show the new location of moved items.
 
+[#6-0-0-audio-image-metadata]
 [discrete]
 === Show Audio and Image EXIF Metadata
 
@@ -969,6 +1112,7 @@ The Infinite Scale sse service is responsible for sending sse (server-sent event
 
 This section will be updated if issues are discovered.
 
+[#5-0-0-deprecation-announcements]
 === Deprecation Announcements
 
 In future releases the following may no longer be supported or get removed:
