@@ -29,15 +29,6 @@ include::partial$maintenance-release-schedule-link.adoc[]
 * xref:{previous-webui-version}@webui:classic_ui:index.adoc[User Manual]
 //   ({docs-base-url}/pdf/webui/{previous-webui-version}_ownCloud_User_Manual.pdf[Download PDF])
 
-////
-// the appliance has been removed from the docs in 10.14 upwards
-=== ownCloud X Appliance
-
-The ownCloud X Appliance is a complete virtual machine image running ownCloud X, on _Univention Server_.
-
-* xref:{latest-server-version}@server:admin_manual:appliance/index.adoc[ownCloud X Appliance Manual]
-////
-
 == Older ownCloud Server Releases
 
 include::partial$maintenance-release-schedule-link.adoc[]
