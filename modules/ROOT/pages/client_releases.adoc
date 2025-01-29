@@ -51,11 +51,5 @@ The latest ownCloud Android App release, suitable for production use.
 * xref:{previous-android-version}@android:ROOT:index.adoc[ownCloud Android App Manual]
 //  ({docs-base-url}/pdf/android/{previous-android-version}_ownCloud_Android_App_Manual.pdf[Download PDF])
 
-== Building Branded ownCloud Clients (Enterprise only)
-
-Instructions for building branded ownCloud iOS, Android, and Desktop Sync clients.
-
-* xref:{latest-branded-version}@branded_clients:ROOT:index.adoc[Building Branded ownCloud Clients]
-//  ({docs-base-url}/pdf/branded_clients/{latest-branded-version}_ownCloud_Branded_Clients_Manual.pdf[Download PDF])
 
 All documentation licensed under the Creative Commons Attribution 3.0 Unported license.
