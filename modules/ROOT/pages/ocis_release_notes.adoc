@@ -26,7 +26,7 @@ Please find the most important changes described here or refer to the changelog 
 [discrete]
 === General Information
 
-This Infinite Scale release provides new functionalities and some bug fixes. See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] documentation for details how to upgrade.
+This Infinite Scale release provides new functionalities, many bug fixes and internal dependency updates. See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] documentation for details how to upgrade.
 
 [discrete]
 === Summary of Notable Feature Implementations
