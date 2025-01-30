@@ -17,7 +17,7 @@ include::partial$maintenance-release-schedule-link.adoc[]
 //  ({docs-base-url}/pdf/server/{latest-server-version}_ownCloud_Admin_Manual.pdf[Download PDF])
 * xref:{latest-server-version}@server:developer_manual:index.adoc[Developer Manual]
 //  ({docs-base-url}/pdf/server/{latest-server-version}_ownCloud_Developer_Manual.pdf[Download PDF])
-* xref:{latest-webui-version}@webui:classic_ui:index.adoc[User Manual]
+* xref:{latest-webui-version}@server:classic_ui:index.adoc[User Manual]
 //   ({docs-base-url}/pdf/webui/{latest-webui-version}_ownCloud_User_Manual.pdf[Download PDF])
 
 === Previous Stable Release (version {previous-server-version})
@@ -26,7 +26,7 @@ include::partial$maintenance-release-schedule-link.adoc[]
 //  ({docs-base-url}/pdf/server/{previous-server-version}_ownCloud_Admin_Manual.pdf[Download PDF])
 * xref:{previous-server-version}@server:developer_manual:index.adoc[Developer Manual]
 //  ({docs-base-url}/pdf/server/{previous-server-version}_ownCloud_Developer_Manual.pdf[Download PDF])
-* xref:{previous-webui-version}@webui:classic_ui:index.adoc[User Manual]
+* xref:{previous-webui-version}@server:classic_ui:index.adoc[User Manual]
 //   ({docs-base-url}/pdf/webui/{previous-webui-version}_ownCloud_User_Manual.pdf[Download PDF])
 
 == Older ownCloud Server Releases
