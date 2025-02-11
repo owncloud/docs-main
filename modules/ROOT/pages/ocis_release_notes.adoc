@@ -16,6 +16,19 @@
 
 toc::[]
 
+== Infinite Scale 7.0.1 (Production)
+
+This release is a bugfix release only and fixes a security issue.
+
+* Infinite Scale: {ocis-releases-url}/v7.0.1[Changes in 7.0.1, window=_blank]
+
+* Web: {web-releases-url}/v11.0.7[Changelog for ownCloud Web 11.0.7, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+* Replace text editor: https://github.com/owncloud/web/pull/12167[#12167]
+
 == Infinite Scale 7.0.0 (Production)
 
 This release brings significant enhancements in performance and stability. It is also designed to provide an optimized experience for both end users and administrators. Please find the most important changes described here or refer to the changelog for a complete list of changes:
@@ -181,6 +194,19 @@ Easily create documents from templates with a single click. Just select an offic
 
 OCM Federation: No Image Preview in Browser::
 A user receiving an image via an OCM (Open Cloud Mesh) federation cannot view it directly in the browser. Users must download the image from the web to view it. For the status of the issue see: https://github.com/owncloud/ocis/issues/10272[github.com/owncloud/ocis/issues/10272]. Please note that OCM is still classified as a feature preview (i.e. it works, but production use should be discussed with ownCloud support). This is because OCM was initially developed for the scientific community as early adopters. Its use in other environments is not yet recommended.
+
+== Infinite Scale 6.5.1 (Rolling)
+
+This release is a bugfix release only and fixes a security issue.
+
+* Infinite Scale: {ocis-releases-url}/v6.5.1[Changes in 6.5.1, window=_blank]
+
+* Web: {web-releases-url}/v10.3.1[Changelog for ownCloud Web 10.3.1, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+* Replace text editor: https://github.com/owncloud/web/pull/12163[#12163]
 
 == Infinite Scale 6.5.0 (Rolling)
 
