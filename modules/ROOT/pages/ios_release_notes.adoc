@@ -12,6 +12,20 @@
 
 toc::[]
 
+== iOS App 12.4.0
+
+[discrete]
+=== General
+
+This release contains changes and bugfixes. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.4.0[GitHub, window=_blank].
+
+[discrete]
+=== Notable Changes
+
+* Bugfix: Memory usage optimizations: https://github.com/owncloud/ios-app/pull/1416[#1416]
+* Enhancement: Content Protection: https://github.com/owncloud/ios-app/pull/1430[#1430]
+
 == iOS App 12.3.1
 
 [discrete]
