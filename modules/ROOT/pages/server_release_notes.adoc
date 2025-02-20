@@ -403,7 +403,7 @@ Symfony framework has been updated to LTS major version 5.4. This also affected 
 [discrete]
 === Drop Setup of User Key Encryption
 
-User key encryption has already been deprecated in core versions later than 10.7. For this reason, the command line interface and web UI to enable user key encryption are no longer available. If you are operating an ownCloud installation with user key encryption enabled, please get in contact with support@owncloud.com to plan a migration to master key encryption. https://github.com/owncloud/encryption/pull/389[encryption#389]
+User key encryption has already been deprecated in core versions later than 10.7. For this reason, the command line interface and web UI to enable user key encryption are no longer available. If you are operating an ownCloud installation with user key encryption enabled, please get in contact with ownCloud support to plan a migration to master key encryption. https://github.com/owncloud/encryption/pull/389[encryption#389]
 
 [discrete]
 === User Key Encryption Is No Longer Auto-Enabled
@@ -1097,12 +1097,7 @@ Both xref:server_release_notes.adoc#known-issues-10-7[known issues from ownCloud
 
 As mentioned, features are still being added to ownCloud Web and the new web interface can't yet cover every use case of the Classic interface. To further shape the new product and to determine the development priorities it is of utmost importance to consider user feedback. We're very grateful for any hints or feedback that you supply via the following channels
 
-- ownCloud Web survey: https://owncloud.com/web-design-feedback
-- GitHub: https://github.com/owncloud/web[owncloud/web]
 - Chat: talk.owncloud.com / #web
-- Mail: product at owncloud dot com
-
-Since the ownCloud Web 3.4.0 release, the survey above is made available in ownCloud Web to allow users to directly report about their experience. If undesired, the feature can be turned off in the https://owncloud.dev/clients/web/getting-started/#options[ownCloud Web configuration].
 
 [discrete]
 === Improved Usability for "Add to ownCloud" on Public Links
@@ -1243,7 +1238,7 @@ For existing installations that use storage encryption, this process is seamless
 
 Storage encryption in ownCloud offers two options, master-key and user-key encryption. While master-key encryption is based on a general encryption key that is used to decrypt all user data, user-key encryption relies in essence on user passwords to decrypt individual user data. Both follow the goal to prevent malicious administrators from being able to read user data.
 Due to the nature of user-key storage encryption, this encryption mode comes with a list of xref:{latest-server-version}@server:admin_manual:configuration/files/encryption/encryption_configuration.adoc#limitations-of-user-key-based-encryption[limitations] and can cause challenges for administrators, e.g., when users forget their password.
-For these reasons, user-key storage encryption is now marked as deprecated and will not be maintained anymore for future versions of ownCloud Server. Server 10.7 still supports user-key encryption but the feature will be removed in later versions. If you are operating an ownCloud installation with user-key storage encryption enabled, please get in contact with support@owncloud.com to plan a migration to master-key storage encryption.
+For these reasons, user-key storage encryption is now marked as deprecated and will not be maintained anymore for future versions of ownCloud Server. Server 10.7 still supports user-key encryption but the feature will be removed in later versions. If you are operating an ownCloud installation with user-key storage encryption enabled, please get in contact with ownCloud support to plan a migration to master-key storage encryption.
 
 TIP: Master-key storage encryption is still supported and has received improvements with Server 10.7 (see above). This encryption mode can be used with dedicated xref:{latest-server-version}@server:admin_manual:configuration/server/security/hsmdaemon/index.adoc[HSM products] for additional security.
 
