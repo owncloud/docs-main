@@ -42,9 +42,9 @@ For the sake of efficiency, Infinite Scale reduces dependencies and works withou
 
 One of the biggest benefits of Infinite Scale is the variety of xref:{latest-ocis-version}@ocis:ROOT:deployment/index.adoc[deployment models] that make the rollout of the platform really easy and independent of the underlying infrastructure as much as possible.
 
-Infinite Scale can be delivered as a xref:{latest-ocis-version}@ocis:ROOT:deployment/binary/binary-setup.adoc[single binary] - which is a self-contained, complete and ready to start compilation of all microservices that are needed to simply start Infinite Scale. Other featured deployment methods are xref:{latest-ocis-version}@ocis:ROOT:deployment/container/container-setup.adoc[docker images] and xref:{latest-ocis-version}@ocis:ROOT:deployment/container/orchestration/orchestration.adoc#docker-compose[docker-compose] files. For setups with scaling requirements all Infinite Scale microservices can be deployed and scaled separately on orchestration infrastructure like xref:{latest-ocis-version}@ocis:ROOT:deployment/container/orchestration/orchestration.adoc#kubernetes-and-helm[Kubernetes].
+Infinite Scale can be delivered as xref:{latest-ocis-version}@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc[Local Production Setup].
 
-With that, Infinite Scale provides all deployment models for modern cloud infrastructure deployments and optimized scaling setups to achieve the best output in return for the invested energy. 
+With that, Infinite Scale provides a deployment model for modern cloud infrastructure deployments and optimized scaling setups to achieve the best output in return for the invested energy. 
 
 === Infinite Scale Features
 
