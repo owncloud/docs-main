@@ -16,6 +16,52 @@
 
 toc::[]
 
+== Infinite Scale 7.1.0 (Production)
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v7.1.0[Changes in 7.1.0, window=_blank]
+* Web: {web-releases-url}/v11.3.0[Changelog for ownCloud Web 11.3.0, window=_blank]
+
+[discrete]
+=== General Information
+
+This Infinite Scale release provides new functionalities, many bug fixes and internal dependency updates. See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Upgrading Infinite Scale] documentation for details how to upgrade.
+
+[discrete]
+=== Summary of Notable Feature Implementations
+
+* Users can now configure notification preferences for events in the user settings of the web UI. Notifications can be sent to the browser and/or via email. When sending via email is selected, the user can define the interval emails are sent. Events triggering the emails are stored, if selected for delayed sending, in a named group like `daily` or `weekly`.
+To send all the emails of a group, the admin needs to trigger a configurable command line job, usually via cron.
++
+For configuration details see: xref:next@ocis:ROOT:deployment/services/env-var-changes.adoc[Changed Environment Variables in Versions] and the xref:next@ocis:ROOT:{s-path}/notifications.adoc[notifications] service.
+
+* Users can now create password-protected folders. They provide an additional layer of security for sensitive or confidential information stored within Infinite Scale. For details see the  https://github.com/owncloud/web/tree/master/packages/web-app-password-protected-folders[password-protected-folders] readme.
+
+* The OCM service (federated sharing, ScienceMesh) got productivity improvements.
+
+* The compose based deployment examples got updated images. See the xref:next@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc#updating-and-upgrading[Updating and Upgrading] compose example description for more details.
+
+[discrete]
+=== Deprecations
+
+No deprecations have been introduced in Infinite Scale 7.1
+
+[discrete]
+=== Migrations
+
+There are no migrations necessary to update from Infinite Scale 7.0 to 7.1
+
+[discrete]
+=== Breaking Changes
+
+There are no breaking changes in Infinite Scale 7.1
+
+[discrete]
+=== Known Issues
+
+This section will be updated if issues are discovered.
+
 == Infinite Scale 7.0.1 (Production)
 
 This release is a bugfix release only and fixes a security issue.
