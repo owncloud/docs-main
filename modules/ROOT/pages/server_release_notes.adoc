@@ -17,6 +17,24 @@ next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 toc::[]
 
 
+== Changes in 10.15.2
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.15.2 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+
+[discrete]
+=== Security Fix
+
+* Disable phar stream wrapper: https://github.com/owncloud/core/pull/41358[#41358]
+
+== Changes in 10.15.1
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.15.1 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+
+[discrete]
+=== Bugfix
+
+* Prevent access to internal app config data: https://github.com/owncloud/core/pull/41338[#41338]
+
 == Changes in 10.15.0
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.15.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
