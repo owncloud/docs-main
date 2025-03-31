@@ -28,7 +28,8 @@ Please find the most important changes described here or refer to the changelog 
 [discrete]
 === Issues Fixed
 
-* Fix pdf form creation: https://github.com/owncloud/ocis/pull/11163[#11163]
+* Fix pdf form creation: https://github.com/owncloud/ocis/pull/11163[#11163] +
+Note that if you are using one of the compose deployment examples, you should update the files as well because of some related changes.
 
 == Infinite Scale 7.1.1 (Production)
 
