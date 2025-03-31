@@ -16,6 +16,20 @@
 
 toc::[]
 
+
+== Infinite Scale 7.1.2 (Production)
+
+This release is a bugfix release for the backend only.
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v7.1.2[Changes in 7.1.2, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+* Fix pdf form creation: https://github.com/owncloud/ocis/pull/11163[#11163]
+
 == Infinite Scale 7.1.1 (Production)
 
 This release is a bugfix release for the backend and implements some enhancements for the webUI only.
