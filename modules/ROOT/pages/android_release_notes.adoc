@@ -47,7 +47,7 @@ Added feedback with some messages in the snackbars when the user sets or un-sets
 Enabling logs and sending them to us is the best way to help us improve the app and provide the best user experience.
 
 ** By default, logging is disabled. +
-To activate them, you have to go to menu:Settings[Logging > Enable logging]. Since the moment they are on, logs will keep track of every event occurring in the app. These DON’T include user’s sensitive information, so they can be used safely.
+To activate them, you have to go to menu:Settings[Logging > Enable logging]. From the moment they are on, logs will keep track of every event occurring in the app. These DON’T include user’s sensitive information, so they can be used safely.
 
 ** Once logging is enabled and some actions have been performed within the application, log files will be created. To view them, go to menu:Settings[Logging > Log Files]. There you can easily share them by tapping the share icon.
 
