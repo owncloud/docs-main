@@ -35,7 +35,7 @@ Refer to the full change log for a list of bug fixes and changes at {android-rel
 Quotas are updated in more file operations such as `copy`, `move`, `delete`, `upload`, etc that change the user's disk usage. In addition, the storage usage of each account has been added to the Manage Accounts dialog.
 
 * Infinite Scale Users Light. +
-From now on, the application supports Infinite Scale Users Light (those who don't have personal space). All the functionalities have been adapted to allow this type of users to use the application correctly, taking into account all their limitations.
+From now on, the application supports Infinite Scale Users Light (those who don't have personal space). All the functionalities have been adapted to allow this type of user to use the application correctly, taking into account all their limitations.
 
 * Added text labels on bottom bar. +
 Text labels have been added to all the items that appear in the bottom navigation bar to provide enough and clear information about the available sections that we have.
