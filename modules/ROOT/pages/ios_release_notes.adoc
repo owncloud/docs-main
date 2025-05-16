@@ -23,8 +23,8 @@ Refer to the full change log for a list of bug fixes and changes at {ios-release
 [discrete]
 === Notable Changes
 
-* Bugfix: Memory usage optimizations: https://github.com/owncloud/ios-app/pull/1416[#1416]
-* Enhancement: Content Protection: https://github.com/owncloud/ios-app/pull/1430[#1430]
+* Enhancement: Server-side search support: https://github.com/owncloud/ios-app/pull/1419[#1419]
+* Enhancement: Support for new ocis spaces/sharing capabilities: https://github.com/owncloud/ios-app/pull/1421[#1421]
 
 == iOS App 12.4.0
 
