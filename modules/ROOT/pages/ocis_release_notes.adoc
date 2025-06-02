@@ -17,6 +17,28 @@
 toc::[]
 
 
+== Infinite Scale 7.1.3 (Production)
+
+This release is a bugfix release for the backend only.
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v7.1.3[Changes in 7.1.3, window=_blank]
+* Web: {web-releases-url}/v11.3.4[Changelog for ownCloud Web 11.3.4, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+* Fix Share roles translation: https://github.com/owncloud/ocis/pull/11241[#11241]
+* Fix collaboration service LastModifiedDate: https://github.com/owncloud/ocis/pull/11328[#11328]
+* Fix translations in Settings: https://github.com/owncloud/ocis/pull/11361[#11361]
+
+[discrete]
+=== Enhancements
+
+* Limit length of tags: https://github.com/owncloud/ocis/pull/11231[#11231]
+* Bump Web to 11.3.4: https://github.com/owncloud/web/pull/12605[#12605]
+
 == Infinite Scale 7.1.2 (Production)
 
 This release is a bugfix release for the backend only.
