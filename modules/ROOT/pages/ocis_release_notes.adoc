@@ -37,6 +37,8 @@ Please find the most important changes described here or refer to the changelog 
 
 * The `ocm` service has been improved for role and file editor permissoins. Share and unshare notifications are now being created.
 
+* A new CLI command has been added to delete all nodes that are in processing state and not referenced by an upload session.
+
 * Error logging has been improved for the following cases:
 ** Users fail to add, update, or remove another user in a space.
 ** Improve postprocessing logs to make it easier to trace successful and failed uploads.
@@ -66,6 +68,11 @@ Please find the most important changes described here or refer to the changelog 
 === Breaking Changes
 
 There are no breaking changes in Infinite Scale 7.2
+
+[discrete]
+=== Upgrading Infinite Scale
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade] section of the Infinite Scale admin documentation for more details.
 
 [discrete]
 === Known Issues
