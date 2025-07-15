@@ -35,7 +35,7 @@ Please find the most important changes described here or refer to the changelog 
 
 * When the `auth-app` service is enabled, authenticated endpoints will now announce `WWW-Authenticate: Basic` in a 401 response.
 
-* The `ocm` service has been improved for role and file editor permissoins. Share and unshare notifications are now being created.
+* The `ocm` service has been improved for role and file editor permissions. Share and unshare notifications are now being created.
 
 * A new CLI command has been added to delete all nodes that are in processing state and not referenced by an upload session.
 
