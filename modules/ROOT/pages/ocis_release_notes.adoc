@@ -27,7 +27,7 @@ Please find the most important changes described here or refer to the changelog 
 [discrete]
 === Summary of Notable Feature Implementations
 
-* You can now manage Spaces via the IDP by using the `OCIS_CLAIM_MANAGED_SPACES_ENABLED` setting. Once enabled, space management will only be possible via the IDP, not via the web UI. The necessary data will then be included in the claim. All services using this environment variable *must* be configured. See xref:next@ocis:ROOT:{s-path}/deployment/services/env-vars-special-scope.adoc[Environment Variables with Special Scopes] for more details.
+* You can now manage Spaces via the IDP by using the `OCIS_CLAIM_MANAGED_SPACES_ENABLED` setting. Once enabled, space management will only be possible via the IDP, not via the web UI. The necessary data will then be included in the claim. All services using this environment variable *must* be configured. See xref:next@ocis:ROOT:deployment/services/env-vars-special-scope.adoc[Environment Variables with Special Scopes] for more details.
 
 * The `search` service can now be instantiated using the `SEARCH_ENGINE_BLEVE_SCALE` environment variable. See the important notes in the xref:next@ocis:ROOT:{s-path}/search.adoc[Search] service documentation.
 
