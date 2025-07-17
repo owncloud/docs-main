@@ -17,6 +17,69 @@
 toc::[]
 
 
+== Infinite Scale 7.2.0 (Production) - Addams 
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v7.2.0[Changes in 7.2.0, window=_blank]
+* Web: {web-releases-url}/v12.0.2[Changelog for ownCloud Web 12.0.2, window=_blank]
+
+[discrete]
+=== Summary of Notable Feature Implementations
+
+* You can now manage Spaces via the IDP by using the `OCIS_CLAIM_MANAGED_SPACES_ENABLED` setting. Once enabled, space management will only be possible via the IDP, not via the web UI. The necessary data will then be included in the claim. All services using this environment variable *must* be configured. See xref:next@ocis:ROOT:{s-path}/deployment/services/env-vars-special-scope.adoc[Environment Variables with Special Scopes] for more details.
+
+* The `search` service can now be instantiated using the `SEARCH_ENGINE_BLEVE_SCALE` environment variable. See the important notes in the xref:next@ocis:ROOT:{s-path}/search.adoc[Search] service documentation.
+
+* A new built-in role, `SpaceEditorWithoutTrashbin`, was added. It is a subset of the `SpaceEditor` role, but has no list/restore permissions for the trashbin.
+
+* When the `auth-app` service is enabled, authenticated endpoints will now announce `WWW-Authenticate: Basic` in a 401 response.
+
+* The `ocm` service has been improved for role and file editor permissions. Share and unshare notifications are now being created.
+
+* A new CLI command has been added to delete all nodes that are in processing state and not referenced by an upload session.
+
+* Error logging has been improved for the following cases:
+** Users fail to add, update, or remove another user in a space.
+** Improve postprocessing logs to make it easier to trace successful and failed uploads.
+
+* The `collaboration` service received a security update to the WOPI protocol token handling.
+
+* Several updates were made to the deployment examples:
+** Updated Image versions including web-extensions.
+** Web Office hardenings. The collaboration service will now remain in the Docker network and will not be exposed to the outside. If you plan to use Microsoft Web Office with the collaboration service or are already using it, note that you must expose the collaboration service to the outside, which requires reconfiguration.
+** PDF form documents are now created using the correct PDF extension instead of the DOCXF extension. This change affects collaboration with OnlyOffice. Note that a PDF form document is a Portable Document Format (PDF) file that includes fillable fields, allowing users to input data directly into the document.
+
+* Translations for DE, UK, RU, ES and CA have been completed and/or updated.
+
+[discrete]
+=== Deprecations
+
+* No new deprecations have been introduced in Infinite Scale 7.2
+* Some existing deprecations have been removed from the code. See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade] section of the Infinite Scale admin documentation for more details.
+
+[discrete]
+=== Migrations
+
+* There are no migrations necessary to upgrade from Infinite Scale 7.1 to 7.2
+* Since the deployment examples have been updated, you *must* update the configuration files, reconfigure them and pull new image versions. No data migration is necessary. See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade] section of the Infinite Scale admin documentation for more details.
+
+[discrete]
+=== Breaking Changes
+
+There are no breaking changes in Infinite Scale 7.2
+
+[discrete]
+=== Upgrading Infinite Scale
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade] section of the Infinite Scale admin documentation for more details.
+
+[discrete]
+=== Known Issues
+
+This section will be updated if issues are discovered.
+
+
 == Infinite Scale 7.1.3 (Production)
 
 This release is a bugfix release for the backend only.
@@ -145,6 +208,7 @@ NOTE: All changes of web releases after 8.0 up to 11.0.6 apply for this producti
 
 Each rolling release of Infinite Scale provided many bugfixes. For details see the linked changelog of each release.
 
+[discrete]
 === Summary of Notable Feature Implementations
 
 
