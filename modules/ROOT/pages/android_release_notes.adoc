@@ -12,6 +12,34 @@
 
 toc::[]
 
+== Android App 4.6.0
+
+[discrete]
+=== General
+
+This release contains bugfixes, changes and enhancements. +
+Refer to the full change log for a list of bug fixes and changes at {android-releases-url}v4.6.0[GitHub, window=_blank].
+
+[discrete]
+=== Summary of Notable Implementations
+
+For a full list of changes and the details see the changelog linked above.
+
+[discrete]
+==== Issues Fixed
+
+* Changes in the automatic uploads algorithm to prevent duplications.
+* Infinite edges in Android 15.
+* Change space icon in file details view for personal space.
+* Other bug fixes and technical improvements.
+
+[discrete]
+==== Enhancements
+
+* Update Kiteworks Server integration.
+* Shares Space in Android native file explorer.
+* Accessibility analysis reports during development.
+
 == Android App 4.5.0
 
 [discrete]
