@@ -24,7 +24,7 @@ Refer to the full change log for a list of bug fixes and changes at {ios-release
 === Notable Changes
 
 * Adds a row of recently picked locations to the Location Picker for quick access.
-* Starting this version iOS ownCloud app can be used with Kiteworks PDN version 9.1.1 and higher.
+*This version of the iOS ownCloud app is compatible with the Kiteworks PDN version 9.1.1 and higher.
 
 == iOS App 12.5.0
 
