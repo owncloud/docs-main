@@ -12,6 +12,20 @@
 
 toc::[]
 
+== iOS App 12.6.0
+
+[discrete]
+=== General
+
+This release contains changes and bugfixes. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.6.0[GitHub, window=_blank].
+
+[discrete]
+=== Notable Changes
+
+* Adds a row of recently picked locations to the Location Picker for quick access.
+* This PR adds Kiteworks integration to the iOS ownCloud app.
+
 == iOS App 12.5.0
 
 [discrete]
