@@ -36,7 +36,7 @@ For a full list of changes and the details see the changelog linked above.
 [discrete]
 ==== Enhancements
 
-* Update Kiteworks Server integration.
+* Starting with this version, the Android ownCloud app is compatible with the Kiteworks PDN version 9.1.1 and higher.
 * Shares Space in Android native file explorer.
 * Accessibility analysis reports during development.
 
