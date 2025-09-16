@@ -14,6 +14,40 @@
 
 toc::[]
 
+== Desktop App 6.0.0
+
+[discrete]
+=== General
+
+The ownCloud Desktop App is now available in version 6.0.0! +
+We strongly recommend updating the Desktop App to the latest available version so that you can access and experience a range of new features and security fixes. Users with an Enterprise subscription are entitled to receive dedicated support.
+
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v6.0.0[GitHub, window=_blank].
+
+[discrete]
+=== Notable Changes
+
+* Relevant when using the Infinite Scale backend:
+** Prevent using the same default sync folder for multiple accounts when using Spaces.
+** Files with the extension `.space` and `.psec` are now excluded by default from synchronization.
+** A new update channel has been added which is accessible via the Settings page.
+
+* Relevant when using macOS:
+** Only APFS is supported on macOS, which preserves Unicode normalization.
+** The minimum supported macOS version is now 13.0 (Ventura).
+
+* Relevant when using Windows:
+** When using Windows, a pop-up window will appear when a new version is found and the Desktop App requires a restart. This information was previously displayed as a systray message.
+
+* Some options have been removed from the command line.
+* A new setting has been added via the Settings page that moves files to the trash bin instead of deleting them.
+* The `.vfs` suffix is deprecated and will be removed in a future version.
+* The selective sync feature has now its own dialog box and is accessible via the context menu of the sync folder.
+* When a captive portal is identified, synchronization will pause because requests will fail due to an SSL certificate mismatch error. Synchronization will restart automatically when you log in via the portal and the captive portal disappears.
+* For platforms that support metered connection detection, there is now an option on the Settings page that can be used to pause folder synchronization when the network connection switches to metered. Force-syncing can still be done when synchronization is paused.
+* Several UI fixes and improvements have been implemented.
+* The translations have been updated.
+
 == Desktop App 5.3.2
 
 [discrete]
