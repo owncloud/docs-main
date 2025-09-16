@@ -27,6 +27,8 @@ Refer to the full change log for a list of bug fixes and changes at {desktop-rel
 [discrete]
 === Notable Changes
 
+IMPORTANT: This release is the last one that supports ownCloud 10.
+
 * Relevant when using the Infinite Scale backend:
 ** Prevent using the same default sync folder for multiple accounts when using Spaces.
 ** Files with the extension `.space` and `.psec` are now excluded by default from synchronization.
