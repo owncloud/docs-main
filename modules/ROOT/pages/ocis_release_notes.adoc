@@ -16,6 +16,66 @@
 
 toc::[]
 
+== Infinite Scale 7.3.0 (Production) - Balch 
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v7.3.0[Changes in 7.3.0, window=_blank]
+* Web: {web-releases-url}/v12.0.2[Changelog for ownCloud Web 12.0.2, window=_blank]
+
+[discrete]
+=== Summary of Notable Feature Implementations
+
+* Allow rendering of the command: `ocis graph list-unified-roles` in Markdown or colorized.
+
+* Server Sent Events (SSE) support has been added for Public Links.
+
+* Added HTTP Strict Transport Security (HSTS):
+** Support for HTTP Strict Transport Security has been added. This reduces the opportunity for man-in-the-middle attacks and the leakage of sensitive information.
+
+* Enable scaling of the search service:
+** Previously, the search service locked the index for its entire lifetime, preventing other search services from accessing the index. With this change, however, the search service can be configured to lock the index on a per-operation basis, allowing other search services to access the index as long as no operations are ongoing.
+
+* Add custom labels for app tokens:
+** Once the `auth-app` service has been enabled and configured, tokens created previously are distinguishable by creation time and the encrypted token. Now, you can set a custom label when creating an app token.
+
+* Display the roles in the WebUI in the language that the user has set up:
+** Previously, in the WebUI, a role was always shown in English. Now the role definitions are returned in the language set according the Accept-Language header, if present.
+
+* Several updates were made to the deployment examples:
+** Updated image versions including web-extensions. +
+Please note that the provided image versions are tested to work with the deployment example that is shipped.
+** The definitions of the image versions for Traefik, Collabora, and OnlyOffice have been moved from their YAML files to the `.env` file. While this makes maintenance easier and gives more freedom for changes, it also means that you need to use the new `.env` file and reconfigure it with your existing settings.
+** The OnlyOffice Enterprise License Integration has been updated, introducing a new configuration environment variable. This allows you to test EE during a trial period without a license. Otherwise, the EE would not work at all.
+
+[discrete]
+=== Deprecations
+
+* No new deprecations have been introduced in Infinite Scale 7.3
+* Some existing deprecations have been removed from the code. See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade] section of the Infinite Scale admin documentation for more details.
+
+[discrete]
+=== Migrations
+
+* There are no migrations necessary to upgrade from Infinite Scale 7.2 to 7.3
+* Since the deployment examples have been updated, you *must* update the configuration files, reconfigure them and pull new image versions. No data migration is necessary. See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade] section of the Infinite Scale admin documentation for more details.
+
+[discrete]
+=== Breaking Changes
+
+There are no breaking changes in Infinite Scale 7.3
+
+[discrete]
+=== Upgrading Infinite Scale
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade] section of the Infinite Scale admin documentation for more details.
+
+[discrete]
+=== Known Issues
+
+This section will be updated if issues are discovered.
+
+
 == Infinite Scale 7.2.0 (Production) - Addams 
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
