@@ -39,6 +39,9 @@ Please find the most important changes described here or refer to the changelog 
 * Add custom labels for app tokens:
 ** Once the `auth-app` service has been enabled and configured, tokens created previously are distinguishable by creation time and the encrypted token. Now, you can set a custom label when creating an app token.
 
+* Add improved rendering for WebOffice on Tablets and mobile devices:
+** A new, configurable feature has been added to improve the rendering of WebOffice on tablets and mobile phones. Previously, the desktop view was used to present data, which was not optimized for mobile devices. Please note that this feature is currently only available for OnlyOffice.
+
 * Display the roles in the WebUI in the language that the user has set up:
 ** Previously, in the WebUI, a role was always shown in English. Now the role definitions are returned in the language set according the Accept-Language header, if present.
 
