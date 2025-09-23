@@ -26,9 +26,9 @@ Please find the most important changes described here or refer to the changelog 
 [discrete]
 === Summary of Notable Feature Implementations
 
-* Allow rendering of the command: `ocis graph list-unified-roles` in Markdown or colorized.
-
 * Server Sent Events (SSE) support has been added for Public Links.
+
+* Allow rendering of the command: `ocis graph list-unified-roles` in Markdown or colorized. This command is relevant to developers and is only described in the developer documentation.
 
 * Added HTTP Strict Transport Security (HSTS):
 ** Support for HTTP Strict Transport Security has been added. This reduces the opportunity for man-in-the-middle attacks and the leakage of sensitive information.
