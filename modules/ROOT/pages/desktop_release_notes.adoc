@@ -57,7 +57,7 @@ The following is a list of known issues identified in the Desktop App that will 
 * **Affects sync relationshipts to ownCloud 10 only**: +
 After upgrading to version 6.0.0 of the Desktop App, files containing special characters, such as umlauts (ä, ö, and ü), will be deleted by the app.
 ** If you are using ownCloud 10 and have special characters in your file names:
-*** Wait to install until the Desktop App patch is released.
+*** Wait to install until version 6.0.1 of the Desktop App is released.
 *** If you have already upgraded and are affected: +
 Revert to the previous version of the Desktop App and restore the missing files from the user's Trash Bin in the ownCloud GUI.
 
