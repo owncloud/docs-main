@@ -29,7 +29,7 @@ Refer to the full change log for a list of bug fixes and changes at {desktop-rel
 
 The following is a list of known issues identified in the Desktop App that will be fixed in a subsequent patch release:
 
-* The Desktop App built for Ubuntu and Debian are currently provided but not functional. The Windows build is unaffected and works properly.
+* Desktop Apps built for the particular Ubuntu 20.04 and Debian 11 releases are currently available but not functional. All other releases are unaffected and function properly.
 
 === Solved Known Issues
 
