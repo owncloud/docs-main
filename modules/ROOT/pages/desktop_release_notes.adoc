@@ -24,6 +24,13 @@ We strongly recommend updating the Desktop App to the latest available version s
 
 Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v6.0.1[GitHub, window=_blank].
 
+[#6-0-1-known-issues]
+=== Known Issues
+
+The following is a list of known issues identified in the Desktop App that will be fixed in a subsequent patch release:
+
+* The Desktop App built for Ubuntu +20.04 and Debian +11 are currently provided but not functional. The Windows build is unaffected and works properly.
+
 === Solved Known Issues
 
 The xref:6-0-0-known-issues[know issue] introduced in version the Desktop App 6.0.0 has been resolved. If you have installed Desktop App 6.0.0, we recommend updating immediately. If you have not yet installed Desktop App 6.0.0, skip it and install version 6.0.1 to avoid potential issues.
