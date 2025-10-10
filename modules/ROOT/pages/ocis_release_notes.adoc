@@ -21,7 +21,7 @@ toc::[]
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
 
 * Infinite Scale: {ocis-releases-url}/v7.3.0[Changes in 7.3.0, window=_blank]
-* Web: {web-releases-url}/v12.1.0[Changelog for ownCloud Web 12.1.0, window=_blank]
+* Web: {web-releases-url}/v12.1.1[Changelog for ownCloud Web 12.1.1, window=_blank]
 
 [discrete]
 === Summary of Notable Feature Implementations
