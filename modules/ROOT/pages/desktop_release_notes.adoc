@@ -14,6 +14,27 @@
 
 toc::[]
 
+== Desktop App 6.0.1
+
+[discrete]
+=== General
+
+The ownCloud Desktop App is now available in version 6.0.1! +
+We strongly recommend updating the Desktop App to the latest available version so that you can access and experience a range of new features and security fixes. Users with an Enterprise subscription are entitled to receive dedicated support.
+
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v6.0.1[GitHub, window=_blank].
+
+[#6-0-1-known-issues]
+=== Known Issues
+
+The following is a list of known issues identified in the Desktop App that will be fixed in a subsequent patch release:
+
+* Desktop Apps built for the particular Ubuntu 20.04 and Debian 11 releases are currently available but not functional. All other releases are unaffected and function properly.
+
+=== Solved Known Issues
+
+The xref:6-0-0-known-issues[know issue] introduced in version the Desktop App 6.0.0 has been resolved. If you have installed Desktop App 6.0.0, we recommend updating immediately. If you have not yet installed Desktop App 6.0.0, skip it and install version 6.0.1 to avoid potential issues.
+
 == Desktop App 6.0.0
 
 [discrete]
@@ -50,6 +71,7 @@ IMPORTANT: This release is the last one that supports ownCloud 10.
 * Several UI fixes and improvements have been implemented.
 * The translations have been updated.
 
+[#6-0-0-known-issues]
 === Known Issues
 
 The following is a list of known issues identified in the Desktop App that will be fixed in a subsequent patch release:
