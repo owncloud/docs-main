@@ -26,7 +26,7 @@ Please find the most important changes described here or refer to the changelog 
 [discrete]
 === Summary of Notable Feature Implementations
 
-* Server Sent Events (SSE) support has been added for Public Links.
+* Support for Server Sent Events (SSE) has been removed for public links.
 
 * Allow rendering of the command: `ocis graph list-unified-roles` in Markdown or colorized. This command is relevant to developers and is only described in the developer documentation.
 
