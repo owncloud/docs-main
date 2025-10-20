@@ -1113,9 +1113,7 @@ Both xref:server_release_notes.adoc#known-issues-10-7[known issues from ownCloud
 [discrete]
 === Feedback
 
-As mentioned, features are still being added to ownCloud Web and the new web interface can't yet cover every use case of the Classic interface. To further shape the new product and to determine the development priorities it is of utmost importance to consider user feedback. We're very grateful for any hints or feedback that you supply via the following channels
-
-- Chat: talk.owncloud.com / #web
+As mentioned, features are still being added to ownCloud Web and the new web interface can't yet cover every use case of the Classic interface. To further shape the new product and to determine the development priorities it is of utmost importance to consider user feedback. We're very grateful for any hints or feedback.
 
 [discrete]
 === Improved Usability for "Add to ownCloud" on Public Links
