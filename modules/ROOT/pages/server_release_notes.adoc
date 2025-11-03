@@ -17,6 +17,38 @@ next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 toc::[]
 
 
+== Changes in 10.16.0
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.16.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+
+[discrete]
+=== Security Fix
+
+* Harden remote service resolution: https://github.com/owncloud/core/pull/41374[#41374]
+
+[discrete]
+=== Changes
+
+* Add user hint in share dialog that password policy can apply: https://github.com/owncloud/core/pull/41314[#41314]
+* Improve global search experience for Chinese and Japanese inputs: https://github.com/owncloud/core/pull/41328[#41328]
+* Unavailable shares storage will not block folder listing: https://github.com/owncloud/core/pull/41338[#41338]
+* Subadmins won't add users to groups, only admins will be able to: https://github.com/owncloud/core/pull/41405[#41405]
+* The phar stream wrapper is disabled by default: https://github.com/owncloud/core/pull/41406[#41406]
+
+== Changes in 10.15.3
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.15.3 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+
+[discrete]
+=== Security Fix
+
+* Harden remote service resolution: https://github.com/owncloud/core/pull/41374[#41374]
+
+[discrete]
+=== Other Updates
+
+* Disable the web updater: https://github.com/owncloud/core/pull/41385[#41385]
+
 == Changes in 10.15.2
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.15.2 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
