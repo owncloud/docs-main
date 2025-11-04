@@ -14,6 +14,21 @@
 
 toc::[]
 
+== Desktop App 6.0.2
+
+[discrete]
+=== General
+
+The ownCloud Desktop App is now available in version 6.0.2! +
+We strongly recommend updating the Desktop App to the latest available version so that you can access and experience a range of new features and security fixes. Users with an Enterprise subscription are entitled to receive dedicated support.
+
+Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v6.0.2[GitHub, window=_blank].
+
+[discrete]
+=== Notable Fixes
+
+* Security: Fixing high security vulnerability in MacOS client: https://github.com/owncloud/client/pull/12379[#12379]
+
 == Desktop App 6.0.1
 
 [discrete]
@@ -23,6 +38,13 @@ The ownCloud Desktop App is now available in version 6.0.1! +
 We strongly recommend updating the Desktop App to the latest available version so that you can access and experience a range of new features and security fixes. Users with an Enterprise subscription are entitled to receive dedicated support.
 
 Refer to the full change log for a list of bug fixes and changes at {desktop-releases-url}v6.0.1[GitHub, window=_blank].
+
+[discrete]
+=== Notable Changes
+
+* Bugfix: Reverting UTF-8 normalisation change: https://github.com/owncloud/client/pull/12304[#12304]
+* Bugfix: Fix VFS checkbox in folder wizard: https://github.com/owncloud/client/pull/12305[#12305]
+* Change: Move to trash-bin is enabled now by default: https://github.com/owncloud/client/pull/12338[#12338]
 
 [#6-0-1-known-issues]
 === Known Issues
