@@ -16,7 +16,20 @@
 
 toc::[]
 
-== Infinite Scale 7.3.0 (Production) - Balch 
+== Infinite Scale 7.3.1 (Production)
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v7.3.1[Changes in 7.3.1, window=_blank]
+* Web: {web-releases-url}/v12.1.2[Changelog for ownCloud Web 12.1.2, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+* Upate translations: https://github.com/owncloud/ocis/pull/11726[#11726]
+* Do not disable sharing of resources when managing spaces via claims: https://github.com/owncloud/ocis/pull/11836[#11836]
+
+== Infinite Scale 7.3.0 (Production) - Balch
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
 
@@ -143,7 +156,6 @@ This section will be updated if issues are discovered.
 
 
 == Infinite Scale 7.1.4 (Production)
-
 
 This release is a bugfix release for the backend and implements some enhancements for the webUI only.
 
