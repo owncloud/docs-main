@@ -12,6 +12,21 @@
 
 toc::[]
 
+== iOS App 12.6.1
+
+[discrete]
+=== General
+
+This release contains changes and bugfixes. +
+Refer to the full change log for a list of bug fixes and changes at {ios-releases-url}/v12.6.1[GitHub, window=_blank].
+
+[discrete]
+=== Notable Fixes
+
+* "Close" viewer when viewed item is being deleted.
+* Fix text visibility of acknowledgments in dark mode.
+* Fix forced termination of Intents due to exceeded memory limit.
+
 == iOS App 12.6.0
 
 [discrete]
