@@ -16,6 +16,76 @@
 
 toc::[]
 
+== Infinite Scale 8.0.0 (Production)
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v8.0.0[Changes in 8.0, window=_blank]
+* Web: {web-releases-url}/v12.3.0[Changelog for ownCloud Web 12.3.0, window=_blank]
+
+[discrete]
+=== Summary of Notable Changes
+
+* The new environment variable `PROXY_FORCE_STRICT_TRANSPORT_SECURITY` has been added to prevent headers being sent back for insecure connections if the proxy service is connected insecurely but the client terminates securely.
+
+* New CLI commands have been added, in particular the `Move Stuck Uploads` and the `Cleanup Orphaned Grants` command. For details see the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation.
+
+* The user roles, along with their respective permissions and descriptions, have been streamlined. They are now more consistent, with each role with extended permissions building on the preceding one. Any existing assigned roles will automatically receive the updated definitions; no manual intervention is required.
+
+* Admins can use the collaboration service to prevent certain file extensions from being edited by certain collaboration apps. Disabling an extension will make it unavailable to the Office web front end.
+
+* The Graph Service can now be configured to reference the external ID of users during the provisioning process via an LDAP attribute. The final ID is provided by an external identity provider. If this is not set, a default attribute will be used instead. See the `GRAPH_LDAP_REQUIRE_EXTERNAL_ID` environment variable for details.
+
+* A new feature has been implemented to protect against brute-force password attacks when using public links. This feature is enabled by default. For details see the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation.
+
+* Infinite Scale can now be configured as a multi-instance application connected to the same Identity Provider (IDP).
+
+* The library dependencies have been updated.
+
+* Although this has no impact on the UI, all translation resources have been harmonised into a single https://app.transifex.com/owncloud-org/owncloud-web/translate/[Transifex project, window=_blank]. This makes maintenance easier and means, that translation contributors can now find all the data in one place.
+
+* Several updates were made to the deployment examples:
+** Updated image versions including web-extensions. +
+Please note that the provided image versions are tested to work with the deployment example that is shipped.
+
+[discrete]
+=== Upgrading Infinite Scale
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation for more details.
+
+* Since the deployment examples have been updated, you *must* update the configuration files, reconfigure them and pull new image versions. No data migration is necessary.
+
+//[discrete]
+=== Known Issues
+
+This section will be updated if issues are discovered.
+
+//[discrete]
+=== Deprecations
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation for more details.
+
+* No new deprecations have been introduced.
+* Some deprecated environment variables have finally been removed.
+
+//[discrete]
+=== Migrations
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation for more details.
+
+* If you are not using/configured the OCM service, no migration is necessary to upgrade from Infinite Scale 7.3 to 8.0.
+
+=== Breaking Changes
+
+[discrete]
+==== OCM
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation for more details.
+
+* Breaking changes only apply when using OCM. +
+These changes mean, that OCM is now fully compatible with other Open Cloud Mesh services and can be federated with them. As drawback, all OCM invitations and shares no longer work and must be resetup.
+
+
 == Infinite Scale 7.3.2 (Production)
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
