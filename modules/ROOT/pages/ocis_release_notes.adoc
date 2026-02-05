@@ -16,6 +16,19 @@
 
 toc::[]
 
+== Infinite Scale 7.3.2 (Production)
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v7.3.2[Changes in 7.3.2, window=_blank]
+* Web: {web-releases-url}/v12.1.2[Changelog for ownCloud Web 12.1.2, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+* Add Strict-Transport-Security via proxy: https://github.com/owncloud/ocis/pull/11896[#11896]
+* Dependency updates: https://github.com/owncloud/ocis/pull/11992[#11992]
+
 == Infinite Scale 7.3.1 (Production)
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
