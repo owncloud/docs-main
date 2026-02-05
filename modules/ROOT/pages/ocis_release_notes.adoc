@@ -26,8 +26,8 @@ Please find the most important changes described here or refer to the changelog 
 [discrete]
 === Issues Fixed
 
-* Add Strict-Transport-Security via proxy: https://github.com/owncloud/ocis/pull/11896[#11896]
-* Dependency updates: https://github.com/owncloud/ocis/pull/11992[#11992]
+* Enhancement: Add Strict-Transport-Security via proxy: https://github.com/owncloud/ocis/pull/11896[#11896]
+* Enhancement: Bump reva version: https://github.com/owncloud/ocis/pull/11992[#11992]
 
 == Infinite Scale 7.3.1 (Production)
 
