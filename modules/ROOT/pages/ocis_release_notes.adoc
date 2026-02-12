@@ -40,13 +40,15 @@ Please find the most important changes described here or refer to the changelog 
 
 * Infinite Scale can now be configured as a multi-instance application connected to the same Identity Provider (IDP).
 
-* The library dependencies have been updated.
-
 * Although this has no impact on the UI, all translation resources have been harmonised into a single https://app.transifex.com/owncloud-org/owncloud-web/translate/[Transifex project, window=_blank]. This makes maintenance easier and means, that translation contributors can now find all the data in one place.
 
 * Several updates were made to the deployment examples:
 ** Updated image versions including web-extensions. +
 Please note that the provided image versions are tested to work with the deployment example that is shipped.
+
+* The underlaying Alpine image used for Infinite Scale has been updated to version 3.23.3, go has been updated to version 1.25.7
+
+* The library dependencies have been updated.
 
 [discrete]
 === Upgrading Infinite Scale
