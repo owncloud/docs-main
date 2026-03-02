@@ -17,6 +17,18 @@ next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 toc::[]
 
 
+== Changes in 10.16.1
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.16.1 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+
+[discrete]
+=== Fixes and Changes
+
+* Apply SVG sanitization to all file content before using ImageMagick: https://github.com/owncloud/core/pull/41433[#41433]
+* Disallow empty tokens when pairing trusted servers: https://github.com/owncloud/core/pull/41434[#41434]
+* Update PHP dependencies: https://github.com/owncloud/core/pull/41408[#41408]
+* Add mimetype aliases/mapping for .toml and .ovpn: https://github.com/owncloud/core/pull/41431[#41431]
+
 == Changes in 10.16.0
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.16.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
