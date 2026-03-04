@@ -59,7 +59,7 @@ See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade,
 
 === Known Issues
 
-* When a new user is created via Infinite Scale, the system will always attempt to write the `externalID` to LDAP, even if it is left blank. This prevents new users from being created. Please note that this issue does not occur when user management is handled directly via LDAP and Infinite Scale only reads the LDAP data. A fix has been provided via https://github.com/owncloud/ocis/pull/12085[#12085] and will be available with the 8.0.1 release.
+* When a new user is created via Infinite Scale and when using an external LDAP, the system will always attempt to write the `externalID` to LDAP, even if it is left blank. This prevents new users from being created. Please note that this issue does not occur when user management is handled directly via LDAP and Infinite Scale only reads the LDAP data. A fix has been provided via https://github.com/owncloud/ocis/pull/12085[#12085] and will be available with the 8.0.1 release.
 
 //[discrete]
 === Deprecations
