@@ -27,7 +27,7 @@ Please find the most important changes described here or refer to the changelog 
 === Issues Fixed
 
 * Enhancement: Bump Reva
-* Fix: Don't write empty externalID to LDAP: https://github.com/owncloud/ocis/pull/0[#0]
+* Fix: Don't write empty externalID to LDAP: https://github.com/owncloud/ocis/pull/12085[#12085]
 * Fix: Don't use hardcoded groupOfNames in group creation: https://github.com/owncloud/ocis/pull/11776[#11776]
 * Fix: Expose the signature-auth attribute: https://github.com/owncloud/ocis/pull/12016[#12016]
 
