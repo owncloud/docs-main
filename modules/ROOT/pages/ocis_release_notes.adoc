@@ -16,11 +16,26 @@
 
 toc::[]
 
+== Infinite Scale 8.0.1 (Production)
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v8.0.1[Changes in 8.0.1, window=_blank]
+* Web: {web-releases-url}/v12.3.2[Changelog for ownCloud Web 12.3.2, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+* Enhancement: Bump Reva
+* Fix: Don't write empty externalID to LDAP: https://github.com/owncloud/ocis/pull/12085[#12085]
+* Fix: Don't use hardcoded groupOfNames in group creation: https://github.com/owncloud/ocis/pull/11776[#11776]
+* Fix: Expose the signature-auth attribute: https://github.com/owncloud/ocis/pull/12016[#12016]
+
 == Infinite Scale 8.0.0 (Production) - Curie
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
 
-* Infinite Scale: {ocis-releases-url}/v8.0.0[Changes in 8.0, window=_blank]
+* Infinite Scale: {ocis-releases-url}/v8.0.0[Changes in 8.0.0, window=_blank]
 * Web: {web-releases-url}/v12.3.1[Changelog for ownCloud Web 12.3.1, window=_blank]
 
 [discrete]
