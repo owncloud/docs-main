@@ -15,7 +15,7 @@ include::partial$release-intro-text.adoc[]
 
 The latest ownCloud Desktop App release, suitable for production use.
 
-* xref:{latest-desktop-version}@desktop:ROOT:index.adoc[ownCloud Desktop App Manual]
+* xref:desktop:ROOT:index.adoc[ownCloud Desktop App Manual]
 //  ({docs-base-url}/pdf/desktop/{latest-desktop-version}_ownCloud_Desktop_Client_Manual.pdf[Download PDF])
 
 ==== Previous Stable Release (version {previous-desktop-version})
@@ -29,7 +29,7 @@ The latest ownCloud Desktop App release, suitable for production use.
 
 The latest ownCloud iOS App release, suitable for production use.
 
-* xref:{latest-ios-version}@ios-app:ROOT:index.adoc[ownCloud iOS App Manual]
+* xref:ios-app:ROOT:index.adoc[ownCloud iOS App Manual]
 //  ({docs-base-url}/pdf/ios-app/{latest-ios-version}_ownCloud_iOS_App_Manual.pdf[Download PDF])
 
 ==== Previous Stable iOS App Release (version {previous-ios-version})
@@ -43,7 +43,7 @@ The latest ownCloud iOS App release, suitable for production use.
 
 The latest ownCloud Android App release, suitable for production use.
 
-* xref:{latest-android-version}@android:ROOT:index.adoc[ownCloud Android App Manual]
+* xref:android:ROOT:index.adoc[ownCloud Android App Manual]
 //  ({docs-base-url}/pdf/android/{latest-android-version}_ownCloud_Android_App_Manual.pdf[Download PDF])
 
 ==== Previous Stable Android App Release (version {previous-android-version})

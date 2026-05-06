@@ -13,8 +13,9 @@
 
 === Actual Stable Release (version {ocis-actual-version})
 
-* xref:{latest-ocis-version}@ocis:ROOT:index.adoc[Infinite Scale Documentation]
+* xref:ocis:admin:index.adoc[Infinite Scale Documentation]
 
 === Former Stable Release (version {ocis-former-version})
 
+// note that we can replace ROOT with admin after 8.1 has been released
 * xref:{previous-ocis-version}@ocis:ROOT:index.adoc[Infinite Scale Documentation]

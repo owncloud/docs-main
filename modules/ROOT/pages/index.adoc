@@ -5,9 +5,9 @@
 
 == What is Infinite Scale
 
-Infinite Scale is a *cloud-native microservices-based architecture* and the latest generation of server applications. It does not depend on external software packages like PHP or a database which eliminates all the hassle that comes along with using them. With its modern xref:{latest-ocis-version}@ocis:ROOT:architecture/architecture.adoc[architecture], Infinite Scale provides all xref:{latest-ocis-version}@ocis:ROOT:availability_scaling/availability_scaling.adoc[deployment models] for cloud infrastructure deployments and optimized scaling setups for the best output in return for the invested energy. With the single binary concept, managing the server is much more streamlined over all deployment methods.
+Infinite Scale is a *cloud-native microservices-based architecture* and the latest generation of server applications. It does not depend on external software packages like PHP or a database which eliminates all the hassle that comes along with using them. With its modern xref:ocis:admin:architecture/architecture.adoc[architecture], Infinite Scale provides all xref:ocis:admin:availability_scaling/availability_scaling.adoc[deployment models] for cloud infrastructure deployments and optimized scaling setups for the best output in return for the invested energy. With the single binary concept, managing the server is much more streamlined over all deployment methods.
 
-With all the measures taken, *security is greatly increased* compared to a LAMP stack. For details read the page about xref:{latest-ocis-version}@ocis:ROOT:security/security.adoc[Security Aspects of Infinite Scale].
+With all the measures taken, *security is greatly increased* compared to a LAMP stack. For details read the page about xref:ocis:admin:security/security.adoc[Security Aspects of Infinite Scale].
 
 Amongst many other features, the most notable benefits of ownCloud Infinite Scale are:
 
@@ -22,7 +22,7 @@ All in all, spaces make life easier for admins by giving space managers the abil
 
 === ownCloud Web
 
-ownCloud Web is bundled with Infinite Scale, has a new design and comes with a brand-new look. The goal is to make ownCloud accessible to all people from children to experts. Technically, ownCloud Web is built with VueJS as a dedicated client, communicating via well-formed APIs with the Infinite Scale server, just like all the other ownCloud clients. ownCloud Web can be used as an app for ownCloud Server but is limited in its capabilities. Nevertheless, switching to ownCloud Web makes a future migration to Infinite Scale easier for users as they are already used to the new UI. ownCloud Web can be customized according to your corporate identity via config values. For details see the xref:{latest-ocis-version}@ocis:ROOT:deployment/webui/webui.adoc[Web UI] configuration documentation.
+ownCloud Web is bundled with Infinite Scale, has a new design and comes with a brand-new look. The goal is to make ownCloud accessible to all people from children to experts. Technically, ownCloud Web is built with VueJS as a dedicated client, communicating via well-formed APIs with the Infinite Scale server, just like all the other ownCloud apps. ownCloud Web can be customized according to your corporate identity via config values. For details see the xref:ocis:admin:deployment/webui/webui-customisation.adoc[Web UI Custom Configuration] documentation.
 
 === Collaborative Editing
 
@@ -40,9 +40,9 @@ Infinite Scale is a platform built of independent microservices that communicate
 
 For the sake of efficiency, Infinite Scale reduces dependencies and works without a traditional database. This saves administration efforts, hardware resources, attack vectors and energy.
 
-One of the biggest benefits of Infinite Scale is the variety of xref:{latest-ocis-version}@ocis:ROOT:deployment/index.adoc[deployment models] that make the rollout of the platform really easy and independent of the underlying infrastructure as much as possible.
+One of the biggest benefits of Infinite Scale is the variety of xref:ocis:admin:deployment/index.adoc[deployment models] that make the rollout of the platform really easy and independent of the underlying infrastructure as much as possible.
 
-Infinite Scale can be delivered as xref:{latest-ocis-version}@ocis:ROOT:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc[Local Production Setup].
+Infinite Scale can be delivered as xref:ocis:admin:depl-examples/ubuntu-compose/ubuntu-compose-prod.adoc[Local Production Setup].
 
 With that, Infinite Scale provides a deployment model for modern cloud infrastructure deployments and optimized scaling setups to achieve the best output in return for the invested energy. 
 
