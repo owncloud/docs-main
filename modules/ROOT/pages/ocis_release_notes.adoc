@@ -16,6 +16,20 @@
 
 toc::[]
 
+== Infinite Scale 8.0.3 (Production)
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v8.0.3[Changes in 8.0.3, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+This is a security release only and bumps go and a library in the Alpinge image used for thumbnail creation.
+
+* Enhancement: Bump go to 1.25.10: https://github.com/owncloud/ocis/pull/12306[#12306]
+* Enhancement: Bump libvips to 8.18.2: https://github.com/owncloud/ocis/pull/12301[#12301]
+
 == Infinite Scale 8.0.2 (Production)
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
