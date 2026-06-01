@@ -16,6 +16,85 @@
 
 toc::[]
 
+== Infinite Scale 8.1.0 (Production) - Daledda
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v8.1.0[Changes in 8.1.0, window=_blank]
+* Web: {web-releases-url}/v12.4.0[Changelog for ownCloud Web 12.4.0, window=_blank]
+
+[discrete]
+=== Summary of Notable Changes
+
+* A new dedicated Vault storage has been added that can be protected with Multi Factor Authentication (MFA).
+** This is achieved through a separate `storage-users` service instance that is configured in Vault mode.
+** New themes have been added to clearly distinguish between regular drives and vaults.
+
+* When searching for a user in the webUI, the result is now ordered as configured via the webUI.
+
+* Added a new space membership role: `Can edit`.
+
+* The new environment variables have been added. For details see the ...
+
+* CLI Commands
+** New CLI commands have been added, in particular the `Verify and Inspect the Blobstore`, the `Search Index Optimize` and the `Reset Password for System Users` command. For details see the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation.
+** The `restart` flag for the Postprocessing CLI has been fixed.
+
+* The Search and indexing backend has been improved with respect to:
+** Optimize search index size, see CLI commands, 
+** Logging when indexing,
+** Re-index incomplete extractions,
+** Index large multimedia files which exceed the extraction size limit. Only the relevant data is read there, which enables indexing of videos, for example.
+** EXIF related extraction and parsing,
+** KQL parsing,
+** Skip indexing of files still in postprocessing,
+** Improve overall performance and memory footprint.
+
+* For ONLYOFFICE, WOPI now immediately returns a HTTP 200 response without locking the file for users with read-only or view access.
+
+* The Rego policies used by the Policies service are now cached, greatly improving memory usage and performance. 
+ 
+* Translations have been fixed/updated.
+
+* Several updates were made to the deployment examples:
+** Added Keycloak to `ocis_full`.
+** The `ocis_full` deployment example has been basically reworked for how to provide monitoring.
+** Image versions are now defined in the `.env` file for all images, except the web-extensions.
+** Updated image versions including web-extensions. +
+Please note that the provided image versions are tested to work with the deployment example that is shipped.
+** The web-extensions `Advanced Search` and `Photo Addon` have greatly been improved.
+
+* The underlaying Alpine image used for Infinite Scale has been updated to version 3.23.4, go has been updated to version 1.25.10
+
+* The library dependencies have been updated.
+
+[discrete]
+=== Upgrading Infinite Scale
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation for more details.
+
+* Since the deployment examples have been updated, you *must* update the configuration files, reconfigure them and pull new image versions. No data migration is necessary.
+
+=== Known Issues
+
+This section will be updated if issues are discovered.
+
+//[discrete]
+=== Deprecations
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation for more details.
+
+* No new deprecations have been introduced.
+
+//[discrete]
+=== Migrations
+
+See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation for more details.
+
+=== Breaking Changes
+
+There are no breaking changes in Infinite Scale 8.1
+
 == Infinite Scale 8.0.4 (Production)
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
