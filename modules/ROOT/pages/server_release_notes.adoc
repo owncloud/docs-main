@@ -17,6 +17,37 @@ next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 toc::[]
 
 
+== Changes in 10.16.3
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.16.3 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+
+[discrete]
+=== Fixes and Changes
+
+* Security:
+** Update phpseclib to 3.0.52 for CVE-2026-40194: https://github.com/owncloud/core/pull/41529[#41529]
+** Restrict AppConfigController read methods to full admins only: https://github.com/owncloud/core/pull/41550[#41550]
+** Update symfony/routing to 5.4.52 for CVE-2026-45065: https://github.com/owncloud/core/pull/41559[#41559]
+
+* Bugfix:
+** Prevent mounting local storage if not allowed: https://github.com/owncloud/core/pull/41538[#41538]
+** Use the correct user ID when changing email via admin API: https://github.com/owncloud/core/pull/41539[#41539]
+** Prevent IDOR in WebDAV comments API:: https://github.com/owncloud/core/pull/41558[#41558]
+
+== Changes in 10.16.2
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.16.2 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+
+[discrete]
+=== Fixes and Changes
+
+* Update dependencies: https://github.com/owncloud/core/pull/41518[#41518] +
+The following dependencies have been updated:
+** phpseclib/phpseclib (3.0.49 to 3.0.50)
+** minimatch (3.1.2 to 3.1.5)
+** underscore.js (1.13.6 to 1.13.8)
+** brace-expansion (1.1.12 to 1.1.13)
+
 == Changes in 10.16.1
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.16.1 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
