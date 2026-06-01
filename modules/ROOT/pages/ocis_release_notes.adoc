@@ -16,6 +16,21 @@
 
 toc::[]
 
+== Infinite Scale 8.0.4 (Production)
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v8.0.4[Changes in 8.0.4, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+This release has security and bugfixes.
+
+* Securit: Upgrade libvips to 8.18.2: https://github.com/owncloud/ocis/pull/12301[#12301]
+* Security: Bump Go to 1.25.10: https://github.com/owncloud/ocis/pull/12306[#12306]
+* Bugfix: SpaceEditorWithoutTrashbin roles now correctly allow file editing: https://github.com/owncloud/ocis/pull/12346[#12346]
+
 == Infinite Scale 8.0.3 (Production)
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
