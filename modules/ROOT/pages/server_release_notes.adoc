@@ -51,7 +51,9 @@ From this version onwards, ownCloud will only be available as a Docker deploymen
 
 * The `OWNCLOUD_SKELETON_DIRECTORY` envvar has been removed. The former skeleton folder is now exported as folder `skeleton` as part of the Docker volume.
 
-* Most configuration settings are now accessible via environment variables. The Kerberos and Windows Network Drive App are two of the few exceptions.
+* By the nature of a Dockerised deployment, configuration keys related when logging to syslog are not relevant. Therefore, no environment variables exist. The configuration key `log_type` is therefore set internally to the default, which is `owncloud`.
+
+* Most configuration settings are now accessible via environment variables. The Kerberos App is of the few exceptions.
 
 
 == Changes in 10.16.3
