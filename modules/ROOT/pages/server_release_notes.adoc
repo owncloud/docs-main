@@ -17,6 +17,43 @@ next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 toc::[]
 
 
+== Changes in 11.0.0
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 11.0.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
+
+[IMPORTANT]
+====
+* This is a major release change. +
+Only a Dockerised deployment is provided, containing all the required prerequisites with a few exceptions.
+
+* ownCloud code is based on PHP 8. +
+All apps shipped with the image, as well as the code, are updated to comply with PHP 8.
+
+* To use this version, you will need to migrate your configuration, and possibly your data too.
+====
+
+[discrete]
+=== Fixes and Changes
+
+* Security:
+
+* Bugfix:
+
+=== Breaking Changes
+
+[discrete]
+==== Docker Only
+
+From this version onwards, ownCloud will only be available as a Docker deployment.
+
+[discrete]
+==== Environment Variable Changes
+
+* The `OWNCLOUD_SKELETON_DIRECTORY` envvar has been removed. The former skeleton folder is now exported as folder `skeleton` as part of the Docker volume.
+
+* Most configuration settings are now accessible via environment variables. The Kerberos and Windows Network Drive App are two of the few exceptions.
+
+
 == Changes in 10.16.3
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Server 10.16.3 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Server changelog] for further details on what has changed.
