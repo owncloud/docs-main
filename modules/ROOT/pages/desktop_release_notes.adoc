@@ -43,7 +43,7 @@ There is no public *Desktop App 7.0* release. Version 7.0 was produced as an int
 * Change: Remove the suffix VFS plugin: https://github.com/owncloud/client/pull/12174[#12174]
 * Change: Remove the capability to upload conflict files: https://github.com/owncloud/client/pull/12369[#12369]
 * Change: Remove the activity tab from account settings: https://github.com/owncloud/client/pull/12307[#12307]
-* Change: MacOS 13 is now the minimum supported macOS version: https://github.com/owncloud/client/pull/12245[#12245]
+* Change: macOS 13 is now the minimum supported macOS version: https://github.com/owncloud/client/pull/12245[#12245]
 * Change: Qt 6.8 is now the minimum required Qt version: https://github.com/owncloud/client/pull/12270[#12270]
 * Enhancement: New account setup wizard: https://github.com/owncloud/client/pull/12189[#12189]
 * Enhancement: System-based configuration (group policy support): https://github.com/owncloud/client/pull/12367[#12367]
