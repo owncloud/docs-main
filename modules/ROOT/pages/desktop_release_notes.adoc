@@ -34,6 +34,21 @@ The Desktop App 7 series supports *ownCloud Infinite Scale (oCIS)* only. If you 
 There is no public *Desktop App 7.0* release. Version 7.0 was produced as an internal-only build used for cross-team integration and release-process validation, and was never published to end users. The 7.x line debuts publicly with 7.1.0, which is why the version history jumps directly from 6.0.x to 7.1.0.
 ====
 
+[discrete]
+=== Notable Changes
+
+* Change: Remove support for ownCloud Server (OC10); the client now requires ownCloud Infinite Scale: https://github.com/owncloud/client/pull/12167[#12167]
+* Change: Remove the command line sync client: https://github.com/owncloud/client/pull/12162[#12162]
+* Change: Remove bandwidth throttling controls: https://github.com/owncloud/client/pull/12335[#12335]
+* Change: Remove the suffix VFS plugin: https://github.com/owncloud/client/pull/12174[#12174]
+* Change: Remove the capability to upload conflict files: https://github.com/owncloud/client/pull/12369[#12369]
+* Change: Remove the activity tab from account settings: https://github.com/owncloud/client/pull/12307[#12307]
+* Change: macOS 13 is now the minimum supported macOS version: https://github.com/owncloud/client/pull/12245[#12245]
+* Change: Qt 6.8 is now the minimum required Qt version: https://github.com/owncloud/client/pull/12270[#12270]
+* Enhancement: New account setup wizard: https://github.com/owncloud/client/pull/12189[#12189]
+* Enhancement: System-based configuration (group policy support): https://github.com/owncloud/client/pull/12367[#12367]
+* Enhancement: Redesigned account and folder management view: https://github.com/owncloud/client/pull/12399[#12399]
+
 == Desktop App 6.0.3
 
 [discrete]
