@@ -2,7 +2,6 @@
 
 // Antora extension to create a new and clean search index based on ElasticSearch
 
-const _ = require('lodash')
 const cheerio = require('cheerio')
 const Entities = require('html-entities')
 const { Client } = require('@elastic/elasticsearch')
