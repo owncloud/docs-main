@@ -35,11 +35,8 @@
     "linkcheck": "broken-link-checker --filter-level 3 --recursive --verbose"
   },
   "dependencies": {
-    "@elastic/elasticsearch": "^7.17.14",
     "antora": "^3.1.15",
     "asciidoctor-kroki": "^0.18.1",
-    "cheerio": "^1.2.0",
-    "html-entities": "2.6.0",
     "js-yaml": "^5.0.0"
   },
   "devDependencies": {
