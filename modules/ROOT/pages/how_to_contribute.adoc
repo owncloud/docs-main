@@ -39,9 +39,9 @@ The locations for the sources can be found at:
 
 ** If you have any suggestions regarding development, see https://owncloud.dev[owncloud.dev] and the sources at {github-docs-url}/ocis[owncloud/ocis].
 
-* For *ownCloud Server*, the `Administration` and `Developer` manuals are in {github-docs-url}/docs[owncloud/docs-server].
+* For *ownCloud Classic*, the `Administration` and `Developer` manuals are in {github-docs-url}/docs[owncloud/docs-server].
 
-* The *web UI* documentation source for both ownCloud Server and Infinite Scale is located in {github-docs-url}/docs-webui[owncloud/docs-webui].
+* The *web UI* documentation source for both ownCloud Classic and Infinite Scale is located in {github-docs-url}/docs-webui[owncloud/docs-webui].
 
 * The *Desktop Sync Client* documentation source is located in {github-docs-url}/docs-client-desktop[owncloud/docs-client-desktop].
 

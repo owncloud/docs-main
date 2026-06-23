@@ -1,4 +1,4 @@
-= ownCloud Server Releases
+= ownCloud Classic Releases
 :toc: right
 :toclevels: 3
 :page-aliases: releases.adoc, next@docs::server_releases.adoc, next@docs_main::server_releases.adoc
@@ -7,7 +7,7 @@
 
 include::partial$release-intro-text.adoc[]
 
-== ownCloud Server Releases
+== ownCloud Classic Releases
 
 include::partial$maintenance-release-schedule-link.adoc[]
 
