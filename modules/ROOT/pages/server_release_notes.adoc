@@ -340,7 +340,7 @@ Dear ownCloud administrator, find below the changes and known issues in ownCloud
 
 We now display IoC scanner instructions to all customers (a valid license key needs to be present) during upgrade (console as well as Web Updater) and in the admin settings. https://github.com/owncloud/core/pull/41137[#41137]
 
-Background: The Indicators of Compromise (IoC) tool plays a vital role in identifying potential security threats or breaches. The tool analyzes your ownCloud Classic 10 deployments and determines whether they have possibly been compromised via the known vulnerabilities. It collects information from the Apache logs and identifies the signatures of potential exploits. Please note, the tool has to be run on ALL ownCloud servers in case of a clustered setup!
+Background: The Indicators of Compromise (IoC) tool plays a vital role in identifying potential security threats or breaches. The tool analyzes your ownCloud Classic deployments and determines whether they have possibly been compromised via the known vulnerabilities. It collects information from the Apache logs and identifies the signatures of potential exploits. Please note, the tool has to be run on ALL ownCloud servers in case of a clustered setup!
 
 [discrete]
 === 2FA Check on Controllers Which Are Annotated as @PublicPage and Also Authenticated
@@ -1169,7 +1169,7 @@ Dear ownCloud administrator, please find below the changes and known issues in o
 [discrete]
 === ownCloud Web supplements the Classic Web Interface - Try it!
 
-The all-new web interface for ownCloud, ownCloud Web, has come a long way since its initial release at the end of 2020. It is available as an app on the https://marketplace.owncloud.com/apps/web[ownCloud Marketplace] and ownCloud Classic has been xref:server_release_notes.adoc#owncloud-web-the-new-web-frontend-for-owncloud[prepared to work with it since version 10.6]. ownCloud Web https://owncloud.dev/clients/web/deployments/oc10-app/#configure-owncloud-10[can be deployed as a supplement to the classic web interface] and meanwhile it is in use at quite a number of installations. This has brought up good feedback around the integration with ownCloud Classic 10 that has been addressed for 10.8. Additionally, lots of improvements have made their way into ownCloud Web. For an overview you can have a look at the https://owncloud.dev/ocis/release_notes/[ownCloud Infinite Scale release notes] and for a full list of changes, please see the https://github.com/owncloud/web/blob/master/CHANGELOG.md[ownCloud Web changelog].
+The all-new web interface for ownCloud, ownCloud Web, has come a long way since its initial release at the end of 2020. It is available as an app on the https://marketplace.owncloud.com/apps/web[ownCloud Marketplace] and ownCloud Classic has been xref:server_release_notes.adoc#owncloud-web-the-new-web-frontend-for-owncloud[prepared to work with it since version 10.6]. ownCloud Web https://owncloud.dev/clients/web/deployments/oc10-app/#configure-owncloud-10[can be deployed as a supplement to the classic web interface] and meanwhile it is in use at quite a number of installations. This has brought up good feedback around the integration with ownCloud Classic that has been addressed for 10.8. Additionally, lots of improvements have made their way into ownCloud Web. For an overview you can have a look at the https://owncloud.dev/ocis/release_notes/[ownCloud Infinite Scale release notes] and for a full list of changes, please see the https://github.com/owncloud/web/blob/master/CHANGELOG.md[ownCloud Web changelog].
 
 The most prominent recent improvements are
 
@@ -1406,13 +1406,13 @@ in ownCloud Web.
 
 There are different ways to deploy ownCloud Web with ownCloud Classic. We strive to make it as easy as
 possible to make the new frontend available to users. For this, there is the new app for
-{oc-marketplace-url}/apps/web[Web] on the ownCloud Marketplace. It can be installed on ownCloud Classic 10 servers with
+{oc-marketplace-url}/apps/web[Web] on the ownCloud Marketplace. It can be installed on ownCloud Classic servers with
 the regular tools. The app will make the new frontend available as described above when
 https://owncloud.github.io/clients/web/deployments/oc10-app/[deployed and configured correctly].
 
 TIP: Deploying ownCloud Web via the Marketplace app is the currently recommended approach.
 
-**Requirements for deploying ownCloud Web as an app for ownCloud Classic 10**
+**Requirements for deploying ownCloud Web as an app for ownCloud Classic**
 
 * ownCloud Classic 10.6
 * {oc-marketplace-url}/apps/oauth2[OAuth2] or {oc-marketplace-url}/apps/openidconnect[OpenID Connect]
@@ -2028,7 +2028,7 @@ Please be aware that apps that do not support outdated PHP versions will not upg
 TIP: See the xref:server:admin_manual:installation/system_requirements.adoc#officially-supported-environments[system requirements in the ownCloud documentation].
 
 To allow for additional upgrade time, version 10.2 still supports PHP 7.0, because some of the major Linux distributions continue to support it.
-However, support for PHP 7.0 will be discontinued in an upcoming version of ownCloud Classic 10, to enhance both security and performance.
+However, support for PHP 7.0 will be discontinued in an upcoming version of ownCloud Classic, to enhance both security and performance.
 To prepare for this change, we strongly encourage you to begin planning an upgrade as soon as possible.
 
 [discrete]
@@ -2857,7 +2857,7 @@ extension (_admin_audit_) is required.
 [discrete]
 === New command to verify and repair file checksums
 
-With ownCloud Classic 10 file integrity checking by computing and matching
+With ownCloud Classic file integrity checking by computing and matching
 checksums has been introduced to ensure that transferred files arrive at
 their target in the exact state as their origin. In some rare cases
 wrong checksums can be written to the database leading to
@@ -2887,7 +2887,7 @@ needs best.
 [discrete]
 === New option to granularly configure public link password enforcement
 
-With ownCloud Classic 10 the `File Drop` feature has been merged with public
+With ownCloud Classic the `File Drop` feature has been merged with public
 link permissions. This kind of public link does not give recipients
 access to any content, but it gives them the possibility to `drop
 files`. As a result, it might not always be desirable to enforce
@@ -3221,7 +3221,7 @@ to be able to use the feature with ownCloud Classic 10.0.4.
 * https://github.com/owncloud/core/issues/29156[SFTP external storages with key pair mode work again]
 * https://github.com/owncloud/core/issues/29240[Added support for MariaDB 10.2.7+]
 * https://github.com/owncloud/core/issues/29049[Encryption panel in admin settings fixed to
-properly detect current mode after upgrade to ownCloud Classic 10]
+properly detect current mode after upgrade to ownCloud Classic]
 * https://github.com/owncloud/core/pull/29261[Removed double quotes from boolean values in status.php output]
 
 == Changes in 10.0.3
