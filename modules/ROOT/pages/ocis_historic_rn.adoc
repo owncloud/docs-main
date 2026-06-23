@@ -205,7 +205,7 @@ Refer to the source and the full change log for a list of bug fixes and changes 
 [discrete]
 === Permanent Link
 
-You can now copy links even more easily: As soon as you have shared a file with someone else, you can now just click on copy "Permanent Link". This link allows you to share direct links with people who already have access and enables users to jump straight to the desired file, improving navigation efficiency. Simply copy and share the link to access specific files instantly. (For those who are familiar with the PHP based ownCloud 10: The permanent link in Infinite Scale has the same function as "Private Links" in ownCloud 10)
+You can now copy links even more easily: As soon as you have shared a file with someone else, you can now just click on copy "Permanent Link". This link allows you to share direct links with people who already have access and enables users to jump straight to the desired file, improving navigation efficiency. Simply copy and share the link to access specific files instantly. (For those who are familiar with the PHP based ownCloud Classic 10: The permanent link in Infinite Scale has the same function as "Private Links" in ownCloud Classic 10)
 
 [discrete]
 === New App: Link to External Sites
@@ -1219,7 +1219,7 @@ For example, if you're looking for a particular project file and you remember ta
 [discrete]
 === Cloud Importer (experimental)
 
-We are excited to announce our new extension: Cloud Importer, designed to import files from other services. With this functionality, you can now seamlessly import files and folders from other services like OneDrive, Google Drive, ownCloud 10 or Nextcloud directly into Infinite Scale.
+We are excited to announce our new extension: Cloud Importer, designed to import files from other services. With this functionality, you can now seamlessly import files and folders from other services like OneDrive, Google Drive, ownCloud Classic 10 or Nextcloud directly into Infinite Scale.
 
 Effortlessly transfer your work documents, shared files, or entire project folders from these popular cloud storage platforms to your account. Whether you're moving a single document or a large batch of files, the Cloud Importer ensures a smooth, fast, and reliable transfer. Note that the Cloud Importer only imports files, not shares or tags. Think of it as uploading a file, but from a cloud service instead of from your local drive.
 
@@ -1407,7 +1407,7 @@ Administrators can now disable login access for multiple users simultaneously, p
 Administrators can enable or disable login access for multiple users, providing greater flexibility in managing user authentication.
 
 * Edit Username: +
-Administrators have the ability to edit the usernames, which is very important if users change their last name. Remember: In ownCloud Server, users where not allowed to marry and/or change names due to technical limitations. With Infinite Scale, marriage and name changes are now possible.
+Administrators have the ability to edit the usernames, which is very important if users change their last name. Remember: In ownCloud Classic, users where not allowed to marry and/or change names due to technical limitations. With Infinite Scale, marriage and name changes are now possible.
 
 [discrete]
 ==== Groups Administration:
@@ -1832,7 +1832,7 @@ Version 1.19.0 brings major improvements, new features and bug fixes to the plat
 The most prominent changes in Infinite Scale 1.19.0 and ownCloud Web 5.3.0 comprise:
 
 * Bugfix - Thumbnails only for accepted shares: https://github.com/owncloud/web/issues/5310[#5310]
-* Bugfix - Show no auth popup on password-protected public links in ownCloud 10: https://github.com/owncloud/web/pull/6530[#6530]
+* Bugfix - Show no auth popup on password-protected public links in ownCloud Classic 10: https://github.com/owncloud/web/pull/6530[#6530]
 * Bugfix - Prevent cross-site scripting attack while displaying space description: https://github.com/owncloud/web/pull/6523[#6523]
 * Bugfix - Replace public mountpoint fileid with grant fileid in ocdav: https://github.com/cs3org/reva/pull/2646[cs3org/reva#2646]
 * Change - Switch NATS backend: https://github.com/cs3org/reva/pull/2574[cs3org/reva#2574]
@@ -1911,7 +1911,7 @@ The most prominent changes in Infinite Scale 1.18.0 and ownCloud Web 5.2.0 compr
 
 * The endpoint to list Spaces now supports sorting by name and last modification time. https://github.com/owncloud/ocis/pull/3201[ocis#3201]
 
-* The Search feature in ownCloud Web has been fixed and improved, e.g., the context menu works again properly (only available on ownCloud 10 currently). https://github.com/owncloud/web/pull/6445[web#6445],  https://github.com/owncloud/web/issues/6496[web#6496]
+* The Search feature in ownCloud Web has been fixed and improved, e.g., the context menu works again properly (only available on ownCloud Classic 10 currently). https://github.com/owncloud/web/pull/6445[web#6445],  https://github.com/owncloud/web/issues/6496[web#6496]
 
 * Creating a new file now refreshes the file list in ownCloud Web. https://github.com/owncloud/web/issues/5530[web#5530]
 
@@ -1931,7 +1931,7 @@ IMPORTANT: We are currently in a Tech Preview state and breaking changes may occ
 [discrete]
 === Infinite Scale 1.17.0 Technology Preview
 
-Version 1.17.0 brings major changes, new features and improvements. The Infinite Scale backend introduces an event system as an important platform component and adds support for file locking. ownCloud Web 5.0.0 comes with a full rework of the design and user experience and introduces initial support for the `Spaces` feature. Additionally ownCloud Web now supports Collabora Online with the ownCloud 10 backend.
+Version 1.17.0 brings major changes, new features and improvements. The Infinite Scale backend introduces an event system as an important platform component and adds support for file locking. ownCloud Web 5.0.0 comes with a full rework of the design and user experience and introduces initial support for the `Spaces` feature. Additionally ownCloud Web now supports Collabora Online with the ownCloud Classic 10 backend.
 
 The most prominent changes in Infinite Scale 1.17.0 and ownCloud Web 5.0.0 comprise:
 
@@ -1951,9 +1951,9 @@ The most prominent changes in Infinite Scale 1.17.0 and ownCloud Web 5.0.0 compr
 
 * ownCloud Web now provides an ID- and path-based URL scheme according to https://owncloud.dev/ocis/adr/0011-global-url-format/#mixed-global-urls[mixed global url's]. https://github.com/owncloud/web/pull/6137[web#6137]
 
-* ownCloud Web now supports Collabora Online with the ownCloud 10 backend. More information on configuration can be found in the https://owncloud.dev/clients/web/deployments/oc10-app/#collabora-online[documentation].
+* ownCloud Web now supports Collabora Online with the ownCloud Classic 10 backend. More information on configuration can be found in the https://owncloud.dev/clients/web/deployments/oc10-app/#collabora-online[documentation].
 
-* ownCloud Web now respects share expiration date enforcement and defaults with the ownCloud 10 backend. https://github.com/owncloud/web/pull/6176[web#6176]
+* ownCloud Web now respects share expiration date enforcement and defaults with the ownCloud Classic 10 backend. https://github.com/owncloud/web/pull/6176[web#6176]
 
 * The People sharing dialog in ownCloud Web has received a couple of improvements. https://github.com/owncloud/web/pull/6039[web#6039]
 
@@ -2177,7 +2177,7 @@ Version 1.10.0 brings new features, usability improvements and bug fixes. ownClo
 
 The most prominent changes in Infinite Scale 1.10.0 and ownCloud Web 4.0.0 comprise:
 
-* ownCloud Web now supports ONLYOFFICE document editors when used with ownCloud Classic Server. See the https://owncloud.dev/clients/web/deployments/oc10-app/#onlyoffice[documentation] for more information on requirements and configuration.
+* ownCloud Web now supports ONLYOFFICE document editors when used with ownCloud Classic. See the https://owncloud.dev/clients/web/deployments/oc10-app/#onlyoffice[documentation] for more information on requirements and configuration.
 
 * ownCloud Web now supports global search and filtering for the current folder via the search bar. Both will work when ownCloud Web is used with ownCloud Classic. The Infinite Scale capabilities are currently limited to filtering the current folder. https://github.com/owncloud/web/pull/5415[web#5415]
 
@@ -2602,7 +2602,7 @@ Infinite Scale is following the microservices architectural pattern. It is imple
 
 * Native storage capabilities are used where like native versioning and trashbin
 
-* Public APIs like WebDAV and OCS have been kept compatible with ownCloud 10
+* Public APIs like WebDAV and OCS have been kept compatible with ownCloud Classic 10
 
 * A secure and flexible framework to create extensions
 
@@ -2650,15 +2650,15 @@ In standalone mode oCIS uses its built-in orchestrator to start all necessary se
 oCIS allows you to scale individual services using well-known orchestration frameworks like docker-compose, dockerSwarm and kubernetes.
 
 [discrete]
-===== Bridge mode with ownCloud 10 backend
+===== Bridge mode with ownCloud Classic 10 backend
 
-For the product transition phase, Infinite Scale comes with an operation mode ("bridge mode") that allows a hybrid deployment between both server generations to operate the new web frontend with ownCloud 10 and Infinite Scale in parallel. This setup allows the ownCloud Web frontend to operate with both server generations and provides the foundation to migrate users gradually to the new backend.
+For the product transition phase, Infinite Scale comes with an operation mode ("bridge mode") that allows a hybrid deployment between both server generations to operate the new web frontend with ownCloud Classic 10 and Infinite Scale in parallel. This setup allows the ownCloud Web frontend to operate with both server generations and provides the foundation to migrate users gradually to the new backend.
 
 **Requirements for the bridge mode**
 
-* ownCloud Server >= 10.6
+* ownCloud Classic >= 10.6
 * https://marketplace.owncloud.com/apps/openidconnect[Open ID Connect] is used for user authentication
-* The https://marketplace.owncloud.com/apps/graphapi[Graph API] app is installed on ownCloud Server
+* The https://marketplace.owncloud.com/apps/graphapi[Graph API] app is installed on ownCloud Classic
 * The latest client versions are rolled-out to users (required for OpenID Connect support). See the https://doc.owncloud.com/server/admin_manual/configuration/user/oidc/#owncloud-desktop-and-mobile-clients[documentation] for more information.
 
 See the https://owncloud.dev/ocis/deployment/bridge/[documentation] on how to deploy Infinite Scale in bridge mode.
@@ -2685,7 +2685,7 @@ One of the most important objectives for oCIS was to ease the setup of a working
 [discrete]
 ===== Deployment Options
 
-Given the architecture of Infinite Scale, there are various deployment options based on the users requirements. In our experience setting up the LAMP stack for ownCloud 10 was difficult for many users. Therefore a big emphasis was put on easy yet functional https://owncloud.dev/ocis/deployment/[deployment] strategies.
+Given the architecture of Infinite Scale, there are various deployment options based on the users requirements. In our experience setting up the LAMP stack for ownCloud Classic 10 was difficult for many users. Therefore a big emphasis was put on easy yet functional https://owncloud.dev/ocis/deployment/[deployment] strategies.
 
 [discrete]
 ===== Delivery as single binary
@@ -2793,7 +2793,7 @@ For more sophisticated setups we recommend using one of our docker setup example
 
 * Display basic profile information (user name, display name, e-mail, group memberships)
 
-* "Edit" button guides to ownCloud 10 user settings (when used with oC 10)
+* "Edit" button guides to ownCloud Classic 10 user settings (when used with oC 10)
 
 [discrete]
 ====== Basic user settings

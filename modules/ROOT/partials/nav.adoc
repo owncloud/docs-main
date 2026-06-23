@@ -2,8 +2,8 @@
 * Server Releases
 ** xref:ocis_releases.adoc[Infinite Scale Releases]
 ** xref:ocis_release_notes.adoc[Infinite Scale Release Notes]
-** xref:server_releases.adoc[ownCloud Server Releases]
-** xref:server_release_notes.adoc[ownCloud Server Release Notes]
+** xref:server_releases.adoc[ownCloud Classic Releases]
+** xref:server_release_notes.adoc[ownCloud Classic Release Notes]
 * xref:client_releases.adoc[App Releases]
 ** xref:desktop_release_notes.adoc[Desktop App Release Notes]
 ** xref:ios_release_notes.adoc[iOS App Release Notes]
@@ -20,11 +20,11 @@
 
 .Server
 * xref:{latest-ocis-version}@ocis:ROOT:index.adoc[Infinite Scale]
-* xref:{latest-server-version}@server:ROOT:index.adoc[ownCloud Server]
+* xref:{latest-server-version}@server:ROOT:index.adoc[ownCloud Classic]
 
 .Apps and User Interfaces
 * xref:{latest-webui-version}@webui:ROOT:index.adoc[Web Infinite Scale]
-* xref:{latest-server-version}@server:classic_ui:index.adoc[Web ownCloud Server]
+* xref:{latest-server-version}@server:classic_ui:index.adoc[Web ownCloud Classic]
 * xref:{latest-desktop-version}@desktop:ROOT:index.adoc[Desktop App]
 * xref:{latest-android-version}@android:ROOT:index.adoc[Mobile App for Android]
 * xref:{latest-ios-version}@ios-app:ROOT:index.adoc[Mobile App for iOS]

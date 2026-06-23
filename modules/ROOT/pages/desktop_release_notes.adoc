@@ -37,7 +37,7 @@ There is no public *Desktop App 7.0* release. Version 7.0 was produced as an int
 [discrete]
 === Notable Changes
 
-* Change: Remove support for ownCloud Server (OC10); the client now requires ownCloud Infinite Scale: https://github.com/owncloud/client/pull/12167[#12167]
+* Change: Remove support for ownCloud Classic (OC10); the client now requires ownCloud Infinite Scale: https://github.com/owncloud/client/pull/12167[#12167]
 * Change: Remove the command line sync client: https://github.com/owncloud/client/pull/12162[#12162]
 * Change: Remove bandwidth throttling controls: https://github.com/owncloud/client/pull/12335[#12335]
 * Change: Remove the suffix VFS plugin: https://github.com/owncloud/client/pull/12174[#12174]
@@ -121,7 +121,7 @@ Refer to the full change log for a list of bug fixes and changes at {desktop-rel
 [discrete]
 === Notable Changes
 
-IMPORTANT: This release is the last one that supports ownCloud 10.
+IMPORTANT: This release is the last one that supports ownCloud Classic 10.
 
 * Relevant when using the Infinite Scale backend:
 ** Prevent using the same default sync folder for multiple accounts when using Spaces.
@@ -149,9 +149,9 @@ IMPORTANT: This release is the last one that supports ownCloud 10.
 
 The following is a list of known issues identified in the Desktop App that will be fixed in a subsequent patch release:
 
-* **Affects sync relationshipts to ownCloud 10 only**: +
+* **Affects sync relationshipts to ownCloud Classic 10 only**: +
 After upgrading to version 6.0.0 of the Desktop App, files containing special characters, such as umlauts (ä, ö, and ü), will be deleted by the app.
-** If you are using ownCloud 10 and have special characters in your file names:
+** If you are using ownCloud Classic 10 and have special characters in your file names:
 *** Wait to install until version 6.0.1 of the Desktop App is released.
 *** If you have already upgraded and are affected: +
 Revert to the previous version of the Desktop App and restore the missing files from the user's Trash Bin in the ownCloud GUI.
