@@ -87,7 +87,7 @@ This section will be updated if issues are discovered.
 
 See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade, window=_blank] section of the Infinite Scale admin documentation for more details.
 
-* No new deprecations have been introduced.
+* The value `owncloudsql` for the `STORAGE_USERS_DRIVER` environment variable has been deprecated.
 
 //[discrete]
 === Migrations
