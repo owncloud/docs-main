@@ -55,6 +55,15 @@ From this version onwards, ownCloud will only be available as a Docker deploymen
 
 * Most configuration settings are now accessible via environment variables. The Kerberos App is of the few exceptions.
 
+[discrete]
+==== Apps
+
+The majority of ownCloud apps are now included in the image. There is no need to download them from the marketplace, and they have been updated to work with PHP 8. However, some apps have been deprecated and are no longer available. The affected apps are:
+
+* Impersonate +
+This app has been removed for security reasons.
+* Microsoft Team Bridge
+* Sharepoint
 
 == Changes in 10.16.3
 
