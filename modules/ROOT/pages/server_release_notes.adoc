@@ -60,8 +60,7 @@ From this version onwards, ownCloud will only be available as a Docker deploymen
 
 The majority of ownCloud apps are now included in the image. There is no need to download them from the marketplace, and they have been updated to work with PHP 8. However, some apps have been deprecated and are no longer available. The affected apps are:
 
-* Impersonate +
-This app has been removed for security reasons.
+* Impersonate
 * Microsoft Team Bridge
 * Sharepoint
 
