@@ -17,6 +17,20 @@ next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 toc::[]
 
 
+== Changes in 10.16.4
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Classic 10.16.4 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Classic changelog] for further details on what has changed.
+
+IMPORTANT: This is a security release. Upgrading is strongly recommended for all installations.
+
+[discrete]
+=== Security Fixes
+
+* Honour the write hook veto on legacy chunked WebDAV uploads: https://github.com/owncloud/core/pull/41763[#41763] +
+The legacy WebDAV chunked upload path assembled the final file without respecting the pre-write hook result, so the filename blacklist that applies to ordinary uploads was not enforced for chunked uploads. A file name that is rejected on the normal upload path could still be written through the chunked path.
+* Fix subadmin email change updating caller's address instead of target's: https://github.com/owncloud/core/pull/41574[#41574] +
+The verification token and confirmation link in the subadmin path of `setMailAddress` were associated with the caller's account instead of the target user's account.
+
 == Changes in 10.16.3
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Classic 10.16.3 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Classic changelog] for further details on what has changed.
