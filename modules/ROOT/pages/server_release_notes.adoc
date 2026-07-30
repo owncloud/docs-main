@@ -17,6 +17,77 @@ next@docs::server_release_notes.adoc, next@docs_main::server_release_notes.adoc
 toc::[]
 
 
+== Changes in 11.0.0
+
+Dear ownCloud administrator, find below the changes and known issues in ownCloud Classic 11.0.0 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Classic changelog] for further details on what has changed.
+
+IMPORTANT: This is a major release containing 11 security fixes. It raises the minimum PHP version and removes deprecated features. Please read the *Breaking Changes* below before upgrading.
+
+Upgrades are supported from 8.2.11, 9.0.9, and 9.1 onwards.
+
+[discrete]
+=== Breaking Changes
+
+* *The minimum required PHP version is now 8.3*: https://github.com/owncloud/core/pull/41449[#41449] +
+Instances running an older PHP version will refuse to start. The version check now runs early in `lib/base.php`. The mail subsystem moved to `symfony/mailer` and the unused `ext-apc` requirement was dropped.
+* *The group-admin (subadmin) feature is disabled by default*: https://github.com/owncloud/core/pull/41634[#41634] +
+The feature's code path has known security shortcomings, so it is now gated behind a new `allow_subadmins` system config. On upgrade, existing group-admin assignments are ignored until an administrator sets `'allow_subadmins' => true` in `config.php`.
+* *G1 app signatures stop verifying on 2027-01-01*: https://github.com/owncloud/core/pull/41680[#41680] +
+App signature verification has been replaced by a new G2 code-signing verifier, which validates the full certificate chain against bundled trust anchors, enforces an algorithm allowlist, and checks a fail-closed CRL for revocation. Existing G1-signed apps continue to verify during the transition, but all G1 signatures stop verifying after the hardcoded sunset at 2026-12-31T23:59:59Z, regardless of individual certificate expiry. After that cutoff, affected apps must be re-signed with a G2 certificate to install or pass integrity verification. If you run third-party apps signed under G1, plan for re-signed releases ahead of that date.
+* *`occ integrity:sign-app` and `occ integrity:sign-core` have been removed*: https://github.com/owncloud/core/pull/41712[#41712] +
+Code signing is a release and CI concern rather than an operator action performed against a running instance. Verification is unaffected: `occ integrity:check-app` and `occ integrity:check-core` continue to work as before.
+* *The `occ db:convert-type` command has been removed*: https://github.com/owncloud/core/pull/41451[#41451] +
+This experimental command was untested and unsupported.
+* *Legacy and deprecated classes have been removed*: https://github.com/owncloud/core/pull/41455[#41455] +
+Including `OC_DB`, `OC_DB_StatementWrapper`, `OC_Group_Backend`, `OC_Group_Database`, `OC_OCS_Result`, `\OCP\DB`, `MDBSchemaWriter`, and the `OC_Group_Interface` and `OC_User_Interface` interfaces. Third-party apps using these will need updating.
+
+[discrete]
+=== Security Fixes
+
+* Prevent params body from overriding validated occ command: https://github.com/owncloud/core/pull/41577[#41577]
+* Remove plaintext federation auth token from error log: https://github.com/owncloud/core/pull/41578[#41578]
+* Replace strcmp token oracle with hash-based comparison in federation: https://github.com/owncloud/core/pull/41579[#41579]
+* Restrict `unserialize()` allowed classes in CommandJob: https://github.com/owncloud/core/pull/41582[#41582]
+* Sanitize storage connection error messages returned to clients: https://github.com/owncloud/core/pull/41585[#41585]
+* Prevent user enumeration via differential password reset UI: https://github.com/owncloud/core/pull/41586[#41586]
+* Do not trust cached binary paths: https://github.com/owncloud/core/pull/41732[#41732]
+* Enforce the read permission in the public share preview endpoint: https://github.com/owncloud/core/pull/41751[#41751]
+* Confine backend provided user homes to the data directory: https://github.com/owncloud/core/pull/41752[#41752]
+* Encode search highlights before they are returned as a DAV property: https://github.com/owncloud/core/pull/41760[#41760]
+
+The group-admin change (https://github.com/owncloud/core/pull/41634[#41634]) is also a security fix; see *Breaking Changes* above.
+
+[discrete]
+=== Changes
+
+* Generated URLs are no longer stored in the memory cache: https://github.com/owncloud/core/pull/41733[#41733] +
+Generating a URL measured faster than a cache round trip, so the cache only added a place where URLs could go stale or be tampered with.
+* Autoloader information is no longer stored in any memory cache: https://github.com/owncloud/core/pull/41376[#41376]
+* The internet connectivity check URL is now configurable: https://github.com/owncloud/core/pull/41506[#41506] +
+The default is now an independent, IPv6-capable resource (`https://detectportal.firefox.com/success.txt`).
+* Host-local caches are kept in the local cache tier: https://github.com/owncloud/core/pull/41734[#41734]
+* HTML metacharacters are covered in the username validation allow-list: https://github.com/owncloud/core/pull/41738[#41738]
+* Group names are escaped in the users administration group list: https://github.com/owncloud/core/pull/41758[#41758]
+* The write hook veto is honoured on legacy chunked WebDAV uploads: https://github.com/owncloud/core/pull/41762[#41762]
+* MIME types for OpenDocument formats have been added: https://github.com/owncloud/core/pull/41648[#41648]
+* Microsoft Office icons have been updated: https://github.com/owncloud/core/pull/41347[#41347]
+* The `msteamsbridge` config sample has been removed: https://github.com/owncloud/core/pull/41668[#41668]
+
+[discrete]
+=== Notable Bugfixes
+
+* Fix `.htaccess` RewriteBase rules blocking API requests by file extension: https://github.com/owncloud/core/issues/41418[#41418] +
+Files whose names end in extensions such as `.jpg`, `.png`, `.svg` or `.json` could not be favorited or tagged via the files API when `htaccess.RewriteBase` was configured, returning 405 Method Not Allowed. Re-run `occ maintenance:update:htaccess` after upgrading to regenerate the rules.
+* Decrypt versions and trashbin so encryption can be disabled: https://github.com/owncloud/core/issues/41623[#41623]
+* Support federation between systems in subdirectories: https://github.com/owncloud/core/pull/41599[#41599]
+* Normalise trashbin original-location PROPFIND response: https://github.com/owncloud/core/issues/39337[#39337]
+* Honor language on anonymous pages: https://github.com/owncloud/core/issues/41618[#41618]
+* Fix `user:home:list-dirs` and `user:home:list-users` crashing on PHP 8: https://github.com/owncloud/core/issues/41630[#41630]
+* Hide navigation icon for apps not enabled for the user: https://github.com/owncloud/core/issues/41717[#41717]
+* Do not crash on malformed translations: https://github.com/owncloud/core/issues/41720[#41720]
+* Reject non-numeric avatar crop coordinates and fix the avatar cropper: https://github.com/owncloud/core/issues/41723[#41723]
+* Add missing space to mail footer signature delimiter: https://github.com/owncloud/core/issues/41364[#41364]
+
 == Changes in 10.16.4
 
 Dear ownCloud administrator, find below the changes and known issues in ownCloud Classic 10.16.4 that need your attention. You can also read the {oc-changelog-url}[full ownCloud Classic changelog] for further details on what has changed.
