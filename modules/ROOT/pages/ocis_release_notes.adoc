@@ -98,6 +98,21 @@ See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade,
 
 There are no breaking changes in Infinite Scale 8.1
 
+== Infinite Scale 8.0.6 (Production)
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v8.0.6[Changes in 8.0.6, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+This release has security and bugfixes.
+
+* Security: Bump Go to 1.25.12: https://github.com/owncloud/ocis/pull/12602[#12602]
+* Security: Upgrade libvips to 8.18.4: https://github.com/owncloud/ocis/pull/12596[#12596]
+* Enhancement: Allow disabling the last sign-in timestamp update: https://github.com/owncloud/ocis/pull/12552[#12552]
+
 == Infinite Scale 8.0.5 (Production)
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
