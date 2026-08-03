@@ -98,6 +98,23 @@ See the xref:next@ocis:ROOT:migration/upgrading-ocis.adoc[Migration and Upgrade,
 
 There are no breaking changes in Infinite Scale 8.1
 
+== Infinite Scale 8.0.7 (Production)
+
+Please find the most important changes described here or refer to the changelog for a complete list of changes:
+
+* Infinite Scale: {ocis-releases-url}/v8.0.7[Changes in 8.0.7, window=_blank]
+
+[discrete]
+=== Issues Fixed
+
+This release has security and bugfixes.
+
+* Bugfix: Return correct issuerAssignedId on /me: https://github.com/owncloud/ocis/pull/12635[#12635]
+* Bugfix: Log unmapped thumbnail errors and always report a sabredav exception: https://github.com/owncloud/ocis/pull/12663[#12663]
+* Enhancement: Eliminate redundant LDAP read-after-write on create and update: https://github.com/owncloud/ocis/pull/12618[#12618]
+* Enhancement: Add an opt-in bounded LDAP connection pool: https://github.com/owncloud/ocis/pull/12660[#12660]
+* Enhancement: Retry LDAP operations against a lagging replica: https://github.com/owncloud/ocis/pull/12672[#12672]
+
 == Infinite Scale 8.0.6 (Production)
 
 Please find the most important changes described here or refer to the changelog for a complete list of changes:
