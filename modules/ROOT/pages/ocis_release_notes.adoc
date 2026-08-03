@@ -109,8 +109,9 @@ Please find the most important changes described here or refer to the changelog 
 
 This release has security and bugfixes.
 
-* Security: Bump Go to 1.25.11: https://github.com/owncloud/ocis/pull/12446[#12446]
-* Bugfix: Education user delete no longer 404s and leaves the LDAP entry behind: https://github.com/owncloud/ocis/pull/12395[#12395]
+* Security: Bump Go to 1.25.12: https://github.com/owncloud/ocis/pull/12602[#12602]
+* Security: Upghrade libvips to 8.18.4: https://github.com/owncloud/ocis/pull/12596[#12596]
+* Enhancement: Allow disabling the last sign-in timestamp update: https://github.com/owncloud/ocis/pull/12552[#12552]
 
 == Infinite Scale 8.0.5 (Production)
 
